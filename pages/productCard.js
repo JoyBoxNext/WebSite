@@ -89,7 +89,7 @@ const ProductCard = () => {
                         <div className="col-sm-6 col-md-4 py-5 ps-1 pe-4">
                             <div className="characteristic mb-3">
                                 <ul>
-                                    <li>экран: 6.53 (2340×1080) 60 Гц</li>
+                                    <li>экран: 6.53{`"`} (2340×1080) 60 Гц</li>
                                     <li>оперативная память: 4 ГБ</li>
                                     <li>память: 64 ГБ, слот для карты памяти</li>
                                     <li>3 камеры: 48 МП, 2 МП, 2 МП</li>
