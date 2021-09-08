@@ -72,12 +72,24 @@ const GlobalStyle = createGlobalStyle`
             z-index: 1;
         }
         .swiper-slide {
-            border: 3px solid blue   ;
         }
     }
     .swiper {
         overflow: hidden;
         position: unset;
+    }
+    .bag {
+        background-color: #FF5314;
+        padding: 20px;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 `;
 

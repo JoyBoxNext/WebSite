@@ -101,9 +101,6 @@ const HomeWrapper = styled.div`
                     margin: 0;
                 }
                 img {
-                /* position: absolute;
-                bottom: 0;
-                left: 0; */
             }
             }
         }
@@ -302,9 +299,7 @@ const HomeWrapper = styled.div`
                     max-height: 206px;
                     max-width: 172px;
                 }
-                .bag {
-                    background-color: #FF5314;
-                }
+                
             }
         }
         .button {
@@ -317,12 +312,77 @@ const HomeWrapper = styled.div`
             }
         }
     }
+    //Laptops
     .laptops {
-        padding: 0 30px;
+        padding: 0 16px;
         margin-bottom: 30px;
         .title-section {
             font-size: 45px;
             font-weight: bold;
+        }
+        .laptop-card {
+            border: 2px solid #2525EB;
+                max-width: 230px;
+                margin: auto;
+                .title {
+                    line-height: 16px !important;
+                    font-size: 12px;
+                    margin-bottom: 10px !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+                .small {
+                    .oldPrice {
+                        font-size: 10px;
+                        text-decoration: line-through;
+                        color: gray;
+                        padding: 0;
+                        margin: 0;
+                        .sum {
+                            font-size: 8px;
+                            text-decoration: none !important;
+                            text-decoration: transparent !important;
+                        }
+                    }
+                    .badgePrice {
+                        font-size: 8px;
+                        background-color: #D3E38C;
+                        padding: 2px 5px;
+                        color: black !important;
+                    }
+                }
+                .prices {
+                    span {
+                        font-size: 25px;
+                    }
+                    .rentPrice {
+                        font-size: 10px;
+                        text-decoration: underline;
+                        color: gray;
+                    }
+                }
+                img {
+                    max-height: 206px;
+                    max-width: 172px;
+                    margin: auto !important;
+                    display: flex;
+                }
+                .bag {
+                    background-color: #FF5314;
+                }
+        }
+    }
+    .bag {
+        background-color: #FF5314;
+        padding: 20px;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 `;

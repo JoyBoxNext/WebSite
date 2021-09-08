@@ -1,60 +1,32 @@
 import HomeWrapper from '../Wrappers/HomeWrapper';
 import Container from '../Containers/Container';
 import Header from '../Containers/Header/Header';
+import Footer from '../Containers/Footer/Footer';
 import NewProductCards from '../Data/NewProductCards';
 import LaptopData from '../Data/LaptopData';
 import { Button } from '@material-ui/core';
+import Link from 'next/link';
+
+//Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
+import "swiper/css/navigation"
+import "swiper/css";
+import "swiper/css/pagination"
+import SwiperCore, {
+  Pagination, Navigation
+} from 'swiper';
+SwiperCore.use([Pagination, Navigation]);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (<HomeWrapper>
     <Container>
       <div className="contant">
         <Header />
-        {/* <div className="container-grid">
-          <div className="item  d-flex item_1 blue">
-            <div className="miniContainer">
-              <div className="num num1">
-                <p className="p-0 m-0">заголовок редактируется через админ панель</p>
-                <p className="udivi">Удиви своих друзей!</p>
-              </div>
-              <div className="num num2">
-                <p>PlayStation 5 Digital version</p>
-                <p>редактируетсячерез админ панель</p>
-                <p className="polPrice d-flex justify-content-end">18,577,000</p>
-                <div className="Price d-flex justify-content-end">
-                  <p>от15,845,000</p>
-                </div>
-                <p className="d-flex justify-content-end">Магазин бытовой техники и электроники</p>
-                <img src="logo3.png" alt="" />
-              </div>
-              <div className="num num3">
-                <img className="threeMobiles" src="threeMobiles.svg" alt="" />
-                <p className="udivi threeMobiles">16:9</p>
-              </div>
-            </div>
-          </div>
-          <div className="item item_2 orange px-0 d-flex align-items-center">
-            <p className="hayron">Удивляй! Hayron qil!</p>
-          </div>
-          <div className="item item_3 blue">3</div>
-          <div className="item item_4 orange">4</div>
-          <div className="item item_5 blue p-0 m-0">
-            <img src="logo2.svg" alt="" />
-          </div>
-          <div className="item item_6 orange">6</div>
-          <div className="item item_7 blue">
-            <div className="">
-              <button className="bg-transparent text-white border-0 border-start border-dark">Скидки</button>
-              <button className="bg-transparent text-white border-0 border-start border-dark">Подборки</button>
-              <button className="bg-transparent text-white border-0 border-start border-dark">Товар дня</button>
-              <button className="bg-transparent text-white border-0 border-start border-dark">Новинки</button>
 
-            </div>
-          </div>
-          <div className="item item_8 orange">8</div>
-          <div className="item item_9 blue">9</div>
-        </div> */}
-
+        {/* Container-1 */}
         <div className="container-1">
           <div className="d-flex flex-wrap">
             <div className="flex1 blue" style={{ width: '25%' }}>
@@ -113,11 +85,11 @@ export default function Home() {
         <div className="container-2 mt-5">
           <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
           <div className="cards">
-            
+
           </div>
-          
+
         </div>
-        
+
         {/* ProductDay */}
         <div className="productDay mt-5">
           <div className="productDayText">
@@ -148,6 +120,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         {/* Container-mi */}
         <div className="container-mi d-flex mt-5 w-100">
           <div className=" d-flex">
@@ -159,6 +132,7 @@ export default function Home() {
             <img className="" src="mipicture2c.png" alt="" />
           </div>
         </div>
+
         {/* New-products */}
         <div className="new-products border rounded-0 w-100 mt-5">
           <h2 className="title-section my-3">Новинки</h2>
@@ -166,7 +140,9 @@ export default function Home() {
             {NewProductCards.map((v, i) => {
               return (<div className="new-product-card p-2" key={i}>
                 <img src={v.img} alt="" />
-                <p className="   fw-bold mt-2">{v.title}</p>
+                <Link href="/productCard"><a>
+                  <p className=" title fw-bold mt-2">{v.title}</p>
+                </a></Link>
                 <div className="small d-flex">
                   <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
                   <div className="badgePrice">
@@ -178,7 +154,7 @@ export default function Home() {
                     <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
                     <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                   </div>
-                  <div className="bag rounded-circle my-auto p-auto p-2  d-flex align-items-center">
+                  <div className="bag">
                     <img src="bag.svg" alt="" />
                   </div>
                 </div>
@@ -190,38 +166,50 @@ export default function Home() {
             <button className="border-0">Перейти в раздел <br /> новинки</button>
           </div>
         </div>
+
         {/* Laptops */}
         <div className="laptops border rounded w-100 mt-5">
           <h2 className="title-section my-3">Топ предложения - Ноутбуки</h2>
-          <div className="laptop-cards d-flex">
-            {LaptopData.map((v, i) => {
-              return (<div className="new-product-card p-2" key={i}>
-                <img src={v.img} alt="" />
-                <p className="   fw-bold mt-2">{v.title}</p>
-                <div className="small d-flex">
-                  <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
-                  <div className="badgePrice">
-                    <p className="m-0 p-0">{v.badgePrice} сум</p>
+          <div className="laptop-cards swiper_content d-flex">
+            <Swiper slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
+              navigation={true} className="mySwiper">
+              {LaptopData.map((v, i) => {
+                return (<SwiperSlide className=" h-100 p-3" key={i}>
+                  <div className="laptop-card p-2" key={i}>
+                    <img src={v.img} alt="" />
+                    <Link href="/productCard"><a>
+                      <p className=" title fw-bold mt-2">{v.title}</p>
+                    </a></Link>
+                    <div className="small d-flex p-0 m-0">
+                      <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
+                      <div className="badgePrice">
+                        <p className="m-0 p-0">{v.badgePrice} сум</p>
+                      </div>
+                    </div>
+                    <div className="d-flex justify-content-between">
+                      <div className="prices">
+                        <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
+                        <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                      </div>
+                      <div className="bag">
+                        <img src="bag.svg" alt="" />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <div className="prices">
-                    <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
-                    <p className="rentPrice">от {v.rentPrice} сум/мес</p>
-                  </div>
-                  <div className="bag rounded-circle my-auto p-auto p-2  d-flex align-items-center">
-                    <img src="bag.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              )
-            })}
-            <div className="laptop-card">
-              <img src="laptop.png" alt="" />
+                </SwiperSlide>
+                )
+              })}
+            </Swiper>
+            <div className="button_next">
+              <FontAwesomeIcon icon={faArrowRight} />
             </div>
+            <div className="button_prev">
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </div>
+
           </div>
         </div>
+        <Footer />
       </div>
     </Container>
   </HomeWrapper >

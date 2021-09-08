@@ -18,7 +18,9 @@ const Header = () => {
     return (
         <HeaderWrapper>
             <div className="d-flex justify-content-between align-items-center">
-                <img className="logo" src="logo.png" alt="" />
+                <Link href="/"><a>
+                    <img className="logo" src="logo.png" alt="" />
+                </a></Link>
                 <div className="input-group search w-50">
                     <span class="input-group-text border-0 m-0 p-0" id="basic-addon1"><Button className="search text-white rounded-0 px-5"><FontAwesomeIcon className="me-1" icon={faSearch} /><p className="m-0">Поиск</p></Button></span>
                     <input type="text" class="form-control rounded-0" aria-label="Username" aria-describedby="basic-addon1" />
@@ -28,10 +30,12 @@ const Header = () => {
                         <img src="IconPerson.svg" alt="" />
                         <p className="m-0">Покупателям</p>
                     </Button>
-                    <Button className="d-block">
-                        <img src="iconBasket.svg" alt="" />
-                        <p className="m-0">Корзина</p>
-                    </Button>
+                    <Link href="/baraxolka"><a>
+                        <Button className="d-block">
+                            <img src="iconBasket.svg" alt="" />
+                            <p className="m-0">Корзина</p>
+                        </Button>
+                    </a></Link>
                 </div>
             </div>
             <div className="w-100">
@@ -64,7 +68,9 @@ const Header = () => {
                     <MenuItem style={{ width: '300px' }} className="menuItem" onClick={handleMenuClose}><Link href="/test"><a>Дом, Сад</a></Link></MenuItem>
                 </Menu>
                 {/* active o'rnatish kere va responsiveni to'g'irlash kere */}
-                <Button className="border-end border-dark rounded-0 px-4">Скидки</Button>
+                <Link href="/product"><a>
+                    <Button className="border-end border-dark rounded-0 px-4">Скидки</Button>
+                </a></Link>
                 <Button className="border-end border-dark rounded-0 px-4">Смартфоны</Button>
                 <Button className="border-end border-dark rounded-0 px-4">ТВ</Button>
                 <Button className="border-end border-dark rounded-0 px-4">Техника для кухни</Button>
