@@ -2,8 +2,14 @@ import styled from "styled-components";
 
 const HomeWrapper = styled.div`
     font-family: 'roboto' ,sans-serif;
+    .blue {
+        background-color: #2525EB;
+    }
+    .orange {
+        background-color: #FF5314;
+    }
 
-    .container-grid {
+    .container-1 {
         color: white;
         .blue {
             background-color: #2525EB;
@@ -122,6 +128,8 @@ const HomeWrapper = styled.div`
             }
         }
         .flex8 {
+            display: flex;
+            justify-content: space-around;
             Button {
                 background-color: transparent;
                 border-left: 1px solid #fff;
@@ -129,83 +137,13 @@ const HomeWrapper = styled.div`
                 border-radius: 0;
                 color: white;
                 text-transform: capitalize;
-                
+                padding: 0 35px;
+                font-weight: lighter;
             }
         }
     }
 
-    /* .container-grid {
-        background-image: url('main.png');
-        width: 100%;
-        height: 370px;
-        background-size: cover;
-        position: relative;
-        .mainMini{
-            width: 678px;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-        }
-    } */
-
-    /* .container-grid {
-        margin-top: 50px;
-        display: grid;
-        grid-template-columns: 920px 376px 161px;
-        grid-template-rows: 303px 83px 88px;
-        color: white;
-        .blue {
-            background-color: #2525EB;
-        }
-        .orange {
-            background-color: #FF5314;
-        }
-        .udivi {
-            font-family: 'roboto', sans-serif;
-            font-size: 38px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 38px;
-            letter-spacing: 0em;
-            text-align: left;
-
-        }
-        .hayron {
-            font-family: Roboto;
-            font-size: 68px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 68px;
-            letter-spacing: 0em;
-            text-align: left;
-            margin: 0;
-            padding: 0;
-            margin-left: 21px;
-
-        }
-        .miniContainer {
-            display: grid;
-            grid-template-columns: 322px 322px 544px;
-            .num {
-            }
-            .num1 {
-                flex: 1;
-                grid-template-rows: 1fr;
-                max-height: 166px;
-            }
-            .num2 {
-                grid-column-start: 1;
-                grid-template-rows: 1fr;
-                border: 2px solid white;
-            }
-            .num3 {
-                grid-column: 2/3;
-                grid-row: 1/3;
-            }
-        
-        }
-        
-    } */
+    
       
     //productDay
     .productDay {
@@ -271,26 +209,20 @@ const HomeWrapper = styled.div`
             }
         }
     }
-    //Cards
-    .Cards {
-        width: 100%;
-        height: 434px;
-        background-color: #2525EB;
-        background-image: url('Korobka.png');
-        background-size: cover;
-        padding: 0 46px 25px;
-        h3 {
-            font-size: 40px;
-            top: 21px;
-        }
-        .container {
-            padding-top: 50px;
-        }
-        .cart {
-            height: 308,16px;
-            background-color: white;
+    //Container-2
+    .container-2 {
+        background: url("/Korobka.png"), #2525EB;
+        background-size: 100% 100%;
+        color: white;
+        .title-section {
+            font-size: 45px;
+            font-weight: bold;
         }
     }
+
+    
+
+
     //Container-mi
     .container-mi {
         background-color: #A8C9C8;

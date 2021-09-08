@@ -55,7 +55,7 @@ export default function Home() {
           <div className="item item_9 blue">9</div>
         </div> */}
 
-        <div className="container-grid">
+        <div className="container-1">
           <div className="d-flex flex-wrap">
             <div className="flex1 blue" style={{ width: '25%' }}>
               <div className="text">
@@ -76,7 +76,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex  justify-content-between  w-100">
-                  <img src="logo3.png" alt=""/>
+                  <img src="logo3.png" alt="" />
                   <p className="bottom-text w-auto">Магазин бытовой техники <br /> и электроники</p>
                 </div>
               </div>
@@ -90,13 +90,13 @@ export default function Home() {
                 <h1 className="h2 text-center">Удивляй! Hayron qil!</h1>
               </div>
             </div>
-            <div className="blue" style={{ width: '10%' }}>4</div>
-            <div className="orange" style={{ width: '65%' }}>5</div>
+            <div className="blue" style={{ width: '10%' }}></div>
+            <div className="orange" style={{ width: '65%' }}></div>
             <div className="flex6 blue" style={{ width: '25%' }}>
               <img className="w-100" src="logo4.png" alt="" />
             </div>
-            <div className="orange" style={{ width: '10%' }}>7</div>
-            <div className="flex8 blue" style={{ width: '65%' }}>
+            <div className="orange" style={{ width: '10%' }}></div>
+            <div className="flex8 blue py-3" style={{ width: '65%' }}>
               <div className="">
                 <Button>Скидки</Button>
                 <Button>Подборки</Button>
@@ -104,31 +104,17 @@ export default function Home() {
                 <Button>Новинки</Button>
               </div>
             </div>
-            <div className="orange" style={{ width: '25%' }}>9</div>
-            <div className="blue" style={{ width: '10%' }}>10</div>
-          </div>
-          {/* <img src="mainMini.png" alt="" className="mainMini" /> */}
-        </div>
-
-
-
-        {/* Cards */}
-        <div className="Cards mt-5">
-          <h3>Удивляйся и удивляй!</h3>
-          <div className="container">
-            <div className="row justify-content-around">
-              <div className="col-2">
-                <div className="cart bg-white">
-                  1
-                </div>
-              </div>
-              <div className="col-2">2</div>
-              <div className="col-2">3</div>
-              <div className="col-2">4</div>
-              <div className="col-2">5</div>
-            </div>
+            <div className="orange" style={{ width: '25%' }}></div>
+            <div className="blue" style={{ width: '10%' }}></div>
           </div>
         </div>
+
+        {/* Container-2 */}
+        <div className="container-2 mt-5">
+          <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
+          
+        </div>
+        
         {/* ProductDay */}
         <div className="productDay mt-5">
           <div className="productDayText">
@@ -175,7 +161,7 @@ export default function Home() {
           <h2 className="title-section my-3">Новинки</h2>
           <div className="new-product-cards d-flex p-2">
             {NewProductCards.map((v, i) => {
-              return (<div className="new-product-card p-2">
+              return (<div className="new-product-card p-2" key={i}>
                 <img src={v.img} alt="" />
                 <p className="   fw-bold mt-2">{v.title}</p>
                 <div className="small d-flex">
@@ -206,7 +192,7 @@ export default function Home() {
           <h2 className="title-section my-3">Топ предложения - Ноутбуки</h2>
           <div className="laptop-cards d-flex">
             {LaptopData.map((v, i) => {
-              return (<div className="new-product-card p-2">
+              return (<div className="new-product-card p-2" key={i}>
                 <img src={v.img} alt="" />
                 <p className="   fw-bold mt-2">{v.title}</p>
                 <div className="small d-flex">
