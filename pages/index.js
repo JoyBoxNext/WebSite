@@ -112,6 +112,9 @@ export default function Home() {
         {/* Container-2 */}
         <div className="container-2 mt-5">
           <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
+          <div className="cards">
+            
+          </div>
           
         </div>
         

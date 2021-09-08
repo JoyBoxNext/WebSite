@@ -214,9 +214,14 @@ const HomeWrapper = styled.div`
         background: url("/Korobka.png"), #2525EB;
         background-size: 100% 100%;
         color: white;
+        padding: 0 30px;
+        margin-bottom: 30px;
         .title-section {
             font-size: 45px;
             font-weight: bold;
+        }
+        .cards {
+            
         }
     }
 
