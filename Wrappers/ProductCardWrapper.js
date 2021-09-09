@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductCardWrapper = styled.div`
+const ProductCardWrapper = styled.div`
     Button {
         box-shadow: none;
         border-radius: 0;
@@ -167,3 +167,5 @@ export const ProductCardWrapper = styled.div`
     }
     
 `;
+
+export default ProductCardWrapper;

@@ -18,7 +18,7 @@ import SwiperData from '../Data/SwiperData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
-import { ProductCardWrapper } from '../Wrappers/productCardWrapper';
+import  ProductCardWrapper from '../Wrappers/productCardWrapper';
 
 const ProductCard = () => {
     return (<ProductCardWrapper>
