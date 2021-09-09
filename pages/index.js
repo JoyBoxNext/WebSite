@@ -92,7 +92,7 @@ export default function Home() {
           <div className="cards d-flex">
             {ChooseData.map((v, i) => {
               return (
-                <div className="card p-2">
+                <div className="card p-2" key={i}>
                   <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                     <img src={v.img} alt="" />
                     <div className="colorBoxes flex-column mb-5">
