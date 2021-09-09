@@ -1,7 +1,6 @@
 import HomeWrapper from '../Wrappers/HomeWrapper';
 import Container from '../Containers/Container';
 import Header from '../Containers/Header/Header';
-import Footer from '../Containers/Footer/Footer';
 import NewProductCards from '../Data/NewProductCards';
 import LaptopData from '../Data/LaptopData';
 import { Button } from '@material-ui/core';
@@ -19,6 +18,7 @@ import SwiperCore, {
 SwiperCore.use([Pagination, Navigation]);
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../Containers/Footer/Footer';
 
 export default function Home() {
   return (<HomeWrapper>
