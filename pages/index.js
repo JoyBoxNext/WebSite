@@ -172,41 +172,43 @@ export default function Home() {
               navigation={true} className="mySwiper">
               {ChooseData.map((v, i) => {
                 return (<SwiperSlide className=" h-100 p-3" key={i}>
-                  <div className="choose-card p-2">
-                    <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                      <img src={v.img} alt="" />
-                      <div className="colorBoxes flex-column mb-5">
-                        <div className="p-1">
-                          <div className="col-3 colorBox black"></div>
+                  <Link href="/productCard"><a>
+                    <div className="choose-card p-2">
+                      <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                        <img src={v.img} alt="" />
+                        <div className="colorBoxes flex-column mb-5">
+                          <div className="p-1">
+                            <div className="col-3 colorBox black"></div>
+                          </div>
+                          <div className="p-1">
+                            <div className="col-3 colorBox white"></div>
+                          </div>
+                          <div className="p-1">
+                            <div className="col-3 colorBox green"></div>
+                          </div>
+                          <div className="p-1">
+                            <div className="col-3 colorBox gray"></div>
+                          </div>
                         </div>
-                        <div className="p-1">
-                          <div className="col-3 colorBox white"></div>
+                      </div>
+                      <Link href="/"><a><p className=" title fw-bold mt-2">{v.title}</p></a></Link>
+                      <div className="small d-flex p-0 m-0">
+                        <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
+                        <div className="badgePrice">
+                          <p className="m-0 p-0">{v.badgePrice} сум</p>
                         </div>
-                        <div className="p-1">
-                          <div className="col-3 colorBox green"></div>
+                      </div>
+                      <div className="d-flex justify-content-between">
+                        <div className="prices">
+                          <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
+                          <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                         </div>
-                        <div className="p-1">
-                          <div className="col-3 colorBox gray"></div>
+                        <div className="bag">
+                          <img src="bag.svg" alt="" />
                         </div>
                       </div>
                     </div>
-                    <Link href="/"><a><p className=" title fw-bold mt-2">{v.title}</p></a></Link>
-                    <div className="small d-flex p-0 m-0">
-                      <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
-                      <div className="badgePrice">
-                        <p className="m-0 p-0">{v.badgePrice} сум</p>
-                      </div>
-                    </div>
-                    <div className="d-flex justify-content-between">
-                      <div className="prices">
-                        <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
-                        <p className="rentPrice">от {v.rentPrice} сум/мес</p>
-                      </div>
-                      <div className="bag">
-                        <img src="bag.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
+                  </a></Link>
                 </SwiperSlide>
                 )
               })}
