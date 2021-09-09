@@ -5,6 +5,8 @@ import NewProductCards from '../Data/NewProductCards';
 import LaptopData from '../Data/LaptopData';
 import { Button } from '@material-ui/core';
 import Link from 'next/link';
+import Footer from '../Containers/Footer/Footer';
+import ChooseData from '../Data/ChooseData';
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,10 +19,13 @@ import SwiperCore, {
 } from 'swiper';
 SwiperCore.use([Pagination, Navigation]);
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Footer from '../Containers/Footer/Footer';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { home_images } from '../Data/data';
+
 
 export default function Home() {
+  console.log(ChooseData);
   return (<HomeWrapper>
     <Container>
       <div className="contant">
@@ -84,8 +89,46 @@ export default function Home() {
         {/* Container-2 */}
         <div className="container-2 mt-5">
           <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
-          <div className="cards">
-
+          <div className="cards d-flex">
+            {ChooseData.map((v, i) => {
+              return (
+                <div className="card p-2">
+                  <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                    <img src={v.img} alt="" />
+                    <div className="colorBoxes flex-column mb-5">
+                      <div className="p-1">
+                        <div className="col-3 colorBox black"></div>
+                      </div>
+                      <div className="p-1">
+                        <div className="col-3 colorBox white"></div>
+                      </div>
+                      <div className="p-1">
+                        <div className="col-3 colorBox green"></div>
+                      </div>
+                      <div className="p-1">
+                        <div className="col-3 colorBox gray"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <Link href="/"><a><p className=" title fw-bold mt-2">{v.title}</p></a></Link>
+                  <div className="small d-flex p-0 m-0">
+                    <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
+                    <div className="badgePrice">
+                      <p className="m-0 p-0">{v.badgePrice} сум</p>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <div className="prices">
+                      <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
+                      <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                    </div>
+                    <div className="bag">
+                      <img src="bag.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
           </div>
 
         </div>
@@ -117,6 +160,62 @@ export default function Home() {
               <div className="col-6 d-flex align-items-center p-0 ">
                 <img className="productDayWasher w-100" src="productDayWasher.png" alt="Washer" />
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ChooseClients */}
+        <div className="choose mt-5 border">
+          <h2 className="title-section my-3 px-4">Выбор покупателей</h2>
+          <div className="choose-cards swiper_content d-flex">
+            <Swiper slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
+              navigation={true} className="mySwiper">
+              {ChooseData.map((v, i) => {
+                return (<SwiperSlide className=" h-100 p-3" key={i}>
+                  <div className="choose-card p-2">
+                    <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                      <img src={v.img} alt="" />
+                      <div className="colorBoxes flex-column mb-5">
+                        <div className="p-1">
+                          <div className="col-3 colorBox black"></div>
+                        </div>
+                        <div className="p-1">
+                          <div className="col-3 colorBox white"></div>
+                        </div>
+                        <div className="p-1">
+                          <div className="col-3 colorBox green"></div>
+                        </div>
+                        <div className="p-1">
+                          <div className="col-3 colorBox gray"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <Link href="/"><a><p className=" title fw-bold mt-2">{v.title}</p></a></Link>
+                    <div className="small d-flex p-0 m-0">
+                      <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
+                      <div className="badgePrice">
+                        <p className="m-0 p-0">{v.badgePrice} сум</p>
+                      </div>
+                    </div>
+                    <div className="d-flex justify-content-between">
+                      <div className="prices">
+                        <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
+                        <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                      </div>
+                      <div className="bag">
+                        <img src="bag.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                )
+              })}
+            </Swiper>
+            <div className="button_next">
+              <FontAwesomeIcon icon={faArrowRight} />
+            </div>
+            <div className="button_prev">
+              <FontAwesomeIcon icon={faArrowLeft} />
             </div>
           </div>
         </div>
@@ -168,7 +267,7 @@ export default function Home() {
         </div>
 
         {/* Laptops */}
-        <div className="laptops border rounded w-100 mt-5">
+        <div className="laptops w-100 mt-5">
           <h2 className="title-section my-3">Топ предложения - Ноутбуки</h2>
           <div className="laptop-cards swiper_content d-flex">
             <Swiper slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
@@ -207,6 +306,41 @@ export default function Home() {
               <FontAwesomeIcon icon={faArrowLeft} />
             </div>
 
+          </div>
+        </div>
+
+
+        <div className="brands">
+          <div className="py-5">
+            <h1 className="title-section">Популярные бренды</h1>
+            <div className="row justify-content-center align-items-center">
+              {home_images.map((value, index) => {
+                return (
+                  <div className={`col-xl-2 ${value.className}`} key={index} >
+                    <img className="home_photo" src={value.img} alt="photo" />
+                  </div>
+                );
+              })}
+            </div>
+            <div className="d-flex justify-content-center align-items-center my-3">
+              <button className="button text-center">ЕЩЕ</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="my-2">
+          <div className="border_ my-4"></div>
+          <div className="d-flex justify-content-center align-items-center">
+            <FontAwesomeIcon
+              className="icon me-3"
+              icon={faInstagram}
+            />
+            <FontAwesomeIcon
+              className="icon me-3"
+              icon={faTelegram}
+            />
+            <FontAwesomeIcon className="icon" icon={faFacebook} />
           </div>
         </div>
         <Footer />

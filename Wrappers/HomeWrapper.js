@@ -211,18 +211,120 @@ const HomeWrapper = styled.div`
         background: url("/Korobka.png"), #2525EB;
         background-size: 100% 100%;
         color: white;
-        padding: 0 30px;
+        padding: 30px 30px;
         margin-bottom: 30px;
-        .title-section {
-            font-size: 45px;
-            font-weight: bold;
-        }
         .cards {
-            
+            margin-bottom: 30px;
+        .card {
+            border: 2px solid #FF8253;
+                /* max-width: 230px; */
+                margin: auto;
+                .title {
+                    line-height: 16px !important;
+                    font-size: 12px;
+                    margin-bottom: 10px !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+                .small {
+                    .oldPrice {
+                        font-size: 10px;
+                        text-decoration: line-through;
+                        color: gray;
+                        padding: 0;
+                        margin: 0;
+                        .sum {
+                            font-size: 8px;
+                            text-decoration: none !important;
+                            text-decoration: transparent !important;
+                        }
+                    }
+                    .badgePrice {
+                        font-size: 8px;
+                        background-color: #D3E38C;
+                        padding: 2px 5px;
+                        color: black !important;
+                    }
+                }
+                .prices {
+                    span {
+                        font-size: 25px;
+                    }
+                    .rentPrice {
+                        font-size: 10px;
+                        text-decoration: underline;
+                        color: gray;
+                    }
+                }
+                img {
+                    /* max-height: 206px; */
+                    max-width: 172px;
+                    margin: auto !important;
+                    display: flex;
+                }
+                .bag {
+                    background-color: #FF5314;
+                }
+        }
         }
     }
 
-    
+    //ChooseClients
+    .choose {
+        /* padding: 0 30px; */
+        margin-bottom: 30px;
+        .choose-card {
+            border: 10px solid #FF8253;
+                /* max-width: 230px; */
+                margin: auto;
+                .title {
+                    line-height: 16px !important;
+                    font-size: 12px;
+                    margin-bottom: 10px !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+                .small {
+                    .oldPrice {
+                        font-size: 10px;
+                        text-decoration: line-through;
+                        color: gray;
+                        padding: 0;
+                        margin: 0;
+                        .sum {
+                            font-size: 8px;
+                            text-decoration: none !important;
+                            text-decoration: transparent !important;
+                        }
+                    }
+                    .badgePrice {
+                        font-size: 8px;
+                        background-color: #D3E38C;
+                        padding: 2px 5px;
+                        color: black !important;
+                    }
+                }
+                .prices {
+                    span {
+                        font-size: 25px;
+                    }
+                    .rentPrice {
+                        font-size: 10px;
+                        text-decoration: underline;
+                        color: gray;
+                    }
+                }
+                img {
+                    /* max-height: 206px; */
+                    max-width: 172px;
+                    margin: auto !important;
+                    display: flex;
+                }
+                .bag {
+                    background-color: #FF5314;
+                }
+        }
+    }
 
 
     //Container-mi
@@ -249,10 +351,6 @@ const HomeWrapper = styled.div`
     .new-products {
         padding: 0 30px;
         margin-bottom: 30px;
-        .title-section {
-            font-size: 45px;
-            font-weight: bold;
-        }
         .new-product-cards {
             border: 5px solid #2525EB;
             padding: 0 !important;
@@ -316,10 +414,6 @@ const HomeWrapper = styled.div`
     .laptops {
         padding: 0 16px;
         margin-bottom: 30px;
-        .title-section {
-            font-size: 45px;
-            font-weight: bold;
-        }
         .laptop-card {
             border: 2px solid #2525EB;
                 max-width: 230px;
@@ -385,6 +479,27 @@ const HomeWrapper = styled.div`
             transform: translate(-50%, -50%);
         }
     }
+    .title-section {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+
+    .brands {
+    .title-section {
+      font-size: 45px;
+      font-weight: bold;
+    }
+    .button {
+      padding: 10px 35px;
+      background-color: #ff5314;
+      color: white;
+      font-weight: bold;
+      border-radius: 15px;
+      width: auto;
+      border: none;
+    }
+  }
 `;
 
 

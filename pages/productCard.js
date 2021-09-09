@@ -18,6 +18,7 @@ SwiperCore.use([Pagination, Navigation]);
 import SwiperData from '../Data/SwiperData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 const ProductCard = () => {
     return (<ProductCardWrapper>
@@ -108,7 +109,7 @@ const ProductCard = () => {
                         <div className="col-md-12 swiper_content">
                             <Swiper slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
                                 navigation={true} className="mySwiper">
-                                   
+
                                 {SwiperData.map((v, i) => {
                                     return <SwiperSlide className=" h-100 p-3" key={i}>
                                         <div className="text-start">
@@ -120,7 +121,7 @@ const ProductCard = () => {
                                 })}
                             </Swiper>
                             <div className="button_next">
-                            <FontAwesomeIcon icon={faArrowRight} />
+                                <FontAwesomeIcon icon={faArrowRight} />
                             </div>
                             <div className="button_prev">
                                 <FontAwesomeIcon icon={faArrowLeft} />
@@ -129,6 +130,26 @@ const ProductCard = () => {
                     </div>
                 </div>
                 <Button className="newProducts">Перейти в раздел новинки</Button>
+
+
+
+                
+                <div className="my-2">
+                    <div className="border_ my-4"></div>
+                    <div className="d-flex justify-content-center align-items-center">
+                        <FontAwesomeIcon
+                            className="icon me-3"
+                            icon={faInstagram}
+                        />
+                        <FontAwesomeIcon
+                            className="icon me-3"
+                            icon={faTelegram}
+                        />
+                        <FontAwesomeIcon className="icon" icon={faFacebook} />
+                    </div>
+                </div>
+
+
                 <Footer />
             </div>
 

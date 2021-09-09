@@ -91,6 +91,38 @@ const GlobalStyle = createGlobalStyle`
             transform: translate(-50%, -50%);
         }
     }
+    .colorBoxes {
+        max-height: 80px;
+        .colorBox {
+                border: 1px solid black;
+                border-radius: 4px;
+        }
+        .black {
+            background-color: black;
+            height: 20px;
+            width: 20px;            
+        }
+        .white {
+            background-color: white;
+            height: 20px;
+            width: 20px;
+        }
+        .green {
+            background-color: #6EB290;
+            height: 20px;
+            width: 20px;
+        }
+        .gray {
+            background-color: #EEEDED;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    .border_ {
+      border-bottom: 3px solid #969696;
+      width: 402px;
+      margin: auto;
+    }
 `;
 
 export default GlobalStyle;

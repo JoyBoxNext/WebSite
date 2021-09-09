@@ -242,4 +242,12 @@ const rightSide = [
   },
 ];
 
-export { bigCategores, categores, phones, rightSide };
+const home_images = [
+  { img: "home_me.png" },
+  { img: "home_samsung.png" },
+  { img: "home_vivo.png" },
+  { img: "home_apple.png", className: "apple" },
+  { img: "home_lg.png" },
+];
+
+export { bigCategores, categores, phones, rightSide, home_images };
