@@ -4,7 +4,6 @@ import Container from "../Containers/Container";
 import Footer from "../Containers/Footer/Footer";
 import { Button } from '@material-ui/core'
 import Link from "next/link";
-import ProductCardWrapper from '../Wrappers/productCardWrapper';
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -19,6 +18,7 @@ import SwiperData from '../Data/SwiperData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { ProductCardWrapper } from '../Wrappers/productCardWrapper';
 
 const ProductCard = () => {
     return (<ProductCardWrapper>
@@ -133,7 +133,7 @@ const ProductCard = () => {
 
 
 
-                
+
                 <div className="my-2">
                     <div className="border_ my-4"></div>
                     <div className="d-flex justify-content-center align-items-center">
