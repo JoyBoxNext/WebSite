@@ -31,7 +31,7 @@ export default function Home() {
   return (<HomeWrapper>
     <Container>
       <div className="contant">
-        <Header />
+        {/* <Header /> */}
 
         {/* Container-1 */}
         <div className="container-1">

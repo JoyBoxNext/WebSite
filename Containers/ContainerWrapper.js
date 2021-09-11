@@ -22,6 +22,10 @@ const ContainerWrapper = styled.div`
         padding: 56px 50px 0;
 
     }
+    @media screen and (max-width: 355px) {
+        padding: 20px 20px 0;
+
+    }
 
 `;
 

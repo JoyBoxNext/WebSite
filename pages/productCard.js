@@ -32,7 +32,7 @@ const ProductCard = () => {
     return (<ProductCardWrapper>
         <Container>
             <div className="contant">
-                <Header />
+                {/* <Header /> */}
                 <p className="mt-5 fw-bold mb-0">Электроника *  смартфоны</p>
                 <div className="d-flex align-items-center mb-4">
                     <h1 className="">Samsung a52 4/256 dual sim onyx black</h1>
@@ -152,52 +152,27 @@ const ProductCard = () => {
                     </div>
                 </div>
                 <Button className="newProducts">Перейти в раздел новинки</Button>
-
-
-
-
                 <div className="my-2">
                     <div className="border_ my-4"></div>
                     <div className="d-flex justify-content-center align-items-center">
-                        <FontAwesomeIcon
-                            className="icon me-3"
-                            icon={faInstagram}
-                        />
-                        <FontAwesomeIcon
-                            className="icon me-3"
-                            icon={faTelegram}
-                        />
+                        <FontAwesomeIcon className="icon me-3" icon={faInstagram} />
+                        <FontAwesomeIcon className="icon me-3" icon={faTelegram} />
                         <FontAwesomeIcon className="icon" icon={faFacebook} />
                     </div>
                 </div>
-
-                <div
-                    className={`row modal_product justify-content-center align-items-center 
-                        }`}
-                >
+                <div className={`row modal_product justify-content-center align-items-center }`}>
                     <div className="col-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 ">
                         <div className="p-4 bg-white  input_group">
                             <h3 className="text-center fw-bold">Оставь заявку</h3>
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Твоё имя *"
-                            />
-                            <input
-                                type="text"
-                                className="form-control my-3"
-                                placeholder="Твой номер телефона *"
-                            />
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Твой номер телеграм *"
+                            <input type="text" className="form-control" placeholder="Твоё имя *"/>
+                            <input type="text" className="form-control my-3" placeholder="Твой номер телефона *"/>
+                            <input type="text"className="form-control" placeholder="Твой номер телеграм *"
                             />
                             <div className="d-flex justify-content-center align-items-center mt-3">
                                 <Button className="button">Оставить заявку</Button>
-                                <Button  className="times">
+                                <Button className="times">
                                     <b>
-                                       <FontAwesomeIcon icon={faTimes}/>
+                                        <FontAwesomeIcon icon={faTimes} />
                                     </b>
                                 </Button>
                             </div>
@@ -206,7 +181,6 @@ const ProductCard = () => {
                 </div>
                 <Footer />
             </div>
-
         </Container>
     </ProductCardWrapper>
     )
