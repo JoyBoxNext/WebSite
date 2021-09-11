@@ -139,8 +139,6 @@ const HomeWrapper = styled.div`
             }
         }
     }
-
-    
       
     //productDay
     .productDay {
@@ -206,6 +204,7 @@ const HomeWrapper = styled.div`
             }
         }
     }
+
     //Container-2
     .container-2 {
         background: url("/Korobka.png"), #2525EB;
@@ -271,11 +270,9 @@ const HomeWrapper = styled.div`
 
     //ChooseClients
     .choose {
-        /* padding: 0 30px; */
         margin-bottom: 30px;
         .choose-card {
             border: 10px solid #FF8253;
-                /* max-width: 230px; */
                 margin: auto;
                 .title {
                     line-height: 16px !important;
@@ -315,7 +312,6 @@ const HomeWrapper = styled.div`
                     }
                 }
                 img {
-                    /* max-height: 206px; */
                     max-width: 172px;
                     margin: auto !important;
                     display: flex;
@@ -325,7 +321,6 @@ const HomeWrapper = styled.div`
                 }
         }
     }
-
 
     //Container-mi
     .container-mi {
@@ -347,6 +342,7 @@ const HomeWrapper = styled.div`
             }
         }
     }
+
     //New-Products
     .new-products {
         padding: 0 30px;
@@ -410,6 +406,7 @@ const HomeWrapper = styled.div`
             }
         }
     }
+
     //Laptops
     .laptops {
         padding: 0 16px;
@@ -490,7 +487,7 @@ const HomeWrapper = styled.div`
       font-size: 45px;
       font-weight: bold;
     }
-    .button {
+    .button_bottom {
       padding: 10px 35px;
       background-color: #ff5314;
       color: white;
@@ -499,7 +496,10 @@ const HomeWrapper = styled.div`
       width: auto;
       border: none;
     }
-  }
+    //Slick
+
+    
+}
 `;
 
 

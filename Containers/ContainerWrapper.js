@@ -7,7 +7,12 @@ const ContainerWrapper = styled.div`
         .contant {
             /* max-width: 1400px; */
         }
-
+    }
+    @media screen and (max-width: 900px) {
+        padding: 35 100px !important;
+        .contant {
+            /* max-width: 1400px; */
+        }
     }
     @media screen and (max-width: 1440px) {
         padding: 21px 160px 0;

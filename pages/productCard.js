@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ProductCardWrapper from '../Wrappers/ProductCardWrapper';
 import Header from "../Containers/Header/Header";
 import Container from "../Containers/Container";
 import Footer from "../Containers/Footer/Footer";
 import { Button } from '@material-ui/core'
 import Link from "next/link";
+import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
+
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -14,11 +17,16 @@ import SwiperCore, {
     Pagination, Navigation
 } from 'swiper';
 SwiperCore.use([Pagination, Navigation]);
-import SwiperData from '../Data/SwiperData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
-import  ProductCardWrapper from '../Wrappers/ProductCardWrapper';
+import { faArrowLeft, faArrowRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+import ProductSwiperData from '../Data/ProductSwiperData';
+
+// const [openInput, setOpenInput] = useState(false);
+
+// const showInput = () => {
+//   setOpenInput(!openInput);
+// };
+
 
 const ProductCard = () => {
     return (<ProductCardWrapper>
@@ -106,16 +114,30 @@ const ProductCard = () => {
                 <h1 className="py-5">С этим товаром покупают</h1>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12 swiper_content">
+                        <div className="col-md-12 product-swiper swiper_content">
                             <Swiper slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
                                 navigation={true} className="mySwiper">
 
-                                {SwiperData.map((v, i) => {
-                                    return <SwiperSlide className=" h-100 p-3" key={i}>
-                                        <div className="text-start">
+                                {ProductSwiperData.map((v, i) => {
+                                    return <SwiperSlide className=" h-100" key={i}>
+                                        <div className="product-swiper-card p-3 text-start">
                                             <img src={v.img} alt="" />
-                                            <p className="fw-bold">{v.name}</p>
-                                            <p className="price">{v.price}</p>
+                                            <p className=" title fw-bold mt-2">{v.name}</p>
+                                            <div className="small d-flex p-0 m-0">
+                                                <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
+                                                <div className="badgePrice">
+                                                    <p className="m-0 p-0">{v.badge} сум</p>
+                                                </div>
+                                            </div>
+                                            <div className="d-flex justify-content-between">
+                                                <div className="prices">
+                                                    <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
+                                                    <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                                                </div>
+                                                <div className="bag">
+                                                    <img className="w-auto h-auto" src="icon.png" alt="" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                 })}
@@ -149,7 +171,39 @@ const ProductCard = () => {
                     </div>
                 </div>
 
-
+                <div
+                    className={`row modal_product justify-content-center align-items-center 
+                        }`}
+                >
+                    <div className="col-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 ">
+                        <div className="p-4 bg-white  input_group">
+                            <h3 className="text-center fw-bold">Оставь заявку</h3>
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Твоё имя *"
+                            />
+                            <input
+                                type="text"
+                                className="form-control my-3"
+                                placeholder="Твой номер телефона *"
+                            />
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Твой номер телеграм *"
+                            />
+                            <div className="d-flex justify-content-center align-items-center mt-3">
+                                <Button className="button">Оставить заявку</Button>
+                                <Button  className="times">
+                                    <b>
+                                       <FontAwesomeIcon icon={faTimes}/>
+                                    </b>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <Footer />
             </div>
 

@@ -14,9 +14,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import BaraxolkaWrapper from "../Wrappers/BaraxolkaWrapper";
-import Footer from "../Containers/Footer/Footer";
-import Link from 'next/link';
+import BaraxollaWrapper from "../Wrappers/BaraxolkaWrapper";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -60,10 +58,17 @@ const Product = () => {
         setValue(newValue);
     };
 
+    // const data = useSelector((state) => state.BooksReducer.filterdata);
+
+    // const saveProduct = (index) => {
+    //   const saveProd = (data[index].save = !data[index].save);
+    //   console.log(saveProd, index);
+    // };
+
     return (
         <Container>
             <Header />
-            <BaraxolkaWrapper>
+            <BaraxollaWrapper>
                 <div className="d-flex">
                     <div className="Sidebar">
                         <div className="container">
@@ -86,7 +91,7 @@ const Product = () => {
                                 </ul>
                             </div>
                             <div className={classes.root}>
-                                <AppBar className="shadow-none" position="static">
+                                <AppBar className="shadow-none mb-5 appbar" position="static">
                                     <Tabs
                                         value={value}
                                         onChange={handleChange}
@@ -114,55 +119,55 @@ const Product = () => {
                                         {phones.map((value, index) => {
                                             return (
                                                 <div
-                                                    className="col-12 col-lg-6 col-xl-4 col-xxl-3 cards_border  mb-3 pt-0 p-0"
+                                                    className="col-12 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
                                                     key={index}
                                                 >
-                                                    <img className="" src="skidka.jpg" alt="photo" />
-                                                    <div className="px-3">
-                                                        <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                                                            <Link href="/productCard"><a>
+                                                    <div className="cards_border">
+                                                        <img className="" src="skidka.jpg" alt="photo" />
+                                                        <div className="px-3">
+                                                            <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                                                                 <img
                                                                     className="me-3 "
-                                                                    src="SwiperProduct3.png"
+                                                                    src={value.img}
                                                                     alt="photo"
                                                                 />
-                                                            </a></Link>
-                                                            <div className="colorBoxes flex-column mb-5">
-                                                                <div className="p-1">
-                                                                    <div className="col-3 colorBox black"></div>
-                                                                </div>
-                                                                <div className="p-1">
-                                                                    <div className="col-3 colorBox white"></div>
-                                                                </div>
-                                                                <div className="p-1">
-                                                                    <div className="col-3 colorBox green"></div>
-                                                                </div>
-                                                                <div className="p-1">
-                                                                    <div className="col-3 colorBox gray"></div>
+                                                                <div className="colorBoxes flex-column mb-5">
+                                                                    <div className="p-1">
+                                                                        <div className="col-3 colorBox black"></div>
+                                                                    </div>
+                                                                    <div className="p-1">
+                                                                        <div className="col-3 colorBox white"></div>
+                                                                    </div>
+                                                                    <div className="p-1">
+                                                                        <div className="col-3 colorBox green"></div>
+                                                                    </div>
+                                                                    <div className="p-1">
+                                                                        <div className="col-3 colorBox gray"></div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <h5 className="fw-bold my-2 text model fw-bold">
-                                                            {value.title}
-                                                        </h5>
-                                                        <div className="d-flex align-items-center">
-                                                            <p className="mb-0 bg_success aksiya__">
-                                                                {value.aksiya_}
-                                                            </p>
-                                                            <p className="mb-0 text_secondary aksiya ms-4">
-                                                                {value.aksiya}
-                                                            </p>
-                                                        </div>
-                                                        <h4 className="fw-bold price mb-0 mt-2">
-                                                            <span className="big_text mb-0">
-                                                                {value.big_price}
-                                                            </span>
-                                                            {value.price}
-                                                        </h4>
-                                                        <div className="d-flex justify-content-between align-items-center">
-                                                            <p className="mb-0 desc">{value.desc}</p>
-                                                            <div className="bag save_btn">
-                                                                <img src="bag.svg" alt="" />
+                                                            <h5 className="fw-bold my-2 text model fw-bold">
+                                                                {value.title}
+                                                            </h5>
+                                                            <div className="d-flex align-items-center">
+                                                                <p className="mb-0 bg_success aksiya__">
+                                                                    {value.aksiya_}
+                                                                </p>
+                                                                <p className="mb-0 text_secondary aksiya ms-4">
+                                                                    {value.aksiya}
+                                                                </p>
+                                                            </div>
+                                                            <h4 className="fw-bold price mb-0 mt-2">
+                                                                <span className="big_text mb-0">
+                                                                    {value.big_price}
+                                                                </span>
+                                                                {value.price}
+                                                            </h4>
+                                                            <div className="d-flex justify-content-between align-items-center">
+                                                                <p className="mb-0 desc">{value.desc}</p>
+                                                                <div className="bag">
+                                                                    <img src="bag.svg" alt="" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -195,8 +200,7 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
-            </BaraxolkaWrapper>
-            <Footer />
+            </BaraxollaWrapper>
         </Container>
     );
 };

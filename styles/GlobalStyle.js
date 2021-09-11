@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-    /* max-width: 1400px !important; */
+    body {
+        overflow-x: hidden; 
+    }
     a {
         color: black;
         text-decoration: none;
@@ -14,6 +16,36 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
     }
+    
+    //Swiper
+    #app { height: 100% }
+    .swiper {
+    width: 100%;
+    height: 100%;
+    }
+
+    .swiper-slide {
+    text-align: center;
+    /* font-size: 18px; */
+    background: #fff;
+
+
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    }
+    
     .swiper-button-next, .swiper-button-prev {
         border: 2px solid black !important;
         border-radius: 5px;
@@ -24,10 +56,10 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
     }
     .swiper-button-next{
-        right: -1%;
+        right: -2%;
     }
     .swiper-button-prev{
-        left: -1%;
+        left: -2%;
     }
     .swiper-button-prev::after{
          content: "";
@@ -42,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
             align-items: center;
             justify-content: center;
             right: auto;
-            left: -1%;
+            left: -2%;
             top: 49.5%;
             transform: translateY(-50%);
             position: absolute;
@@ -59,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
             align-items: center;
             justify-content: center;
             right: auto;
-            right: -1%;
+            right: -2%;
             top: 49.5%;
             transform: translateY(-50%);
             position: absolute;
@@ -78,6 +110,7 @@ const GlobalStyle = createGlobalStyle`
         overflow: hidden;
         position: unset;
     }
+
     .bag {
         background-color: #FF5314;
         padding: 20px;
@@ -123,6 +156,72 @@ const GlobalStyle = createGlobalStyle`
       width: 402px;
       margin: auto;
     }
+
+    #nprogress{
+  height: 100vh !important;
+  .spinner{
+    top:0;
+    right: 0;
+    width: 100% !important;
+    height: 100vh !important;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #33333333;
+    .spinner-icon{
+      width: 60px !important;
+      height: 60px !important;
+    }
+  }
+}
+.MuiAppBar-colorPrimary {
+    background-color: transparent !important;
+  }
+  .modal_product {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 0.1);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 10000;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      backdrop-filter: blur(10px);
+    }
+    .input_group {
+      border-radius: 30px;
+      border: 3px dashed #2525eb;
+      position: relative;
+      .button {
+        position: absolute;
+        bottom: -15px;
+        left: 25%;
+        background-color: #ff5314;
+        color: white;
+        border-radius: 10px;
+      }
+      .times {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #91d9f8;
+        border: 2px solid black;
+        .icon {
+          font-weight: bold;
+          font-size: 25px;
+        }
+      }
+    }
+    input {
+      border-radius: 20px;
+    }
+  }
 `;
 
 export default GlobalStyle;

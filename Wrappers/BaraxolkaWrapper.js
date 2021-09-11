@@ -12,6 +12,7 @@ const BaraxollaWrapper = styled.div`
     .li {
     }
   }
+  
   .MuiTabs-flexContainer {
     background: white !important;
     color: #000;
@@ -20,6 +21,7 @@ const BaraxollaWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100% !important;
   }
   .Sidebar {
     width: 100%;
@@ -30,10 +32,12 @@ const BaraxollaWrapper = styled.div`
     .item_two {
       color: #ff5314;
       border: 1px solid #ff5314;
+      margin: 10px 0;
     }
     .item_three {
       border: 1px solid #a6a6a6;
       color: #000;
+      margin-top: 5px;
     }
     .title {
       font-weight: bold;
@@ -64,7 +68,6 @@ const BaraxollaWrapper = styled.div`
     }
     .cards_border {
       border: 3px solid #2525eb;
-      position: relative;
     }
     .text_secondary {
       background-color: #e2e38c;
@@ -118,49 +121,22 @@ const BaraxollaWrapper = styled.div`
       letter-spacing: 0.025em;
       text-decoration-line: underline;
     }
-    .colorBoxes {
-        max-height: 80px;
-        .colorBox {
-                border: 1px solid black;
-                border-radius: 4px;
-            }
-            .black {
-                background-color: black;
-                height: 20px;
-                width: 20px;            
-        }
-        .white {
-        background-color: white;
-        height: 20px;
-        width: 20px;
-        }
-        .green {
-        background-color: #6EB290;
-        height: 20px;
-        width: 20px;
-        }
-        .gray {
-            background-color: #EEEDED;
-            height: 20px;
-            width: 20px;
-        }
-        }
-        .bag {
-            position: absolute;
-            bottom: 30px;
-            right: 20px;
-            background-color: #FF5314;
-            padding: 30px;
-            margin: 0;
-            border-radius: 50%;
-            position: relative;
-            img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            }
-        }    
+  }
+  .bag {
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    .MuiTabs-flexContainer {
+      display: grid !important;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .MuiTabs-flexContainer {
+      display: grid !important;
+    }
+    .MuiAppBar-colorPrimary {
+      width: 345px !important;
+    }
   }
 `;
 export default BaraxollaWrapper;

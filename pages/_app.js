@@ -7,6 +7,16 @@ config.autoAddCss = false;
 import GlobalStyle from '../styles/GlobalStyle';
 import { Provider } from 'react-redux';
 import Store from "../redux/Store";
+import Router, { useRouter } from "next/router";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+//Binding events.
+Router.events.on("routeChangeStart", () => NProgress.start());
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
+//Slick-Slider
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 function MyApp({ Component, pageProps }) {

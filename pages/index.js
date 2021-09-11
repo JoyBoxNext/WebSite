@@ -1,3 +1,4 @@
+import React from 'react'
 import HomeWrapper from '../Wrappers/HomeWrapper';
 import Container from '../Containers/Container';
 import Header from '../Containers/Header/Header';
@@ -7,6 +8,9 @@ import { Button } from '@material-ui/core';
 import Link from 'next/link';
 import Footer from '../Containers/Footer/Footer';
 import ChooseData from '../Data/ChooseData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { home_images } from '../Data/data';
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,14 +22,12 @@ import SwiperCore, {
   Pagination, Navigation
 } from 'swiper';
 SwiperCore.use([Pagination, Navigation]);
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
-import { home_images } from '../Data/data';
+
 
 
 export default function Home() {
-  console.log(ChooseData);
+
   return (<HomeWrapper>
     <Container>
       <div className="contant">
@@ -165,13 +167,32 @@ export default function Home() {
         </div>
 
         {/* ChooseClients */}
-        <div className="choose mt-5 border">
+        <div className="choose mt-5 border">  
           <h2 className="title-section my-3 px-4">Выбор покупателей</h2>
-          <div className="choose-cards swiper_content d-flex">
-            <Swiper slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
+          <div className="choose-cards swiper_content">
+            <Swiper breakpoints={{ 
+              "300": {
+                "slidesPerView": 1,
+                "spaceBetween": 20
+              },
+              "768": {
+                "slidesPerView": 2,
+                "spaceBetween": 40
+              },
+              "1024": {
+                "slidesPerView": 4,
+                "spaceBetween": 50
+              },
+              "1920": {
+                "slidesPerView": 5,
+                "spaceBetween": 50
+              }
+            }}
+              slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
               navigation={true} className="mySwiper">
+
               {ChooseData.map((v, i) => {
-                return (<SwiperSlide className=" h-100 p-3" key={i}>
+                return <SwiperSlide className=" h-100 p-3" key={i}>
                   <Link href="/productCard"><a>
                     <div className="choose-card p-2">
                       <div className="d-flex justify-content-center align-items-center ps-4 my-3">
@@ -191,7 +212,7 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      <Link href="/"><a><p className=" title fw-bold mt-2">{v.title}</p></a></Link>
+                      <p className=" title fw-bold mt-2">{v.title}</p>
                       <div className="small d-flex p-0 m-0">
                         <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
                         <div className="badgePrice">
@@ -210,7 +231,6 @@ export default function Home() {
                     </div>
                   </a></Link>
                 </SwiperSlide>
-                )
               })}
             </Swiper>
             <div className="button_next">
@@ -271,34 +291,38 @@ export default function Home() {
         {/* Laptops */}
         <div className="laptops w-100 mt-5">
           <h2 className="title-section my-3">Топ предложения - Ноутбуки</h2>
-          <div className="laptop-cards swiper_content d-flex">
+          <div className="laptop-cards swiper_content">
             <Swiper slidesPerView={5} spaceBetween={0} slidesPerGroup={1} loop={true} loopFillGroupWithBlank={true}
               navigation={true} className="mySwiper">
+
               {LaptopData.map((v, i) => {
-                return (<SwiperSlide className=" h-100 p-3" key={i}>
-                  <div className="laptop-card p-2" key={i}>
-                    <img src={v.img} alt="" />
-                    <Link href="/productCard"><a>
-                      <p className=" title fw-bold mt-2">{v.title}</p>
-                    </a></Link>
-                    <div className="small d-flex p-0 m-0">
-                      <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
-                      <div className="badgePrice">
-                        <p className="m-0 p-0">{v.badgePrice} сум</p>
+                return <SwiperSlide className=" h-100 p-3" key={i}>
+                  <Link href="/productCard"><a>
+                    <div className=" h-100 p-3" key={i}>
+                      <div className="laptop-card p-2" key={i}>
+                        <img className="w-100" src={v.img} alt="" />
+                        <Link href="/test"><a>
+                          <p className=" title fw-bold mt-2">{v.title}</p>
+                        </a></Link>
+                        <div className="small d-flex p-0 m-0">
+                          <p className="oldPrice me-1 m-0 p-0">{v.oldPrice}<span className="sum">сум</span></p>
+                          <div className="badgePrice">
+                            <p className="m-0 p-0">{v.badgePrice} сум</p>
+                          </div>
+                        </div>
+                        <div className="d-flex justify-content-between">
+                          <div className="prices">
+                            <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
+                            <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                          </div>
+                          <div className="bag">
+                            <img src="bag.svg" alt="" />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="d-flex justify-content-between">
-                      <div className="prices">
-                        <p className="m-0 fw-bold"><span>{v.priceBig}</span>{v.price}<small>сум</small></p>
-                        <p className="rentPrice">от {v.rentPrice} сум/мес</p>
-                      </div>
-                      <div className="bag">
-                        <img src="bag.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
+                  </a></Link>
                 </SwiperSlide>
-                )
               })}
             </Swiper>
             <div className="button_next">
@@ -307,7 +331,6 @@ export default function Home() {
             <div className="button_prev">
               <FontAwesomeIcon icon={faArrowLeft} />
             </div>
-
           </div>
         </div>
 
@@ -325,7 +348,7 @@ export default function Home() {
               })}
             </div>
             <div className="d-flex justify-content-center align-items-center my-3">
-              <button className="button text-center">ЕЩЕ</button>
+              <Button className="button_bottom text-center">ЕЩЕ</Button>
             </div>
           </div>
         </div>

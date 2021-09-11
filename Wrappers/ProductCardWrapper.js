@@ -10,7 +10,7 @@ const ProductCardWrapper = styled.div`
         }
     }
     h1 {
-        font-family: Roboto;
+        font-family: 'Roboto',sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 45.3237px;
@@ -118,11 +118,72 @@ const ProductCardWrapper = styled.div`
             padding-left: 10px;
             font-weight: bold;
         }
-        /* @media screen and (max-width:1300px) {
-            .characteristic {
-            }
-        } */
     }
+
+    .product-swiper {
+        border: 5px solid #2525EB;
+        padding: 0;
+        .product-swiper-card {
+            border-left: 5px solid #2525EB66;
+             margin: 0;
+            .title {
+                line-height: 16px !important;
+                font-size: 12px;
+                margin-bottom: 10px !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .small {
+                .oldPrice {
+                    font-size: 10px;
+                    text-decoration: line-through;
+                    color: gray;
+                    padding: 0;
+                    margin: 0;
+                    .sum {
+                        font-size: 8px;
+                        text-decoration: none !important;
+                        text-decoration: transparent !important;
+                    }
+                }
+                .badgePrice {
+                    font-size: 8px;
+                    background-color: #D3E38C;
+                    padding: 2px 5px;
+                    color: black !important;
+                }
+            }
+            .prices {
+                span {
+                    font-size: 25px;
+                }
+                .rentPrice {
+                    font-size: 10px;
+                    text-decoration: underline;
+                    color: gray;
+                }
+            }
+            img {
+                max-width: 172px;
+                margin: auto !important;
+                display: flex;
+            }
+            .bag {
+            background-color: #FF5314;
+            padding: 20px;
+            margin: auto;
+            border-radius: 50%;
+            position: relative;
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    
     .newProducts {
         display: flex;
         justify-content: center;
@@ -130,34 +191,8 @@ const ProductCardWrapper = styled.div`
         color: white;
         margin: 20px auto;
     }
-    //Swiper
-    #app { height: 100% }
-    .swiper {
-    width: 100%;
-    height: 100%;
-    }
-
-    .swiper-slide {
-    text-align: center;
-    /* font-size: 18px; */
-    background: #fff;
-
-
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    }
+    
+    
 
     .swiper-slide img {
     display: block;
