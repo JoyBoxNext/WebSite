@@ -153,7 +153,7 @@ const GlobalStyle = createGlobalStyle`
     }
     .border_ {
       border-bottom: 3px solid #969696;
-      width: 100%;
+      width: 40%;
       margin: auto;
     }
 
