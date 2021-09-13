@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../Containers/Header/Header";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
