@@ -12,7 +12,10 @@ const BaraxollaWrapper = styled.div`
     .li {
     }
   }
-  
+
+  .baraxolka_img {
+    width: 100%;
+  }
   .MuiTabs-flexContainer {
     background: white !important;
     color: #000;
@@ -124,6 +127,10 @@ const BaraxollaWrapper = styled.div`
   }
   .bag {
     margin-bottom: 10px;
+    &:hover {
+      background-color: #ff5314;
+      color: white;
+    }
   }
   @media screen and (max-width: 600px) {
     .MuiTabs-flexContainer {

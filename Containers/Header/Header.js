@@ -11,25 +11,35 @@ import { dispatch } from "../../redux/Store";
 import { useRouter } from "next/dist/client/router";
 import Badge from "@material-ui/core/Badge";
 
-
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
 
   const data = useSelector((state) => state.BooksReducer.phonesdata);
+
   const array = data?.filter((value) =>
     value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
   );
-
-  const savedData = useSelector((state) => state.BooksReducer.saveProduct);
+  const baraxolkaData = useSelector(
+    (state) => state.BooksReducer.baraxolkaData
+  );
+  // console.log(baraxolkaData);
+  const arraybaraxolka = baraxolkaData?.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
 
   const datas = () => {
-    const action = { type: t.BOOKS_DATA, payload: array };
+    const action = {
+      type: t.BOOKS_DATA,
+      payload: array,
+      payload2: arraybaraxolka,
+    };
     dispatch(action);
   };
+
   useEffect(() => {
     datas();
-  }, [searchTerm, array.length]);
+  }, [searchTerm, array.length, arraybaraxolka.length]);
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -40,17 +50,54 @@ const Header = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-  const saveproduct = useSelector((state) => state.BooksReducer.saveProduct);
+  // const saveproduct = useSelector((state) => state.BooksReducer.saveProduct);
   const produktdata = useSelector((state) => state.BooksReducer.filterdata);
+  const baraxolkaFilterdata = useSelector(
+    (state) => state.BooksReducer.baraxolkaFilterdata
+  );
+  console.log(baraxolkaFilterdata);
 
+  const [saveLength, setsaveLength] = useState(true);
+  //product
+  const baraxolkaFilterdatasave = baraxolkaFilterdata.filter((v) => v.save);
   const saveProduct = () => {
     const data = produktdata.filter((v) => v.save);
-    const action = { type: t.SAVE_PRODUCT, payload: data };
+    const action = {
+      type: t.SAVE_PRODUCT,
+      payload: data,
+      payload2: baraxolkaFilterdatasave,
+    };
     dispatch(action);
   };
+  const savedData = useSelector((state) => state.BooksReducer.saveProduct);
+  const baraxolkaSaveProduct = useSelector(
+    (state) => state.BooksReducer.baraxolkaSaveProduct
+  );
+  const indexdata = useSelector((state) => state.BooksReducer.index);
+
+  const datalfilter = savedData.filter((v) => v.save);
+  const [indexs, setindexs] = useState(-1);
+  useEffect(() => {
+    console.log(baraxolkaSaveProduct);
+    saveProduct();
+  }, [
+    indexdata,
+    savedData.length,
+    indexs,
+    datalfilter.length,
+    baraxolkaSaveProduct.length,
+  ]);
+
+  //baraxolka
+  // const saveBaraxolkaProduct = () => {
+  //   const baraxolkaData = baraxolkaProductData.filter((v) => v.save);
+  //   const action = { type: t.BARAXOLKASAVE_PRODUCT, payload: baraxolkaData };
+  //   dispatch(action);
+  // };
 
   const deleteProduct = (index) => {
-    const saveProd = (produktdata[index].save = !produktdata[index].save);
+    setindexs(index);
+    const saveProd = (datalfilter[index].save = !datalfilter[index].save);
     console.log(saveProd, index);
   };
 
@@ -59,7 +106,11 @@ const Header = () => {
       <div className="container pt-4">
         <div className="row justify-content-center align-items-center w-100">
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
-            <img className="w-100 logo" src="logo.png" alt="rasm" />
+            <Link href="/">
+              <a>
+                <img className="w-100 logo" src="logo.png" alt="rasm" />
+              </a>
+            </Link>
           </div>
           <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 order-3 order-sm-3 order-md-3 order-lg-0 inputOrder">
             <div className="d-flex justify-content-center align-items-center">
@@ -88,12 +139,9 @@ const Header = () => {
                 </p>
               </Button>
               <div className={`korzina`}>
-                {savedData?.map((value, index) => (
+                {datalfilter?.map((value, index) => (
                   <div>
-                    <div
-                      className="d-flex align-items-center mb-3"
-                      key={index}
-                    >
+                    <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
@@ -171,8 +219,9 @@ const Header = () => {
                   <a>
                     <Button
                       style={{ zIndex: "100" }}
-                      className={`border_links border-dark rounded-0 px-4 ${value.className
-                        } ${router.pathname === value.href ? "active" : ""}`}
+                      className={`border_links border-dark rounded-0 px-4 ${
+                        value.className
+                      } ${router.pathname === value.href ? "active" : ""}`}
                     >
                       {value.link}
                     </Button>
