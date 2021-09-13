@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import ProductWrapper from "../Wrappers/productWrapper";
 import Header from "./../Containers/Header/Header";
+import Footer from "../Containers/Footer/Footer"
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -435,7 +436,7 @@ const Product = () => {
           </div>
         </div>
       </ProductWrapper>
-
+              <Footer />
       <ModalProduct />
     </>
   );

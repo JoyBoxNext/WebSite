@@ -32,7 +32,7 @@ const ProductCard = () => {
     return (<ProductCardWrapper>
         <Container>
             <div className="contant">
-                {/* <Header /> */}
+                <Header />
                 <div className="contant-title mb-4">
                     <div className="contant-title-1">
                         <p className="p-text mt-5 fw-bold mb-0">Электроника * смартфоны</p>
@@ -46,7 +46,7 @@ const ProductCard = () => {
                 <div className="firstContainer">
                     <div className="d-flex flex-wrap">
                         <div className="firstContainerIpad firstContainerMacbook">
-                            <div className="images d-flex">
+                            <div className="images">
                                 <div className=" smallimg d-flex justify-content-start">
                                     <img className="active" src="p1small1.png" alt="" />
                                     <img src="p1small2.png" alt="" />
@@ -106,23 +106,23 @@ const ProductCard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="characteristic-container py-5 ">
-                            <div className="characteristic mb-3">
-                                <ul>
-                                    <li>экран: 6.53{`"`} (2340×1080) 60 Гц</li>
-                                    <li>оперативная память: 4 ГБ</li>
-                                    <li>память: 64 ГБ, слот для карты памяти</li>
-                                    <li>3 камеры: 48 МП, 2 МП, 2 МП</li>
-                                    <li>аккумулятор: 6000 мА·ч</li>
-                                    <li>процессор: Qualcomm Snapdragon 662</li>
-                                    <li>SIM-карты: 2 (nano SIM)</li>
-                                </ul>
-                                <div className="buttonBottom">
-                                    <FontAwesomeIcon icon={faAngleDown} />
-                                </div>
+                    </div>
+                    <div className="characteristic-container py-5 ">
+                        <div className="characteristic mb-3">
+                            <ul>
+                                <li>экран: 6.53{`"`} (2340×1080) 60 Гц</li>
+                                <li>оперативная память: 4 ГБ</li>
+                                <li>память: 64 ГБ, слот для карты памяти</li>
+                                <li>3 камеры: 48 МП, 2 МП, 2 МП</li>
+                                <li>аккумулятор: 6000 мА·ч</li>
+                                <li>процессор: Qualcomm Snapdragon 662</li>
+                                <li>SIM-карты: 2 (nano SIM)</li>
+                            </ul>
+                            <div className="buttonBottom">
+                                <FontAwesomeIcon icon={faAngleDown} />
                             </div>
-                            <Link href="/"><a className="link-korzinka text-primary">Все характеристики</a></Link>
                         </div>
+                        <Link href="/"><a className="link-korzinka text-primary">Все характеристики</a></Link>
                     </div>
                 </div>
                 {/* fitstcontanerFinish */}

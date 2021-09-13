@@ -20,8 +20,11 @@ const ProductCardWrapper = styled.div`
         background-color: #D3E38C;
     }
     .firstContainer {
+        
         background-color: #eff9fe;
-        .smallimg {
+        .images {
+            order: 1;
+            .smallimg {
             display: flex;
             flex-direction: column;
             /* justify-content: center; */
@@ -33,12 +36,16 @@ const ProductCardWrapper = styled.div`
             .active {
                 border: 1px solid blue;
             }
-        }
-        .bigimg {
-            width: 230px !important;
+            .bigimg {
+            width: 230px ;
             /* max-height: 530px;             */
+            }
         }
-        .colorBoxes {
+        
+        }
+        .colorMemories {
+            order: 2 !important;
+            .colorBoxes {
             display: flex;
             .colorBox {
                 border: 2px solid black;
@@ -77,6 +84,7 @@ const ProductCardWrapper = styled.div`
                 font-weight: bold;
             }
         }
+        }
         .prices {
             h4 {
                 text-decoration: line-through;
@@ -100,6 +108,7 @@ const ProductCardWrapper = styled.div`
         .characteristic {
             border: 2px solid blue;
             width: 100%;
+            order: 3 !important;
             .link-characteristic {
                 color: blue !important;
             }
@@ -143,6 +152,7 @@ const ProductCardWrapper = styled.div`
         .product-swiper-card {
             border-left: 5px solid #2525EB66;
              margin: 0;
+             
             .title {
                 line-height: 16px !important;
                 font-size: 12px;
@@ -200,6 +210,7 @@ const ProductCardWrapper = styled.div`
             }
         }
     }
+
     
     .newProducts {
         display: flex;
@@ -209,8 +220,6 @@ const ProductCardWrapper = styled.div`
         margin: 20px auto;
         border-radius: 10px;
     }
-    
-    
 
     .swiper-slide img {
     display: block;
@@ -219,8 +228,7 @@ const ProductCardWrapper = styled.div`
     object-fit: cover;
     }
 
-
-    @media screen and (max-width:1440px) and (min-width: 900px){
+    @media screen and (max-width:1920px) and (min-width: 1400px){
         padding: 0 !important;
         .contant-title {
             display: block;
@@ -270,18 +278,22 @@ const ProductCardWrapper = styled.div`
             
         }
         .firstContainer {
+            display: flex !important;
             background-color: transparent;
+            justify-content: space-between;
             .firstContainerMacbook {
                 display: flex !important;
                 flex-wrap: wrap;
                 .images {
                     width: 480px;
                     display: flex !important;
+                    order: 1;
                 }
                 .colorMemories {
                     width: 300px;
                     display: block;
                     flex-wrap: wrap;
+                    order: 2 !important;
                     .row {
                         display: block;
                     }
@@ -343,9 +355,10 @@ const ProductCardWrapper = styled.div`
             }
             
             .characteristic-container {
+                order: 10;
+                max-width: 100% !important;
                 .characteristic {
-                    /* max-width: 100%; */
-
+                    max-width: 100% !important;
                 }
                 .link-korzinka {
                     display: none;
@@ -368,6 +381,311 @@ const ProductCardWrapper = styled.div`
         }
     }
 
+    @media screen and (max-width:1440px) and (min-width: 1200px){
+        padding: 0 !important;
+        .contant-title {
+            display: block;
+            align-items: end;
+            font-size: 14px;
+            .p-text {
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 115.5%;
+                letter-spacing: -0.03em;
+                text-transform: uppercase;
+            }
+            .badge {
+                display: none;
+            }
+            .contant-title-1 {
+                display: flex;
+                justify-content: space-between;
+                .badge {
+                    order: 2;
+                    height: 30px;
+                    align-items: flex-end !important;
+                }
+            }
+            .contant-title-2 {
+                display: flex;
+                align-items: center;
+                h1 {
+                    font-size: 35px;
+                    line-height: 115%;
+                    letter-spacing: -0.03em;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                .badge {
+                    display: flex;
+                    max-width: 207px;
+                    height: 25px;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 115.5%;
+                    letter-spacing: -0.03em;
+                    text-transform: uppercase;
+                    margin: 0 20px;
+                }
+            }
+            
+        }
+        .firstContainer {
+            display: flex !important;
+            background-color: transparent;
+            justify-content: space-between;
+            .firstContainerMacbook {
+                display: flex !important;
+                flex-wrap: wrap;
+                .images {
+                    width: 480px;
+                    display: flex !important;
+                    order: 1;
+                }
+                .colorMemories {
+                    width: 300px;
+                    display: block;
+                    flex-wrap: wrap;
+                    order: 2 !important;
+                    .row {
+                        display: block;
+                    }
+                    .colorBoxes, .memorie {
+                        display: flex;
+                        flex-wrap: nowrap;
+                    }
+                }
+            
+                .priceButton {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .prices {
+                        display: block;
+                        .oldPrice {
+                            font-size: 20px;
+                            line-height: 115.5%;
+                            text-decoration-line: line-through;
+                            text-transform: uppercase;
+
+                        }
+                        .badge {
+                            font-size: 13px;
+                            line-height: 115.5%;
+                            letter-spacing: 0.025em;
+                            text-transform: uppercase;
+                            max-height: 23px;
+                        }
+                        .price {
+                            /* max-width: 80% !important; */
+                            .bigPrice {
+                                font-size: 50px;
+                                line-height: 92%;
+                                letter-spacing: -0.03em;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .rentPrice {
+                            display: block !important;
+                            font-size: 14px;
+                        }
+                    
+                    }
+                    .button {
+                        /* max-width: 45% !important; */
+                        display: flex;
+                        flex-wrap: wrap;
+                        .checkout {
+                            width: 100% !important;
+                            font-size: 15px;
+                            max-height: 50px;
+                            border-radius: 5px;
+                        }
+                        .link-korzinka {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+            .characteristic-container {
+                order: 10;
+                max-width: 100% !important;
+                .characteristic {
+                    max-width: 100% !important;
+                }
+                .link-korzinka {
+                    display: none;
+                }
+            }
+        }
+        .secondContainer {
+            h1 {
+                font-weight: bold;
+                font-size: 38px;
+                line-height: 100%;
+            }
+            .button_next, .button_prev, .swiper-button-next,.swiper-button-prev {
+                display: flex;
+            }
+            .swiper-pagination {
+                display: none;
+                justify-content: center;
+            }
+        }
+    }
+
+    @media screen and (max-width:1200px) and (min-width: 900px){
+        padding: 0 !important;
+        .contant-title {
+            display: block;
+            align-items: end;
+            font-size: 14px;
+            .p-text {
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 115.5%;
+                letter-spacing: -0.03em;
+                text-transform: uppercase;
+            }
+            .badge {
+                display: none;
+            }
+            .contant-title-1 {
+                display: flex;
+                justify-content: space-between;
+                .badge {
+                    order: 2;
+                    height: 30px;
+                    align-items: flex-end !important;
+                }
+            }
+            .contant-title-2 {
+                display: flex;
+                align-items: center;
+                h1 {
+                    font-size: 35px;
+                    line-height: 115%;
+                    letter-spacing: -0.03em;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                .badge {
+                    display: flex;
+                    max-width: 207px;
+                    height: 25px;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 115.5%;
+                    letter-spacing: -0.03em;
+                    text-transform: uppercase;
+                    margin: 0 20px;
+                }
+            }
+            
+        }
+        .firstContainer {
+            display: block !important;
+            background-color: transparent;
+            justify-content: space-between;
+            .firstContainerMacbook {
+                display: flex !important;
+                flex-wrap: wrap;
+                .images {
+                    width: 480px;
+                    display: flex !important;
+                    order: 1;
+                }
+                .colorMemories {
+                    width: 300px;
+                    display: block;
+                    flex-wrap: wrap;
+                    order: 2 !important;
+                    .row {
+                        display: block;
+                    }
+                    .colorBoxes, .memorie {
+                        display: flex;
+                        flex-wrap: nowrap;
+                    }
+                }
+            
+                .priceButton {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .prices {
+                        display: block;
+                        .oldPrice {
+                            font-size: 20px;
+                            line-height: 115.5%;
+                            text-decoration-line: line-through;
+                            text-transform: uppercase;
+
+                        }
+                        .badge {
+                            font-size: 13px;
+                            line-height: 115.5%;
+                            letter-spacing: 0.025em;
+                            text-transform: uppercase;
+                            max-height: 23px;
+                        }
+                        .price {
+                            /* max-width: 80% !important; */
+                            .bigPrice {
+                                font-size: 50px;
+                                line-height: 92%;
+                                letter-spacing: -0.03em;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .rentPrice {
+                            display: block !important;
+                            font-size: 14px;
+                        }
+                    
+                    }
+                    .button {
+                        /* max-width: 45% !important; */
+                        display: flex;
+                        flex-wrap: wrap;
+                        .checkout {
+                            width: 100% !important;
+                            font-size: 15px;
+                            max-height: 50px;
+                            border-radius: 5px;
+                        }
+                        .link-korzinka {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+            .characteristic-container {
+                order: 10;
+                max-width: 100% !important;
+                .characteristic {
+                    max-width: 100% !important;
+                }
+                .link-korzinka {
+                    display: none;
+                }
+            }
+        }
+        .secondContainer {
+            h1 {
+                font-weight: bold;
+                font-size: 38px;
+                line-height: 100%;
+            }
+            .button_next, .button_prev, .swiper-button-next,.swiper-button-prev {
+                display: flex;
+            }
+            .swiper-pagination {
+                display: none;
+                justify-content: center;
+            }
+        }
+    }
 
     @media screen and (max-width:900px) and (min-width: 600px){
         padding: 0 !important;
@@ -640,6 +958,11 @@ const ProductCardWrapper = styled.div`
     }
 
 
+    @media screen and (max-width:760px) and (min-width:0px) {
+         .product-swiper-card {
+             border: none !important;
+        }
+    }
 
     @media screen and (min-width: 1920px){
         .contant-title-1 {
@@ -648,7 +971,6 @@ const ProductCardWrapper = styled.div`
             }
         }
     }
-
 `;
 
 export default ProductCardWrapper;
