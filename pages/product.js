@@ -6,7 +6,7 @@ import {
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import ProductWrapper from "../Wrappers/productWrapper";
+import ProductWrapper from "../Wrappers/ProductWrapper";
 import Header from "./../Containers/Header/Header";
 import Footer from "../Containers/Footer/Footer"
 import { makeStyles } from "@material-ui/core/styles";
@@ -172,16 +172,14 @@ const Product = () => {
                             {value.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex align-items-center ${
-                                    show ? "" : "d-none"
-                                  }`}
+                                  className={`d-flex align-items-center ${show ? "" : "d-none"
+                                    }`}
                                   key={index}
                                 >
                                   <button
                                     onClick={() => toggle(index)}
-                                    className={` box me-2 ${
-                                      checked == index ? "active" : ""
-                                    }`}
+                                    className={` box me-2 ${checked == index ? "active" : ""
+                                      }`}
                                   ></button>
                                   <p className="my-1 subtitle">
                                     {value.subtitle}
@@ -220,9 +218,8 @@ const Product = () => {
                             {value.name.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex justify-content-between ${
-                                    show2 ? "" : "d-none"
-                                  }`}
+                                  className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                    }`}
                                   key={index}
                                 >
                                   <div className="d-flex align-items-center mt-2">
@@ -436,7 +433,7 @@ const Product = () => {
           </div>
         </div>
       </ProductWrapper>
-              <Footer />
+      <Footer />
       <ModalProduct />
     </>
   );
