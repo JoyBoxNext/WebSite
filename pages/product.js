@@ -5,11 +5,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "@material-ui/core";
 import React, { useState } from "react";
-import CloseIcon from "@material-ui/icons/Close";
 import ProductWrapper from "../Wrappers/productWrapper";
-import Container from "./../Containers/Container";
 import Header from "./../Containers/Header/Header";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -23,6 +20,7 @@ import { dispatch } from "../redux/Store";
 import Link from "next/link";
 import { bigCategores, categores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
+import ModalProduct from "../Components/ModalProduct";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -31,6 +29,7 @@ function TabPanel(props) {
     dispatch(action);
   };
   phoneData();
+
   return (
     <div
       role="tabpanel"
@@ -72,7 +71,6 @@ const Product = () => {
 
   const [show, setShow] = useState(true);
   const [show2, setShow2] = useState(true);
-  const [openInput, setOpenInput] = useState(false);
   const checked = useSelector((state) => state.BooksReducer.chekbox);
   const toggle = (i) => {
     if (checked == -1) {
@@ -91,19 +89,19 @@ const Product = () => {
   const hide2 = () => {
     setShow2(!show2);
   };
-  
-
-  const showInput = () => {
-    setOpenInput(!openInput);
-  };
 
   const data = useSelector((state) => state.BooksReducer.filterdata);
 
   const saveProduct = (index) => {
     const saveProd = (data[index].save = !data[index].save);
-    console.log(saveProd, index);
+    const action = { type: "A", payload: index };
+    dispatch(action);
+    console.log(data[index].save, index);
   };
-
+  const [openInput, setOpenInput] = useState(true);
+  const open = () => {
+    setOpenInput(!openInput);
+  };
   return (
     <>
       <Header />
@@ -173,14 +171,16 @@ const Product = () => {
                             {value.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex align-items-center ${show ? "" : "d-none"
-                                    }`}
+                                  className={`d-flex align-items-center ${
+                                    show ? "" : "d-none"
+                                  }`}
                                   key={index}
                                 >
                                   <button
                                     onClick={() => toggle(index)}
-                                    className={` box me-2 ${checked == index ? "active" : ""
-                                      }`}
+                                    className={` box me-2 ${
+                                      checked == index ? "active" : ""
+                                    }`}
                                   ></button>
                                   <p className="my-1 subtitle">
                                     {value.subtitle}
@@ -219,8 +219,9 @@ const Product = () => {
                             {value.name.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex justify-content-between ${show2 ? "" : "d-none"
-                                    }`}
+                                  className={`d-flex justify-content-between ${
+                                    show2 ? "" : "d-none"
+                                  }`}
                                   key={index}
                                 >
                                   <div className="d-flex align-items-center mt-2">
@@ -262,7 +263,7 @@ const Product = () => {
           <div className="Sidebar">
             <div className="container ">
               <div className="d-flex justify-content-between align-items-center">
-                <h1 onClick={showInput}  className="title my-4">Удивляйся и удивляй!</h1>
+                <h1 className="title my-4">Удивляйся и удивляй!</h1>
               </div>
               <div className="row justify-content-center">
                 {data?.map((value, index) => {
@@ -367,7 +368,10 @@ const Product = () => {
             <div className="row w-100 mt-5">
               {rightSide.map((value, index) => {
                 return (
-                  <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12 col-xxl-12 mb-4" key={index}>
+                  <div
+                    className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12 col-xxl-12 mb-4"
+                    key={index}
+                  >
                     <div className="right_flex d-xl-flex">
                       <div className="d-flex justify-content-center align-items-center">
                         <img
@@ -430,41 +434,9 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <div
-          // modal_product
-          className={`row modal_product justify-content-center align-items-center ${openInput ? "active" : ""
-            }`}
-        >
-          <div className="col-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 ">
-            <div className="p-4 bg-white  input_group">
-              <h3 className="text-center fw-bold">Оставь заявку</h3>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Твоё имя *"
-              />
-              <input
-                type="text"
-                className="form-control my-3"
-                placeholder="Твой номер телефона *"
-              />
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Твой номер телеграм *"
-              />
-              <div className="d-flex justify-content-center align-items-center mt-3">
-                <Button className="button">Оставить заявку</Button>
-                <Button onClick={showInput} className="times">
-                  <b>
-                    <CloseIcon className="icon fw-bold" />
-                  </b>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
       </ProductWrapper>
+
+      <ModalProduct />
     </>
   );
 };

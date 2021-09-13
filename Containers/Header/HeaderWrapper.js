@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
+  /* position: sticky;
+  background-color: #ffe5dc;
+  z-index: 12000;
+  top: 0px; */
   .logo {
     height: 50px;
   }
@@ -78,13 +82,14 @@ const HeaderWrapper = styled.div`
   .korzina {
     position: absolute;
     width: 400px;
-    top: 60px;
-    left: 40px;
+    top: 59px;
+    left: -100px;
     font-weight: bold;
     padding: 20px;
     overflow-y: auto;
     z-index: 2;
     background-color: #fff;
+    z-index: 1000;
 
     .title {
       font-size: 11px;
