@@ -452,7 +452,6 @@ export default function Home() {
                     // "spaceBetween": 50
                   }
                 }}>
-              >
                 {LaptopData.map((v, i) => {
                   return (
                     <SwiperSlide className=" h-100 p-3" key={i}>
