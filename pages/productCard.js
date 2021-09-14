@@ -57,7 +57,7 @@ const ProductCard = () => {
                                 </div>
                             </div>
                             <div className="row colorMemories mt-3">
-                                <div className="col-6 col-sm-">
+                                <div className="col-6">
                                     <p className="">Цвет товара: <span>Черный</span></p>
                                     <div className="colorBoxes">
                                         <div className="p-2">
@@ -74,7 +74,7 @@ const ProductCard = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className=" col-6 col-sm-">
+                                <div className=" col-6">
                                     <p className="">Память:</p>
                                     <div className="row">
                                         <div className="memorie">
@@ -91,7 +91,7 @@ const ProductCard = () => {
                                     </div>
                                 </div>
                                 <div className="row priceButton">
-                                    <div className="prices col-sm- mt-4">
+                                    <div className="prices mt-4">
                                         <div className="d-flex justify-content-between">
                                             <h4 className="oldPrice">16 800 000</h4>
                                             <p className="badge d-flex align-items-center rounded-0 text-dark m-0">1 330 000 сум</p>
@@ -99,7 +99,7 @@ const ProductCard = () => {
                                         <h3 className="price fw-bold"><span className="bigPrice">15</span>,470,999</h3>
                                         <p className="rentPrice">от 1 362 000 сум/мес</p>
                                     </div>
-                                    <div className="button col-sm- d-flex flex-wrap">
+                                    <div className="button d-flex flex-wrap">
                                         <Button className="checkout">Оформить заказ</Button>
                                         <Link href="/"><a className="link-korzinka">Перейти в корзину</a></Link>
                                     </div>

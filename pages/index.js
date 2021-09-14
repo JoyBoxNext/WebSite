@@ -443,7 +443,7 @@ export default function Home() {
                           <div className=" h-100 p-3" key={i}>
                             <div className="laptop-card p-2" key={i}>
                               <img className="w-100" src={v.img} alt="" />
-                              <Link href="/test">
+                              <Link href="/">
                                 <a>
                                   <p className=" title fw-bold mt-2">
                                     {v.title}

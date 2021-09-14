@@ -37,7 +37,9 @@ const ProductCardWrapper = styled.div`
                 border: 1px solid blue;
             }
             .bigimg {
-            width: 230px ;
+                width: 100% !important;
+                object-fit: cover;
+            /* width: 230px ; */
             /* max-height: 530px;             */
             }
         }
@@ -433,7 +435,7 @@ const ProductCardWrapper = styled.div`
         .firstContainer {
             display: flex !important;
             background-color: transparent;
-            justify-content: space-between;
+            /* justify-content: space-between; */
             .firstContainerMacbook {
                 display: flex !important;
                 flex-wrap: wrap;
@@ -508,8 +510,7 @@ const ProductCardWrapper = styled.div`
             }
             
             .characteristic-container {
-                order: 10;
-                max-width: 100% !important;
+                /* max-width: 100% !important; */
                 .characteristic {
                     max-width: 100% !important;
                 }
@@ -737,8 +738,11 @@ const ProductCardWrapper = styled.div`
             .firstContainerIpad {
                 display: flex !important;
                 .images {
-                width: 480px;
+                width: 400px;
                 display: flex !important;
+                .bigimg {
+                    max-width: 300px;
+                }
                 }
                 .colorMemories {
                     display: block;
@@ -878,8 +882,11 @@ const ProductCardWrapper = styled.div`
         .firstContainer {
             background-color: transparent;
             .images {
-                max-width: 335px;
+                max-width: 100% !important;
                 display: flex !important;
+                .bigimg {
+                    width: 200px;
+                }
             }
             .colorMemories {
                 .colorBoxes, .memorie {
