@@ -181,16 +181,17 @@ const Product = () => {
                               </h4>
                               <div className="d-flex justify-content-between align-items-center">
                                 <p className="mb-0 desc">{value.desc}</p>
-                                <Button
+                                <div
+                                  style={{ cursor: "pointer" }}
                                   className="bag"
                                   onClick={() => savebaraxolka(index)}
                                 >
                                   <img
                                     className="w-auto h-auto"
                                     src="icon.png"
-                                    alt=""
+                                    alt="photo"
                                   />
-                                </Button>
+                                </div>
                               </div>
                             </div>
                           </div>

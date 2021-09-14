@@ -34,9 +34,6 @@ const HomeWrapper = styled.div`
       .productDayText .left_clock {
         font-size: 10px !important;
       }
-      .right_price {
-        font-size: 10px !important;
-      }
     }
 
     @media screen and (min-width: 1025px) {
@@ -194,7 +191,7 @@ const HomeWrapper = styled.div`
           font-family: Roboto;
           font-style: normal;
           font-weight: bold;
-          font-size: 9.50027px;
+          font-size: 11px;
           line-height: 100%;
           text-decoration-line: line-through;
           padding: 0;
@@ -647,8 +644,8 @@ const HomeWrapper = styled.div`
       width: 150px !important;
     }
     .oldPrice,
-    .badgePrice {
-      font-size: 12px !important;
+    .salePrice .badgePrice {
+      font-size: 14px !important;
     }
   }
   @media screen and (max-width: 1025px) {
@@ -664,9 +661,10 @@ const HomeWrapper = styled.div`
       width: 130px !important;
     }
     .oldPrice,
+    .salePrice,
     .badgePrice,
     .sum {
-      font-size: 10px !important;
+      font-size: 12px !important;
     }
     .small_price {
       font-size: 12px;
@@ -676,6 +674,24 @@ const HomeWrapper = styled.div`
     }
     .bag {
       padding: 15px;
+    }
+    .left_title {
+      font-size: 12px;
+    }
+    .left_clock {
+      font-size: 25px;
+    }
+    .left_subtitle {
+      font-size: 14px;
+    }
+    .yellowCont p {
+      font-size: 14px;
+    }
+    .yellowCont h2 {
+      font-size: 25px;
+    }
+    .right_title {
+      font-size: 25px;
     }
   }
   @media screen and (max-width: 750px) {
