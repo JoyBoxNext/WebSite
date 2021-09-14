@@ -459,7 +459,7 @@ const Product = () => {
         </div>
       </ProductWrapper>
       <Footer />
-      <ModalProduct />
+      {/* <ModalProduct /> */}
     </>
   );
 };

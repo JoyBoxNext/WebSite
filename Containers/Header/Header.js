@@ -280,7 +280,12 @@ const Header = () => {
                             <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <p className="mb-0 price fw-bold">{value.price}</p>
+                          <h6 className="fw-bold mb-0">
+                            <span className="big_text mb-0 price">
+                              {value.big_price}
+                            </span>
+                            {value.price}
+                          </h6>
                         </div>
                         <div>
                           <h6
@@ -310,7 +315,12 @@ const Header = () => {
                             <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <p className="mb-0 price fw-bold">{value.price}</p>
+                          <h6 className="fw-bold mb-0">
+                            <span className="big_text mb-0 price">
+                              {value.big_price}
+                            </span>
+                            {value.price}
+                          </h6>
                         </div>
                         <div>
                           <h6
@@ -340,7 +350,12 @@ const Header = () => {
                             <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <p className="mb-0 price fw-bold">{value.price}</p>
+                          <h6 className="fw-bold mb-0">
+                            <span className="big_text mb-0 price">
+                              {value.big_price}
+                            </span>
+                            {value.price}
+                          </h6>
                         </div>
                         <div>
                           <h6
@@ -370,7 +385,12 @@ const Header = () => {
                             <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <p className="mb-0 price fw-bold">{value.price}</p>
+                          <h6 className="fw-bold mb-0">
+                            <span className="big_text mb-0 price">
+                              {value.priceBig}
+                            </span>
+                            {value.price}
+                          </h6>
                         </div>
                         <div>
                           <h6
@@ -400,7 +420,12 @@ const Header = () => {
                             <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <p className="mb-0 price fw-bold">{value.price}</p>
+                          <h6 className="fw-bold mb-0">
+                            <span className="big_text mb-0 price">
+                              {value.priceBig}
+                            </span>
+                            {value.price}
+                          </h6>
                         </div>
                         <div>
                           <h6
@@ -430,7 +455,12 @@ const Header = () => {
                             <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <p className="mb-0 price fw-bold">{value.price}</p>
+                          <h6 className="fw-bold mb-0">
+                            <span className="big_text mb-0 price">
+                              {value.priceBig}
+                            </span>
+                            {value.price}
+                          </h6>
                         </div>
                         <div>
                           <h6
@@ -452,7 +482,7 @@ const Header = () => {
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <p className="mb-0 title fw-bold ">{value.title}</p>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
@@ -461,7 +491,12 @@ const Header = () => {
                             <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <p className="mb-0 price fw-bold">{value.price}</p>
+                          <h6 className="fw-bold mb-0">
+                            <span className="big_text mb-0 price">
+                              {value.priceBig}
+                            </span>
+                            {value.price}
+                          </h6>
                         </div>
                         <div>
                           <h6

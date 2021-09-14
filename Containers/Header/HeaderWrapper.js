@@ -29,6 +29,10 @@ const HeaderWrapper = styled.div`
     .inputOrder {
       order: 1;
     }
+    .search,
+    .input-group {
+      margin-top: 30px;
+    }
   }
   .search {
     background-color: #ff5314;
@@ -85,7 +89,7 @@ const HeaderWrapper = styled.div`
   }
   .korzina {
     position: absolute;
-    width: 200px;
+    width: 400px;
     top: 59px;
     left: -100px;
     font-weight: bold;
@@ -93,7 +97,7 @@ const HeaderWrapper = styled.div`
     overflow-y: auto;
     z-index: 2;
     background-color: #fff;
-    z-index: 1000;
+    z-index: 1002;
 
     .title {
       font-size: 11px;

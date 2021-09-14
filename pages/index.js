@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Containers/Header/Header";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
@@ -140,7 +139,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="d-flex  justify-content-between  w-100">
-                    <img src="logo3.png top_title" alt="" />
+                    <img src="logo3.png top_title" alt="photo" />
                     <p className="bottom-text w-auto">
                       Магазин бытовой техники <br /> и электроники
                     </p>
@@ -184,7 +183,7 @@ export default function Home() {
           {/* Container-2 */}
           <div className="container-2 mt-5">
             <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
-            <div className="cards d-flex flex-wrap">
+            <div className="cards d-flex">
               {homeData.map((v, i) => {
                 return (
                   <div className={`card m-1 p-3 ${v.className}`} key={i}>
@@ -248,7 +247,7 @@ export default function Home() {
           {/* ProductDay */}
           <div className="productDay mt-5">
             <div className="row">
-              <div className="col-lg-5">
+              <div className="col-5 col-sm-5 col-md-5 col-lg-5">
                 <div className="productDayText">
                   <p className="mb-0 left_title">Товар дня</p>
                   <h1 className="mb-0 left_clock">17.08</h1>
@@ -262,10 +261,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-7">
+              <div className="col-7 col-sm-7 col-md-7 col-lg-7 col-lg-7">
                 <div className="productBoard">
                   <div className="row">
-                    <div className="col-12 col-lg-6">
+                    <div className="col-6 col-lg-6">
                       <h2 className="right_title">
                         Samsung side by side-washer
                       </h2>

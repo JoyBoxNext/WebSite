@@ -83,6 +83,9 @@ const HomeWrapper = styled.div`
       .flex3 .home_wonder_title {
         font-size: 30px !important;
       }
+      .productBoard .right_title {
+        font-size: 10px !important;
+      }
     }
 
     @media screen and (max-width: 830px) {
@@ -126,6 +129,10 @@ const HomeWrapper = styled.div`
       .btn_links {
         font-size: 10px !important;
         padding: 0 8px !important;
+      }
+      .cards {
+        display: flex !important;
+        flex-wrap: wrap !important;
       }
     }
 
@@ -267,88 +274,142 @@ const HomeWrapper = styled.div`
         font-weight: lighter;
       }
     }
-  }
 
-  //productDay
-  .productDay {
-    background-image: url("BgProductDay.png");
-    background-size: cover;
-    width: 100% !important;
-    height: 350px;
-    /* padding: 30px; */
-    display: flex;
-    h2 {
-      font-size: 29px;
-    }
-    .productDayText {
-      width: 100%;
-      margin: 68px 70px 66px 64px;
-    }
-    .productBoard {
-      width: 90%;
-      height: 299px;
-      background-color: white;
-      margin: 25px 100px 25px 0;
-      padding: 30px 40px !important;
-      .oldPrice {
-        font-size: 20px;
-        text-decoration: line-through;
-        font-weight: bold;
+    //productDay
+    .productDay {
+      background-image: url("BgProductDay.png");
+      background-size: cover;
+      width: 100% !important;
+      height: 350px;
+      /* padding: 30px; */
+      display: flex;
+      .right_title {
+        font-size: 29px;
       }
-      .salePrice {
-        font-size: 12px;
-        font-weight: bold;
-        background-color: #d3e38c;
-        padding: 2px 5px;
-        color: black !important;
+      .productDayText {
+        width: 100%;
+        margin: 68px 70px 66px 64px;
       }
-      .bgPrice {
-        background-color: #ff5314;
-        color: white;
-        padding: 5px 15px;
-        margin-top: 10px;
-        .small {
-          font-size: 12px !important;
-          padding: 0;
-          margin: 0;
+      .productBoard {
+        width: 90%;
+        height: 299px;
+        background-color: white;
+        margin: 25px 100px 25px 0;
+        padding: 30px 40px !important;
+        .oldPrice {
+          font-size: 20px;
+          text-decoration: line-through;
+          font-weight: bold;
         }
-        .price {
-          font-size: 22px;
-          margin: 0;
-          padding: 0;
+        .salePrice {
+          font-size: 12px;
+          font-weight: bold;
+          background-color: #d3e38c;
+          padding: 2px 5px;
+          color: black !important;
         }
-      }
+        .bgPrice {
+          background-color: #ff5314;
+          color: white;
+          padding: 5px 15px;
+          margin-top: 10px;
+          .small {
+            font-size: 12px !important;
+            padding: 0;
+            margin: 0;
+          }
+          .price {
+            font-size: 22px;
+            margin: 0;
+            padding: 0;
+          }
+        }
 
-      .productDayWasher {
+        .productDayWasher {
+          width: 100% !important;
+        }
+      }
+      .yellowCont {
+        background-color: #fff9b0;
+        display: inline-block;
+        padding: 7px 15px;
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    //Container-2
+    .container-2 {
+      background: url("/Korobka.png"), #2525eb;
+      background-size: 100% 100%;
+      color: white;
+      padding: 30px 30px;
+      margin-bottom: 30px;
+      .container2_photo {
         width: 100% !important;
       }
-    }
-    .yellowCont {
-      background-color: #fff9b0;
-      display: inline-block;
-      padding: 7px 15px;
-      p {
-        margin: 0;
-        padding: 0;
+      .cards {
+        margin-bottom: 30px;
+        .card {
+          border: 2px solid #ff8253;
+          margin: auto;
+          .title {
+            line-height: 16px !important;
+            font-size: 12px;
+            margin-bottom: 10px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+          .small {
+            .oldPrice {
+              font-size: 10px;
+              text-decoration: line-through;
+              color: gray;
+              padding: 0;
+              margin: 0;
+              .sum {
+                font-size: 8px;
+                text-decoration: none !important;
+                text-decoration: transparent !important;
+              }
+            }
+            .badgePrice {
+              font-size: 8px;
+              background-color: #d3e38c;
+              padding: 2px 5px;
+              color: black !important;
+            }
+          }
+          .prices {
+            span {
+              font-size: 25px;
+            }
+            .rentPrice {
+              font-size: 10px;
+              text-decoration: underline;
+              color: gray;
+            }
+          }
+          img {
+            /* max-height: 206px; */
+            max-width: 172px;
+            margin: auto !important;
+            display: flex;
+          }
+          .bag {
+            background-color: #ff5314;
+          }
+        }
       }
     }
-  }
 
-  //Container-2
-  .container-2 {
-    background: url("/Korobka.png"), #2525eb;
-    background-size: 100% 100%;
-    color: white;
-    padding: 30px 30px;
-    margin-bottom: 30px;
-    .container2_photo {
-      width: 100% !important;
-    }
-    .cards {
+    //ChooseClients
+    .choose {
       margin-bottom: 30px;
-      .card {
-        border: 2px solid #ff8253;
-        /* max-width: 230px; */
+      .choose-card {
+        border: 10px solid #ff8253;
         margin: auto;
         .title {
           line-height: 16px !important;
@@ -388,7 +449,6 @@ const HomeWrapper = styled.div`
           }
         }
         img {
-          /* max-height: 206px; */
           max-width: 172px;
           margin: auto !important;
           display: flex;
@@ -398,105 +458,112 @@ const HomeWrapper = styled.div`
         }
       }
     }
-  }
 
-  //ChooseClients
-  .choose {
-    margin-bottom: 30px;
-    .choose-card {
-      border: 10px solid #ff8253;
-      margin: auto;
-      .title {
-        line-height: 16px !important;
-        font-size: 12px;
-        margin-bottom: 10px !important;
-        padding: 0 !important;
-        margin: 0 !important;
+    //Container-mi
+    .container-mi {
+      background-color: #a8c9c8;
+      height: 90px;
+      position: relative !important;
+
+      .miicon {
+        margin: 25px 12px;
       }
-      .small {
-        .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
-          padding: 0;
+      .img {
+        position: absolute !important;
+        right: 0px !important;
+        display: flex;
+        img {
+          max-width: 100% !important;
+          object-fit: cover;
+        }
+      }
+    }
+
+    //New-Products
+    .new-products {
+      padding: 0 30px;
+      margin-bottom: 30px;
+      .new-product-cards {
+        border: 5px solid #2525eb;
+        padding: 0 !important;
+        .new-product-card {
+          border: 2px solid #2525eb66;
+          max-width: 230px;
           margin: 0;
-          .sum {
-            font-size: 8px;
-            text-decoration: none !important;
-            text-decoration: transparent !important;
+          border-top: 0;
+          border-bottom: 0;
+          .title {
+            line-height: 16px;
+            font-size: 14px;
+            margin-bottom: 10px !important;
+          }
+          .small {
+            .oldPrice {
+              font-size: 10px;
+              text-decoration: line-through;
+              color: gray;
+              .sum {
+                font-size: 8px;
+                text-decoration: none !important;
+                text-decoration: transparent !important;
+              }
+            }
+            .badgePrice {
+              font-size: 8px;
+              background-color: #d3e38c;
+              padding: 2px 5px;
+              color: black !important;
+            }
+          }
+          .prices {
+            span {
+              font-size: 25px;
+            }
+            .rentPrice {
+              font-size: 10px;
+              text-decoration: underline;
+              color: gray;
+            }
+          }
+          img {
+            max-height: 206px;
+            max-width: 172px;
           }
         }
-        .badgePrice {
-          font-size: 8px;
-          background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
+      }
+      .button {
+        button {
+          padding: 10px 35px;
+          background-color: #ff5314;
+          color: white;
+          font-weight: bold;
+          border-radius: 15px;
         }
       }
-      .prices {
-        span {
-          font-size: 25px;
-        }
-        .rentPrice {
-          font-size: 10px;
-          text-decoration: underline;
-          color: gray;
-        }
-      }
-      img {
-        max-width: 172px;
-        margin: auto !important;
-        display: flex;
-      }
-      .bag {
-        background-color: #ff5314;
-      }
     }
-  }
 
-  //Container-mi
-  .container-mi {
-    background-color: #a8c9c8;
-    height: 90px;
-    position: relative !important;
-
-    .miicon {
-      margin: 25px 12px;
-    }
-    .img {
-      position: absolute !important;
-      right: 0px !important;
-      display: flex;
-      img {
-        max-width: 100% !important;
-        object-fit: cover;
-      }
-    }
-  }
-
-  //New-Products
-  .new-products {
-    padding: 0 30px;
-    margin-bottom: 30px;
-    .new-product-cards {
-      border: 5px solid #2525eb;
-      padding: 0 !important;
-      .new-product-card {
-        border: 2px solid #2525eb66;
+    //Laptops
+    .laptops {
+      padding: 0 16px;
+      margin-bottom: 30px;
+      .laptop-card {
+        border: 2px solid #2525eb;
         max-width: 230px;
-        margin: 0;
-        border-top: 0;
-        border-bottom: 0;
+        margin: auto;
         .title {
-          line-height: 16px;
-          font-size: 14px;
+          line-height: 16px !important;
+          font-size: 12px;
           margin-bottom: 10px !important;
+          padding: 0 !important;
+          margin: 0 !important;
         }
         .small {
           .oldPrice {
             font-size: 10px;
             text-decoration: line-through;
             color: gray;
+            padding: 0;
+            margin: 0;
             .sum {
               font-size: 8px;
               text-decoration: none !important;
@@ -523,105 +590,44 @@ const HomeWrapper = styled.div`
         img {
           max-height: 206px;
           max-width: 172px;
+          margin: auto !important;
+          display: flex;
+        }
+        .bag {
+          background-color: #ff5314;
         }
       }
     }
-    .button {
-      button {
+    .bag {
+      background-color: #ff5314;
+      padding: 20px;
+      margin: auto;
+      border-radius: 50%;
+      position: relative;
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .title-section {
+      font-size: 45px;
+      font-weight: bold;
+    }
+
+    .brands {
+      .button_bottom {
         padding: 10px 35px;
         background-color: #ff5314;
         color: white;
         font-weight: bold;
         border-radius: 15px;
+        width: auto;
+        border: none;
       }
+      //Slick
     }
-  }
-
-  //Laptops
-  .laptops {
-    padding: 0 16px;
-    margin-bottom: 30px;
-    .laptop-card {
-      border: 2px solid #2525eb;
-      max-width: 230px;
-      margin: auto;
-      .title {
-        line-height: 16px !important;
-        font-size: 12px;
-        margin-bottom: 10px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      .small {
-        .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
-          padding: 0;
-          margin: 0;
-          .sum {
-            font-size: 8px;
-            text-decoration: none !important;
-            text-decoration: transparent !important;
-          }
-        }
-        .badgePrice {
-          font-size: 8px;
-          background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
-        }
-      }
-      .prices {
-        span {
-          font-size: 25px;
-        }
-        .rentPrice {
-          font-size: 10px;
-          text-decoration: underline;
-          color: gray;
-        }
-      }
-      img {
-        max-height: 206px;
-        max-width: 172px;
-        margin: auto !important;
-        display: flex;
-      }
-      .bag {
-        background-color: #ff5314;
-      }
-    }
-  }
-  .bag {
-    background-color: #ff5314;
-    padding: 20px;
-    margin: auto;
-    border-radius: 50%;
-    position: relative;
-    img {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-  .title-section {
-    font-size: 45px;
-    font-weight: bold;
-  }
-
-  .brands {
-    .button_bottom {
-      padding: 10px 35px;
-      background-color: #ff5314;
-      color: white;
-      font-weight: bold;
-      border-radius: 15px;
-      width: auto;
-      border: none;
-    }
-    //Slick
   }
 `;
 

@@ -57,4 +57,4 @@ const ChooseData = [
   },
 ];
 
-export { ChooseData };
+export  {ChooseData};
