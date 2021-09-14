@@ -24,7 +24,6 @@ import "swiper/css/pagination";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Header from "../Containers/Header/Header";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import { useSelector } from "react-redux";
@@ -232,12 +231,9 @@ export default function Home() {
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
-                      <Button
-                        onClick={() => saveHomeProduct(i)}
-                        className="bag"
-                      >
-                        <img src="bag.svg" alt="photo" />
-                      </Button>
+                      <button onClick={() => saveHomeProduct(i)} className="bag border-0">
+                        <img className="w-auto h-auto" src="icon.png" alt="" />
+                      </button>
                     </div>
                   </div>
                 );
@@ -378,13 +374,9 @@ export default function Home() {
                                   от {v.rentPrice} сум/мес
                                 </p>
                               </div>
-                              <div
-                                onClick={() => saveChooseDatas(i)}
-                                className="bag"
-                                style={{ cursor: "pointer" }}
-                              >
-                                <img src="bag.svg" alt="" />
-                              </div>
+                              <button onClick={() => saveHomeProduct(i)} className="bag border-0">
+                                <img className="w-auto h-auto" src="icon.png" alt="" />
+                              </button>
                             </div>
                           </div>
                         </a>
@@ -448,13 +440,9 @@ export default function Home() {
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
-                      <div
-                        style={{ cursor: "pointer" }}
-                        onClick={() => saveNewsData(i)}
-                        className="bag"
-                      >
-                        <img src="bag.svg" alt="" />
-                      </div>
+                      <button onClick={() => saveHomeProduct(i)} className="bag border-0">
+                        <img className="w-auto h-auto" src="icon.png" alt="" />
+                      </button>
                     </div>
                   </div>
                 );
@@ -532,13 +520,9 @@ export default function Home() {
                                     от {v.rentPrice} сум/мес
                                   </p>
                                 </div>
-                                <div
-                                  style={{ cursor: "pointer" }}
-                                  onClick={() => saveNotebookData(i)}
-                                  className="bag"
-                                >
-                                  <img src="bag.svg" alt="photo" />
-                                </div>
+                                <button onClick={() => saveHomeProduct(i)} className="bag border-0">
+                                  <img className="w-auto h-auto" src="icon.png" alt="" />
+                                </button>
                               </div>
                             </div>
                           </div>
