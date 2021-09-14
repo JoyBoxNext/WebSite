@@ -185,7 +185,11 @@ const Product = () => {
                                   className="bag"
                                   onClick={() => savebaraxolka(index)}
                                 >
-                                  <img src="bag.svg" alt="" />
+                                  <img
+                                    className="w-auto h-auto"
+                                    src="icon.png"
+                                    alt=""
+                                  />
                                 </Button>
                               </div>
                             </div>
