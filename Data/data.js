@@ -446,8 +446,8 @@ const home_images = [
   { img: "home_me.png" },
   { img: "home_samsung.png" },
   { img: "home_vivo.png" },
-  { img: "home_apple.png", className: "apple" },
-  { img: "home_lg.png" },
+  { img: "home_apple.png" },
+  { img: "home_lg.png", className: "lg" },
 ];
 
 export {

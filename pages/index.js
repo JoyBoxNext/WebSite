@@ -28,6 +28,7 @@ import { dispatch } from "../redux/Store";
 import { useSelector } from "react-redux";
 import { homeDatas } from "../Data/homeData";
 import { ChooseData } from "./../Data/ChooseData";
+import Header from "./../Containers/Header/Header";
 
 export default function Home() {
   //==========homeFunction==========
@@ -230,7 +231,10 @@ export default function Home() {
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
-                      <button onClick={() => saveHomeProduct(i)} className="bag border-0">
+                      <button
+                        onClick={() => saveHomeProduct(i)}
+                        className="bag border-0"
+                      >
                         <img className="w-auto h-auto" src="icon.png" alt="" />
                       </button>
                     </div>
@@ -373,8 +377,15 @@ export default function Home() {
                                   от {v.rentPrice} сум/мес
                                 </p>
                               </div>
-                              <button onClick={() => saveHomeProduct(i)} className="bag border-0">
-                                <img className="w-auto h-auto" src="icon.png" alt="" />
+                              <button
+                                onClick={() => saveHomeProduct(i)}
+                                className="bag border-0"
+                              >
+                                <img
+                                  className="w-auto h-auto"
+                                  src="icon.png"
+                                  alt=""
+                                />
                               </button>
                             </div>
                           </div>
@@ -415,10 +426,15 @@ export default function Home() {
               {NewProductCards.map((v, i) => {
                 return (
                   <div className="new-product-card p-2" key={i}>
-                    <img src={v.img} alt="" />
+                    <img
+                      style={{ objectFit: "contain" }}
+                      className="w-100 h-50"
+                      src={v.img}
+                      alt="photo"
+                    />
                     <Link href="/productCard">
                       <a>
-                        <p className=" title fw-bold mt-2">{v.title}</p>
+                        <p className="title fw-bold mt-2">{v.title}</p>
                       </a>
                     </Link>
                     <div className="small d-flex">
@@ -439,7 +455,10 @@ export default function Home() {
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
-                      <button onClick={() => saveHomeProduct(i)} className="bag border-0">
+                      <button
+                        onClick={() => saveHomeProduct(i)}
+                        className="bag border-0"
+                      >
                         <img className="w-auto h-auto" src="icon.png" alt="" />
                       </button>
                     </div>
@@ -467,23 +486,28 @@ export default function Home() {
                 navigation={true}
                 className="mySwiper"
                 breakpoints={{
-                  "300": {
-                    "slidesPerView": 1,
+                  300: {
+                    slidesPerView: 1,
                     // "spaceBetween": 20
                   },
-                  "768": {
-                    "slidesPerView": 2,
+                  768: {
+                    slidesPerView: 2,
                     // "spaceBetween": 40
                   },
-                  "1024": {
-                    "slidesPerView": 4,
+                  940: {
+                    slidesPerView: 3,
+                    // "spaceBetween": 40
+                  },
+                  1024: {
+                    slidesPerView: 4,
                     // "spaceBetween": 50
                   },
-                  "1920": {
-                    "slidesPerView": 5,
+                  1920: {
+                    slidesPerView: 5,
                     // "spaceBetween": 50
-                  }
-                }}>
+                  },
+                }}
+              >
                 {LaptopData.map((v, i) => {
                   return (
                     <SwiperSlide className=" h-100 p-3" key={i}>
@@ -491,7 +515,7 @@ export default function Home() {
                         <a>
                           <div className=" h-100 p-3" key={i}>
                             <div className="laptop-card p-2" key={i}>
-                              <img className="w-100" src={v.img} alt="" />
+                              <img src={v.img} alt="photo" />
                               <Link href="/">
                                 <a>
                                   <p className=" title fw-bold mt-2">
@@ -519,8 +543,15 @@ export default function Home() {
                                     от {v.rentPrice} сум/мес
                                   </p>
                                 </div>
-                                <button onClick={() => saveHomeProduct(i)} className="bag border-0">
-                                  <img className="w-auto h-auto" src="icon.png" alt="" />
+                                <button
+                                  onClick={() => saveHomeProduct(i)}
+                                  className="bag border-0"
+                                >
+                                  <img
+                                    className="w-auto h-auto"
+                                    src="icon.png"
+                                    alt=""
+                                  />
                                 </button>
                               </div>
                             </div>
@@ -543,11 +574,18 @@ export default function Home() {
           <div className="brands">
             <div className="py-5">
               <h1 className="title-section">Популярные бренды</h1>
-              <div className="row justify-content-center align-items-center">
+              <div className="row flex-wrap justify-content-center align-items-center">
                 {home_images.map((value, index) => {
                   return (
-                    <div className={`col-xl-2 ${value.className}`} key={index}>
-                      <img className="home_photo" src={value.img} alt="photo" />
+                    <div
+                      className={`col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 ${value.className}`}
+                      key={index}
+                    >
+                      <img
+                        className="home_photo mt-4"
+                        src={value.img}
+                        alt="photo"
+                      />
                     </div>
                   );
                 })}

@@ -629,6 +629,16 @@ const HomeWrapper = styled.div`
       //Slick
     }
   }
+  .home_photo {
+    width: 150px;
+    height: 80px;
+    object-fit: contain;
+  }
+  @media screen and (max-width: 600px) {
+    .lg {
+      display: none !important;
+    }
+  }
 `;
 
 export default HomeWrapper;

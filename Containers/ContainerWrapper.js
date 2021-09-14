@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ContainerWrapper = styled.div`
   @media screen and (max-width: 1980px) {
-    padding: 0px 260px 0 260px;
+    padding: 0px 200px 0 200px;
     .contant {
       /* max-width: 1400px; */
     }

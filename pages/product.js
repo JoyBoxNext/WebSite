@@ -21,6 +21,7 @@ import { dispatch } from "../redux/Store";
 import Link from "next/link";
 import { bigCategores, categores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
+import ModalProduct from "../Components/ModalProduct";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -292,7 +293,7 @@ const Product = () => {
                 {data?.map((value, index) => {
                   return (
                     <div
-                      className="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
+                      className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
                       key={index}
                     >
                       <div className="cards_border ">
@@ -392,7 +393,7 @@ const Product = () => {
               {rightSelectorData.map((value, index) => {
                 return (
                   <div
-                    className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12 col-xxl-12 mb-4"
+                    className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"
                     key={index}
                   >
                     <div className="right_flex d-xl-flex">
@@ -459,7 +460,7 @@ const Product = () => {
         </div>
       </ProductWrapper>
       <Footer />
-      {/* <ModalProduct /> */}
+      {/* <ModalProduct openInput={openInput} /> */}
     </>
   );
 };
