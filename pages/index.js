@@ -7,7 +7,6 @@ import LaptopData from "../Data/LaptopData";
 import { Button } from "@material-ui/core";
 import Link from "next/link";
 import Footer from "../Containers/Footer/Footer";
-import ChooseData from "../Data/ChooseData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -25,8 +24,78 @@ import "swiper/css/pagination";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Header from "../Containers/Header/Header";
+import * as t from "../redux/Types";
+import { dispatch } from "../redux/Store";
+import { useSelector } from "react-redux";
+import { homeDatas } from "../Data/homeData";
+import { ChooseData } from "./../Data/ChooseData";
 
 export default function Home() {
+  //==========homeFunction==========
+  const homeFunction = () => {
+    const action = { type: t.HOME_DATA, payload: homeDatas };
+    dispatch(action);
+  };
+  homeFunction();
+
+  //==========chooseFunction==========
+  const chooseFunction = () => {
+    const action = { type: t.CHOOSE_DATA, payload: ChooseData };
+    dispatch(action);
+  };
+  chooseFunction();
+
+  //==========newsFunction==========
+  const newsFunction = () => {
+    const action = { type: t.NEWS_DATA, payload: NewProductCards };
+    dispatch(action);
+  };
+  newsFunction();
+
+  //==========notebookFunction==========
+  const notebookFunction = () => {
+    const action = { type: t.NOTEBOOK_DATA, payload: LaptopData };
+    dispatch(action);
+  };
+  notebookFunction();
+
+  //homeData
+  const homeData = useSelector((state) => state.BooksReducer.homeFilter);
+
+  const saveHomeProduct = (index) => {
+    homeData[index].save = !homeData[index].save;
+    const action = { type: "A", payload: index };
+    dispatch(action);
+  };
+
+  //chooseData
+  const ChooseDatas = useSelector((state) => state.BooksReducer.chooseData);
+
+  const saveChooseDatas = (index) => {
+    ChooseDatas[index].save = !ChooseDatas[index].save;
+    const action = { type: "A", payload: index };
+    dispatch(action);
+  };
+
+  //newsData
+  const newsData = useSelector((state) => state.BooksReducer.newsData);
+
+  const saveNewsData = (index) => {
+    newsData[index].save = !newsData[index].save;
+    const action = { type: "A", payload: index };
+    dispatch(action);
+  };
+
+  //notebook
+  const notebookData = useSelector((state) => state.BooksReducer.notebookData);
+
+  const saveNotebookData = (index) => {
+    notebookData[index].save = !notebookData[index].save;
+    const action = { type: "A", payload: index };
+    dispatch(action);
+  };
+
   return (
     <HomeWrapper>
       <Container>
@@ -115,8 +184,8 @@ export default function Home() {
           {/* Container-2 */}
           <div className="container-2 mt-5">
             <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
-            <div className="cards d-flex">
-              {ChooseData.map((v, i) => {
+            <div className="cards d-flex flex-wrap">
+              {homeData.map((v, i) => {
                 return (
                   <div className={`card m-1 p-3 ${v.className}`} key={i}>
                     <div className="d-flex justify-content-center align-items-center ps-4 my-3">
@@ -163,9 +232,12 @@ export default function Home() {
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
-                      <div className="bag">
-                        <img src="bag.svg" alt="" />
-                      </div>
+                      <Button
+                        onClick={() => saveHomeProduct(i)}
+                        className="bag"
+                      >
+                        <img src="bag.svg" alt="photo" />
+                      </Button>
                     </div>
                   </div>
                 );
@@ -227,45 +299,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* <div className="productDay mt-5">
-            <div className="productDayText">
-              <p>Товар дня</p>
-              <h1>17.08</h1>
-              <p>
-                Ограниченное количество. Предложение действительно только
-                сегодня.
-              </p>
-              <div className="yellowCont">
-                <p>до конца акции</p>
-                <h2>08:03:45</h2>
-              </div>
-            </div>
-            <div className="productBoard">
-              <div className="row">
-                <div className="col-12 col-lg-6">
-                  <h2>Samsung side by side-washer</h2>
-                  <div className="d-flex">
-                    <p className="oldPrice mb-0">18,577,000</p>
-                    <p className="salePrice my-auto ms-2 mb-0">- 2,732,000</p>
-                  </div>
-                  <div className="bgPrice">
-                    <p className="price small">
-                      от <span className="price">15,845,000</span> сум
-                    </p>
-                  </div>
-                  <img src="logo3.png" alt="" />
-                </div>
-                <div className="col-6 d-flex align-items-center p-0 ">
-                  <img
-                    className="productDayWasher w-100"
-                    src="productDayWasher.png"
-                    alt="Washer"
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
-
           {/* ChooseClients */}
           <div className="choose mt-5 border">
             <h2 className="title-section my-3 px-4">Выбор покупателей</h2>
@@ -297,14 +330,18 @@ export default function Home() {
                 navigation={true}
                 className="mySwiper"
               >
-                {ChooseData.map((v, i) => {
+                {ChooseDatas.map((v, i) => {
                   return (
                     <SwiperSlide className=" h-100 p-3" key={i}>
-                      <Link href="/productCard">
+                      <div>
                         <a>
                           <div className="choose-card p-2">
                             <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                              <img src={v.img} alt="" />
+                              <Link href="/productCard">
+                                <a>
+                                  <img src={v.img} alt="photo" />
+                                </a>
+                              </Link>
                               <div className="colorBoxes flex-column mb-5">
                                 <div className="p-1">
                                   <div className="col-3 colorBox black"></div>
@@ -341,13 +378,17 @@ export default function Home() {
                                   от {v.rentPrice} сум/мес
                                 </p>
                               </div>
-                              <div className="bag">
+                              <div
+                                onClick={() => saveChooseDatas(i)}
+                                className="bag"
+                                style={{ cursor: "pointer" }}
+                              >
                                 <img src="bag.svg" alt="" />
                               </div>
                             </div>
                           </div>
                         </a>
-                      </Link>
+                      </div>
                     </SwiperSlide>
                   );
                 })}
@@ -407,7 +448,11 @@ export default function Home() {
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
-                      <div className="bag">
+                      <div
+                        style={{ cursor: "pointer" }}
+                        onClick={() => saveNewsData(i)}
+                        className="bag"
+                      >
                         <img src="bag.svg" alt="" />
                       </div>
                     </div>
@@ -455,7 +500,7 @@ export default function Home() {
                 {LaptopData.map((v, i) => {
                   return (
                     <SwiperSlide className=" h-100 p-3" key={i}>
-                      <Link href="/productCard">
+                      <div>
                         <a>
                           <div className=" h-100 p-3" key={i}>
                             <div className="laptop-card p-2" key={i}>
@@ -487,14 +532,18 @@ export default function Home() {
                                     от {v.rentPrice} сум/мес
                                   </p>
                                 </div>
-                                <div className="bag">
-                                  <img src="bag.svg" alt="" />
+                                <div
+                                  style={{ cursor: "pointer" }}
+                                  onClick={() => saveNotebookData(i)}
+                                  className="bag"
+                                >
+                                  <img src="bag.svg" alt="photo" />
                                 </div>
                               </div>
                             </div>
                           </div>
                         </a>
-                      </Link>
+                      </div>
                     </SwiperSlide>
                   );
                 })}

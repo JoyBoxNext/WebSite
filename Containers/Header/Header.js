@@ -15,32 +15,6 @@ const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
 
-  const data = useSelector((state) => state.BooksReducer.phonesdata);
-
-  const array = data?.filter((value) =>
-    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
-  );
-  const baraxolkaData = useSelector(
-    (state) => state.BooksReducer.baraxolkaData
-  );
-  // console.log(baraxolkaData);
-  const arraybaraxolka = baraxolkaData?.filter((value) =>
-    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
-  );
-
-  const datas = () => {
-    const action = {
-      type: t.BOOKS_DATA,
-      payload: array,
-      payload2: arraybaraxolka,
-    };
-    dispatch(action);
-  };
-
-  useEffect(() => {
-    datas();
-  }, [searchTerm, array.length, arraybaraxolka.length]);
-
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleOpenMenu = (e) => {
@@ -50,35 +24,158 @@ const Header = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-  // const saveproduct = useSelector((state) => state.BooksReducer.saveProduct);
+
+  //====================================================================================================
+  //===phonesData===
+  const data = useSelector((state) => state.BooksReducer.phonesdata);
+  const array = data?.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+
+  //===baraxolkaData===
+  const baraxolkaData = useSelector(
+    (state) => state.BooksReducer.baraxolkaData
+  );
+  const arraybaraxolka = baraxolkaData?.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+
+  //===rightData===
+  const rightDatas = useSelector((state) => state.BooksReducer.rightData);
+  const arrayRightSide = rightDatas?.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+
+  //===homeData===
+  const homeDatas = useSelector((state) => state.BooksReducer.homeData);
+  const arrayHomeDatas = homeDatas?.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+
+  //===chooseData===
+  const ChooseData = useSelector((state) => state.BooksReducer.chooseData);
+  const arrayChooseData = ChooseData.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+
+  //===newsData===
+  const newsData = useSelector((state) => state.BooksReducer.newsData);
+  const arrayNewsData = newsData.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+
+  //===notebook===
+  const noteBook = useSelector((state) => state.BooksReducer.notebookData);
+  const arrayNoteBook = noteBook.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
+  //=========================================================================================================
+
+  const datas = () => {
+    const action = {
+      type: t.BOOKS_DATA,
+      payload: array,
+      payload2: arraybaraxolka,
+      payload3: arrayRightSide,
+      payload4: arrayHomeDatas,
+      payload5: arrayChooseData,
+      payload6: arrayNewsData,
+      payload7: arrayNoteBook,
+    };
+    dispatch(action);
+  };
+
+  useEffect(() => {
+    datas();
+  }, [
+    searchTerm,
+    array.length,
+    arraybaraxolka.length,
+    arrayRightSide.length,
+    arrayHomeDatas.length,
+    arrayChooseData.length,
+    arrayNewsData.length,
+    arrayNoteBook.length,
+  ]);
+
   const produktdata = useSelector((state) => state.BooksReducer.filterdata);
+
+  const newsFilterData = useSelector((state) => state.BooksReducer.newsFilter);
+
   const baraxolkaFilterdata = useSelector(
     (state) => state.BooksReducer.baraxolkaFilterdata
   );
-  console.log(baraxolkaFilterdata);
+  const rightFilterData = useSelector(
+    (state) => state.BooksReducer.rightFilter
+  );
 
-  const [saveLength, setsaveLength] = useState(true);
-  //product
-  const baraxolkaFilterdatasave = baraxolkaFilterdata.filter((v) => v.save);
+  const homeProductFilterData = useSelector(
+    (state) => state.BooksReducer.homeFilter
+  );
+
+  const chooseFilterData = useSelector(
+    (state) => state.BooksReducer.chooseFilter
+  );
+
+  const notebookFilter = useSelector(
+    (state) => state.BooksReducer.notebookFilter
+  );
+
   const saveProduct = () => {
     const data = produktdata.filter((v) => v.save);
+    const baraxolkaFilterdatasave = baraxolkaFilterdata.filter((v) => v.save);
+    const rightFilterDataSave = rightFilterData.filter((v) => v.save);
+    const homeProductFilterDataSave = homeProductFilterData.filter(
+      (v) => v.save
+    );
+    const chooseFilterDataSave = chooseFilterData.filter((v) => v.save);
+    const newsFilterDataSave = newsFilterData.filter((v) => v.save);
+    const notebookFilterSave = notebookFilter.filter((v) => v.save);
+
     const action = {
       type: t.SAVE_PRODUCT,
       payload: data,
       payload2: baraxolkaFilterdatasave,
+      payload3: rightFilterDataSave,
+      payload4: homeProductFilterDataSave,
+      payload5: chooseFilterDataSave,
+      payload6: newsFilterDataSave,
+      payload7: notebookFilterSave,
     };
     dispatch(action);
   };
+
   const savedData = useSelector((state) => state.BooksReducer.saveProduct);
+
   const baraxolkaSaveProduct = useSelector(
     (state) => state.BooksReducer.baraxolkaSaveProduct
   );
+
+  const rightSaveProduct = useSelector(
+    (state) => state.BooksReducer.rightSideProduct
+  );
+
+  const homeSaveProduct = useSelector(
+    (state) => state.BooksReducer.homeProduct
+  );
+
+  const chooseSaveProduct = useSelector(
+    (state) => state.BooksReducer.chooseProduct
+  );
+
+  const newsSaveProduct = useSelector(
+    (state) => state.BooksReducer.newsProduct
+  );
+
+  const notebookSaveProduct = useSelector(
+    (state) => state.BooksReducer.notebookProduct
+  );
+
   const indexdata = useSelector((state) => state.BooksReducer.index);
 
   const datalfilter = savedData.filter((v) => v.save);
   const [indexs, setindexs] = useState(-1);
   useEffect(() => {
-    console.log(baraxolkaSaveProduct);
     saveProduct();
   }, [
     indexdata,
@@ -86,19 +183,40 @@ const Header = () => {
     indexs,
     datalfilter.length,
     baraxolkaSaveProduct.length,
+    rightSaveProduct.length,
+    homeSaveProduct.length,
+    chooseSaveProduct.length,
+    newsSaveProduct.length,
+    notebookSaveProduct.length,
   ]);
-
-  //baraxolka
-  // const saveBaraxolkaProduct = () => {
-  //   const baraxolkaData = baraxolkaProductData.filter((v) => v.save);
-  //   const action = { type: t.BARAXOLKASAVE_PRODUCT, payload: baraxolkaData };
-  //   dispatch(action);
-  // };
 
   const deleteProduct = (index) => {
     setindexs(index);
-    const saveProd = (datalfilter[index].save = !datalfilter[index].save);
-    console.log(saveProd, index);
+    datalfilter[index].save = !datalfilter[index].save;
+  };
+  const deleteProduct2 = (index) => {
+    setindexs(index);
+    baraxolkaSaveProduct[index].save = !baraxolkaSaveProduct[index].save;
+  };
+  const deleteProduct3 = (index) => {
+    setindexs(index);
+    rightSaveProduct[index].save = !rightSaveProduct[index].save;
+  };
+  const deleteProduct4 = (index) => {
+    setindexs(index);
+    homeSaveProduct[index].save = !homeSaveProduct[index].save;
+  };
+  const deleteProduct5 = (index) => {
+    setindexs(index);
+    chooseSaveProduct[index].save = !chooseSaveProduct[index].save;
+  };
+  const deleteProduct6 = (index) => {
+    setindexs(index);
+    newsSaveProduct[index].save = !newsSaveProduct[index].save;
+  };
+  const deleteProduct7 = (index) => {
+    setindexs(index);
+    notebookSaveProduct[index].save = !notebookSaveProduct[index].save;
   };
 
   return (
@@ -108,7 +226,7 @@ const Header = () => {
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
             <Link href="/">
               <a>
-                <img className="w-100 logo" src="logo.png" alt="rasm" />
+                <img className="w-100 logo" src="logo.png" alt="photo" />
               </a>
             </Link>
           </div>
@@ -127,13 +245,21 @@ const Header = () => {
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 order-0 order-sm-0 order-md-0 order-lg-3 iconsOrder">
             <div className="d-flex position-relative">
               <Button className="d-block">
-                <img src="IconPerson.svg" alt="" />
+                <img src="IconPerson.svg" alt="photo" />
                 <p className="m-0">Покупателям</p>
               </Button>
               <Button className="d-block" onClick={saveProduct}>
-                <img src="iconBasket.svg" alt="" />
+                <img src="iconBasket.svg" alt="photo" />
                 <p className="m-0">
-                  <Badge badgeContent={savedData.length} color="error">
+                  <Badge
+                    badgeContent={
+                      savedData.length +
+                      baraxolkaSaveProduct.length +
+                      rightSaveProduct.length +
+                      homeSaveProduct.length
+                    }
+                    color="error"
+                  >
                     Корзина
                   </Badge>
                 </p>
@@ -160,7 +286,7 @@ const Header = () => {
                           <h6
                             style={{ cursor: "pointer" }}
                             onClick={() => deleteProduct(index)}
-                            className="text-end border-bottom delete"
+                            className="text-end border-bottom delete mt-3"
                           >
                             удалить
                           </h6>
@@ -169,6 +295,188 @@ const Header = () => {
                     </div>
                   </div>
                 ))}
+                {baraxolkaSaveProduct?.map((value, index) => (
+                  <div>
+                    <div className="d-flex align-items-center mb-3" key={index}>
+                      <img className="photo me-2" src={value.img} alt="photo" />
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <FontAwesomeIcon
+                            className="icon text-end"
+                            icon={faAngleDown}
+                          />
+                          <div className="d-flex align-items-center">
+                            <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
+                            <p className="mb-0 aksiya">{value.aksiya}</p>
+                          </div>
+                          <p className="mb-0 price fw-bold">{value.price}</p>
+                        </div>
+                        <div>
+                          <h6
+                            style={{ cursor: "pointer" }}
+                            onClick={() => deleteProduct2(index)}
+                            className="text-end border-bottom delete mt-3"
+                          >
+                            удалить
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {rightSaveProduct?.map((value, index) => (
+                  <div>
+                    <div className="d-flex align-items-center mb-3" key={index}>
+                      <img className="photo me-2" src={value.img} alt="photo" />
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <FontAwesomeIcon
+                            className="icon text-end"
+                            icon={faAngleDown}
+                          />
+                          <div className="d-flex align-items-center">
+                            <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
+                            <p className="mb-0 aksiya">{value.aksiya}</p>
+                          </div>
+                          <p className="mb-0 price fw-bold">{value.price}</p>
+                        </div>
+                        <div>
+                          <h6
+                            style={{ cursor: "pointer" }}
+                            onClick={() => deleteProduct3(index)}
+                            className="text-end border-bottom delete mt-3"
+                          >
+                            удалить
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {homeSaveProduct?.map((value, index) => (
+                  <div>
+                    <div className="d-flex align-items-center mb-3" key={index}>
+                      <img className="photo me-2" src={value.img} alt="photo" />
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <FontAwesomeIcon
+                            className="icon text-end"
+                            icon={faAngleDown}
+                          />
+                          <div className="d-flex align-items-center">
+                            <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
+                            <p className="mb-0 aksiya">{value.aksiya}</p>
+                          </div>
+                          <p className="mb-0 price fw-bold">{value.price}</p>
+                        </div>
+                        <div>
+                          <h6
+                            style={{ cursor: "pointer" }}
+                            onClick={() => deleteProduct4(index)}
+                            className="text-end border-bottom delete mt-3"
+                          >
+                            удалить
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {chooseSaveProduct?.map((value, index) => (
+                  <div>
+                    <div className="d-flex align-items-center mb-3" key={index}>
+                      <img className="photo me-2" src={value.img} alt="photo" />
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <FontAwesomeIcon
+                            className="icon text-end"
+                            icon={faAngleDown}
+                          />
+                          <div className="d-flex align-items-center">
+                            <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
+                            <p className="mb-0 aksiya">{value.aksiya}</p>
+                          </div>
+                          <p className="mb-0 price fw-bold">{value.price}</p>
+                        </div>
+                        <div>
+                          <h6
+                            style={{ cursor: "pointer" }}
+                            onClick={() => deleteProduct5(index)}
+                            className="text-end border-bottom delete mt-3"
+                          >
+                            удалить
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {newsSaveProduct?.map((value, index) => (
+                  <div>
+                    <div className="d-flex align-items-center mb-3" key={index}>
+                      <img className="photo me-2" src={value.img} alt="photo" />
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <FontAwesomeIcon
+                            className="icon text-end"
+                            icon={faAngleDown}
+                          />
+                          <div className="d-flex align-items-center">
+                            <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
+                            <p className="mb-0 aksiya">{value.aksiya}</p>
+                          </div>
+                          <p className="mb-0 price fw-bold">{value.price}</p>
+                        </div>
+                        <div>
+                          <h6
+                            style={{ cursor: "pointer" }}
+                            onClick={() => deleteProduct6(index)}
+                            className="text-end border-bottom delete mt-3"
+                          >
+                            удалить
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
+                {notebookSaveProduct?.map((value, index) => (
+                  <div>
+                    <div className="d-flex align-items-center mb-3" key={index}>
+                      <img className="photo me-2" src={value.img} alt="photo" />
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <FontAwesomeIcon
+                            className="icon text-end"
+                            icon={faAngleDown}
+                          />
+                          <div className="d-flex align-items-center">
+                            <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
+                            <p className="mb-0 aksiya">{value.aksiya}</p>
+                          </div>
+                          <p className="mb-0 price fw-bold">{value.price}</p>
+                        </div>
+                        <div>
+                          <h6
+                            style={{ cursor: "pointer" }}
+                            onClick={() => deleteProduct7(index)}
+                            className="text-end border-bottom delete mt-3"
+                          >
+                            удалить
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
                 {/* <Button className="orange_btn">dsdsds</Button> */}
               </div>
             </div>
@@ -183,9 +491,9 @@ const Header = () => {
               onClick={handleOpenMenu}
               variant="contained"
             >
-              <img className="me-1" src="iconCategories.svg" alt="" />
+              <img className="me-1" src="iconCategories.svg" alt="photo" />
               Категории
-              <img className="ms-1" src="iconCtegories2.svg" alt="" />
+              <img className="ms-1" src="iconCtegories2.svg" alt="photo" />
             </Button>
             <Menu
               className="CategoriesMenu"

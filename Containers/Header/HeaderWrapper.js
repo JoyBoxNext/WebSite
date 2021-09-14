@@ -46,6 +46,10 @@ const HeaderWrapper = styled.div`
     padding: 5px 0;
     outline: none;
   }
+  .search,
+  .input-group {
+    z-index: 1001;
+  }
   Button {
     box-shadow: none;
     border-radius: 0;
