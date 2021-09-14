@@ -85,7 +85,7 @@ const HeaderWrapper = styled.div`
   }
   .korzina {
     position: absolute;
-    width: 400px;
+    width: 200px;
     top: 59px;
     left: -100px;
     font-weight: bold;

@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../Containers/Header/Header";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
@@ -486,16 +487,8 @@ export default function Home() {
                         <a>
                           <div className=" h-100 p-3" key={i}>
                             <div className="laptop-card p-2" key={i}>
-                              <Link href="/productCard">
-                                <a>
-                                  <img
-                                    className="w-100"
-                                    src={v.img}
-                                    alt="photo"
-                                  />
-                                </a>
-                              </Link>
-                              <Link href="/test">
+                              <img className="w-100" src={v.img} alt="" />
+                              <Link href="/">
                                 <a>
                                   <p className=" title fw-bold mt-2">
                                     {v.title}

@@ -6,8 +6,9 @@ import {
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import ProductWrapper from "../Wrappers/productWrapper";
+import ProductWrapper from "../Wrappers/ProductWrapper";
 import Header from "./../Containers/Header/Header";
+import Footer from "../Containers/Footer/Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -350,7 +351,7 @@ const Product = () => {
                           </div>
                         </div>
                         <p className="descripton px-2">
-                          Экран (6.5", Super AMOLED, 2400x1080)/ Qualcomm
+                          Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
                           Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/ основная
                           квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
                           фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной памяти
@@ -457,6 +458,8 @@ const Product = () => {
           </div>
         </div>
       </ProductWrapper>
+      <Footer />
+      <ModalProduct />
     </>
   );
 };
