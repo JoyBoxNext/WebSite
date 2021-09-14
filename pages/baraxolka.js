@@ -22,11 +22,6 @@ import { dispatch } from "../redux/Store";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const baraxolkaPhonesData = () => {
-    const action = { type: t.BARAXOLKA_DATA, payload: baraxolkaPhones };
-    dispatch(action);
-  };
-  baraxolkaPhonesData();
 
   return (
     <div
@@ -67,18 +62,22 @@ const Product = () => {
     setValue(newValue);
   };
 
+  //baraxolka
+  const baraxolkaPhonesData = () => {
+    const action = { type: t.BARAXOLKA_DATA, payload: baraxolkaPhones };
+    dispatch(action);
+  };
+  baraxolkaPhonesData();
+
   const baraxolka = useSelector(
     (state) => state.BooksReducer.baraxolkaFilterdata
   );
   console.log(baraxolka);
 
-  //   const saveProduct = (index) => {
-  //     const saveProd = (data[index].save = !data[index].save);
-  //     console.log(saveProd, index);
-  //   };
-
   const savebaraxolka = (index) => {
     baraxolka[index].save = !baraxolka[index].save;
+    const action = { type: "A", payload: index };
+    dispatch(action);
     console.log(baraxolka[index].save, index);
   };
 

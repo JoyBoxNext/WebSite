@@ -1,58 +1,64 @@
 const LaptopData = [
-    {
-        img: "Laptop.png",
-        title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
-        oldPrice: "16 800 000 ",
-        badgePrice: "1 330 000",
-        priceBig: "15",
-        price: ",470,999 ",
-        rentPrice: "1 362 000"
-    },
-    {
-        img: "Laptop.png",
-        title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
-        oldPrice: "16 800 000 ",
-        badgePrice: "1 330 000",
-        priceBig: "15",
-        price: ",470,999 ",
-        rentPrice: "1 362 000"
-    },
-    {
-        img: "Laptop.png",
-        title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
-        oldPrice: "16 800 000 ",
-        badgePrice: "1 330 000",
-        priceBig: "15",
-        price: ",470,999 ",
-        rentPrice: "1 362 000"
-    },
-    {
-        img: "Laptop.png",
-        title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
-        oldPrice: "16 800 000 ",
-        badgePrice: "1 330 000",
-        priceBig: "15",
-        price: ",470,999 ",
-        rentPrice: "1 362 000"
-    },
-    {
-        img: "Laptop.png",
-        title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
-        oldPrice: "16 800 000 ",
-        badgePrice: "1 330 000",
-        priceBig: "15",
-        price: ",470,999 ",
-        rentPrice: "1 362 000"
-    },
-    {
-        img: "Laptop.png",
-        title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
-        oldPrice: "16 800 000 ",
-        badgePrice: "1 330 000",
-        priceBig: "15",
-        price: ",470,999 ",
-        rentPrice: "1 362 000"
-    },
-]
+  {
+    img: "Laptop.png",
+    title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
+    oldPrice: "16 800 000 ",
+    badgePrice: "1 330 000",
+    priceBig: "15",
+    price: ",470,999 ",
+    rentPrice: "1 362 000",
+    save: false,
+  },
+  {
+    img: "Laptop.png",
+    title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
+    oldPrice: "16 800 000 ",
+    badgePrice: "1 330 000",
+    priceBig: "15",
+    price: ",470,999 ",
+    rentPrice: "1 362 000",
+    save: false,
+  },
+  {
+    img: "Laptop.png",
+    title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
+    oldPrice: "16 800 000 ",
+    badgePrice: "1 330 000",
+    priceBig: "15",
+    price: ",470,999 ",
+    rentPrice: "1 362 000",
+    save: false,
+  },
+  {
+    img: "Laptop.png",
+    title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
+    oldPrice: "16 800 000 ",
+    badgePrice: "1 330 000",
+    priceBig: "15",
+    price: ",470,999 ",
+    rentPrice: "1 362 000",
+    save: false,
+  },
+  {
+    img: "Laptop.png",
+    title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
+    oldPrice: "16 800 000 ",
+    badgePrice: "1 330 000",
+    priceBig: "15",
+    price: ",470,999 ",
+    rentPrice: "1 362 000",
+    save: false,
+  },
+  {
+    img: "Laptop.png",
+    title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
+    oldPrice: "16 800 000 ",
+    badgePrice: "1 330 000",
+    priceBig: "15",
+    price: ",470,999 ",
+    rentPrice: "1 362 000",
+    save: false,
+  },
+];
 
 export default LaptopData;

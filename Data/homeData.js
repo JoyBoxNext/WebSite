@@ -1,4 +1,4 @@
-const ChooseData = [
+const homeDatas = [
   {
     img: "SwiperProduct3.png",
     title: "Samsung a52 4/256 dual sim onyx black",
@@ -57,4 +57,4 @@ const ChooseData = [
   },
 ];
 
-export { ChooseData };
+export { homeDatas };

@@ -20,15 +20,9 @@ import { dispatch } from "../redux/Store";
 import Link from "next/link";
 import { bigCategores, categores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
-import ModalProduct from "../Components/ModalProduct";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const phoneData = () => {
-    const action = { type: t.PHONES_DATA, payload: phones };
-    dispatch(action);
-  };
-  phoneData();
 
   return (
     <div
@@ -89,19 +83,47 @@ const Product = () => {
   const hide2 = () => {
     setShow2(!show2);
   };
+  //============================================================================================================================
+  //phonesData
+  const phoneData = () => {
+    const action = { type: t.PHONES_DATA, payload: phones };
+    dispatch(action);
+  };
+  phoneData();
 
   const data = useSelector((state) => state.BooksReducer.filterdata);
 
   const saveProduct = (index) => {
-    const saveProd = (data[index].save = !data[index].save);
+    data[index].save = !data[index].save;
     const action = { type: "A", payload: index };
     dispatch(action);
-    console.log(data[index].save, index);
   };
+
+  //============================================================================================================================
+  //rightSide
+  const rightData = () => {
+    const action = { type: t.RIGHT_DATA, payload: rightSide };
+    dispatch(action);
+  };
+  rightData();
+
+  const rightSelectorData = useSelector(
+    (state) => state.BooksReducer.rightFilter
+  );
+
+  const saveRightProduct = (index) => {
+    rightSelectorData[index].save = !rightSelectorData[index].save;
+    const action = { type: "A", payload: index };
+    dispatch(action);
+    console.log(rightSelectorData[index].save, index);
+  };
+
+  // =============
   const [openInput, setOpenInput] = useState(true);
   const open = () => {
     setOpenInput(!openInput);
   };
+
   return (
     <>
       <Header />
@@ -366,7 +388,7 @@ const Product = () => {
           </div>
           <div className="rightSide mt-5 px-2">
             <div className="row w-100 mt-5">
-              {rightSide.map((value, index) => {
+              {rightSelectorData.map((value, index) => {
                 return (
                   <div
                     className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12 col-xxl-12 mb-4"
@@ -399,7 +421,7 @@ const Product = () => {
                         <div className="d-flex justify-content-between align-items-center">
                           <p className="mb-0 desc">{value.desc}</p>
                           <button
-                            // onClick={() => saveProduct(index)}
+                            onClick={() => saveRightProduct(index)}
                             className="border-0 save_btn"
                           >
                             <img src="orange.png" alt="photo" />
@@ -435,8 +457,6 @@ const Product = () => {
           </div>
         </div>
       </ProductWrapper>
-
-      <ModalProduct />
     </>
   );
 };
