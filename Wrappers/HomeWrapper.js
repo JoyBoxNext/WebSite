@@ -444,7 +444,7 @@ const HomeWrapper = styled.div`
         }
       }
       img {
-        max-width: 172px;
+        max-width: 162px;
         margin: auto !important;
         display: flex;
       }
@@ -543,7 +543,7 @@ const HomeWrapper = styled.div`
     margin-bottom: 30px;
     .laptop-card {
       border: 2px solid #2525eb;
-      max-width: 230px;
+      /* max-width: 230px; */
       margin: auto;
       .title {
         line-height: 16px !important;

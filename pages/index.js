@@ -102,7 +102,7 @@ export default function Home() {
           <Header />
 
           {/* Container-1 */}
-          <div className="container-1">
+          <div className="container-1  mt-5">
             <div className="d-flex flex-wrap">
               <div className="flex1 blue" style={{ width: "25%" }}>
                 <div className="text">
@@ -183,16 +183,12 @@ export default function Home() {
           {/* Container-2 */}
           <div className="container-2 mt-5">
             <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
-            <div className="cards d-flex flex-wrap">
+            <div className="cards d-flex flex-wrap justify-content-around">
               {homeData.map((v, i) => {
                 return (
                   <div className={`card m-1 p-3 ${v.className}`} key={i}>
                     <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                      <img
-                        className="container2_photo"
-                        src={v.img}
-                        alt="photo"
-                      />
+                      <img className="container2_photo" src={v.img} alt="photo"/>
                       <div className="colorBoxes flex-column mb-5">
                         <div className="p-1">
                           <div className="col-3 colorBox black"></div>
@@ -296,36 +292,31 @@ export default function Home() {
           </div>
 
           {/* ChooseClients */}
-          <div className="choose mt-5 border">
-            <h2 className="title-section my-3 px-4">Выбор покупателей</h2>
+          <div className="choose mt-5">
+            <h2 className="title-section my-2 px-2">Выбор покупателей</h2>
             <div className="choose-cards swiper_content">
-              <Swiper
-                breakpoints={{
-                  300: {
+              <Swiper breakpoints={{
+                  200: {
                     slidesPerView: 1,
-                    spaceBetween: 20,
+                    // spaceBetween: 20,
                   },
-                  768: {
+                  568: {
                     slidesPerView: 2,
-                    spaceBetween: 40,
+                    // spaceBetween: 40,
                   },
-                  1024: {
+                  924: {
+                    slidesPerView: 3,
+                    // spaceBetween: 50,
+                  },
+                  1060: {
                     slidesPerView: 4,
-                    spaceBetween: 50,
                   },
-                  1920: {
+                  1590: {
                     slidesPerView: 5,
-                    spaceBetween: 50,
                   },
-                }}
-                slidesPerView={5}
-                spaceBetween={0}
-                slidesPerGroup={1}
-                loop={true}
-                loopFillGroupWithBlank={true}
-                navigation={true}
-                className="mySwiper"
-              >
+                }} slidesPerView={5} spaceBetween={0} slidesPerGroup={1}
+                loop={true} loopFillGroupWithBlank={true} navigation={true}
+                className="mySwiper">
                 {ChooseDatas.map((v, i) => {
                   return (
                     <SwiperSlide className=" h-100 p-3" key={i}>
@@ -394,7 +385,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Container-mi */}
+          {/* Container-mi
           <div className="container-mi d-flex mt-5 w-100">
             <div className=" d-flex">
               <img className="miicon" src="miicon.png" alt="" />
@@ -407,10 +398,10 @@ export default function Home() {
               <img className="" src="mipicture1.png" alt="" />
               <img className="" src="mipicture2c.png" alt="" />
             </div>
-          </div>
+          </div> */}
 
           {/* New-products */}
-          <div className="new-products border rounded-0 w-100 mt-5">
+          {/* <div className="new-products border rounded-0 w-100 mt-5">
             <h2 className="title-section my-3">Новинки</h2>
             <div className="new-product-cards d-flex p-2">
               {NewProductCards.map((v, i) => {
@@ -453,7 +444,7 @@ export default function Home() {
                 Перейти в раздел <br /> новинки
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Laptops */}
           <div className="laptops w-100 mt-5">
@@ -468,34 +459,36 @@ export default function Home() {
                 navigation={true}
                 className="mySwiper"
                 breakpoints={{
-                  "300": {
-                    "slidesPerView": 1,
-                    // "spaceBetween": 20
+                  200: {
+                    slidesPerView: 1,
                   },
-                  "768": {
-                    "slidesPerView": 2,
-                    // "spaceBetween": 40
+                  460: {
+                    slidesPerView: 2,
                   },
-                  "1024": {
-                    "slidesPerView": 4,
-                    // "spaceBetween": 50
+                  660: {
+                    slidesPerView: 3,
                   },
-                  "1920": {
-                    "slidesPerView": 5,
-                    // "spaceBetween": 50
-                  }
+                  950: {
+                    slidesPerView: 4,
+                  },
+                  1150: {
+                    slidesPerView: 5,
+                  },
+                  // 1590: {
+                  //   slidesPerView: 5,
+                  // },
                 }}>
                 {LaptopData.map((v, i) => {
                   return (
-                    <SwiperSlide className=" h-100 p-3" key={i}>
+                    <SwiperSlide className=" h-100 p-1" key={i}>
                       <div>
                         <a>
-                          <div className=" h-100 p-3" key={i}>
+                          <div className=" h-100 p-2" key={i}>
                             <div className="laptop-card p-2" key={i}>
                               <img className="w-100" src={v.img} alt="" />
                               <Link href="/">
                                 <a>
-                                  <p className=" title fw-bold mt-2">
+                                  <p className="title fw-bold mt-2">
                                     {v.title}
                                   </p>
                                 </a>

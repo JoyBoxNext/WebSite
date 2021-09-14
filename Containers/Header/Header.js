@@ -221,7 +221,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <div className="container pt-4">
+      <div className=" pt-4">
         <div className="row justify-content-center align-items-center w-100">
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
             <Link href="/">
