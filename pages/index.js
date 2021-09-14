@@ -247,7 +247,7 @@ export default function Home() {
           {/* ProductDay */}
           <div className="productDay mt-5">
             <div className="row">
-              <div className="col-5 col-sm-5 col-md-5 col-lg-5">
+              <div className="col-12 col-sm-5 col-md-5 col-lg-5">
                 <div className="productDayText">
                   <p className="mb-0 left_title">Товар дня</p>
                   <h1 className="mb-0 left_clock">17.08</h1>
@@ -261,15 +261,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-7 col-sm-7 col-md-7 col-lg-7 col-lg-7">
+              <div className="col-12 col-sm-7 col-md-7 col-lg-7 col-lg-7">
                 <div className="productBoard">
-                  <div className="row">
-                    <div className="col-6 col-lg-6">
+                  <div className="row ">
+                    <div className="col-12 col-lg-6 col-xl-6">
                       <h2 className="right_title">
                         Samsung side by side-washer
                       </h2>
-                      <div className="d-flex">
-                        <p className="oldPrice mb-0 right_price">18,577,000</p>
+                      <div className="d-flex align-items-center">
+                        <p className="oldPrice mb-0">18,577,000</p>
                         <p className="salePrice my-auto ms-2 mb-0 right_green_price">
                           - 2,732,000
                         </p>
@@ -285,7 +285,7 @@ export default function Home() {
                         alt="photo"
                       />
                     </div>
-                    <div className="col-6 d-flex align-items-center p-0 ">
+                    <div className="col-12 col-sm-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
                         className="productDayWasher w-75"
                         src="productDayWasher.png"
