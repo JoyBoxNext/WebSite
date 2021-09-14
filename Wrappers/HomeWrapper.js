@@ -667,7 +667,7 @@ const HomeWrapper = styled.div`
       font-size: 14px !important;
     }
   }
-  @media screen and (max-width: 1025px) {
+  @media screen and (max-width: 1105px) {
     .five {
       display: none !important;
     }
@@ -713,6 +713,28 @@ const HomeWrapper = styled.div`
       font-size: 25px;
     }
   }
+  @media screen and (max-width: 950px) {
+    .four {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .three {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .two {
+      display: none !important;
+    }
+    max-width: 400px;
+    .new-product-cards {
+      img {
+        margin: auto;
+      }
+    }
+  }
+  
   .title-section {
     font-size: 45px;
     font-weight: bold;

@@ -320,6 +320,10 @@ export default function Home() {
                     slidesPerView: 5,
                   },
                 }}
+                autoplay={{
+                  "delay": 2500,
+                  "disableOnInteraction": false
+                }}
                 slidesPerView={5}
                 spaceBetween={0}
                 slidesPerGroup={1}
@@ -416,47 +420,49 @@ export default function Home() {
             <div className="new-product-cards d-flex p-2">
               {NewProductCards.map((v, i) => {
                 return (
-                  <div className={`new-product-card p-2 ${v.className}`} key={i} >
-                    <img style={{ objectFit: "contain" }}
-                      className="w-100 h-50 new_photos"
-                      src={v.img}
-                      alt="photo"
-                    />
-                    <Link href="/productCard">
-                      <a>
-                        <p className="title fw-bold mt-2">{v.title}</p>
-                      </a>
-                    </Link>
-                    <div className="small d-flex">
-                      <p className="oldPrice me-1 m-0 p-0">
-                        {v.oldPrice}
-                        <span className="sum">сум</span>
-                      </p>
-                      <div className="badgePrice">
-                        <p className="m-0 p-0">{v.badgePrice} сум</p>
-                      </div>
-                    </div>
-                    <div className="d-flex justify-content-between">
-                      <div className="prices">
-                        <p className="m-0 fw-bold">
-                          <span>{v.priceBig}</span>
-                          <span className="small_price">{v.price}</span>
-                          <small className="sum">сум</small>
+                  <Link href="/productCard"><a>
+                    <div className={`new-product-card p-2 ${v.className}`} key={i} >
+                      <img style={{ objectFit: "contain" }}
+                        className="w-100 h-50 new_photos"
+                        src={v.img}
+                        alt="photo"
+                      />
+                      <Link href="/productCard">
+                        <a>
+                          <p className="title fw-bold mt-2">{v.title}</p>
+                        </a>
+                      </Link>
+                      <div className="small d-flex">
+                        <p className="oldPrice me-1 m-0 p-0">
+                          {v.oldPrice}
+                          <span className="sum">сум</span>
                         </p>
-                        <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                        <div className="badgePrice">
+                          <p className="m-0 p-0">{v.badgePrice} сум</p>
+                        </div>
                       </div>
-                      <button
-                        onClick={() => saveHomeProduct(i)}
-                        className="bag border-0"
-                      >
-                        <img className="w-auto h-auto" src="icon.png" alt="" />
-                      </button>
+                      <div className="d-flex justify-content-between">
+                        <div className="prices">
+                          <p className="m-0 fw-bold">
+                            <span>{v.priceBig}</span>
+                            <span className="small_price">{v.price}</span>
+                            <small className="sum">сум</small>
+                          </p>
+                          <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                        </div>
+                        <button
+                          onClick={() => saveHomeProduct(i)}
+                          className="bag border-0"
+                        >
+                          <img className="w-auto h-auto" src="icon.png" alt="" />
+                        </button>
+                      </div>
+                      <div className="dot_orange dot1"></div>
+                      <div className="dot_orange dot2"></div>
+                      <div className="dot_orange dot3"></div>
+                      <div className="dot_orange dot4"></div>
                     </div>
-                    <div className="dot_orange dot1"></div>
-                    <div className="dot_orange dot2"></div>
-                    <div className="dot_orange dot3"></div>
-                    <div className="dot_orange dot4"></div>
-                  </div>
+                  </a></Link>
                 );
               })}
             </div>
@@ -482,30 +488,25 @@ export default function Home() {
                 breakpoints={{
                   300: {
                     slidesPerView: 1,
-                    // "spaceBetween": 20
                   },
                   768: {
-                    slidesPerView: 2,
-                    // "spaceBetween": 40
-                  },
-                  940: {
                     slidesPerView: 3,
-                    // "spaceBetween": 40
+                  },
+                  1155: {
+                    slidesPerView: 4,
                   },
                   1024: {
-                    slidesPerView: 4,
-                    // "spaceBetween": 50
-                  },
-                  1920: {
                     slidesPerView: 5,
-                    // "spaceBetween": 50
+                  },
+                  1820: {
+                    slidesPerView: 6,
                   },
                 }}
               >
                 {LaptopData.map((v, i) => {
                   return (
                     <SwiperSlide className=" h-100 p-1" key={i}>
-                      <div>
+                      <Link href="/productCard">
                         <a>
                           <div className=" h-100 p-2" key={i}>
                             <div className="laptop-card p-2" key={i}>
@@ -551,7 +552,7 @@ export default function Home() {
                             </div>
                           </div>
                         </a>
-                      </div>
+                      </Link>
                     </SwiperSlide>
                   );
                 })}
