@@ -406,8 +406,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Container-mi
-          <div className="container-mi d-flex mt-5 w-100">
+          {/* Container-mi */}
+          {/* <div className="container-mi d-flex mt-5 w-100">
             <div className=" d-flex">
               <img className="miicon" src="miicon.png" alt="" />
               <p className="text-white d-flex align-items-center m-2">
@@ -420,17 +420,23 @@ export default function Home() {
               <img className="" src="mipicture2c.png" alt="" />
             </div>
           </div> */}
+          <div>
+            <img className="w-100" src="reklama.png" alt="photo" />
+          </div>
 
           {/* New-products */}
-          {/* <div className="new-products border rounded-0 w-100 mt-5">
+          <div className="new-products border rounded-0 w-100 mt-5">
             <h2 className="title-section my-3">Новинки</h2>
             <div className="new-product-cards d-flex p-2">
               {NewProductCards.map((v, i) => {
                 return (
-                  <div className="new-product-card p-2" key={i}>
+                  <div
+                    className={`new-product-card p-2 ${v.className}`}
+                    key={i}
+                  >
                     <img
                       style={{ objectFit: "contain" }}
-                      className="w-100 h-50"
+                      className="w-100 h-50 new_photos"
                       src={v.img}
                       alt="photo"
                     />
@@ -452,8 +458,8 @@ export default function Home() {
                       <div className="prices">
                         <p className="m-0 fw-bold">
                           <span>{v.priceBig}</span>
-                          {v.price}
-                          <small>сум</small>
+                          <span className="small_price">{v.price}</span>
+                          <small className="sum">сум</small>
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
@@ -473,7 +479,7 @@ export default function Home() {
                 Перейти в раздел <br /> новинки
               </button>
             </div>
-          </div> */}
+          </div>
 
           {/* Laptops */}
           <div className="laptops w-100 mt-5">

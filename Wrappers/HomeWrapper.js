@@ -639,6 +639,55 @@ const HomeWrapper = styled.div`
       display: none !important;
     }
   }
+  @media screen and (max-width: 1200px) {
+    .new-products .title {
+      font-size: 13px !important;
+    }
+    .new_photos {
+      width: 150px !important;
+    }
+    .oldPrice,
+    .badgePrice {
+      font-size: 12px !important;
+    }
+  }
+  @media screen and (max-width: 1025px) {
+    .five {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .new-products .title {
+      font-size: 12px !important;
+    }
+    .new_photos {
+      width: 130px !important;
+    }
+    .oldPrice,
+    .badgePrice,
+    .sum {
+      font-size: 10px !important;
+    }
+    .small_price {
+      font-size: 12px;
+    }
+    .rentPrice {
+      font-size: 11px;
+    }
+    .bag {
+      padding: 15px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .four {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .three {
+      display: none !important;
+    }
+  }
 `;
 
 export default HomeWrapper;
