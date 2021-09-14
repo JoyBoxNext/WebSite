@@ -58,7 +58,7 @@ const ProductCard = () => {
                             </div>
                             <div className="row colorMemories mt-3">
                                 <div className="col-6">
-                                    <p className="">Цвет товара: <span>Черный</span></p>
+                                    <p style={{ width: 200}}>Цвет товара: <span>Черный</span></p>
                                     <div className="colorBoxes">
                                         <div className="p-2">
                                             <div className="d-flex align-items-center justify-content-center colorBox black"></div>

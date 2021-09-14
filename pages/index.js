@@ -434,6 +434,24 @@ export default function Home() {
                 loopFillGroupWithBlank={true}
                 navigation={true}
                 className="mySwiper"
+                breakpoints={{
+                  "300": {
+                    "slidesPerView": 1,
+                    // "spaceBetween": 20
+                  },
+                  "768": {
+                    "slidesPerView": 2,
+                    // "spaceBetween": 40
+                  },
+                  "1024": {
+                    "slidesPerView": 4,
+                    // "spaceBetween": 50
+                  },
+                  "1920": {
+                    "slidesPerView": 5,
+                    // "spaceBetween": 50
+                  }
+                }}>
               >
                 {LaptopData.map((v, i) => {
                   return (

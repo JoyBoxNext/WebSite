@@ -297,7 +297,7 @@ const ProductCardWrapper = styled.div`
                     flex-wrap: wrap;
                     order: 2 !important;
                     .row {
-                        display: block;
+                        display: block !important;
                     }
                     .colorBoxes, .memorie {
                         display: flex;
@@ -448,7 +448,6 @@ const ProductCardWrapper = styled.div`
                     width: 300px;
                     display: block;
                     flex-wrap: wrap;
-                    order: 2 !important;
                     .row {
                         display: block;
                     }
@@ -512,7 +511,7 @@ const ProductCardWrapper = styled.div`
             .characteristic-container {
                 /* max-width: 100% !important; */
                 .characteristic {
-                    max-width: 100% !important;
+                    width: 100% !important;
                 }
                 .link-korzinka {
                     display: none;
