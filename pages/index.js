@@ -102,7 +102,7 @@ export default function Home() {
           <Header />
 
           {/* Container-1 */}
-          <div className="container-1">
+          <div className="container-1  mt-5">
             <div className="d-flex flex-wrap">
               <div className="flex1 blue" style={{ width: "25%" }}>
                 <div className="text">
@@ -299,26 +299,28 @@ export default function Home() {
           </div>
 
           {/* ChooseClients */}
-          <div className="choose mt-5 border">
-            <h2 className="title-section my-3 px-4">Выбор покупателей</h2>
+          <div className="choose mt-5">
+            <h2 className="title-section my-2 px-2">Выбор покупателей</h2>
             <div className="choose-cards swiper_content">
               <Swiper
                 breakpoints={{
-                  300: {
+                  200: {
                     slidesPerView: 1,
-                    spaceBetween: 20,
+                    // spaceBetween: 20,
                   },
-                  768: {
+                  568: {
                     slidesPerView: 2,
-                    spaceBetween: 40,
+                    // spaceBetween: 40,
                   },
-                  1024: {
+                  924: {
+                    slidesPerView: 3,
+                    // spaceBetween: 50,
+                  },
+                  1060: {
                     slidesPerView: 4,
-                    spaceBetween: 50,
                   },
-                  1920: {
+                  1590: {
                     slidesPerView: 5,
-                    spaceBetween: 50,
                   },
                 }}
                 slidesPerView={5}
@@ -404,7 +406,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Container-mi */}
+          {/* Container-mi
           <div className="container-mi d-flex mt-5 w-100">
             <div className=" d-flex">
               <img className="miicon" src="miicon.png" alt="" />
@@ -417,10 +419,10 @@ export default function Home() {
               <img className="" src="mipicture1.png" alt="" />
               <img className="" src="mipicture2c.png" alt="" />
             </div>
-          </div>
+          </div> */}
 
           {/* New-products */}
-          <div className="new-products border rounded-0 w-100 mt-5">
+          {/* <div className="new-products border rounded-0 w-100 mt-5">
             <h2 className="title-section my-3">Новинки</h2>
             <div className="new-product-cards d-flex p-2">
               {NewProductCards.map((v, i) => {
@@ -471,7 +473,7 @@ export default function Home() {
                 Перейти в раздел <br /> новинки
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Laptops */}
           <div className="laptops w-100 mt-5">
@@ -510,15 +512,15 @@ export default function Home() {
               >
                 {LaptopData.map((v, i) => {
                   return (
-                    <SwiperSlide className=" h-100 p-3" key={i}>
+                    <SwiperSlide className=" h-100 p-1" key={i}>
                       <div>
                         <a>
-                          <div className=" h-100 p-3" key={i}>
+                          <div className=" h-100 p-2" key={i}>
                             <div className="laptop-card p-2" key={i}>
                               <img src={v.img} alt="photo" />
                               <Link href="/">
                                 <a>
-                                  <p className=" title fw-bold mt-2">
+                                  <p className="title fw-bold mt-2">
                                     {v.title}
                                   </p>
                                 </a>
