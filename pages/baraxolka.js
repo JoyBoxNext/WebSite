@@ -1,9 +1,4 @@
-import {
-  faFacebook,
-  faInstagram,
-  faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import React from "react";
 import { baraxolkaPhones } from "../Data/data";
 import Container from "./../Containers/Container";
@@ -16,9 +11,9 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import BaraxollaWrapper from "../Wrappers/BaraxolkaWrapper";
 import { useSelector } from "react-redux";
-import { Button } from "@material-ui/core";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
+import Footer from "../Containers/Footer/Footer";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -194,18 +189,12 @@ const Product = () => {
                         </div>
                       );
                     })}
-                    <div className="my-2">
-                      <div className="border_ my-4"></div>
-                      <div className="d-flex justify-content-center align-items-center">
-                        <FontAwesomeIcon
-                          className="icon me-3"
-                          icon={faInstagram}
-                        />
-                        <FontAwesomeIcon
-                          className="icon me-3"
-                          icon={faTelegram}
-                        />
-                        <FontAwesomeIcon className="icon" icon={faFacebook} />
+                    <div className="mt-4">
+                      <div className="border_"></div>
+                      <div className="d-flex justify-content-center align-items-center  my-4">
+                        <Link href="https://www.instagram.com/?hl=ru"><a><img className="icon me-3 fs-3" src="instagram.png" alt="instagram" /></a></Link>
+                        <Link href="https://web.telegram.org"><a><img className="icon me-3 fs-3" src="telegram.png" alt="telegram" /></a></Link>
+                        <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" /></a></Link>
                       </div>
                     </div>
                   </div>
@@ -221,6 +210,7 @@ const Product = () => {
           </div>
         </div>
       </BaraxollaWrapper>
+      <Footer/>
     </Container>
   );
 };

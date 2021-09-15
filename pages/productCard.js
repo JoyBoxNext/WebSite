@@ -5,11 +5,6 @@ import Container from "../Containers/Container";
 import Footer from "../Containers/Footer/Footer";
 import { Button } from "@material-ui/core";
 import Link from "next/link";
-import {
-  faFacebook,
-  faInstagram,
-  faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";

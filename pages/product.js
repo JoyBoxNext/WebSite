@@ -193,16 +193,14 @@ const Product = () => {
                             {value.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex align-items-center ${
-                                    show ? "" : "d-none"
-                                  }`}
+                                  className={`d-flex align-items-center ${show ? "" : "d-none"
+                                    }`}
                                   key={index}
                                 >
                                   <button
                                     onClick={() => toggle(index)}
-                                    className={` box me-2 ${
-                                      checked == index ? "active" : ""
-                                    }`}
+                                    className={` box me-2 ${checked == index ? "active" : ""
+                                      }`}
                                   ></button>
                                   <p className="my-1 subtitle">
                                     {value.subtitle}
@@ -241,9 +239,8 @@ const Product = () => {
                             {value.name.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex justify-content-between ${
-                                    show2 ? "" : "d-none"
-                                  }`}
+                                  className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                    }`}
                                   key={index}
                                 >
                                   <div className="d-flex align-items-center mt-2">
@@ -276,10 +273,6 @@ const Product = () => {
                   similique? Quisquam sint deserunt numquam id?
                 </TabPanel>
               </div>
-              {/* <div>
-                <Button className="orange_btn active">Полная цена</Button>
-                <Button className="orange_btn">Цена в месяц</Button>
-              </div> */}
             </div>
           </div>
           <div className="Sidebar">
@@ -380,11 +373,13 @@ const Product = () => {
                       );
                     })}
                   </ul>
-                  <div className="border_ my-4"></div>
-                  <div className="d-flex justify-content-center align-items-center">
-                    <FontAwesomeIcon className="icon me-3" icon={faInstagram} />
-                    <FontAwesomeIcon className="icon me-3" icon={faTelegram} />
-                    <FontAwesomeIcon className="icon" icon={faFacebook} />
+                  <div className="mt-4">
+                    <div className="border_"></div>
+                    <div className="d-flex justify-content-center align-items-center  my-4">
+                      <Link href="https://www.instagram.com/?hl=ru"><a><img className="icon me-3 fs-3" src="instagram.png" alt="instagram" /></a></Link>
+                      <Link href="https://web.telegram.org"><a><img className="icon me-3 fs-3" src="telegram.png" alt="telegram" /></a></Link>
+                      <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" /></a></Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -452,11 +447,13 @@ const Product = () => {
                 );
               })}
             </ul>
-            <div className="border_ my-4"></div>
-            <div className="d-flex justify-content-center align-items-center">
-              <FontAwesomeIcon className="icon me-3" icon={faInstagram} />
-              <FontAwesomeIcon className="icon me-3" icon={faTelegram} />
-              <FontAwesomeIcon className="icon" icon={faFacebook} />
+            <div className="mt-4">
+              <div className="border_"></div>
+              <div className="d-flex justify-content-center align-items-center  my-4">
+                <Link href="https://www.instagram.com/?hl=ru"><a><img className="icon me-3 fs-3" src="instagram.png" alt="instagram" /></a></Link>
+                <Link href="https://web.telegram.org"><a><img className="icon me-3 fs-3" src="telegram.png" alt="telegram" /></a></Link>
+                <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" /></a></Link>
+              </div>
             </div>
           </div>
         </div>
