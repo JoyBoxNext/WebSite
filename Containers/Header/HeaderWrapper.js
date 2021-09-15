@@ -34,8 +34,9 @@ const HeaderWrapper = styled.div`
       border-radius: 5px;
       margin: 15px 8px 0px 0px;
     }
-    .header_korzina {
-      width: 1px !important;
+    .header_korzina,
+    .header_icon {
+      width: 25px !important;
     }
   }
   @media screen and (max-width: 994px) {
@@ -100,17 +101,12 @@ const HeaderWrapper = styled.div`
   .lg_menu {
     display: none;
   }
-  .line {
-    border: 1px solid rgba(0, 0, 0, 0.4) !important;
-    margin-bottom: 10px;
-  }
   .korzina {
     position: absolute;
     top: 59px;
     left: 0;
     font-weight: bold;
     padding: 20px;
-    overflow-y: auto;
     z-index: 2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
@@ -136,14 +132,14 @@ const HeaderWrapper = styled.div`
     .icon {
       color: #ff5314;
       position: absolute;
-      right: 0;
+      right: -30px;
       top: 0;
     }
     .delete {
       color: #6c6c6c;
       position: absolute;
-      right: -10px;
-      bottom: 0;
+      right: -30px;
+      bottom: -6px;
     }
     .photo {
       width: 50px;
@@ -154,9 +150,16 @@ const HeaderWrapper = styled.div`
     .korzina {
       position: absolute;
       top: 65px;
-      width: 338px;
+      width: 350px;
       left: -100px;
       padding: 20px;
+    }
+  }
+  @media screen and (max-width: 1310px) {
+    .korzina {
+      position: absolute;
+      width: 350px;
+      left: -120px;
     }
   }
   @media screen and (max-width: 1000px) {
