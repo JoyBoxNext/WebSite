@@ -65,7 +65,7 @@ const categores = [
 
 const phones = [
   {
-    title: `1Samsung a52 4/256 dual sim onyx black`,
+    title: `1Samsung a52 4/256 dual  sim onyx black`,
     aksiya_: `16 800 000`,
     img: "SwiperProduct3.png",
     aksiya: `1 330 000 СУМ`,
