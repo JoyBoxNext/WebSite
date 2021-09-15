@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
-  /* position: sticky;
-  background-color: #ffe5dc;
-  z-index: 12000;
-  top: 0px; */
   .orange_btn {
     background-color: #ff5314;
     color: white;
@@ -37,6 +33,9 @@ const HeaderWrapper = styled.div`
       border: 1px solid black;
       border-radius: 5px;
       margin: 15px 8px 0px 0px;
+    }
+    .header_korzina {
+      width: 1px !important;
     }
   }
   @media screen and (max-width: 994px) {
@@ -101,15 +100,19 @@ const HeaderWrapper = styled.div`
   .lg_menu {
     display: none;
   }
+  .line {
+    border: 1px solid rgba(0, 0, 0, 0.4) !important;
+    margin-bottom: 10px;
+  }
   .korzina {
     position: absolute;
-    width: 400px;
     top: 59px;
-    left: -100px;
+    left: 0;
     font-weight: bold;
     padding: 20px;
     overflow-y: auto;
     z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     z-index: 1002;
 
@@ -134,11 +137,13 @@ const HeaderWrapper = styled.div`
       color: #ff5314;
       position: absolute;
       right: 0;
+      top: 0;
     }
     .delete {
       color: #6c6c6c;
       position: absolute;
-      right: 0;
+      right: -10px;
+      bottom: 0;
     }
     .photo {
       width: 50px;
@@ -148,9 +153,9 @@ const HeaderWrapper = styled.div`
   @media screen and (max-width: 1550px) {
     .korzina {
       position: absolute;
-      top: 59px;
-      left: -200px;
-      width: 400px;
+      top: 65px;
+      width: 338px;
+      left: -100px;
       padding: 20px;
     }
   }
@@ -159,7 +164,7 @@ const HeaderWrapper = styled.div`
       position: absolute;
       top: 59px;
       left: -200px;
-      width: 350px;
+      /* width: 350px; */
       padding: 15px;
     }
   }
@@ -182,7 +187,7 @@ const HeaderWrapper = styled.div`
       position: absolute;
       top: 59px;
       left: -150px;
-      width: 400px;
+      /* width: 400px; */
     }
   }
   @media screen and (max-width: 500px) {
@@ -190,7 +195,7 @@ const HeaderWrapper = styled.div`
       position: absolute;
       top: 59px;
       left: -150px;
-      width: 320px;
+      /* width: 320px; */
       padding: 10px;
     }
   }

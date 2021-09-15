@@ -21,7 +21,7 @@ import { dispatch } from "../redux/Store";
 import Link from "next/link";
 import { bigCategores, categores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
-import ModalProduct from "../Components/ModalProduct";
+import Container from "./../Containers/Container";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -124,7 +124,9 @@ const Product = () => {
 
   return (
     <>
-      <Header />
+      <Container>
+        <Header />
+      </Container>
       <ProductWrapper>
         <div className="d-flex D_flex">
           <div className="LeftSide">
@@ -149,7 +151,7 @@ const Product = () => {
                         <input
                           type="text"
                           value="3.000.000"
-                          className="input"
+                          className="input rounded"
                         />
                       </div>
                       <div className="d-flex align-items-center mt-3">
@@ -157,7 +159,7 @@ const Product = () => {
                         <input
                           type="text"
                           value="3.000.000"
-                          className="input"
+                          className="input rounded"
                         />
                       </div>
                     </div>
@@ -254,7 +256,7 @@ const Product = () => {
                                     </p>
                                   </div>
                                   <div className="">
-                                    <p className="my-1 subtitle me-3">
+                                    <p className="my-1 subtitle numbers me-3">
                                       {value.subtitle}
                                     </p>
                                   </div>
@@ -282,6 +284,10 @@ const Product = () => {
           </div>
           <div className="Sidebar">
             <div className="container ">
+              <h6 className="text-center mt-4 d-flex justify-content-center align-items-center">
+                Сортировать по: Цене |{" "}
+                <span className="pro_orange ms-2">Цене</span>
+              </h6>
               <div className="d-flex justify-content-between align-items-center">
                 <h1 className="title my-4">Удивляйся и удивляй!</h1>
               </div>
@@ -367,8 +373,8 @@ const Product = () => {
                   <ul>
                     {bottomText.map((value, index) => {
                       return (
-                        <li className="li" key={index}>
-                          <img className="me-1" src="finger.png" alt="" />
+                        <li className="li p-2" key={index}>
+                          <img className="me-2" src={value.img} alt="photo" />
                           {value.title}
                         </li>
                       );
@@ -440,7 +446,7 @@ const Product = () => {
               {bottomText.map((value, index) => {
                 return (
                   <li className="li" key={index}>
-                    <img className="me-1" src="finger.png" alt="" />
+                    <img className="me-1" src={value.img} alt="photo" />
                     {value.title}
                   </li>
                 );
@@ -455,7 +461,9 @@ const Product = () => {
           </div>
         </div>
       </ProductWrapper>
-      <Footer />
+      <Container>
+        <Footer />
+      </Container>
     </>
   );
 };

@@ -254,11 +254,15 @@ const Header = () => {
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 order-0 order-sm-0 order-md-0 order-lg-3 iconsOrder">
             <div className="d-flex position-relative">
               <Button className="d-block">
-                <img src="IconPerson.svg" alt="photo" />
+                <img className="header_icon" src="IconPerson.svg" alt="photo" />
                 <p className="m-0">Покупателям</p>
               </Button>
               <Button className="d-block" onClick={saveProduct}>
-                <img src="iconBasket.svg" alt="photo" />
+                <img
+                  className="header_korzina"
+                  src="iconBasket.svg"
+                  alt="photo"
+                />
                 <p className="m-0">
                   <Badge
                     badgeContent={
@@ -276,11 +280,14 @@ const Header = () => {
               <div className={`korzina ${openSave ? "d-none" : "d-block"}`}>
                 {datalfilter?.map((value, index) => (
                   <div>
+                    <div className="line"></div>
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
-                          <p className="mb-0 title fw-bold">{value.title}</p>
+                        <div className="position-relative">
+                          <div className="pe-4 p-xxl-0">
+                            <p className="mb-0 title fw-bold">{value.title}</p>
+                          </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
@@ -295,8 +302,6 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                        </div>
-                        <div>
                           <h6
                             style={{ cursor: "pointer" }}
                             onClick={() => deleteProduct(index)}
@@ -311,11 +316,14 @@ const Header = () => {
                 ))}
                 {baraxolkaSaveProduct?.map((value, index) => (
                   <div>
+                    <div className="line"></div>
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <div className="pe-4 p-xxl-0">
+                            <p className="mb-0 title fw-bold">{value.title}</p>
+                          </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
@@ -346,11 +354,14 @@ const Header = () => {
                 ))}
                 {rightSaveProduct?.map((value, index) => (
                   <div>
+                    <div className="line"></div>
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <div className="pe-4 p-xxl-0">
+                            <p className="mb-0 title fw-bold">{value.title}</p>
+                          </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
@@ -381,11 +392,14 @@ const Header = () => {
                 ))}
                 {homeSaveProduct?.map((value, index) => (
                   <div>
+                    <div className="line"></div>
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <div className="pe-4 p-xxl-0">
+                            <p className="mb-0 title fw-bold">{value.title}</p>
+                          </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
@@ -416,11 +430,14 @@ const Header = () => {
                 ))}
                 {chooseSaveProduct?.map((value, index) => (
                   <div>
+                    <div className="line"></div>
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <div className="pe-4 p-xxl-0">
+                            <p className="mb-0 title fw-bold">{value.title}</p>
+                          </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
@@ -451,11 +468,14 @@ const Header = () => {
                 ))}
                 {newsSaveProduct?.map((value, index) => (
                   <div>
+                    <div className="line"></div>
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 title fw-bold">{value.title}</p>
+                          <div className="pe-4 p-xxl-0">
+                            <p className="mb-0 title fw-bold">{value.title}</p>
+                          </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
@@ -487,11 +507,14 @@ const Header = () => {
 
                 {notebookSaveProduct?.map((value, index) => (
                   <div>
+                    <div className="line"></div>
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 title fw-bold ">{value.title}</p>
+                          <div className="pe-4 p-xxl-0">
+                            <p className="mb-0 title fw-bold">{value.title}</p>
+                          </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}

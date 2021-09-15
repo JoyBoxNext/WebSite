@@ -70,7 +70,7 @@ const ProductWrapper = styled.div`
   }
   .LeftSide {
     width: 340px;
-    margin-top: 70px;
+    margin-top: 130px;
     .input {
       width: 68%;
       border: none;
@@ -228,6 +228,7 @@ const ProductWrapper = styled.div`
   }
   .rightSide {
     flex: 1;
+    margin-top: 90px !important;
     .phone {
       width: 84.1px;
       height: 116px;
@@ -305,8 +306,27 @@ const ProductWrapper = styled.div`
   }
   .li {
     font-weight: bold;
-    font-size: 24.0473px;
+    font-size: 42px;
     line-height: 100%;
+  }
+  .pro_orange {
+    background-color: #ff5314;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+  }
+  .numbers {
+    color: rgba(85, 85, 85, 1);
+  }
+  @media screen and (max-width: 1850px) {
+    .li {
+      font-size: 42px;
+    }
+  }
+  @media screen and (max-width: 1441px) {
+    .li {
+      font-size: 30px;
+    }
   }
   @media screen and (max-width: 1200px) {
     .D_flex {
@@ -359,6 +379,11 @@ const ProductWrapper = styled.div`
       margin-top: 0;
     }
   }
+  @media screen and (max-width: 855px) {
+    .li {
+      font-size: 30px;
+    }
+  }
   @media screen and (max-width: 760px) {
     .D_flex {
       flex-wrap: wrap;
@@ -394,6 +419,11 @@ const ProductWrapper = styled.div`
     }
     .li {
       font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 385px) {
+    .li {
+      font-size: 20px !important;
     }
   }
 `;
