@@ -163,12 +163,35 @@ const HeaderWrapper = styled.div`
       left: -120px;
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1220px) {
     .korzina {
       position: absolute;
-      top: 59px;
-      left: -200px;
-      /* width: 350px; */
+      top: 65px;
+      left: -100px;
+      padding: 15px;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    .korzina {
+      position: absolute;
+      top: 65px;
+      left: -10px;
+      padding: 15px;
+    }
+  }
+  @media screen and (max-width: 880px) {
+    .korzina {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      padding: 15px;
+    }
+  }
+  @media screen and (max-width: 880px) {
+    .korzina {
+      position: absolute;
+      top: 65px;
+      left: -50px;
       padding: 15px;
     }
   }

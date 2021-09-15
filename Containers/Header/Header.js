@@ -398,9 +398,9 @@ const Header = () => {
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
-                            <p className="mb-0 title fw-bold">{value.title}</p>
+                            <p className="mb-0 title fw-bold ">{value.title}</p>
                           </div>
                           <FontAwesomeIcon
                             className="icon text-end"
@@ -416,15 +416,15 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                        </div>
-                        <div>
-                          <h6
-                            style={{ cursor: "pointer" }}
-                            onClick={() => deleteProduct4(index)}
-                            className="text-end border-bottom delete mt-3"
-                          >
-                            удалить
-                          </h6>
+                          <div>
+                            <h6
+                              style={{ cursor: "pointer" }}
+                              onClick={() => deleteProduct4(index)}
+                              className="text-end border-bottom delete mt-3"
+                            >
+                              удалить
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -436,9 +436,9 @@ const Header = () => {
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
-                            <p className="mb-0 title fw-bold">{value.title}</p>
+                            <p className="mb-0 title fw-bold ">{value.title}</p>
                           </div>
                           <FontAwesomeIcon
                             className="icon text-end"
@@ -454,15 +454,15 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                        </div>
-                        <div>
-                          <h6
-                            style={{ cursor: "pointer" }}
-                            onClick={() => deleteProduct5(index)}
-                            className="text-end border-bottom delete mt-3"
-                          >
-                            удалить
-                          </h6>
+                          <div>
+                            <h6
+                              style={{ cursor: "pointer" }}
+                              onClick={() => deleteProduct5(index)}
+                              className="text-end border-bottom delete mt-3"
+                            >
+                              удалить
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -474,9 +474,9 @@ const Header = () => {
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
-                            <p className="mb-0 title fw-bold">{value.title}</p>
+                            <p className="mb-0 title fw-bold ">{value.title}</p>
                           </div>
                           <FontAwesomeIcon
                             className="icon text-end"
@@ -492,15 +492,15 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                        </div>
-                        <div>
-                          <h6
-                            style={{ cursor: "pointer" }}
-                            onClick={() => deleteProduct6(index)}
-                            className="text-end border-bottom delete mt-3"
-                          >
-                            удалить
-                          </h6>
+                          <div>
+                            <h6
+                              style={{ cursor: "pointer" }}
+                              onClick={() => deleteProduct6(index)}
+                              className="text-end border-bottom delete mt-3"
+                            >
+                              удалить
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -513,9 +513,9 @@ const Header = () => {
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
-                            <p className="mb-0 title fw-bold">{value.title}</p>
+                            <p className="mb-0 title fw-bold ">{value.title}</p>
                           </div>
                           <FontAwesomeIcon
                             className="icon text-end"
@@ -531,15 +531,15 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                        </div>
-                        <div>
-                          <h6
-                            style={{ cursor: "pointer" }}
-                            onClick={() => deleteProduct7(index)}
-                            className="text-end border-bottom delete mt-3"
-                          >
-                            удалить
-                          </h6>
+                          <div>
+                            <h6
+                              style={{ cursor: "pointer" }}
+                              onClick={() => deleteProduct7(index)}
+                              className="text-end border-bottom delete mt-3"
+                            >
+                              удалить
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </div>
