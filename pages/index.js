@@ -428,7 +428,7 @@ export default function Home() {
             <div className="new-product-cards d-flex p-2">
               {NewProductCards.map((v, i) => {
                 return (
-                  <Link href="/productCard">
+                  <Link href="/productCard" key={i}>
                     <a>
                       <div
                         className={`new-product-card p-2 ${v.className}`}
