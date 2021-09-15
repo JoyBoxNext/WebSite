@@ -586,6 +586,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* //brands */}
           <div className="brands">
             <div className="py-5">
               <h1 className="title-section">Популярные бренды</h1>
