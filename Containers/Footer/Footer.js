@@ -13,11 +13,11 @@ const Footer = () => {
             return (
               <div key={i} className="col-sm-6 col-md-4 p-5">
                 <div className="">
-                  <h4 className="fw-bold">{v.title}</h4>
+                  <h4 className="fw-bold mb-4">{v.title}</h4>
                   {v.subtitle.map((v, i) => {
                     return (
                       <ul key={i}>
-                        <li>
+                        <li className="my-2">
                           <Link href={v.href}>
                             <a>{v.title}</a>
                           </Link>

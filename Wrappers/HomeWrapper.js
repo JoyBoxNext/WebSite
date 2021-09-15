@@ -287,9 +287,6 @@ const HomeWrapper = styled.div`
     h2 {
       font-size: 29px;
     }
-    .productDayText {
-      margin: 68px 70px 66px 64px;
-    }
     .productBoard {
       width: 100%;
       background-color: white;
@@ -307,6 +304,8 @@ const HomeWrapper = styled.div`
         color: black !important;
       }
       .bgPrice {
+        display: flex;
+        flex-wrap: nowrap !important;
         background-color: #ff5314;
         color: white;
         padding: 5px 15px;
@@ -317,9 +316,30 @@ const HomeWrapper = styled.div`
           margin: 0;
         }
         .price {
-          font-size: 22px;
+          font-size: 18px !important;
           margin: 0;
           padding: 0;
+        }
+      }
+      @media screen and (max-width:700px) {
+        .priceContainer {
+          display: flex;
+          align-items: center;
+        }
+        .productDay {
+          padding: 0 !important;
+        }
+      }
+      @media screen and (max-width:500px) {
+        .priceContainer {
+          display: block;
+          align-items: center;
+          .bgPrice {
+            width: 100%;
+          }
+        }
+        .productDay {
+          padding: 0 !important;
         }
       }
     }
