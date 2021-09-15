@@ -214,6 +214,153 @@ const ProductCardWrapper = styled.div`
     height: 100%;
     object-fit: cover;
   }
+  @media screen and (max-width: 1920px) and (min-width: 1440px) {
+    padding: 0 !important;
+    .contant-title {
+      display: block;
+      align-items: end;
+      font-size: 14px;
+      .p-text {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 115.5%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: none;
+      }
+      .contant-title-1 {
+        display: flex;
+        justify-content: space-between;
+        .badge {
+          order: 2;
+          height: 30px;
+          align-items: flex-end !important;
+        }
+      }
+      .contant-title-2 {
+        display: flex;
+        align-items: center;
+        h1 {
+          font-size: 35px;
+          line-height: 115%;
+          letter-spacing: -0.03em;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        .badge {
+          display: flex;
+          max-width: 207px;
+          height: 25px;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 115.5%;
+          letter-spacing: -0.03em;
+          text-transform: uppercase;
+          margin: 0 20px;
+        }
+      }
+    }
+    .firstContainer {
+      background-color: #eff9fe;
+      .firstContainerMacbook {
+        display: flex !important;
+        flex-wrap: wrap;
+        .images {
+          width: 480px;
+          display: flex !important;
+        }
+        .colorMemories {
+          width: 300px;
+          display: block;
+          flex-wrap: wrap;
+          .row {
+            display: block;
+          }
+          .colorBoxes,
+          .memorie {
+            display: flex;
+            flex-wrap: nowrap;
+          }
+        }
+
+        .priceButton {
+          display: flex;
+          flex-wrap: wrap;
+          .prices {
+            display: block;
+            .oldPrice {
+              font-size: 20px;
+              line-height: 115.5%;
+              text-decoration-line: line-through;
+              text-transform: uppercase;
+            }
+            .badge {
+              font-size: 13px;
+              line-height: 115.5%;
+              letter-spacing: 0.025em;
+              text-transform: uppercase;
+              max-height: 23px;
+            }
+            .price {
+              /* max-width: 80% !important; */
+              .bigPrice {
+                font-size: 50px;
+                line-height: 92%;
+                letter-spacing: -0.03em;
+                text-transform: uppercase;
+              }
+            }
+            .rentPrice {
+              display: block !important;
+              font-size: 14px;
+            }
+          }
+          .button {
+            /* max-width: 45% !important; */
+            display: flex;
+            flex-wrap: wrap;
+            .checkout {
+              width: 100% !important;
+              font-size: 15px;
+              max-height: 50px;
+              border-radius: 5px;
+            }
+            .link-korzinka {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .characteristic-container {
+        .characteristic {
+          /* max-width: 100%; */
+        }
+        .link-korzinka {
+          display: none;
+        }
+      }
+    }
+    .secondContainer {
+      h1 {
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 100%;
+      }
+      .button_next,
+      .button_prev,
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: flex;
+      }
+      .swiper-pagination {
+        display: none;
+        justify-content: center;
+      }
+    }
+  }
 
   @media screen and (max-width: 1440px) and (min-width: 900px) {
     padding: 0 !important;

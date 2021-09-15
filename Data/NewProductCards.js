@@ -16,6 +16,7 @@ const NewProductCards = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    className:"two"
   },
   {
     img: "SwiperProduct3.png",

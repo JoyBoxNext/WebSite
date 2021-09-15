@@ -18,6 +18,7 @@ const homeDatas = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    className: " two",
     save: false,
   },
 
@@ -29,6 +30,7 @@ const homeDatas = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    className: " three",
     save: false,
   },
 
@@ -40,7 +42,7 @@ const homeDatas = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
-    className: "d-none d-xl-flex",
+    className: " four",
     save: false,
   },
 
@@ -52,7 +54,7 @@ const homeDatas = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
-    className: "d-none d-xl-flex",
+    className: " five",
     save: false,
   },
 ];
