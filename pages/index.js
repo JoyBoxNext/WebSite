@@ -246,24 +246,30 @@ export default function Home() {
 
           {/* ProductDay */}
           <div className="productDay mt-5">
-            <div className="row">
+            <div className="row justify-content-center p-3 w-100">
               <div className="col-12 col-sm-5 col-md-5 col-lg-5">
                 <div className="productDayText">
-                  <p className="mb-0 left_title">Товар дня</p>
-                  <h1 className="mb-0 left_clock">17.08</h1>
-                  <p className="fw-bold left_subtitle">
-                    Ограниченное количество. Предложение действительно только
-                    сегодня.
-                  </p>
-                  <div className="yellowCont">
-                    <p>до конца акции</p>
-                    <h2>08:03:45</h2>
+                  <div className="row">
+                    <div className="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                      <p className="mb-0 left_title">Товар дня</p>
+                      <h1 className="mb-0 left_clock">17.08</h1>
+                      <p className="fw-bold left_subtitle">
+                        Ограниченное количество. Предложение действительно
+                        только сегодня.
+                      </p>
+                    </div>
+                    <div className="col-6 col-sm-12 col-xl-6 ">
+                      <div className="yellowCont">
+                        <p>до конца акции</p>
+                        <h2>08:03:45</h2>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-7 col-md-7 col-lg-7 col-lg-7">
-                <div className="productBoard">
-                  <div className="row ">
+              <div className="col-12 col-sm-7 col-md-7 col-lg-7 col-lg-7 d-flex justify-content-center align-items-center m-0">
+                <div className={`productBoard `}>
+                  <div className="row justify-content-center align-items-center">
                     <div className="col-12 col-lg-6 col-xl-6">
                       <h2 className="right_title">
                         Samsung side by side-washer
@@ -285,9 +291,9 @@ export default function Home() {
                         alt="photo"
                       />
                     </div>
-                    <div className="col-12 col-sm-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
+                    <div className="col-12 col-sm-6 col-md-5 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
-                        className="productDayWasher w-75"
+                        className="productDayWasher w-100"
                         src="productDayWasher.png"
                         alt="Washer"
                       />
@@ -321,8 +327,8 @@ export default function Home() {
                   },
                 }}
                 autoplay={{
-                  "delay": 2500,
-                  "disableOnInteraction": false
+                  delay: 2500,
+                  disableOnInteraction: false,
                 }}
                 slidesPerView={5}
                 spaceBetween={0}
@@ -335,67 +341,69 @@ export default function Home() {
                 {ChooseDatas.map((v, i) => {
                   return (
                     <SwiperSlide className=" h-100 p-3" key={i}>
-                      <Link href="/productCard"><a>
-                        <div className="choose-card p-2">
-                          <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                            <Link href="/productCard">
-                              <a>
-                                <img src={v.img} alt="photo" />
-                              </a>
-                            </Link>
-                            <div className="colorBoxes flex-column mb-5">
-                              <div className="p-1">
-                                <div className="col-3 colorBox black"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox white"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox green"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox gray"></div>
+                      <Link href="/productCard">
+                        <a>
+                          <div className="choose-card p-2">
+                            <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                              <Link href="/productCard">
+                                <a>
+                                  <img src={v.img} alt="photo" />
+                                </a>
+                              </Link>
+                              <div className="colorBoxes flex-column mb-5">
+                                <div className="p-1">
+                                  <div className="col-3 colorBox black"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox white"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox green"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox gray"></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <p className=" title fw-bold mt-2">{v.title}</p>
-                          <div className="small d-flex p-0 m-0">
-                            <p className="oldPrice me-1 m-0 p-0">
-                              {v.oldPrice}
-                              <span className="sum">сум</span>
-                            </p>
-                            <div className="badgePrice">
-                              <p className="m-0 p-0">{v.badgePrice} сум</p>
-                            </div>
-                          </div>
-                          <div className="d-flex justify-content-between">
-                            <div className="prices">
-                              <p className="m-0 fw-bold">
-                                <span>{v.priceBig}</span>
-                                {v.price}
-                                <small>сум</small>
+                            <p className=" title fw-bold mt-2">{v.title}</p>
+                            <div className="small d-flex p-0 m-0">
+                              <p className="oldPrice me-1 m-0 p-0">
+                                {v.oldPrice}
+                                <span className="sum">сум</span>
                               </p>
-                              <p className="rentPrice">
-                                от {v.rentPrice} сум/мес
-                              </p>
+                              <div className="badgePrice">
+                                <p className="m-0 p-0">{v.badgePrice} сум</p>
+                              </div>
                             </div>
-                            <button
-                              onClick={() => saveHomeProduct(i)}
-                              className="bag border-0"
-                            >
-                              <img
-                                className="w-auto h-auto"
-                                src="icon.png"
-                                alt=""
-                              />
-                            </button>
+                            <div className="d-flex justify-content-between">
+                              <div className="prices">
+                                <p className="m-0 fw-bold">
+                                  <span>{v.priceBig}</span>
+                                  {v.price}
+                                  <small>сум</small>
+                                </p>
+                                <p className="rentPrice">
+                                  от {v.rentPrice} сум/мес
+                                </p>
+                              </div>
+                              <button
+                                onClick={() => saveHomeProduct(i)}
+                                className="bag border-0"
+                              >
+                                <img
+                                  className="w-auto h-auto"
+                                  src="icon.png"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+                            <div className="dot_blue dot1"></div>
+                            <div className="dot_blue dot2"></div>
+                            <div className="dot_blue dot3"></div>
+                            <div className="dot_blue dot4"></div>
                           </div>
-                          <div className="dot_blue dot1"></div>
-                          <div className="dot_blue dot2"></div>
-                          <div className="dot_blue dot3"></div>
-                          <div className="dot_blue dot4"></div>
-                        </div>
-                      </a></Link>
+                        </a>
+                      </Link>
                     </SwiperSlide>
                   );
                 })}
@@ -420,49 +428,61 @@ export default function Home() {
             <div className="new-product-cards d-flex p-2">
               {NewProductCards.map((v, i) => {
                 return (
-                  <Link href="/productCard"><a>
-                    <div className={`new-product-card p-2 ${v.className}`} key={i} >
-                      <img style={{ objectFit: "contain" }}
-                        className="w-100 h-50 new_photos"
-                        src={v.img}
-                        alt="photo"
-                      />
-                      <Link href="/productCard">
-                        <a>
-                          <p className="title fw-bold mt-2">{v.title}</p>
-                        </a>
-                      </Link>
-                      <div className="small d-flex">
-                        <p className="oldPrice me-1 m-0 p-0">
-                          {v.oldPrice}
-                          <span className="sum">сум</span>
-                        </p>
-                        <div className="badgePrice">
-                          <p className="m-0 p-0">{v.badgePrice} сум</p>
-                        </div>
-                      </div>
-                      <div className="d-flex justify-content-between">
-                        <div className="prices">
-                          <p className="m-0 fw-bold">
-                            <span>{v.priceBig}</span>
-                            <span className="small_price">{v.price}</span>
-                            <small className="sum">сум</small>
+                  <Link href="/productCard">
+                    <a>
+                      <div
+                        className={`new-product-card p-2 ${v.className}`}
+                        key={i}
+                      >
+                        <img
+                          style={{ objectFit: "contain" }}
+                          className="w-100 h-50 new_photos"
+                          src={v.img}
+                          alt="photo"
+                        />
+                        <Link href="/productCard">
+                          <a>
+                            <p className="title fw-bold mt-2">{v.title}</p>
+                          </a>
+                        </Link>
+                        <div className="small d-flex">
+                          <p className="oldPrice me-1 m-0 p-0">
+                            {v.oldPrice}
+                            <span className="sum">сум</span>
                           </p>
-                          <p className="rentPrice">от {v.rentPrice} сум/мес</p>
+                          <div className="badgePrice">
+                            <p className="m-0 p-0">{v.badgePrice} сум</p>
+                          </div>
                         </div>
-                        <button
-                          onClick={() => saveHomeProduct(i)}
-                          className="bag border-0"
-                        >
-                          <img className="w-auto h-auto" src="icon.png" alt="" />
-                        </button>
+                        <div className="d-flex justify-content-between">
+                          <div className="prices">
+                            <p className="m-0 fw-bold">
+                              <span>{v.priceBig}</span>
+                              <span className="small_price">{v.price}</span>
+                              <small className="sum">сум</small>
+                            </p>
+                            <p className="rentPrice">
+                              от {v.rentPrice} сум/мес
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => saveHomeProduct(i)}
+                            className="bag border-0"
+                          >
+                            <img
+                              className="w-auto h-auto"
+                              src="icon.png"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div className="dot_orange dot1"></div>
+                        <div className="dot_orange dot2"></div>
+                        <div className="dot_orange dot3"></div>
+                        <div className="dot_orange dot4"></div>
                       </div>
-                      <div className="dot_orange dot1"></div>
-                      <div className="dot_orange dot2"></div>
-                      <div className="dot_orange dot3"></div>
-                      <div className="dot_orange dot4"></div>
-                    </div>
-                  </a></Link>
+                    </a>
+                  </Link>
                 );
               })}
             </div>
@@ -573,11 +593,11 @@ export default function Home() {
                 {home_images.map((value, index) => {
                   return (
                     <div
-                      className={`col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 ${value.className}`}
+                      className={`col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center`}
                       key={index}
                     >
                       <img
-                        className="home_photo mt-4"
+                        className={`home_photo mt-4 ${value.className}`}
                         src={value.img}
                         alt="photo"
                       />

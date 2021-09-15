@@ -283,9 +283,7 @@ const Product = () => {
           <div className="Sidebar">
             <div className="container ">
               <div className="d-flex justify-content-between align-items-center">
-                <h1 onClick={open} className="title my-4">
-                  Удивляйся и удивляй!
-                </h1>
+                <h1 className="title my-4">Удивляйся и удивляй!</h1>
               </div>
               <div className="row justify-content-center">
                 {data?.map((value, index) => {

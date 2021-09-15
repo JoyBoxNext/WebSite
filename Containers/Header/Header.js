@@ -520,7 +520,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="w-100 mt-3 d-flex flex-wrap align-items-center">
+        <div className="w-100 mt-3 d-flex justify-content-center flex-wrap align-items-center">
           <div>
             <Button
               className="Categories"

@@ -7,6 +7,7 @@ const NewProductCards = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    save: false,
   },
   {
     img: "SwiperProduct2.png",
@@ -16,7 +17,8 @@ const NewProductCards = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
-    className:"two"
+    className: "two",
+    save: false,
   },
   {
     img: "SwiperProduct3.png",
@@ -27,6 +29,7 @@ const NewProductCards = [
     price: ",470,999 ",
     rentPrice: "1 362 000",
     className: "three",
+    save: false,
   },
   {
     img: "SwiperProduct2.png",
@@ -37,6 +40,7 @@ const NewProductCards = [
     price: ",470,999 ",
     rentPrice: "1 362 000",
     className: "four",
+    save: false,
   },
   {
     img: "SwiperProduct3.png",
@@ -47,6 +51,7 @@ const NewProductCards = [
     price: ",470,999 ",
     rentPrice: "1 362 000",
     className: "five",
+    save: false,
   },
 ];
 

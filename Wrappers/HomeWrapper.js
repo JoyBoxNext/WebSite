@@ -179,15 +179,11 @@ const HomeWrapper = styled.div`
       .text {
         padding: 10px 20px;
         .subtitle {
-          font-family: Roboto;
-          font-style: normal;
           font-weight: bold;
           font-size: 11.3714px;
           line-height: 100%;
         }
         .title {
-          font-family: Roboto;
-          font-style: normal;
           font-weight: bold;
           font-size: 29.974px;
           line-height: 100%;
@@ -200,22 +196,16 @@ const HomeWrapper = styled.div`
         padding: 8px;
 
         .title {
-          font-family: Roboto;
-          font-style: normal;
           font-weight: normal;
           font-size: 13.0968px;
           line-height: 100%;
         }
         .subtitle {
-          font-family: Roboto;
-          font-style: normal;
           font-weight: bold;
           font-size: 11.3714px;
           line-height: 100%;
         }
         .oldPrice {
-          font-family: Roboto;
-          font-style: normal;
           font-weight: bold;
           font-size: 11px;
           line-height: 100%;
@@ -228,17 +218,12 @@ const HomeWrapper = styled.div`
           background-color: #ff5314;
           padding: 7px 4px;
           .price {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10.3361px;
+            font-size: 10px;
             line-height: 100%;
             padding: 0;
             margin: 0;
             .priceNum {
-              font-style: normal;
-              font-weight: bold;
-              font-size: 16.0455px;
+              font-size: 16px;
               line-height: 100%;
               letter-spacing: 0.045em;
               text-transform: lowercase;
@@ -248,9 +233,6 @@ const HomeWrapper = styled.div`
           }
         }
         .bottom-text {
-          font-family: Roboto;
-          font-style: normal;
-          font-weight: normal;
           font-size: 7px;
           line-height: 100%;
           display: flex;
@@ -266,9 +248,6 @@ const HomeWrapper = styled.div`
     .flex2 {
       border: 2px solid #fff;
       .threePhone_title {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
         font-size: 36px;
         line-height: 100%;
         display: flex;
@@ -277,7 +256,6 @@ const HomeWrapper = styled.div`
     }
     .flex3 {
       .home_wonder_title {
-        font-style: normal;
         font-weight: bold;
         font-size: 52px;
         line-height: 100%;
@@ -304,21 +282,17 @@ const HomeWrapper = styled.div`
     background-image: url("BgProductDay.png");
     background-size: cover;
     width: 100% !important;
-    height: 350px;
     /* padding: 30px; */
     display: flex;
     h2 {
       font-size: 29px;
     }
     .productDayText {
-      width: 100%;
       margin: 68px 70px 66px 64px;
     }
     .productBoard {
-      width: 90%;
-      height: 299px;
+      width: 100%;
       background-color: white;
-      margin: 25px 100px 25px 0;
       padding: 30px 40px !important;
       .oldPrice {
         font-size: 20px;
@@ -347,10 +321,6 @@ const HomeWrapper = styled.div`
           margin: 0;
           padding: 0;
         }
-      }
-
-      .productDayWasher {
-        width: 100% !important;
       }
     }
     .yellowCont {
@@ -699,6 +669,13 @@ const HomeWrapper = styled.div`
     .salePrice .badgePrice {
       font-size: 14px !important;
     }
+
+    .right_title {
+      font-size: 24px !important;
+    }
+    .price {
+      font-size: 12px !important;
+    }
   }
   @media screen and (max-width: 1105px) {
     .five {
@@ -743,7 +720,10 @@ const HomeWrapper = styled.div`
       font-size: 25px;
     }
     .right_title {
-      font-size: 25px;
+      font-size: 20px !important;
+    }
+    .price {
+      font-size: 9px !important;
     }
   }
   @media screen and (max-width: 950px) {
@@ -755,19 +735,31 @@ const HomeWrapper = styled.div`
     .three {
       display: none !important;
     }
+    .lg {
+      display: none !important;
+    }
+    .home_photo {
+      width: 100px !important;
+    }
+    .apple {
+      width: 80px !important;
+    }
+    .productDayWasher {
+      width: 200px !important;
+    }
   }
   @media screen and (max-width: 500px) {
     .two {
       display: none !important;
     }
-    max-width: 400px;
+
     .new-product-cards {
       img {
         margin: auto;
       }
     }
   }
-  
+
   .title-section {
     font-size: 45px;
     font-weight: bold;
@@ -785,7 +777,12 @@ const HomeWrapper = styled.div`
     }
     //Slick
   }
-  
+  .home_photo {
+    width: 150px;
+  }
+  .apple {
+    width: 100px;
+  }
 `;
 
 export default HomeWrapper;
