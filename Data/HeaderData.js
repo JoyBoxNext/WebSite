@@ -4,25 +4,25 @@ const links = [
   { link: "ТВ", href: "/baraxolka" },
   {
     link: "Техника для кухни",
-    href: "/",
+    href: "",
     className: "link1 col-12",
   },
   {
     link: "Аксессуары",
-    href: "/",
+    href: "",
     className: "link2 mx-4 d-block d-md-none",
   },
   {
     link: "Техника для дома",
-    href: "/",
+    href: "",
     className: "link3 d-none d-lg-block",
   },
   {
     link: " Ноутбук, ПК, планшет",
-    href: "/",
+    href: "",
     className: "link4 d-none d-xl-block",
   },
-  { link: "Для геймеров", href: "/", className: "link5 d-none d-xxl-block" },
+  { link: "Для геймеров", href: "", className: "link5 d-none d-xxl-block" },
 ];
 
 const pages = [

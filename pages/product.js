@@ -193,14 +193,16 @@ const Product = () => {
                             {value.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex align-items-center ${show ? "" : "d-none"
-                                    }`}
+                                  className={`d-flex align-items-center ${
+                                    show ? "" : "d-none"
+                                  }`}
                                   key={index}
                                 >
                                   <button
                                     onClick={() => toggle(index)}
-                                    className={` box me-2 ${checked == index ? "active" : ""
-                                      }`}
+                                    className={` box me-2 ${
+                                      checked == index ? "active" : ""
+                                    }`}
                                   ></button>
                                   <p className="my-1 subtitle">
                                     {value.subtitle}
@@ -239,8 +241,9 @@ const Product = () => {
                             {value.name.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex justify-content-between ${show2 ? "" : "d-none"
-                                    }`}
+                                  className={`d-flex justify-content-between ${
+                                    show2 ? "" : "d-none"
+                                  }`}
                                   key={index}
                                 >
                                   <div className="d-flex align-items-center mt-2">
@@ -347,7 +350,7 @@ const Product = () => {
                           </div>
                         </div>
                         <p className="descripton px-2">
-                          Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
+                          Экран (6.5", Super AMOLED, 2400x1080)/ Qualcomm
                           Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/ основная
                           квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
                           фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной памяти
@@ -376,9 +379,33 @@ const Product = () => {
                   <div className="mt-4">
                     <div className="border_"></div>
                     <div className="d-flex justify-content-center align-items-center  my-4">
-                      <Link href="https://www.instagram.com/?hl=ru"><a><img className="icon me-3 fs-3" src="instagram.png" alt="instagram" /></a></Link>
-                      <Link href="https://web.telegram.org"><a><img className="icon me-3 fs-3" src="telegram.png" alt="telegram" /></a></Link>
-                      <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" /></a></Link>
+                      <Link href="https://www.instagram.com/?hl=ru">
+                        <a>
+                          <img
+                            className="icon me-3 fs-3"
+                            src="instagram.png"
+                            alt="instagram"
+                          />
+                        </a>
+                      </Link>
+                      <Link href="https://web.telegram.org">
+                        <a>
+                          <img
+                            className="icon me-3 fs-3"
+                            src="telegram.png"
+                            alt="telegram"
+                          />
+                        </a>
+                      </Link>
+                      <Link href="https://www.facebook.com">
+                        <a>
+                          <img
+                            className="icon fs-3"
+                            src="facebook.png"
+                            alt="facebook"
+                          />
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -393,6 +420,7 @@ const Product = () => {
                     className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"
                     key={index}
                   >
+                    <hr />
                     <div className="right_flex d-xxl-flex">
                       <div className="d-flex justify-content-center align-items-center">
                         <img
@@ -450,9 +478,33 @@ const Product = () => {
             <div className="mt-4">
               <div className="border_"></div>
               <div className="d-flex justify-content-center align-items-center  my-4">
-                <Link href="https://www.instagram.com/?hl=ru"><a><img className="icon me-3 fs-3" src="instagram.png" alt="instagram" /></a></Link>
-                <Link href="https://web.telegram.org"><a><img className="icon me-3 fs-3" src="telegram.png" alt="telegram" /></a></Link>
-                <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" /></a></Link>
+                <Link href="https://www.instagram.com/?hl=ru">
+                  <a>
+                    <img
+                      className="icon me-3 fs-3"
+                      src="instagram.png"
+                      alt="instagram"
+                    />
+                  </a>
+                </Link>
+                <Link href="https://web.telegram.org">
+                  <a>
+                    <img
+                      className="icon me-3 fs-3"
+                      src="telegram.png"
+                      alt="telegram"
+                    />
+                  </a>
+                </Link>
+                <Link href="https://www.facebook.com">
+                  <a>
+                    <img
+                      className="icon fs-3"
+                      src="facebook.png"
+                      alt="facebook"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

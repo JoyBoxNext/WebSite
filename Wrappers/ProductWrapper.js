@@ -27,6 +27,8 @@ const ProductWrapper = styled.div`
   .MuiPaper-elevation4 {
     box-shadow: none;
     padding: 0 !important;
+    border: none !important;
+    outline: none;
   }
   .MuiBox-root-11,
   .MuiBox-root-31 {
@@ -54,11 +56,19 @@ const ProductWrapper = styled.div`
   .MuiTab-root:nth-child(1) {
     background: #ff5314 !important;
     color: #fff;
+    border-radius: 10px 0 0 10px;
   }
   .MuiTab-root:nth-child(2) {
     background: #fff !important;
     color: #ff5314;
     border: 1px solid rgba(168, 160, 160, 1);
+    border-radius: 0 5px 5px 0;
+  }
+  /* .MuiButtonBase-root {
+    border-radius: 0 10px 10px 0;
+  } */
+  .MuiTabs-scroller {
+    border-radius: 5px;
   }
   .save_btn {
     background: transparent !important;
@@ -94,7 +104,7 @@ const ProductWrapper = styled.div`
     .box {
       width: 20px;
       height: 20px;
-      border: 1px solid #969696;
+      border: 1px solid #eae7e7;
       background: #eae7e7;
       outline: none;
       border-radius: 2px;
@@ -159,6 +169,8 @@ const ProductWrapper = styled.div`
         height: 0px;
         overflow: hidden;
         font-size: 11.5px;
+        color: #8d8989;
+        text-transform: uppercase;
       }
       &:hover {
         position: absolute;
@@ -276,8 +288,8 @@ const ProductWrapper = styled.div`
     height: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.4);
     border-radius: 3px;
+    border: 1px solid #eae7e7 !important;
     content: "";
     background-repeat: no-repeat;
     background-position: center;
