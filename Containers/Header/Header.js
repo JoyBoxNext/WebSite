@@ -252,7 +252,7 @@ const Header = () => {
             </div>
           </div>
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 order-0 order-sm-0 order-md-0 order-lg-3 iconsOrder">
-            <div className="d-flex position-relative">
+            <div className="d-flex position-relative justify-content-end">
               <Button className="d-block">
                 <img className="header_icon" src="IconPerson.svg" alt="photo" />
                 <p className="m-0">Покупателям</p>
@@ -286,7 +286,7 @@ const Header = () => {
                       <div className="d-flex justify-content-between align-items-center">
                         <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
-                            <p className="mb-0 title fw-bold">{value.title}</p>
+                            <p className="mb-0 title fw-bold ">{value.title}</p>
                           </div>
                           <FontAwesomeIcon
                             className="icon text-end"
@@ -302,13 +302,15 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                          <h6
-                            style={{ cursor: "pointer" }}
-                            onClick={() => deleteProduct(index)}
-                            className="text-end border-bottom delete mt-3"
-                          >
-                            удалить
-                          </h6>
+                          <div>
+                            <h6
+                              style={{ cursor: "pointer" }}
+                              onClick={() => deleteProduct(index)}
+                              className="text-end border-bottom delete mt-3"
+                            >
+                              удалить
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -320,7 +322,7 @@ const Header = () => {
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
                             <p className="mb-0 title fw-bold">{value.title}</p>
                           </div>
@@ -338,15 +340,15 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                        </div>
-                        <div>
-                          <h6
-                            style={{ cursor: "pointer" }}
-                            onClick={() => deleteProduct2(index)}
-                            className="text-end border-bottom delete mt-3"
-                          >
-                            удалить
-                          </h6>
+                          <div>
+                            <h6
+                              style={{ cursor: "pointer" }}
+                              onClick={() => deleteProduct2(index)}
+                              className="text-end border-bottom delete mt-3"
+                            >
+                              удалить
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -358,7 +360,7 @@ const Header = () => {
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
                             <p className="mb-0 title fw-bold">{value.title}</p>
                           </div>
@@ -376,15 +378,15 @@ const Header = () => {
                             </span>
                             {value.price}
                           </h6>
-                        </div>
-                        <div>
-                          <h6
-                            style={{ cursor: "pointer" }}
-                            onClick={() => deleteProduct3(index)}
-                            className="text-end border-bottom delete mt-3"
-                          >
-                            удалить
-                          </h6>
+                          <div>
+                            <h6
+                              style={{ cursor: "pointer" }}
+                              onClick={() => deleteProduct3(index)}
+                              className="text-end border-bottom delete mt-3"
+                            >
+                              удалить
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </div>

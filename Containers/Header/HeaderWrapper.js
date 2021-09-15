@@ -114,6 +114,7 @@ const HeaderWrapper = styled.div`
 
     .title {
       font-size: 11px;
+      padding-right: 100px;
     }
     .aksiya_ {
       font-weight: 500;
@@ -132,14 +133,14 @@ const HeaderWrapper = styled.div`
     .icon {
       color: #ff5314;
       position: absolute;
-      right: -30px;
+      right: 0;
       top: 0;
     }
     .delete {
       color: #6c6c6c;
       position: absolute;
-      right: -30px;
-      bottom: -6px;
+      right: 0;
+      bottom: -10%;
     }
     .photo {
       width: 50px;
