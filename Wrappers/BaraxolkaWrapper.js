@@ -13,9 +13,6 @@ const BaraxollaWrapper = styled.div`
     }
   }
 
-  .baraxolka_img {
-    width: 100%;
-  }
   .MuiTabs-flexContainer {
     background: white !important;
     color: #000;

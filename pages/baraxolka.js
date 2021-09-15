@@ -135,18 +135,14 @@ const Product = () => {
                     {baraxolka?.map((value, index) => {
                       return (
                         <div
-                          className="col-12 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
+                          className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
                           key={index}
                         >
                           <div className="cards_border">
                             <img src="skidka.jpg" alt="photo" />
                             <div className="px-3">
                               <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                                <img
-                                  className="baraxolka_img"
-                                  src={value.img}
-                                  alt="photo"
-                                />
+                                <img src={value.img} alt="photo" />
                                 <div className="colorBoxes flex-column mb-5">
                                   <div className="p-1">
                                     <div className="col-3 colorBox black"></div>

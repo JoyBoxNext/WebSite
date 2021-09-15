@@ -121,10 +121,6 @@ const Product = () => {
   };
 
   // =============
-  const [openInput, setOpenInput] = useState(true);
-  const open = () => {
-    setOpenInput(!openInput);
-  };
 
   return (
     <>
@@ -287,7 +283,9 @@ const Product = () => {
           <div className="Sidebar">
             <div className="container ">
               <div className="d-flex justify-content-between align-items-center">
-                <h1 className="title my-4">Удивляйся и удивляй!</h1>
+                <h1 onClick={open} className="title my-4">
+                  Удивляйся и удивляй!
+                </h1>
               </div>
               <div className="row justify-content-center">
                 {data?.map((value, index) => {
@@ -396,7 +394,7 @@ const Product = () => {
                     className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"
                     key={index}
                   >
-                    <div className="right_flex d-xl-flex">
+                    <div className="right_flex d-xxl-flex">
                       <div className="d-flex justify-content-center align-items-center">
                         <img
                           className="me-3 phone"
@@ -460,7 +458,6 @@ const Product = () => {
         </div>
       </ProductWrapper>
       <Footer />
-      {/* <ModalProduct openInput={openInput} /> */}
     </>
   );
 };

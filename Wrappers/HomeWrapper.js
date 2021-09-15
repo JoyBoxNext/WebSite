@@ -143,6 +143,39 @@ const HomeWrapper = styled.div`
       }
     }
 
+    @media screen and (max-width: 450px) {
+      .threePhone {
+        width: 90px !important;
+        height: 40%;
+      }
+      .flex2 .threePhone_title {
+        font-size: 11px !important;
+      }
+      .flex3 .home_wonder_title {
+        font-size: 10px !important;
+      }
+      .big_title {
+        font-size: 10px !important;
+      }
+      .priceNum {
+        font-size: 7px !important;
+      }
+      .samsung_title {
+        font-size: 7px !important;
+      }
+      .btn_links {
+        font-size: 10px !important;
+        padding: 0 8px !important;
+      }
+      .cards {
+        display: flex !important;
+        flex-wrap: wrap !important;
+      }
+      .flex8 {
+        display: none !important;
+      }
+    }
+
     .blue {
       background-color: #2525eb;
     }

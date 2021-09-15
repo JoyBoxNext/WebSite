@@ -32,7 +32,7 @@ import ModalProduct from "../Components/ModalProduct";
 
 const ProductCard = () => {
   // =============
-  const [openInput, setOpenInput] = useState(true);
+  const [openInput, setOpenInput] = useState(false);
   const open = () => {
     setOpenInput(!openInput);
   };
@@ -119,7 +119,9 @@ const ProductCard = () => {
                       <p className="rentPrice">от 1 362 000 сум/мес</p>
                     </div>
                     <div className="button col-sm- d-flex flex-wrap">
-                      <Button className="checkout">Оформить заказ</Button>
+                      <Button onClick={open} className="checkout">
+                        Оформить заказ
+                      </Button>
                       <Link href="/">
                         <a className="link-korzinka">Перейти в корзину</a>
                       </Link>
@@ -274,7 +276,7 @@ const ProductCard = () => {
               </div>
             </div>
           </div>
-          <ModalProduct />
+          <ModalProduct openInput={openInput} open={open} />
           <Footer />
         </div>
       </Container>

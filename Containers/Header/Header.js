@@ -12,6 +12,8 @@ import { useRouter } from "next/dist/client/router";
 import Badge from "@material-ui/core/Badge";
 
 const Header = () => {
+  const [openSave, setOpenSave] = useState(false);
+
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
 
@@ -122,6 +124,7 @@ const Header = () => {
   );
 
   const saveProduct = () => {
+    setOpenSave(!openSave);
     const data = produktdata.filter((v) => v.save);
     const baraxolkaFilterdatasave = baraxolkaFilterdata.filter((v) => v.save);
     const rightFilterDataSave = rightFilterData.filter((v) => v.save);
@@ -264,7 +267,7 @@ const Header = () => {
                   </Badge>
                 </p>
               </Button>
-              <div className={`korzina`}>
+              <div className={`korzina ${openSave ? "d-none" : "d-block"}`}>
                 {datalfilter?.map((value, index) => (
                   <div>
                     <div className="d-flex align-items-center mb-3" key={index}>

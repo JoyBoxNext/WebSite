@@ -164,7 +164,7 @@ export default function Home() {
               <div className="blue" style={{ width: "10%" }}></div>
               <div className="orange" style={{ width: "65%" }}></div>
               <div className="flex6 blue" style={{ width: "25%" }}>
-                <img className="w-100" src="logo4.png" alt="" />
+                <img className="w-100" src="logo4.png" alt="photo" />
               </div>
               <div className="orange" style={{ width: "10%" }}></div>
               <div className="flex8 blue py-3" style={{ width: "65%" }}>
@@ -189,7 +189,7 @@ export default function Home() {
                   <div className={`card m-1 p-3 ${v.className}`} key={i}>
                     <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                       <img
-                        className="container2_photo"
+                        className="container2_photo w-100"
                         src={v.img}
                         alt="photo"
                       />
