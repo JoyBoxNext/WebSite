@@ -243,8 +243,8 @@ export default function Home() {
           <div className="productDay mt-5">
             <div className="row justify-content-center p-3 w-100">
               <div className="col-12 col-sm-5 col-md-5 col-lg-5">
-                <div className="productDayText">
-                  <div className="row">
+                <div className="productDayText m-0">
+                  <div className="row pe-0">
                     <div className="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                       <p className="mb-0 left_title">Товар дня</p>
                       <h1 className="mb-0 left_clock">17.08</h1>
@@ -275,16 +275,14 @@ export default function Home() {
                           - 2,732,000
                         </p>
                       </div>
-                      <div className="bgPrice">
-                        <p className="price small">
-                          от <span className="price">15,845,000</span> сум
-                        </p>
+                      <div className="priceContainer">
+                        <div className="bgPrice w-100 rounded">
+                          <p className="price small">
+                            от <span className="price">15,845,000</span> сум
+                          </p>
+                        </div>
+                        <img className="product_logo h-100" src="logo3.png" alt="photo" />
                       </div>
-                      <img
-                        className="product_logo"
-                        src="logo3.png"
-                        alt="photo"
-                      />
                     </div>
                     <div className="col-12 col-sm-6 col-md-5 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
