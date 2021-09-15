@@ -243,32 +243,20 @@ const ProductCard = () => {
             </div>
             <Button className="newProducts">Перейти в раздел новинки</Button>
           </div>
-          <div className="button col-sm- d-flex flex-wrap">
-            <Button onClick={open} className="checkout">
-              Оформить заказ
-            </Button>
-            <Link href="/">
-              <a className="link-korzinka">Перейти в корзину</a>
-            </Link>
-            <div className="my-2">
-              <div className="border_ my-4"></div>
-              <div className="d-flex justify-content-center align-items-center">
-                <FontAwesomeIcon className="icon me-3" icon={faInstagram} />
-                <FontAwesomeIcon className="icon me-3" icon={faTelegram} />
-                <FontAwesomeIcon className="icon" icon={faFacebook} />
-              </div>
+          <div className="mt-4">
+            <div className="border_"></div>
+            <div className="d-flex justify-content-center align-items-center  my-4">
+              <Link href="https://www.instagram.com/?hl=ru"><a><img className="icon me-3 fs-3" src="instagram.png" alt="instagram" /></a></Link>
+              <Link href="https://web.telegram.org"><a><img className="icon me-3 fs-3" src="telegram.png" alt="telegram" /></a></Link>
+              <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" /></a></Link>
             </div>
-            <div
-              className={`row modal_product justify-content-center align-items-center }`}
-            >
+          </div>
+          <div className="button d-flex flex-wrap">
+            <div className={`row modal_product justify-content-center align-items-center }`} >
               <div className="col-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 ">
                 <div className="p-4 bg-white  input_group">
                   <h3 className="text-center fw-bold">Оставь заявку</h3>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Твоё имя *"
-                  />
+                  <input type="text" className="form-control" placeholder="Твоё имя *" />
                   <input
                     type="text"
                     className="form-control my-3"
