@@ -178,7 +178,7 @@ export default function Home() {
           {/* Container-2 */}
           <div className="container-2 mt-5">
             <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
-            <div className="cards d-flex">
+            <div className="cards d-flex justify-content-center">
               {homeData.map((v, i) => {
                 return (
                   <div className={`card m-1 p-3 ${v.className}`} key={i}>
@@ -426,7 +426,7 @@ export default function Home() {
                   <div key={i}>
                     <a>
                       <div
-                        className={`new-product-card p-2 ${v.className}`}
+                        className={`new-product-card text-center p-2 ${v.className}`}
                         key={i}
                       >
                         <img
@@ -440,7 +440,7 @@ export default function Home() {
                             <p className="title fw-bold mt-2">{v.title}</p>
                           </a>
                         </Link>
-                        <div className="small d-flex">
+                        <div className="small d-flex ">
                           <p className="oldPrice me-1 m-0 p-0">
                             {v.oldPrice}
                             <span className="sum">сум</span>
