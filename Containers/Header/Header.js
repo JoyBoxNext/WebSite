@@ -280,7 +280,7 @@ const Header = () => {
               <div className={`korzina ${openSave ? "d-none" : "d-block"}`}>
                 {datalfilter?.map((value, index) => (
                   <div>
-                    <div className="line"></div>
+                    <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
@@ -316,7 +316,7 @@ const Header = () => {
                 ))}
                 {baraxolkaSaveProduct?.map((value, index) => (
                   <div>
-                    <div className="line"></div>
+                    <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
@@ -354,7 +354,7 @@ const Header = () => {
                 ))}
                 {rightSaveProduct?.map((value, index) => (
                   <div>
-                    <div className="line"></div>
+                    <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
@@ -392,7 +392,7 @@ const Header = () => {
                 ))}
                 {homeSaveProduct?.map((value, index) => (
                   <div>
-                    <div className="line"></div>
+                    <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
@@ -430,7 +430,7 @@ const Header = () => {
                 ))}
                 {chooseSaveProduct?.map((value, index) => (
                   <div>
-                    <div className="line"></div>
+                    <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
@@ -468,7 +468,7 @@ const Header = () => {
                 ))}
                 {newsSaveProduct?.map((value, index) => (
                   <div>
-                    <div className="line"></div>
+                    <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
@@ -507,7 +507,7 @@ const Header = () => {
 
                 {notebookSaveProduct?.map((value, index) => (
                   <div>
-                    <div className="line"></div>
+                    <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
                       <div className="d-flex justify-content-between align-items-center">
