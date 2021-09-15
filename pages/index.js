@@ -139,7 +139,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="d-flex  justify-content-between  w-100">
-                    <img src="logo3.png top_title" alt="photo" />
+                    <img className="top_title" src="logo3.png" alt="photo" />
                     <p className="bottom-text w-auto">
                       Магазин бытовой техники <br /> и электроники
                     </p>

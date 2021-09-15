@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react";
 import { dispatch } from "../../redux/Store";
 import { useRouter } from "next/dist/client/router";
 import Badge from "@material-ui/core/Badge";
+import ModalProduct from "../../Components/ModalProduct";
 
 const Header = () => {
   const [openSave, setOpenSave] = useState(false);
@@ -220,6 +221,11 @@ const Header = () => {
   const deleteProduct7 = (index) => {
     setindexs(index);
     notebookSaveProduct[index].save = !notebookSaveProduct[index].save;
+  };
+
+  const [openInput, setOpenInput] = useState(false);
+  const open = () => {
+    setOpenInput(!openInput);
   };
 
   return (
@@ -515,7 +521,11 @@ const Header = () => {
                   </div>
                 ))}
 
-                {/* <Button className="orange_btn">dsdsds</Button> */}
+                <div className="d-flex justify-content-center align-items-center mt-3">
+                  <button onClick={open} className="orange_btn">
+                    Оформить заказ
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -577,21 +587,7 @@ const Header = () => {
             })}
           </div>
         </div>
-        {/* <div className="row res_menu">
-          {links.map((value, index) => {
-            return (
-              <div className="col-4 col-sm-3 my-2 res_padding">
-                <Link className="" href={value.href} key={index}>
-                  <a>
-                    <Button className={`sm_border  px-4 ${value.className}`}>
-                      {value.link}
-                    </Button>
-                  </a>
-                </Link>
-              </div>
-            );
-          })}
-        </div> */}
+        <ModalProduct openInput={openInput} open={open} />
       </div>
     </HeaderWrapper>
   );

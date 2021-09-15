@@ -25,10 +25,16 @@ const ModalProductWrapper = styled.div`
       .button {
         position: absolute;
         bottom: -15px;
-        left: 25%;
+        left: 30%;
         background-color: #ff5314;
         color: white;
         border-radius: 10px;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: #ff5314 !important;
+          color: white !important;
+        }
       }
       .times {
         position: absolute;
@@ -36,6 +42,7 @@ const ModalProductWrapper = styled.div`
         right: -10px;
         background-color: #91d9f8;
         border: 2px solid black;
+        border-radius: 5px !important;
         .icon {
           font-weight: bold;
           font-size: 25px;

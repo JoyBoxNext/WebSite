@@ -5,6 +5,20 @@ const HeaderWrapper = styled.div`
   background-color: #ffe5dc;
   z-index: 12000;
   top: 0px; */
+  .orange_btn {
+    background-color: #ff5314;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 6px 30px;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #ff5314 !important;
+      color: white !important;
+    }
+  }
   .logo {
     height: 50px;
   }
