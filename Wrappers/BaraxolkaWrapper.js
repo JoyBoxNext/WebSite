@@ -142,5 +142,8 @@ const BaraxollaWrapper = styled.div`
       width: 345px !important;
     }
   }
+  .PrivateTabIndicator-root-2 {
+    display: none !important;
+  }
 `;
 export default BaraxollaWrapper;
