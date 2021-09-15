@@ -20,6 +20,9 @@ const ProductCardWrapper = styled.div`
   }
   .firstContainer {
     background-color: #eff9fe;
+    .colorText {
+      min-width: 200px !important;
+    }
     .smallimg {
       display: flex;
       flex-direction: column;
@@ -138,6 +141,8 @@ const ProductCardWrapper = styled.div`
   .product-swiper {
     border: 5px solid #2525eb;
     padding: 0;
+    position: relative;
+    z-index: -100;
     .product-swiper-card {
       border-left: 5px solid #2525eb66;
       margin: 0;
@@ -196,6 +201,33 @@ const ProductCardWrapper = styled.div`
           transform: translate(-50%, -50%);
         }
       }
+      .dot_orange {
+          width: 5px;
+          height: 5px;
+          background-color: #ff5314;
+          z-index: 99999 !important;
+        }
+        .dot1 {
+          position: absolute;
+          left: -5px;
+          z-index: 10099 !important;
+          top: -5px;
+        }
+        .dot2 {
+          position: absolute;
+          right: -5px;
+          top: -5px;
+        }
+        .dot3 {
+          position: absolute;
+          left: -5px;
+          bottom: -5px;
+        }
+        .dot4 {
+          position: absolute;
+          right: -5px;
+          bottom: -5px;
+        }
     }
   }
 

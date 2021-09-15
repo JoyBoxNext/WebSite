@@ -139,6 +139,10 @@ export default function Home() {
                       Магазин бытовой техники <br /> и электроники
                     </p>
                   </div>
+                  <div className="dot_orange dot1"></div>
+                  <div className="dot_orange dot2"></div>
+                  <div className="dot_orange dot3"></div>
+                  <div className="dot_orange dot4"></div>
                 </div>
               </div>
               <div className="flex2 d-flex blue" style={{ width: "40%" }}>
@@ -226,10 +230,7 @@ export default function Home() {
                         </p>
                         <p className="rentPrice">от {v.rentPrice} сум/мес</p>
                       </div>
-                      <button
-                        onClick={() => saveHomeProduct(i)}
-                        className="bag border-0"
-                      >
+                      <button onClick={() => saveHomeProduct(i)} className="bag border-0">
                         <img className="w-auto h-auto" src="icon.png" alt="" />
                       </button>
                     </div>
@@ -238,16 +239,15 @@ export default function Home() {
               })}
             </div>
           </div>
-
           {/* ProductDay */}
-          <div className="productDay mt-5">
+          <div className="productDay px-lg-4 mt-5">
             <div className="row justify-content-center p-3 w-100">
               <div className="col-12 col-sm-5 col-md-5 col-lg-5">
-                <div className="productDayText m-0">
+                <div className="productDayText m-0 mt-lg-3 ">
                   <div className="row pe-0">
                     <div className="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                       <p className="mb-0 left_title">Товар дня</p>
-                      <h1 className="mb-0 left_clock">17.08</h1>
+                      <h1 className="mb-0 left_clock fw-bold">17.08</h1>
                       <p className="fw-bold left_subtitle">
                         Ограниченное количество. Предложение действительно
                         только сегодня.
