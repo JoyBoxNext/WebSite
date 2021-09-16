@@ -456,7 +456,7 @@ const Product = () => {
                       className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"
                       key={index}
                     >
-                      <hr />
+                      <hr className="d-none d-xl-flex" />
                       <div className="right_flex d-xxl-flex">
                         <div className="d-flex justify-content-center align-items-center">
                           <img
@@ -500,13 +500,13 @@ const Product = () => {
               </div>
             </Fade>
           </div>
-          <div className="my-2 d-none bottom_block_text">
+          <div className="my-2 d-none bottom_block_text  d-flex justify-content-center align-items-center m-auto">
             <Zoom bottom>
-              <h1 className="text my-4">
+              <h1 className="text my-4 ">
                 Часто задаваемые вопросы про Смартфоны
               </h1>
             </Zoom>
-            <ul>
+            <ul className="m-auto">
               {bottomText.map((value, index) => {
                 return (
                   <li className="li" key={index}>

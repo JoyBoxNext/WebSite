@@ -2,7 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     body {
-        overflow-x: hidden; 
+        overflow-x: hidden;
+        padding: 0 !important;
+        margin: 0 !important;
     }
     *{
       box-sizing: border-box;

@@ -105,10 +105,6 @@ const HeaderWrapper = styled.div`
   }
   .menuItem {
     width: 300px !important;
-    .icon_right {
-      right: 0 !important;
-      color: #606060 !important;
-    }
   }
   .sm_border {
     border: 1px solid black;

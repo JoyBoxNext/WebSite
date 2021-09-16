@@ -419,7 +419,7 @@ const ProductWrapper = styled.div`
   }
   @media screen and (max-width: 855px) {
     .li {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
   @media screen and (max-width: 760px) {
@@ -448,7 +448,7 @@ const ProductWrapper = styled.div`
       font-size: 20px;
     }
     .li {
-      font-size: 13px;
+      font-size: 17px;
     }
   }
   @media screen and (max-width: 510px) {
@@ -456,12 +456,12 @@ const ProductWrapper = styled.div`
       font-size: 16px;
     }
     .li {
-      font-size: 10px;
+      font-size: 14px;
     }
   }
   @media screen and (max-width: 385px) {
     .li {
-      font-size: 20px !important;
+      font-size: 11px !important;
     }
   }
 `;
