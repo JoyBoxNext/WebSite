@@ -151,9 +151,7 @@ const ProductWrapper = styled.div`
         line-height: 100%;
       }
     }
-    .fade {
-      z-index: 1;
-    }
+
     .cards_border {
       border: 3px solid #2525eb;
       background-color: white;
@@ -345,6 +343,14 @@ const ProductWrapper = styled.div`
     height: 25px;
     position: absolute;
     top: 5px;
+  }
+  @media screen and (max-width: 500px) {
+    .MuiSlider-thumb {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 14px !important;
+    }
   }
   .MuiSlider-valueLabel {
     left: -5px !important;
