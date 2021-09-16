@@ -17,7 +17,6 @@ SwiperCore.use([Pagination, Navigation]);
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
-  faAngleUp,
   faArrowLeft,
   faArrowRight,
   faTimes,
@@ -187,7 +186,7 @@ const ProductCard = () => {
                     {ProductSwiperData.map((v, i) => {
                       return (
                         <SwiperSlide className=" h-100" key={i}>
-                          <Link href="/productCard">
+                          <Link href="/product">
                             <a>
                               <div className="product-swiper-card p-3 text-start">
                                 <img src={v.img} alt="" />
