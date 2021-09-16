@@ -325,7 +325,7 @@ const ProductCard = () => {
             </div>
           </div>
           <ModalProduct openInput={openInput} open={open} />
-          <Fade bottom>
+          <Fade>
             <Footer />
           </Fade>
         </div>
