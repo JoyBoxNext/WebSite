@@ -193,16 +193,14 @@ const Product = () => {
                             {value.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex align-items-center ${
-                                    show ? "" : "d-none"
-                                  }`}
+                                  className={`d-flex align-items-center ${show ? "" : "d-none"
+                                    }`}
                                   key={index}
                                 >
                                   <button
                                     onClick={() => toggle(index)}
-                                    className={` box me-2 ${
-                                      checked == index ? "active" : ""
-                                    }`}
+                                    className={` box me-2 ${checked == index ? "active" : ""
+                                      }`}
                                   ></button>
                                   <p className="my-1 subtitle">
                                     {value.subtitle}
@@ -241,9 +239,8 @@ const Product = () => {
                             {value.name.category.map((value, index) => {
                               return (
                                 <div
-                                  className={`d-flex justify-content-between ${
-                                    show2 ? "" : "d-none"
-                                  }`}
+                                  className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                    }`}
                                   key={index}
                                 >
                                   <div className="d-flex align-items-center mt-2">
@@ -290,76 +287,74 @@ const Product = () => {
               <div className="row justify-content-center">
                 {data?.map((value, index) => {
                   return (
-                    <div
-                      className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
-                      key={index}
-                    >
-                      <div className="cards_border ">
-                        <img className="skidka" src="skidka.jpg" alt="photo" />
-                        <div className="px-3">
-                          <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                            <Link href="/productCard">
-                              <a>
-                                <img
-                                  className="me-3 phone_photo"
-                                  src={value.img}
-                                  alt="photo"
-                                />
-                              </a>
-                            </Link>
-                            <div className="colorBoxes flex-column mb-5">
-                              <div className="p-1">
-                                <div className="col-3 colorBox black"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox white"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox green"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox gray"></div>
+                    <Link href="/productCard"><a>
+                      <div
+                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
+                        key={index}
+                      >
+                        <div className="cards_border ">
+                          <img className="skidka" src="skidka.jpg" alt="photo" />
+                          <div className="px-3">
+                            <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                              <img
+                                className="me-3 phone_photo"
+                                src={value.img}
+                                alt="photo"
+                              />
+                              <div className="colorBoxes flex-column mb-5">
+                                <div className="p-1">
+                                  <div className="col-3 colorBox black"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox white"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox green"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox gray"></div>
+                                </div>
                               </div>
                             </div>
+                            <h5 className="fw-bold my-2 subtitle">
+                              {value.title}
+                            </h5>
+                            <div className="d-flex align-items-center">
+                              <p className="mb-0 bg_success aksiya__">
+                                {value.aksiya_}
+                              </p>
+                              <p className="mb-0 text_secondary aksiya ms-4">
+                                {value.aksiya}
+                              </p>
+                            </div>
+                            <h4 className="fw-bold price mb-0 mt-2">
+                              <span className="big_text mb-0">
+                                {value.big_price}
+                              </span>
+                              {value.price}
+                            </h4>
+                            <div className="d-flex justify-content-between align-items-center ">
+                              <p className="mb-0 desc">{value.desc}</p>
+                              <button
+                                onClick={() => saveProduct(index)}
+                                className="border-0 save_btn"
+                              >
+                                <img src="orange.png" alt="photo" />
+                              </button>
+                            </div>
                           </div>
-                          <h5 className="fw-bold my-2 subtitle">
-                            {value.title}
-                          </h5>
-                          <div className="d-flex align-items-center">
-                            <p className="mb-0 bg_success aksiya__">
-                              {value.aksiya_}
-                            </p>
-                            <p className="mb-0 text_secondary aksiya ms-4">
-                              {value.aksiya}
-                            </p>
-                          </div>
-                          <h4 className="fw-bold price mb-0 mt-2">
-                            <span className="big_text mb-0">
-                              {value.big_price}
-                            </span>
-                            {value.price}
-                          </h4>
-                          <div className="d-flex justify-content-between align-items-center ">
-                            <p className="mb-0 desc">{value.desc}</p>
-                            <button
-                              onClick={() => saveProduct(index)}
-                              className="border-0 save_btn"
-                            >
-                              <img src="orange.png" alt="photo" />
-                            </button>
-                          </div>
+                          <p className="descripton px-2">
+                            Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
+                            Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/ основная
+                            квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
+                            фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной памяти
+                            + microSD (до 1 ТБ)/ 3G/ LTE/ GPS/ A-GPS/ ГЛОНАСС/
+                            BDS/ поддержка 2х SIM-карт (Nano-SIM)/ Android 11.0
+                            (One UI)/ 4500 мА*ч
+                          </p>
                         </div>
-                        <p className="descripton px-2">
-                          Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
-                          Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/ основная
-                          квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
-                          фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной памяти
-                          + microSD (до 1 ТБ)/ 3G/ LTE/ GPS/ A-GPS/ ГЛОНАСС/
-                          BDS/ поддержка 2х SIM-карт (Nano-SIM)/ Android 11.0
-                          (One UI)/ 4500 мА*ч
-                        </p>
                       </div>
-                    </div>
+                    </a></Link>
                   );
                 })}
                 <div className="my-2 bottom_text">

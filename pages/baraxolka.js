@@ -129,64 +129,66 @@ const Product = () => {
                   <div className="row justify-content-center">
                     {baraxolka?.map((value, index) => {
                       return (
-                        <div
-                          className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
-                          key={index}
-                        >
-                          <div className="cards_border">
-                            <img src="skidka.jpg" alt="photo" />
-                            <div className="px-3">
-                              <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                                <img src={value.img} alt="photo" />
-                                <div className="colorBoxes flex-column mb-5">
-                                  <div className="p-1">
-                                    <div className="col-3 colorBox black"></div>
-                                  </div>
-                                  <div className="p-1">
-                                    <div className="col-3 colorBox white"></div>
-                                  </div>
-                                  <div className="p-1">
-                                    <div className="col-3 colorBox green"></div>
-                                  </div>
-                                  <div className="p-1">
-                                    <div className="col-3 colorBox gray"></div>
+                        <Link href="/productCard"><a>
+                          <div
+                            className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
+                            key={index}
+                          >
+                            <div className="cards_border">
+                              <img src="skidka.jpg" alt="photo" />
+                              <div className="px-3">
+                                <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                                  <img src={value.img} alt="photo" />
+                                  <div className="colorBoxes flex-column mb-5">
+                                    <div className="p-1">
+                                      <div className="col-3 colorBox black"></div>
+                                    </div>
+                                    <div className="p-1">
+                                      <div className="col-3 colorBox white"></div>
+                                    </div>
+                                    <div className="p-1">
+                                      <div className="col-3 colorBox green"></div>
+                                    </div>
+                                    <div className="p-1">
+                                      <div className="col-3 colorBox gray"></div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <h5 className="fw-bold my-2 text model fw-bold">
-                                {value.title}
-                              </h5>
-                              <div className="d-flex align-items-center">
-                                <p className="mb-0 bg_success aksiya__">
-                                  {value.aksiya_}
-                                </p>
-                                <p className="mb-0 text_secondary aksiya ms-4">
-                                  {value.aksiya}
-                                </p>
-                              </div>
-                              <h4 className="fw-bold price mb-0 mt-2">
-                                <span className="big_text mb-0">
-                                  {value.big_price}
-                                </span>
-                                {value.price}
-                              </h4>
-                              <div className="d-flex justify-content-between align-items-center">
-                                <p className="mb-0 desc">{value.desc}</p>
-                                <div
-                                  style={{ cursor: "pointer" }}
-                                  className="bag"
-                                  onClick={() => savebaraxolka(index)}
-                                >
-                                  <img
-                                    className="w-auto h-auto"
-                                    src="icon.png"
-                                    alt="photo"
-                                  />
+                                <h5 className="fw-bold my-2 text model fw-bold">
+                                  {value.title}
+                                </h5>
+                                <div className="d-flex align-items-center">
+                                  <p className="mb-0 bg_success aksiya__">
+                                    {value.aksiya_}
+                                  </p>
+                                  <p className="mb-0 text_secondary aksiya ms-4">
+                                    {value.aksiya}
+                                  </p>
+                                </div>
+                                <h4 className="fw-bold price mb-0 mt-2">
+                                  <span className="big_text mb-0">
+                                    {value.big_price}
+                                  </span>
+                                  {value.price}
+                                </h4>
+                                <div className="d-flex justify-content-between align-items-center">
+                                  <p className="mb-0 desc">{value.desc}</p>
+                                  <div
+                                    style={{ cursor: "pointer" }}
+                                    className="bag"
+                                    onClick={() => savebaraxolka(index)}
+                                  >
+                                    <img
+                                      className="w-auto h-auto"
+                                      src="icon.png"
+                                      alt="photo"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </a></Link>
                       );
                     })}
                     <div className="mt-4">
@@ -210,7 +212,7 @@ const Product = () => {
           </div>
         </div>
       </BaraxollaWrapper>
-      <Footer/>
+      <Footer />
     </Container>
   );
 };
