@@ -56,18 +56,18 @@ const ProductCard = () => {
             <div className="d-flex flex-wrap">
               <div className="firstContainerIpad firstContainerMacbook">
                 <div className="images d-flex">
-                  <div className=" smallimg d-flex justify-content-start">
+                  <div className=" smallimg d-flex justify-content-start mt-5">
                     <img className="active" src="p1small1.png" alt="" />
                     <img src="p1small2.png" alt="" />
                     <img src="p1small3.png" alt="" />
                   </div>
-                  <div className="mx-auto">
+                  <div className="m-auto">
                     <img className="bigimg" src="p1samsung.png" alt="" />
                   </div>
                 </div>
                 <div className="row colorMemories mt-3">
                   <div className="col-6 col-sm-">
-                    <p className="">
+                    <p className="colorText">
                       Цвет товара: <span>Черный</span>
                     </p>
                     <div className="colorBoxes">
@@ -220,6 +220,10 @@ const ProductCard = () => {
                                     />
                                   </div>
                                 </div>
+                                <div className="dot_orange dot1"></div>
+                                <div className="dot_orange dot2"></div>
+                                <div className="dot_orange dot3"></div>
+                                <div className="dot_orange dot4"></div>
                               </div>
                             </a>
                           </Link>

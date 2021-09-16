@@ -375,7 +375,7 @@ const Product = () => {
                           </div>
                         </div>
                         <p className="descripton px-2">
-                          Экран (6.5", Super AMOLED, 2400x1080)/ Qualcomm
+                          Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
                           Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/ основная
                           квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
                           фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной памяти

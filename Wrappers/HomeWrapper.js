@@ -38,7 +38,32 @@ const HomeWrapper = styled.div`
 
     @media screen and (min-width: 1025px) {
       .mini-content {
-        border: 6px solid #fff !important;
+        border: 4px solid #fff !important;
+        .dot_orange {
+          width: 5px;
+          height: 5px;
+          background-color: #ff5314;
+        }
+        .dot1 {
+          position: absolute;
+          left: -5px;
+          top: -5px;
+        }
+        .dot2 {
+          position: absolute;
+          right: -5px;
+          top: -5px;
+        }
+        .dot3 {
+          position: absolute;
+          left: -5px;
+          bottom: -5px;
+        }
+        .dot4 {
+          position: absolute;
+          right: -5px;
+          bottom: -5px;
+        }
       }
     }
 
@@ -194,7 +219,7 @@ const HomeWrapper = styled.div`
       .mini-content {
         border: none;
         padding: 8px;
-
+        position: relative;
         .title {
           font-weight: normal;
           font-size: 13.0968px;
