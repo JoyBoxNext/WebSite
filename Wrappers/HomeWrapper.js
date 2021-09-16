@@ -346,7 +346,7 @@ const HomeWrapper = styled.div`
           padding: 0;
         }
       }
-      @media screen and (max-width:700px) {
+      @media screen and (max-width: 700px) {
         .priceContainer {
           display: flex;
           align-items: center;
@@ -355,7 +355,7 @@ const HomeWrapper = styled.div`
           padding: 0 !important;
         }
       }
-      @media screen and (max-width:500px) {
+      @media screen and (max-width: 500px) {
         .priceContainer {
           display: block;
           align-items: center;
@@ -623,14 +623,40 @@ const HomeWrapper = styled.div`
         }
       }
     }
-    .button {
-      button {
-        padding: 10px 35px;
-        background-color: #ff5314;
-        color: white;
-        font-weight: bold;
-        border-radius: 15px;
-      }
+  }
+  .button {
+    button {
+      padding: 10px 35px;
+      background-color: #ff5314;
+      color: white;
+      font-weight: bold;
+      border-radius: 15px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .discount {
+      position: absolute !important;
+      top: 13.5px !important;
+      left: 121px !important;
+    }
+    .acer {
+      position: absolute !important;
+      top: 55px !important;
+      left: 47% !important;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .discount {
+      position: absolute !important;
+      top: 13.5px !important;
+      left: 16.1% !important;
+    }
+  }
+  @media screen and (max-width: 570px) {
+    .discount {
+      position: absolute !important;
+      top: 13.5px !important;
+      left: 3.7% !important;
     }
   }
 
@@ -638,9 +664,34 @@ const HomeWrapper = styled.div`
   .laptops {
     padding: 0 16px;
     margin-bottom: 30px;
+    position: relative;
+    height: auto;
+    .discount {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+    }
+    .acer {
+      position: absolute;
+      top: 55px;
+      left: 37%;
+    }
+    .swiper_content .button_next {
+      right: -0.5% !important;
+    }
+    .swiper-button-next {
+      right: -0.5%;
+    }
+
+    .swiper_content .button_prev {
+      left: -0.7% !important;
+    }
+    .swiper-button-prev {
+      left: -0.7%;
+    }
+
     .laptop-card {
       border: 2px solid #2525eb;
-      /* max-width: 230px; */
       margin: auto;
       .title {
         line-height: 16px !important;
@@ -682,8 +733,6 @@ const HomeWrapper = styled.div`
       img {
         max-height: 206px;
         max-width: 172px;
-        margin: auto !important;
-        display: flex;
       }
       .bag {
         background-color: #ff5314;
@@ -812,7 +861,7 @@ const HomeWrapper = styled.div`
 
   .brands {
     .button_bottom {
-      padding: 10px 35px;
+      padding: 10px 40px;
       background-color: #ff5314;
       color: white;
       font-weight: bold;
