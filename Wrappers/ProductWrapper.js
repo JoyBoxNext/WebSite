@@ -167,24 +167,25 @@ const ProductWrapper = styled.div`
         height: 138px;
       }
       .descripton {
-        height: 0px;
+        height: 0;
         overflow: hidden;
         font-size: 9px;
         color: #8d8989;
         text-transform: uppercase;
+        display: none;
         transition: 1s !important;
       }
       &:hover {
         position: absolute;
-        max-width: 100% !important;
         top: 0;
         left: 0;
-        right: 0;
+        width: 100%;
+        height: auto;
         transition: 1s !important;
       }
       &:hover .descripton {
+        display: block;
         height: auto;
-        transition: 1s !important;
       }
     }
     .title {

@@ -530,13 +530,16 @@ export default function Home() {
                     300: {
                       slidesPerView: 1,
                     },
-                    768: {
+                    750: {
+                      slidesPerView: 2,
+                    },
+                    868: {
                       slidesPerView: 3,
                     },
-                    1155: {
+                    1024: {
                       slidesPerView: 4,
                     },
-                    1024: {
+                    1155: {
                       slidesPerView: 5,
                     },
                     1820: {
@@ -549,9 +552,25 @@ export default function Home() {
                       <SwiperSlide className=" h-100 p-1" key={i}>
                         <Link href="/productCard">
                           <a>
-                            <div className=" h-100 p-2" key={i}>
+                            <div className="h-100 p-2" key={i}>
                               <div className="laptop-card p-2" key={i}>
-                                <img src={v.img} alt="photo" />
+                                <img
+                                  className="discount"
+                                  src="skidka.jpg"
+                                  alt="photo"
+                                />
+                                <div className="d-flex flex-column justify-content-center align-items-center">
+                                  <img
+                                    className="acer"
+                                    src="acer.png"
+                                    alt="acer"
+                                  />
+                                  <img
+                                    style={{ marginTop: "70px" }}
+                                    src={v.img}
+                                    alt="photo"
+                                  />
+                                </div>
                                 <Link href="/">
                                   <a>
                                     <p className="title fw-bold mt-2">
@@ -608,6 +627,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="button d-flex justify-content-center">
+              <button className="border-0">
+                Перейти в раздел <br /> новинки
+              </button>
+            </div>
           </Fade>
 
           {/* //brands */}
@@ -631,7 +655,7 @@ export default function Home() {
                     );
                   })}
                 </div>
-                <div className="d-flex justify-content-center align-items-center my-3">
+                <div className="d-flex justify-content-center align-items-center mt-5">
                   <Button className="button_bottom text-center">ЕЩЕ</Button>
                 </div>
               </div>
@@ -639,7 +663,7 @@ export default function Home() {
           </Fade>
 
           <Zoom>
-            <div className="mt-4">
+            <div className="mt-2">
               <div className="border_"></div>
               <div className="d-flex justify-content-center align-items-center  my-4">
                 <Link href="https://www.instagram.com/?hl=ru">

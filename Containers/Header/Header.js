@@ -1,4 +1,4 @@
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as t from "../../redux/Types";
 import Link from "next/link";
@@ -282,7 +282,10 @@ const Header = () => {
                         savedData.length +
                         baraxolkaSaveProduct.length +
                         rightSaveProduct.length +
-                        homeSaveProduct.length
+                        homeSaveProduct.length +
+                        chooseSaveProduct.length +
+                        newsSaveProduct.length +
+                        notebookSaveProduct.length
                       }
                       color="error"
                     >
@@ -560,17 +563,38 @@ const Header = () => {
                   </div>
                 ))}
 
-                <div className="d-flex justify-content-center align-items-center mt-3">
-                  <button onClick={open} className="orange_btn">
-                    Оформить заказ
-                  </button>
+                <div className="d-flex flex-column justify-content-center align-items-center mt-3">
+                  {savedData.length == 0 &&
+                  baraxolkaSaveProduct.length == 0 &&
+                  rightSaveProduct.length == 0 &&
+                  homeSaveProduct.length == 0 &&
+                  chooseSaveProduct.length == 0 &&
+                  newsSaveProduct.length == 0 &&
+                  notebookSaveProduct.length == 0 ? (
+                    <p>Корзина пустой</p>
+                  ) : (
+                    ""
+                  )}
+                  {savedData.length == 0 &&
+                  baraxolkaSaveProduct.length == 0 &&
+                  rightSaveProduct.length == 0 &&
+                  homeSaveProduct.length == 0 &&
+                  chooseSaveProduct.length == 0 &&
+                  newsSaveProduct.length == 0 &&
+                  notebookSaveProduct.length == 0 ? (
+                    ""
+                  ) : (
+                    <button onClick={open} className="orange_btn">
+                      Оформить заказ
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
         <Fade top>
-          <div className="w-100 mt-3 d-flex justify-content-center flex-wrap align-items-center">
+          <div className="w-100 mt-3 d-flex justify-content-center flex-wrap align-items-center category">
             <div>
               <Button
                 className="Categories"
@@ -596,11 +620,18 @@ const Header = () => {
                     <MenuItem
                       key={index}
                       style={{ width: "300px" }}
-                      className="menuItem"
+                      className="menuItem position-relative"
                       onClick={handleMenuClose}
                     >
                       <Link href="/">
-                        <a>{value.page}</a>
+                        <div>
+                          <a>{value.page}</a>
+                          <FontAwesomeIcon
+                            className="icon_right position-absolute"
+                            style={{ right: "10px", color: "#606060" }}
+                            icon={faAngleRight}
+                          />
+                        </div>
                       </Link>
                     </MenuItem>
                   );

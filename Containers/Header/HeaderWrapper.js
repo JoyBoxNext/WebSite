@@ -28,6 +28,7 @@ const HeaderWrapper = styled.div`
       color: rgba(0 0 0 0);
     }
   }
+
   @media screen and (max-width: 600px) {
     .border_links {
       border: 1px solid black;
@@ -104,6 +105,10 @@ const HeaderWrapper = styled.div`
   }
   .menuItem {
     width: 300px !important;
+    .icon_right {
+      right: 0 !important;
+      color: #606060 !important;
+    }
   }
   .sm_border {
     border: 1px solid black;

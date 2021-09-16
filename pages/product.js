@@ -381,7 +381,7 @@ const Product = () => {
                               </button>
                             </div>
                           </div>
-                          <Fade bottom>
+                          <Fade top>
                             <p className="descripton px-2">
                               Экран (6.5{`"`}, Super AMOLED, 2400x1080)/
                               Qualcomm Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8
