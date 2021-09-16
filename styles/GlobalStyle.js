@@ -4,6 +4,10 @@ const GlobalStyle = createGlobalStyle`
     body {
         overflow-x: hidden; 
     }
+    *{
+      box-sizing: border-box;
+      transition: .1s;
+    }
     a {
         color: black;
         text-decoration: none;

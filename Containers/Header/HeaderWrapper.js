@@ -36,7 +36,21 @@ const HeaderWrapper = styled.div`
     }
     .header_korzina,
     .header_icon {
-      width: 25px !important;
+      width: 30px !important;
+    }
+    .logo {
+      width: 100% !important;
+      object-fit: contain !important;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .header_title,
+    .header_subtitle {
+      font-size: 10px !important;
+    }
+    .header_korzina,
+    .header_icon {
+      width: 20px !important;
     }
   }
   @media screen and (max-width: 994px) {
@@ -111,6 +125,7 @@ const HeaderWrapper = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     z-index: 1002;
+    min-width: 350px;
 
     .title {
       font-size: 11px;

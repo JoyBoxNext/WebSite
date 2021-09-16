@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 const BaraxollaWrapper = styled.div`
   width: 100%;
+  .PrivateTabIndicator-colorSecondary-5 {
+    display: none !important;
+  }
   .text {
     font-family: Roboto;
     font-style: normal;
@@ -22,6 +25,10 @@ const BaraxollaWrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100% !important;
+  }
+  .baraxolka_photo {
+    width: 190px;
+    height: 183px;
   }
   .Sidebar {
     width: 100%;
@@ -52,8 +59,13 @@ const BaraxollaWrapper = styled.div`
     }
     .border_ {
       border-bottom: 3px solid #969696;
-      width: 402px;
+      width: auto;
       margin: auto;
+    }
+    @media screen and (min-width: 1000px) {
+      .border_ {
+        width: 420px !important;
+      }
     }
     .icon {
       width: 30.2px;

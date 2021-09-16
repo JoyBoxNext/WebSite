@@ -11,6 +11,8 @@ import { dispatch } from "../../redux/Store";
 import { useRouter } from "next/dist/client/router";
 import Badge from "@material-ui/core/Badge";
 import ModalProduct from "../../Components/ModalProduct";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 const Header = () => {
   const [openSave, setOpenSave] = useState(false);
@@ -230,53 +232,65 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <div className=" pt-4">
+      <div className="pt-4">
         <div className="row justify-content-center align-items-center w-100">
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
-            <Link href="/">
-              <a>
-                <img className="w-100 logo" src="logo.png" alt="photo" />
-              </a>
-            </Link>
+            <Fade left>
+              <Link href="/">
+                <a>
+                  <img className="w-100 logo" src="logo.png" alt="photo" />
+                </a>
+              </Link>
+            </Fade>
           </div>
-          <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 order-3 order-sm-3 order-md-3 order-lg-0 inputOrder">
-            <div className="d-flex justify-content-center align-items-center">
-              <Button className="search px-5">Поиск</Button>
-              <input
-                className="w-100 input-group"
-                type="text"
-                onChange={(event) => {
-                  setSearchTerm(event.target.value);
-                }}
-              />
-            </div>
-          </div>
-          <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 order-0 order-sm-0 order-md-0 order-lg-3 iconsOrder">
-            <div className="d-flex position-relative justify-content-end">
-              <Button className="d-block">
-                <img className="header_icon" src="IconPerson.svg" alt="photo" />
-                <p className="m-0">Покупателям</p>
-              </Button>
-              <Button className="d-block" onClick={saveProduct}>
-                <img
-                  className="header_korzina"
-                  src="iconBasket.svg"
-                  alt="photo"
+          <Fade top>
+            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 order-3 order-sm-3 order-md-3 order-lg-0 inputOrder">
+              <div className="d-flex justify-content-center align-items-center">
+                <Button className="search px-5">Поиск</Button>
+                <input
+                  className="w-100 input-group"
+                  type="text"
+                  onChange={(event) => {
+                    setSearchTerm(event.target.value);
+                  }}
                 />
-                <p className="m-0">
-                  <Badge
-                    badgeContent={
-                      savedData.length +
-                      baraxolkaSaveProduct.length +
-                      rightSaveProduct.length +
-                      homeSaveProduct.length
-                    }
-                    color="error"
-                  >
-                    Корзина
-                  </Badge>
-                </p>
-              </Button>
+              </div>
+            </div>
+          </Fade>
+          <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 order-0 order-sm-0 order-md-0 order-lg-3 iconsOrder">
+            <div className="d-flex align-items-center position-relative justify-content-end">
+              <Fade right>
+                <Button className="d-block">
+                  <img
+                    className="header_icon"
+                    src="IconPerson.svg"
+                    alt="photo"
+                  />
+                  <p className="m-0 header_title">Покупателям</p>
+                </Button>
+              </Fade>
+              <Fade right>
+                <Button className="d-block" onClick={saveProduct}>
+                  <img
+                    className="header_korzina"
+                    src="iconBasket.svg"
+                    alt="photo"
+                  />
+                  <p className="m-0 header_subtitle">
+                    <Badge
+                      badgeContent={
+                        savedData.length +
+                        baraxolkaSaveProduct.length +
+                        rightSaveProduct.length +
+                        homeSaveProduct.length
+                      }
+                      color="error"
+                    >
+                      Корзина
+                    </Badge>
+                  </p>
+                </Button>
+              </Fade>
               <div className={`korzina ${openSave ? "d-none" : "d-block"}`}>
                 {datalfilter?.map((value, index) => (
                   <div>
@@ -555,63 +569,65 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="w-100 mt-3 d-flex justify-content-center flex-wrap align-items-center">
-          <div>
-            <Button
-              className="Categories"
-              aria-controls="menu"
-              disableRipple
-              onClick={handleOpenMenu}
-              variant="contained"
-            >
-              <img className="me-1" src="iconCategories.svg" alt="photo" />
-              Категории
-              <img className="ms-1" src="iconCtegories2.svg" alt="photo" />
-            </Button>
-            <Menu
-              className="CategoriesMenu"
-              style={{ marginTop: "40px" }}
-              id="menu"
-              onClose={handleMenuClose}
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-            >
-              {pages.map((value, index) => {
+        <Fade top>
+          <div className="w-100 mt-3 d-flex justify-content-center flex-wrap align-items-center">
+            <div>
+              <Button
+                className="Categories"
+                aria-controls="menu"
+                disableRipple
+                onClick={handleOpenMenu}
+                variant="contained"
+              >
+                <img className="me-1" src="iconCategories.svg" alt="photo" />
+                Категории
+                <img className="ms-1" src="iconCtegories2.svg" alt="photo" />
+              </Button>
+              <Menu
+                className="CategoriesMenu"
+                style={{ marginTop: "40px" }}
+                id="menu"
+                onClose={handleMenuClose}
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+              >
+                {pages.map((value, index) => {
+                  return (
+                    <MenuItem
+                      key={index}
+                      style={{ width: "300px" }}
+                      className="menuItem"
+                      onClick={handleMenuClose}
+                    >
+                      <Link href="/">
+                        <a>{value.page}</a>
+                      </Link>
+                    </MenuItem>
+                  );
+                })}
+              </Menu>
+            </div>
+            {/* active o'rnatish kere va responsiveni to'g'irlash kere */}
+            <div className="d-flex flex-wrap">
+              {links.map((value, index) => {
                 return (
-                  <MenuItem
-                    key={index}
-                    style={{ width: "300px" }}
-                    className="menuItem"
-                    onClick={handleMenuClose}
-                  >
-                    <Link href="/">
-                      <a>{value.page}</a>
-                    </Link>
-                  </MenuItem>
+                  <Link href={value.href} key={index}>
+                    <a>
+                      <Button
+                        style={{ zIndex: "100" }}
+                        className={`border_links border-dark rounded-0 px-4 ${
+                          value.className
+                        } ${router.pathname === value.href ? "active" : ""}`}
+                      >
+                        {value.link}
+                      </Button>
+                    </a>
+                  </Link>
                 );
               })}
-            </Menu>
+            </div>
           </div>
-          {/* active o'rnatish kere va responsiveni to'g'irlash kere */}
-          <div className="d-flex flex-wrap">
-            {links.map((value, index) => {
-              return (
-                <Link href={value.href} key={index}>
-                  <a>
-                    <Button
-                      style={{ zIndex: "100" }}
-                      className={`border_links border-dark rounded-0 px-4 ${
-                        value.className
-                      } ${router.pathname === value.href ? "active" : ""}`}
-                    >
-                      {value.link}
-                    </Button>
-                  </a>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+        </Fade>
         <ModalProduct openInput={openInput} open={open} />
       </div>
     </HeaderWrapper>

@@ -151,6 +151,9 @@ const ProductWrapper = styled.div`
         line-height: 100%;
       }
     }
+    .fade {
+      z-index: 1;
+    }
     .cards_border {
       border: 3px solid #2525eb;
       background-color: white;
@@ -171,6 +174,7 @@ const ProductWrapper = styled.div`
         font-size: 9px;
         color: #8d8989;
         text-transform: uppercase;
+        transition: 1s !important;
       }
       &:hover {
         position: absolute;
@@ -178,9 +182,11 @@ const ProductWrapper = styled.div`
         top: 0;
         left: 0;
         right: 0;
+        transition: 1s !important;
       }
       &:hover .descripton {
         height: auto;
+        transition: 1s !important;
       }
     }
     .title {
@@ -325,10 +331,23 @@ const ProductWrapper = styled.div`
     background-color: #ff5314;
     color: white;
     padding: 2px 10px;
-    border-radius: 5px;
   }
   .numbers {
     color: rgba(85, 85, 85, 1);
+  }
+
+  //slider
+  .MuiSlider-root {
+    color: #ff5314 !important;
+  }
+  .MuiSlider-thumb {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;
+  }
+  .MuiSlider-valueLabel {
+    left: -5px !important;
   }
   @media screen and (max-width: 1850px) {
     .li {
