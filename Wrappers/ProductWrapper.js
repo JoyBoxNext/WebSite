@@ -168,7 +168,7 @@ const ProductWrapper = styled.div`
       .descripton {
         height: 0px;
         overflow: hidden;
-        font-size: 11.5px;
+        font-size: 9px;
         color: #8d8989;
         text-transform: uppercase;
       }

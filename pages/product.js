@@ -22,6 +22,7 @@ import Link from "next/link";
 import { bigCategores, categores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
 import Container from "./../Containers/Container";
+import Slider from "@material-ui/core/Slider";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+  },
+  rootSlider: {
+    width: 300,
   },
 }));
 
@@ -121,6 +125,15 @@ const Product = () => {
   };
 
   // =============
+  function valuetext(value) {
+    return `${value}°C`;
+  }
+  const classeS = useStyles();
+  const [SliderValue, setSliderValue] = React.useState([20, 37]);
+
+  const handleChangeSlider = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <>
@@ -165,6 +178,18 @@ const Product = () => {
                     </div>
                   </div>
                   <div>
+                    <div className={classeS.rootSlider}>
+                      <Typography id="range-slider" gutterBottom>
+                        Temperature range
+                      </Typography>
+                      <Slider
+                        value={value}
+                        onChange={handleChangeSlider}
+                        valueLabelDisplay="auto"
+                        aria-labelledby="range-slider"
+                        getAriaValueText={valuetext}
+                      />
+                    </div>
                     <div className="row w-100">
                       {bigCategores.map((value, index) => {
                         return (
