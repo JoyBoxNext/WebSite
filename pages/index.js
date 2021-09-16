@@ -185,8 +185,8 @@ export default function Home() {
             <div className="cards d-flex justify-content-center">
               {homeData.map((v, i) => {
                 return (
-                  <Link href="/"><a>
-                    <div className={`card m-1 p-3 ${v.className}`} key={i}>
+                  <Link href="/" key={i}><a>
+                    <div className={`card m-1 p-3 ${v.className}`}>
                       <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                         <img
                           className="container2_photo w-100"

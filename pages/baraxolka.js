@@ -129,10 +129,10 @@ const Product = () => {
                   <div className="row justify-content-center">
                     {baraxolka?.map((value, index) => {
                       return (
-                        <Link href="/productCard"><a>
+                        <Link href="/productCard"  key={index}><a>
                           <div
                             className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
-                            key={index}
+                           
                           >
                             <div className="cards_border">
                               <img src="skidka.jpg" alt="photo" />

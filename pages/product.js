@@ -287,11 +287,8 @@ const Product = () => {
               <div className="row justify-content-center">
                 {data?.map((value, index) => {
                   return (
-                    <Link href="/productCard"><a>
-                      <div
-                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
-                        key={index}
-                      >
+                    <Link href="/productCard" key={index}><a>
+                      <div className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative" >
                         <div className="cards_border ">
                           <img className="skidka" src="skidka.jpg" alt="photo" />
                           <div className="px-3">
