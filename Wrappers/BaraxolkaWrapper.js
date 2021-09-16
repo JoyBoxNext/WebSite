@@ -52,7 +52,7 @@ const BaraxollaWrapper = styled.div`
     }
     .border_ {
       border-bottom: 3px solid #969696;
-      width: 402px;
+      /* width: 402px; */
       margin: auto;
     }
     .icon {
