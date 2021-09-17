@@ -337,10 +337,6 @@ export default function Home() {
                       slidesPerView: 5,
                     },
                   }}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
                   slidesPerView={5}
                   spaceBetween={0}
                   slidesPerGroup={1}

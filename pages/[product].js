@@ -1,12 +1,10 @@
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../Containers/Header/Header";
 import Footer from "../Containers/Footer/Footer";
 import ProductWrapper from "../Wrappers/ProductWrapper";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
