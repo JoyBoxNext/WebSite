@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Header from "../Containers/Header/Header";
 import Footer from "../Containers/Footer/Footer";
-import ProductWrapper from "../Wrappers/ProductWrapper"
+import ProductWrapper from "../Wrappers/ProductWrapper";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
@@ -20,7 +20,6 @@ import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import { useRouter } from "next/router";
 import datacategory from "../Data/index";
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -116,6 +115,13 @@ const Category = () => {
   //   datasend();
   // }, []);
   console.log(datacategory);
+
+  const [tabPanel, setTabPanel] = useState(false);
+
+  const tabApp = (id) => {
+    setTabPanel(id);
+  };
+
   return (
     <>
       <Container>
@@ -200,14 +206,16 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${show ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex align-items-center ${
+                                      show ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${checked == index ? "active" : ""
-                                        }`}
+                                      className={` box me-2 ${
+                                        checked == index ? "active" : ""
+                                      }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -246,8 +254,9 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex justify-content-between ${
+                                      show2 ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
