@@ -365,15 +365,20 @@ const ProductCardWrapper = styled.div`
           }
         }
       }
+      /* @media screen and (max-width: 1200px) {
+        .characteristic-container {
+          width: 100% !important;
+        }
+      }
+      */
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 800px) {
         .characteristic-container {
           width: 30% !important;
         }
       }
 
       .characteristic-container {
-        width: 100%;
         .characteristic {
           /* max-width: 100%; */
         }

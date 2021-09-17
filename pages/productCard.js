@@ -132,8 +132,11 @@ const ProductCard = () => {
                     </div>
                   </div>
                 </div>
-                <div className="characteristic-container py-5 ">
+                <div className="characteristic-container w-100 py-5 ">
                   <div className="characteristic mb-3">
+                    <div className="" style={{ color: "#EFF9FE" }}>
+                      .
+                    </div>
                     <ul>
                       <li>экран: 6.53{`"`} (2340×1080) 60 Гц</li>
                       <li>оперативная память: 4 ГБ</li>
