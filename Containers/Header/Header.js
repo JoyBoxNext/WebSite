@@ -93,14 +93,7 @@ const Header = () => {
   useEffect(() => {
     datas();
   }, [
-    searchTerm,
-    array.length,
-    arraybaraxolka.length,
-    arrayRightSide.length,
-    arrayHomeDatas.length,
-    arrayChooseData.length,
-    arrayNewsData.length,
-    arrayNoteBook.length,
+
   ]);
 
   const produktdata = useSelector((state) => state.BooksReducer.filterdata);
@@ -184,16 +177,7 @@ const Header = () => {
   useEffect(() => {
     saveProduct();
   }, [
-    indexdata,
-    savedData.length,
-    indexs,
-    datalfilter.length,
-    baraxolkaSaveProduct.length,
-    rightSaveProduct.length,
-    homeSaveProduct.length,
-    chooseSaveProduct.length,
-    newsSaveProduct.length,
-    notebookSaveProduct.length,
+
   ]);
 
   const deleteProduct = (index) => {
@@ -230,6 +214,17 @@ const Header = () => {
     setOpenInput(!openInput);
   };
 
+  const newdata = useSelector(state => state.BooksReducer.newdata);
+  const newFilterdata = newdata?.filter((value) =>
+    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  )
+  // const sendData = () => {
+  //   const action = { type: "SEND_FILTER", payload: newFilterdata }
+  //   dispatch(action)
+  // }
+  // useEffect(() => {
+  //   sendData()
+  // }, [])
   return (
     <HeaderWrapper>
       <div className="pt-4">
@@ -565,23 +560,23 @@ const Header = () => {
 
                 <div className="d-flex flex-column justify-content-center align-items-center mt-3">
                   {savedData.length == 0 &&
-                  baraxolkaSaveProduct.length == 0 &&
-                  rightSaveProduct.length == 0 &&
-                  homeSaveProduct.length == 0 &&
-                  chooseSaveProduct.length == 0 &&
-                  newsSaveProduct.length == 0 &&
-                  notebookSaveProduct.length == 0 ? (
+                    baraxolkaSaveProduct.length == 0 &&
+                    rightSaveProduct.length == 0 &&
+                    homeSaveProduct.length == 0 &&
+                    chooseSaveProduct.length == 0 &&
+                    newsSaveProduct.length == 0 &&
+                    notebookSaveProduct.length == 0 ? (
                     <p>Корзина пустой</p>
                   ) : (
                     ""
                   )}
                   {savedData.length == 0 &&
-                  baraxolkaSaveProduct.length == 0 &&
-                  rightSaveProduct.length == 0 &&
-                  homeSaveProduct.length == 0 &&
-                  chooseSaveProduct.length == 0 &&
-                  newsSaveProduct.length == 0 &&
-                  notebookSaveProduct.length == 0 ? (
+                    baraxolkaSaveProduct.length == 0 &&
+                    rightSaveProduct.length == 0 &&
+                    homeSaveProduct.length == 0 &&
+                    chooseSaveProduct.length == 0 &&
+                    newsSaveProduct.length == 0 &&
+                    notebookSaveProduct.length == 0 ? (
                     ""
                   ) : (
                     <button onClick={open} className="orange_btn">
@@ -646,9 +641,8 @@ const Header = () => {
                     <a>
                       <Button
                         style={{ zIndex: "100" }}
-                        className={`border_links border-dark rounded-0 px-4 ${
-                          value.className
-                        } ${router.pathname === value.href ? "active" : ""}`}
+                        className={`border_links border-dark rounded-0 px-4 ${value.className
+                          } ${router.pathname === value.href ? "active" : ""}`}
                       >
                         {value.link}
                       </Button>

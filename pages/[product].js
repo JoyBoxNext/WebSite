@@ -1,9 +1,9 @@
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import ProductWrapper from "../Wrappers/ProductWrapper";
-import Header from "./../Containers/Header/Header";
+import React, { useEffect, useState } from "react";
+import Header from "../Containers/Header/Header";
 import Footer from "../Containers/Footer/Footer";
+import ProductWrapper from "../Wrappers/ProductWrapper"
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -16,11 +16,14 @@ import { dispatch } from "../redux/Store";
 import Link from "next/link";
 import { bigCategores, categores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
-import Container from "./../Containers/Container";
+import Container from "../Containers/Container";
 import Slider from "@material-ui/core/Slider";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
+import { useRouter } from "next/router";
+import datacategory from "../Data/index";
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,8 +65,8 @@ const useStyles = makeStyles((theme) => ({
 function valuetext(valueSlider) {
   return `${valueSlider}°C`;
 }
-
-const Product = () => {
+// Category
+const Category = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const [valueSlider, setValueSlider] = React.useState([0, 45]);
@@ -132,7 +135,17 @@ const Product = () => {
   };
 
   // =============
-
+  const router = useRouter();
+  const category = router.query.product;
+  const datas = datacategory[category];
+  // const datasend = () => {
+  //   const action = { type: "SEND", payload: datas };
+  //   dispatch(action);
+  // }
+  // useEffect(() => {
+  //   datasend();
+  // }, []);
+  console.log(datacategory);
   return (
     <>
       <Container>
@@ -215,16 +228,14 @@ const Product = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${
-                                      show ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex align-items-center ${show ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${
-                                        checked == index ? "active" : ""
-                                      }`}
+                                      className={` box me-2 ${checked == index ? "active" : ""
+                                        }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -263,9 +274,8 @@ const Product = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${
-                                      show2 ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
@@ -319,7 +329,7 @@ const Product = () => {
               </Fade>
               <Slide bottom>
                 <div className="row justify-content-center">
-                  {data?.map((value, index) => {
+                  {datas?.map((value, index) => {
                     return (
                       <div className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative">
                         <div className="cards_border ">
@@ -565,4 +575,4 @@ const Product = () => {
 {
 }
 
-export default Product;
+export default Category;

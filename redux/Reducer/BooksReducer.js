@@ -32,13 +32,17 @@ const initialState = {
   notebookData: [],
   notebookFilter: [],
   notebookProduct: [],
+
+  newdata: [],
+  newFilter: []
 };
 
 const BooksReducer = (state = initialState, action) => {
   switch (action.type) {
     case t.CHEKED:
       return { ...state, chekbox: action.payload };
-
+    case "SEND" : return {...state , newdata: action.payload}
+    case "SEND_FILTER" : return {...state , newFilter: action.payload}
     case t.CHEKED2:
       return { ...state, chekbox: action.payload };
 

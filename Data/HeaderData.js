@@ -1,10 +1,10 @@
 const links = [
-  { link: "Скидки", href: "/product" },
-  { link: "Смартфоны", href: "/productCard" },
-  { link: "ТВ", href: "/baraxolka" },
+  { link: "Скидки", href: "/" },
+  { link: "Смартфоны", href: "/phones" },
+  { link: "ТВ", href: "/tv" },
   {
     link: "Техника для кухни",
-    href: "",
+    href: "/kitchen",
     className: "link1 col-12",
   },
   {
@@ -14,15 +14,15 @@ const links = [
   },
   {
     link: "Техника для дома",
-    href: "",
+    href: "/homeTech",
     className: "link3 d-none d-lg-block",
   },
   {
     link: " Ноутбук, ПК, планшет",
-    href: "",
+    href: "/laptops",
     className: "link4 d-none d-xl-block",
   },
-  { link: "Для геймеров", href: "", className: "link5 d-none d-xxl-block" },
+  { link: "Для геймеров", href: "/gamers", className: "link5 d-none d-xxl-block" },
 ];
 
 const pages = [

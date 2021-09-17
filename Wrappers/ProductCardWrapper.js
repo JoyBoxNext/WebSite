@@ -14,6 +14,7 @@ const ProductCardWrapper = styled.div`
     font-weight: bold;
     font-size: 45.3237px;
     line-height: 100%;
+    
   }
   .badge {
     background-color: #d3e38c;
