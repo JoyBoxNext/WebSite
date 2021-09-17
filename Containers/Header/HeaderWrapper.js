@@ -15,6 +15,37 @@ const HeaderWrapper = styled.div`
       color: white !important;
     }
   }
+  .flex {
+    display: flex;
+  }
+  @media screen and (max-width: 800px) {
+    .flex {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .Categories {
+      width: 40% !important;
+    }
+  }
+  .MenuContainer {
+    background-color: #fff;
+    top: 100%;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    left: -1px;
+    opacity: 0;
+    z-index: 1000 !important;
+    padding: 10px;
+    visibility: hidden;
+    transition: 0.1s;
+    &.Active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .menuItem {
+      z-index: 10000;
+      padding: 8px 0;
+    }
+  }
   .logo {
     height: 50px;
   }
