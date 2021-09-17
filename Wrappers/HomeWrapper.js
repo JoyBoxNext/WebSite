@@ -220,6 +220,7 @@ const HomeWrapper = styled.div`
         border: none;
         padding: 8px;
         position: relative;
+        z-index: 0;
         .title {
           font-weight: normal;
           font-size: 13.0968px;

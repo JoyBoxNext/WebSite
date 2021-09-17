@@ -5,9 +5,6 @@ import ProductWrapper from "../Wrappers/ProductWrapper";
 import Header from "./../Containers/Header/Header";
 import Footer from "../Containers/Footer/Footer";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { useSelector } from "react-redux";
@@ -21,7 +18,6 @@ import Slider from "@material-ui/core/Slider";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -40,13 +36,6 @@ function TabPanel(props) {
       )}
     </div>
   );
-}
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -131,7 +120,10 @@ const Product = () => {
     console.log(rightSelectorData[index].save, index);
   };
 
-  // =============
+  const [tabPanel, setTabPanel] = useState(0);
+  const tabApp = (id) => {
+    setTabPanel(id);
+  };
 
   return (
     <>
@@ -144,17 +136,19 @@ const Product = () => {
             <Zoom>
               <div className="container mt-3">
                 <div className={classes.root}>
-                  <AppBar className="mt-4" position="static">
-                    <Tabs
-                      value={value}
-                      onChange={handleChange}
-                      aria-label="simple tabs example"
-                    >
-                      <Tab label="Полная цена" {...a11yProps(0)} />
-                      <Tab label="Цена в месяц" {...a11yProps(1)} />
-                    </Tabs>
-                  </AppBar>
-                  <TabPanel className="px-2" value={value} index={0}>
+                  <div className="mt-4" position="static">
+                    <div className="d-flex align-items-center">
+                      <div className="btn_orange" onClick={() => tabApp(0)}>
+                        Полная цена{" "}
+                      </div>
+                      <div className="btn_light" onClick={() => tabApp(1)}>
+                        Цена в месяц{" "}
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={`px-2 ${tabPanel == 0 ? "d-block" : "d-none"}`}
+                  >
                     <div className="">
                       <p className="mb-1 my-3 fw-bold">Цена</p>
                       <div className="d-flex align-items-center">
@@ -191,7 +185,7 @@ const Product = () => {
                         {bigCategores.map((value, index) => {
                           return (
                             <div
-                              className="col-sm-6 col-lg-6 col-xl-12"
+                              className="col-sm-6 col-lg-12 col-xl-12 col-xxl-12"
                               key={index}
                             >
                               <div className="d-flex mt-4">
@@ -239,7 +233,7 @@ const Product = () => {
                         {categores.map((value, index) => {
                           return (
                             <div
-                              className="col-sm-6 col-md-6 col-lg-6 col-xl-12"
+                              className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
                               key={index}
                             >
                               <div className="d-flex justify-content-between mt-4">
@@ -290,13 +284,15 @@ const Product = () => {
                         })}
                       </div>
                     </div>
-                  </TabPanel>
-                  <TabPanel value={value} index={1}>
+                  </div>
+                  <div
+                    className={`mt-4 ${tabPanel == 1 ? "d-block" : "d-none"}`}
+                  >
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Maiores labore possimus eveniet minima vitae ea
                     reprehenderit, nemo beatae vero, corporis laudantium quo
                     quaerat ex similique? Quisquam sint deserunt numquam id?
-                  </TabPanel>
+                  </div>
                 </div>
               </div>
             </Zoom>

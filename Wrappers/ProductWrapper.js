@@ -3,6 +3,21 @@ import styled from "styled-components";
 const ProductWrapper = styled.div`
   width: 100%;
   overflow-x: hidden;
+  .btn_orange {
+    background-color: #ff5314;
+    padding: 7px 24px;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+  }
+  .btn_light {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 6px 24px;
+    background-color: #fff;
+    color: #ff5314;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
 
   @media screen and (max-width: 500px) {
     .button {
@@ -16,6 +31,9 @@ const ProductWrapper = styled.div`
         font-size: 10px !important;
       }
     }
+  }
+  .PrivateTabIndicator-colorSecondary-5 {
+    display: none !important;
   }
   .MuiTabs-flexContainer {
     display: flex;
@@ -350,6 +368,14 @@ const ProductWrapper = styled.div`
       width: 25px;
       height: 25px;
       position: absolute;
+      top: 8px !important;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .MuiSlider-thumb {
+      width: 25px;
+      height: 25px;
+      position: absolute;
       top: 14px !important;
     }
   }
@@ -365,103 +391,96 @@ const ProductWrapper = styled.div`
     .li {
       font-size: 30px;
     }
-  }
-  @media screen and (max-width: 1200px) {
-    .D_flex {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .LeftSide {
-      flex: 1;
-    }
-    .Sidebar {
-      flex: 1;
-    }
-    .rightSide {
-      flex: 1;
-    }
-  }
-  @media screen and (max-width: 1025px) {
-    .D_flex {
-      display: grid !important;
-      flex-wrap: wrap;
-    }
-    .LeftSide {
-      width: 100%;
-    }
-    .Sidebar {
-      flex: 1;
-    }
-    .rightSide {
-      flex: 1;
-    }
-  }
-  @media screen and (max-width: 1024px) {
-    .bottom_text {
-      display: none;
-    }
-    .bottom_block_text {
-      display: block !important;
-    }
-    .text {
-      font-size: 25px;
-    }
-    .li {
-      font-size: 18px;
-    }
-    .right_flex {
-      border: 3px solid #2525eb;
-      padding: 20px;
-    }
-    .rightSide {
-      margin-top: 0;
-    }
-  }
-  @media screen and (max-width: 855px) {
-    .li {
-      font-size: 20px;
-    }
-  }
-  @media screen and (max-width: 760px) {
-    .D_flex {
-      flex-wrap: wrap;
-    }
-    .MuiTabs-flexContainer {
-      display: grid;
-    }
-    .LeftSide {
-      flex: 1;
-      .container {
+    @media screen and (max-width: 1200px) {
+      .D_flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .LeftSide {
+        flex: 150px;
+      }
+      .Sidebar {
+        flex: 1;
+      }
+      .rightSide {
+        flex: 1;
       }
     }
-    .Sidebar {
-      width: 100%;
+    @media screen and (max-width: 1025px) {
+      .D_flex {
+        display: grid !important;
+        flex-wrap: wrap;
+      }
+      .LeftSide {
+        width: 100%;
+      }
+      .Sidebar {
+        flex: 1;
+      }
+      .rightSide {
+        flex: 1;
+      }
     }
-    .rightSide {
-      flex: 1;
+    @media screen and (max-width: 1024px) {
+      .bottom_text {
+        display: none;
+      }
+      .bottom_block_text {
+        display: block !important;
+      }
+      .text {
+        font-size: 25px;
+      }
+      .li {
+        font-size: 18px;
+      }
+      .right_flex {
+        border: 3px solid #2525eb;
+        padding: 20px;
+      }
+      .rightSide {
+        margin-top: 0;
+      }
     }
-    .MuiTab-root {
-      min-height: 25px;
-      min-width: 200px;
+    @media screen and (max-width: 855px) {
+      .li {
+        font-size: 20px;
+      }
     }
-    .text {
-      font-size: 20px;
+    @media screen and (max-width: 760px) {
+      .D_flex {
+        flex-wrap: wrap;
+      }
+      .LeftSide {
+        flex: 1;
+        .container {
+        }
+      }
+      .Sidebar {
+        width: 100%;
+      }
+      .rightSide {
+        flex: 1;
+      }
+      .text {
+        font-size: 20px;
+      }
+      .li {
+        font-size: 17px;
+      }
     }
-    .li {
-      font-size: 17px;
+    @media screen and (max-width: 510px) {
+      .text {
+        font-size: 16px;
+      }
+      .li {
+        font-size: 14px;
+      }
     }
-  }
-  @media screen and (max-width: 510px) {
-    .text {
-      font-size: 16px;
-    }
-    .li {
-      font-size: 14px;
-    }
-  }
-  @media screen and (max-width: 385px) {
-    .li {
-      font-size: 11px !important;
+    @media screen and (max-width: 385px) {
+      .li {
+        font-size: 11px !important;
+      }
     }
   }
 `;

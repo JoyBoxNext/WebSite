@@ -11,10 +11,6 @@ const BaraxollaWrapper = styled.div`
     font-weight: bold;
     line-height: 100%;
   }
-  ul {
-    .li {
-    }
-  }
 
   .MuiTabs-flexContainer {
     background: white !important;

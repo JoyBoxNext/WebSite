@@ -202,32 +202,32 @@ const ProductCardWrapper = styled.div`
         }
       }
       .dot_orange {
-          width: 5px;
-          height: 5px;
-          background-color: #ff5314;
-          z-index: 99999 !important;
-        }
-        .dot1 {
-          position: absolute;
-          left: -5px;
-          z-index: 10099 !important;
-          top: -5px;
-        }
-        .dot2 {
-          position: absolute;
-          right: -5px;
-          top: -5px;
-        }
-        .dot3 {
-          position: absolute;
-          left: -5px;
-          bottom: -5px;
-        }
-        .dot4 {
-          position: absolute;
-          right: -5px;
-          bottom: -5px;
-        }
+        width: 5px;
+        height: 5px;
+        background-color: #ff5314;
+        z-index: 99999 !important;
+      }
+      .dot1 {
+        position: absolute;
+        left: -5px;
+        z-index: 10099 !important;
+        top: -5px;
+      }
+      .dot2 {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+      }
+      .dot3 {
+        position: absolute;
+        left: -5px;
+        bottom: -5px;
+      }
+      .dot4 {
+        position: absolute;
+        right: -5px;
+        bottom: -5px;
+      }
     }
   }
 
@@ -366,7 +366,14 @@ const ProductCardWrapper = styled.div`
         }
       }
 
+      @media screen and (min-width: 1200px) {
+        .characteristic-container {
+          width: 30% !important;
+        }
+      }
+
       .characteristic-container {
+        width: 100%;
         .characteristic {
           /* max-width: 100%; */
         }

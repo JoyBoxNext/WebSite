@@ -99,91 +99,87 @@ export default function Home() {
           <Header />
 
           {/* Container-1 */}
-          <Fade bottom>
-            <div className="container-1  mt-5">
-              <div className="d-flex flex-wrap">
-                <div className="flex1 blue" style={{ width: "25%" }}>
-                  <div className="text">
-                    <p className="subtitle m-1 top_title">
-                      заголовок редактируется через админ панель
+          <div className="container-1  mt-5">
+            <div className="d-flex flex-wrap">
+              <div className="flex1 blue" style={{ width: "25%" }}>
+                <div className="text">
+                  <p className="subtitle m-1 top_title">
+                    заголовок редактируется через админ панель
+                  </p>
+                  <h1 className="title mb-3 big_title">Удиви своих друзей!</h1>
+                </div>
+                <div className="mini-content p-0">
+                  <div className="p-1">
+                    <p className="title top_title">
+                      PlayStation 5 Digital version
                     </p>
-                    <h1 className="title mb-3 big_title">
-                      Удиви своих друзей!
-                    </h1>
-                  </div>
-                  <div className="mini-content p-0">
-                    <div className="p-1">
-                      <p className="title top_title">
-                        PlayStation 5 Digital version
+                    <div className="d-flex justify-content-between align-items-center">
+                      <p className="title mb-0 text-end small_title d-none">
+                        заголовок редактируется через админ панель
                       </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <p className="title mb-0 text-end small_title d-none">
-                          заголовок редактируется через админ панель
-                        </p>
-                        <p className="title mb-0 text-end samsung_title">
-                          с Samsung Galaxy A52
-                        </p>
-                      </div>
-                      <div className="d-flex justify-content-between">
-                        <p className="subtitle top_title">
-                          редактируется через админ панель
-                        </p>
-                        <div className="d-block">
-                          <p className="oldPrice ">18,577,000</p>
-                          <div className="priceDec">
-                            <div className="price d-flex">
-                              от <p className="priceNum">15,845,000</p> сум
-                            </div>
+                      <p className="title mb-0 text-end samsung_title">
+                        с Samsung Galaxy A52
+                      </p>
+                    </div>
+                    <div className="d-flex justify-content-between">
+                      <p className="subtitle top_title">
+                        редактируется через админ панель
+                      </p>
+                      <div className="d-block">
+                        <p className="oldPrice ">18,577,000</p>
+                        <div className="priceDec">
+                          <div className="price d-flex">
+                            от <p className="priceNum">15,845,000</p> сум
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="d-flex  justify-content-between  w-100">
-                      <img className="top_title" src="logo3.png" alt="photo" />
-                      <p className="bottom-text w-auto">
-                        Магазин бытовой техники <br /> и электроники
-                      </p>
-                    </div>
-                    <div className="dot_orange dot1"></div>
-                    <div className="dot_orange dot2"></div>
-                    <div className="dot_orange dot3"></div>
-                    <div className="dot_orange dot4"></div>
                   </div>
-                </div>
-                <div className="flex2 d-flex blue" style={{ width: "40%" }}>
-                  <h1 className="threePhone_title">16:9</h1>
-                  <img
-                    className="threePhone"
-                    src="threeMobiles.png"
-                    alt="phone"
-                  />
-                </div>
-                <div className="flex3 orange" style={{ width: "25%" }}>
-                  <div className="h-100 d-flex align-items-center">
-                    <h1 className="h2 text-center home_wonder_title">
-                      Удивляй! Hayron qil!
-                    </h1>
+                  <div className="d-flex  justify-content-between  w-100">
+                    <img className="top_title" src="logo3.png" alt="photo" />
+                    <p className="bottom-text w-auto">
+                      Магазин бытовой техники <br /> и электроники
+                    </p>
                   </div>
+                  <div className="dot_orange dot1"></div>
+                  <div className="dot_orange dot2"></div>
+                  <div className="dot_orange dot3"></div>
+                  <div className="dot_orange dot4"></div>
                 </div>
-                <div className="blue" style={{ width: "10%" }}></div>
-                <div className="orange" style={{ width: "65%" }}></div>
-                <div className="flex6 blue" style={{ width: "25%" }}>
-                  <img className="w-100" src="logo4.png" alt="photo" />
-                </div>
-                <div className="orange" style={{ width: "10%" }}></div>
-                <div className="flex8 blue py-3" style={{ width: "65%" }}>
-                  <div className="">
-                    <Button className="btn_links">Скидки</Button>
-                    <Button className="btn_links">Подборки</Button>
-                    <Button className="btn_links">Товар дня</Button>
-                    <Button className="btn_links">Новинки</Button>
-                  </div>
-                </div>
-                <div className="orange" style={{ width: "25%" }}></div>
-                <div className="blue" style={{ width: "10%" }}></div>
               </div>
+              <div className="flex2 d-flex blue" style={{ width: "40%" }}>
+                <h1 className="threePhone_title">16:9</h1>
+                <img
+                  className="threePhone"
+                  src="threeMobiles.png"
+                  alt="phone"
+                />
+              </div>
+              <div className="flex3 orange" style={{ width: "25%" }}>
+                <div className="h-100 d-flex align-items-center">
+                  <h1 className="h2 text-center home_wonder_title">
+                    Удивляй! Hayron qil!
+                  </h1>
+                </div>
+              </div>
+              <div className="blue" style={{ width: "10%" }}></div>
+              <div className="orange" style={{ width: "65%" }}></div>
+              <div className="flex6 blue" style={{ width: "25%" }}>
+                <img className="w-100" src="logo4.png" alt="photo" />
+              </div>
+              <div className="orange" style={{ width: "10%" }}></div>
+              <div className="flex8 blue py-3" style={{ width: "65%" }}>
+                <div className="">
+                  <Button className="btn_links">Скидки</Button>
+                  <Button className="btn_links">Подборки</Button>
+                  <Button className="btn_links">Товар дня</Button>
+                  <Button className="btn_links">Новинки</Button>
+                </div>
+              </div>
+              <div className="orange" style={{ width: "25%" }}></div>
+              <div className="blue" style={{ width: "10%" }}></div>
             </div>
-          </Fade>
+          </div>
 
           {/* Container-2 */}
           <Zoom>

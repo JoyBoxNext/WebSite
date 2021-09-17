@@ -20,10 +20,10 @@ const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
 
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(false);
 
-  const handleOpenMenu = (e) => {
-    setAnchorEl(e.currentTarget);
+  const handleOpenMenu = () => {
+    setAnchorEl(!anchorEl);
   };
 
   const handleMenuClose = () => {
@@ -523,7 +523,6 @@ const Header = () => {
                     </div>
                   </div>
                 ))}
-
                 {notebookSaveProduct?.map((value, index) => (
                   <div>
                     <hr />
@@ -593,7 +592,62 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <Fade top>
+        <div className="w-100 mt-3 d-flex justify-content-center align-items-center category">
+          <div className="flex position-relative">
+            <Button
+              className="Categories mb-3"
+              aria-controls="menu"
+              disableRipple
+              onClick={handleOpenMenu}
+              variant="contained"
+            >
+              <img className="me-1" src="iconCategories.svg" alt="photo" />
+              Категории
+              <img className="ms-1" src="iconCtegories2.svg" alt="photo" />
+            </Button>
+            <div
+              className={`MenuContainer position-absolute ${
+                anchorEl ? "Active" : ""
+              }`}
+            >
+              {pages.map((value, index) => {
+                return (
+                  <div key={index} className="menuItem">
+                    <Link href="/">
+                      <div>
+                        <a>{value.page}</a>
+                        <FontAwesomeIcon
+                          className="icon_right position-absolute"
+                          style={{ right: "10px", color: "#606060" }}
+                          icon={faAngleRight}
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="d-flex flex-wrap">
+              {links.map((value, index) => {
+                return (
+                  <Link href={value.href} key={index}>
+                    <a>
+                      <Button
+                        style={{ zIndex: "100" }}
+                        className={`border_links border-dark rounded-0 px-4 ${
+                          value.className
+                        } ${router.pathname === value.href ? "active" : ""}`}
+                      >
+                        {value.link}
+                      </Button>
+                    </a>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        {/* <Fade top>
           <div className="w-100 mt-3 d-flex justify-content-center flex-wrap align-items-center category">
             <div>
               <Button
@@ -638,7 +692,6 @@ const Header = () => {
                 })}
               </Menu>
             </div>
-            {/* active o'rnatish kere va responsiveni to'g'irlash kere */}
             <div className="d-flex flex-wrap">
               {links.map((value, index) => {
                 return (
@@ -658,7 +711,7 @@ const Header = () => {
               })}
             </div>
           </div>
-        </Fade>
+        </Fade> */}
         <ModalProduct openInput={openInput} open={open} />
       </div>
     </HeaderWrapper>
