@@ -29,7 +29,7 @@ const HeaderWrapper = styled.div`
   }
   .MenuContainer {
     background-color: #fff;
-    top: 100%;
+    top: 70%;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     left: -1px;
     opacity: 0;
