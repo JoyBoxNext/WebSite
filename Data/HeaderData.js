@@ -1,5 +1,5 @@
 const links = [
-  { link: "Скидки", href: "/" },
+  { link: "Скидки", href: "/skidka" },
   { link: "Смартфоны", href: "/phones" },
   { link: "ТВ", href: "/tv" },
   {
@@ -9,7 +9,7 @@ const links = [
   },
   {
     link: "Аксессуары",
-    href: "",
+    href: "/homeTech",
     className: "link2 mx-4 d-block d-md-none",
   },
   {
@@ -22,7 +22,11 @@ const links = [
     href: "/laptops",
     className: "link4 d-none d-xl-block",
   },
-  { link: "Для геймеров", href: "/gamers", className: "link5 d-none d-xxl-block" },
+  {
+    link: "Для геймеров",
+    href: "/gamers",
+    className: "link5 d-none d-xxl-block gamer",
+  },
 ];
 
 const pages = [

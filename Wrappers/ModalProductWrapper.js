@@ -53,5 +53,17 @@ const ModalProductWrapper = styled.div`
       border-radius: 20px;
     }
   }
+  @media screen and (max-width: 400px) {
+    .times {
+      position: absolute !important;
+      top: -20px !important;
+      right: -20px !important;
+    }
+    .button {
+      position: absolute !important;
+      bottom: -15px !important;
+      left: 22% !important;
+    }
+  }
 `;
 export default ModalProductWrapper;

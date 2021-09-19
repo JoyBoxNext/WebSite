@@ -278,12 +278,143 @@ const Category = () => {
                     </div>
                   </div>
                   <div
-                    className={`mt-4 ${tabPanel == 1 ? "d-block" : "d-none"}`}
+                    className={`px-2 ${tabPanel == 1 ? "d-block" : "d-none"}`}
                   >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Maiores labore possimus eveniet minima vitae ea
-                    reprehenderit, nemo beatae vero, corporis laudantium quo
-                    quaerat ex similique? Quisquam sint deserunt numquam id?
+                    <div className="">
+                      <p className="mb-1 my-3 fw-bold">Цена</p>
+                      <div className="d-flex align-items-center">
+                        <div className="d-flex align-items-center mt-3">
+                          <p className="mb-0 me-2 subtitle">От</p>
+                          <input
+                            type="text"
+                            value="2.000.000"
+                            className="input rounded"
+                          />
+                        </div>
+                        <div className="d-flex align-items-center mt-3">
+                          <p className="mb-0 mx-2 subtitle">До</p>
+                          <input
+                            type="text"
+                            value="2.000.000"
+                            className="input rounded"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className={classes.root}>
+                        <Slider
+                          className="my-4"
+                          value={valueSlider}
+                          onChange={handleSliderChange}
+                          valueLabelDisplay="auto"
+                          aria-labelledby="range-slider"
+                          getAriaValueText={valuetext}
+                        />
+                      </div>
+                      <div className="row w-100">
+                        {bigCategores.map((value, index) => {
+                          return (
+                            <div
+                              className="col-sm-6 col-lg-12 col-xl-12 col-xxl-12"
+                              key={index}
+                            >
+                              <div className="d-flex mt-4">
+                                <p className="mb-0 subtitle me-4 mb-3">
+                                  {value.title}
+                                </p>
+                                {show ? (
+                                  <FontAwesomeIcon
+                                    onClick={hide}
+                                    className={`mt-1 ms-5 icon`}
+                                    icon={value.icon}
+                                  />
+                                ) : (
+                                  <FontAwesomeIcon
+                                    onClick={hide}
+                                    className={`mt-1 ms-5 icon`}
+                                    icon={faAngleDown}
+                                  />
+                                )}
+                              </div>
+                              {value.category.map((value, index) => {
+                                return (
+                                  <div
+                                    className={`d-flex align-items-center ${
+                                      show ? "" : "d-none"
+                                    }`}
+                                    key={index}
+                                  >
+                                    <button
+                                      onClick={() => toggle(index)}
+                                      className={` box me-2 ${
+                                        checked == index ? "active" : ""
+                                      }`}
+                                    ></button>
+                                    <p className="my-1 subtitle">
+                                      {value.subtitle}
+                                    </p>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          );
+                        })}
+
+                        {categores.map((value, index) => {
+                          return (
+                            <div
+                              className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
+                              key={index}
+                            >
+                              <div className="d-flex justify-content-between mt-4">
+                                <p className="subtitle my-3">
+                                  {value.name.title}
+                                </p>
+                                {show2 ? (
+                                  <FontAwesomeIcon
+                                    onClick={hide2}
+                                    className={`mt-3 mx-3 icon`}
+                                    icon={value.name.icon}
+                                  />
+                                ) : (
+                                  <FontAwesomeIcon
+                                    onClick={hide2}
+                                    className={`mt-3 mx-3 icon`}
+                                    icon={faAngleDown}
+                                  />
+                                )}
+                              </div>
+                              {value.name.category.map((value, index) => {
+                                return (
+                                  <div
+                                    className={`d-flex justify-content-between ${
+                                      show2 ? "" : "d-none"
+                                    }`}
+                                    key={index}
+                                  >
+                                    <div className="d-flex align-items-center mt-2">
+                                      <input
+                                        type="checkbox"
+                                        className="myinput"
+                                      />
+                                      <p className="mb-0 subtitle ms-2">
+                                        {value.title}
+                                      </p>
+                                    </div>
+                                    <div className="">
+                                      <p className="my-1 subtitle numbers me-3">
+                                        {value.subtitle}
+                                      </p>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -309,7 +440,10 @@ const Category = () => {
                 <div className="row justify-content-center">
                   {datas?.map((value, index) => {
                     return (
-                      <div key={index} className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative">
+                      <div
+                        key={index}
+                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
+                      >
                         <div className="cards_border ">
                           <img
                             className="skidka"
@@ -342,45 +476,49 @@ const Category = () => {
                                 </div>
                               </div>
                             </div>
-                            <h5 className="fw-bold my-2 subtitle">
-                              {value.title}
-                            </h5>
-                            <div className="d-flex align-items-center">
-                              <p className="mb-0 bg_success aksiya__">
-                                {value.aksiya_}
-                              </p>
-                              <p className="mb-0 text_secondary aksiya ms-4">
-                                {value.aksiya}
-                              </p>
-                            </div>
-                            <h4 className="fw-bold price mb-0 mt-2">
-                              <span className="big_text mb-0">
-                                {value.big_price}
-                              </span>
-                              {value.price}
-                            </h4>
-                            <div className="d-flex justify-content-between align-items-center ">
-                              <p className="mb-0 desc">{value.desc}</p>
-                              <button
-                                onClick={() => saveProduct(index)}
-                                className="border-0 save_btn"
-                              >
-                                <img src="orange.png" alt="photo" />
-                              </button>
-                            </div>
                           </div>
-                          <Fade top>
-                            <p className="descripton px-2">
-                              Экран (6.5{`"`}, Super AMOLED, 2400x1080)/
-                              Qualcomm Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8
-                              ГГц)/ основная квадро-камера: 64 Мп + 12 Мп + 5 Мп
-                              + 5 Мп, фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ
-                              встроенной памяти + microSD (до 1 ТБ)/ 3G/ LTE/
-                              GPS/ A-GPS/ ГЛОНАСС/ BDS/ поддержка 2х SIM-карт
-                              (Nano-SIM)/ Android 11.0 (One UI)/ 4500 мА*ч
+                          <h5 className="fw-bold my-2 subtitle">
+                            {value.title}
+                          </h5>
+                          <div className="d-flex align-items-center">
+                            <p className="mb-0 bg_success aksiya__">
+                              {value.aksiya_}
                             </p>
-                          </Fade>
+                            <p className="mb-0 text_secondary aksiya ms-4">
+                              {value.aksiya}
+                            </p>
+                          </div>
+                          <h4 className="fw-bold price mb-0 mt-2">
+                            <span className="big_text mb-0">
+                              {value.big_price}
+                            </span>
+                            {value.price}
+                          </h4>
+                          <div className="d-flex justify-content-between align-items-center ">
+                            <p className="mb-0 desc">{value.desc}</p>
+                            <button
+                              onClick={() => saveProduct(index)}
+                              className="border-0 save_btn"
+                            >
+                              <img
+                                className="w-75 mb-2"
+                                src="save_orange.png"
+                                alt="photo"
+                              />
+                            </button>
+                          </div>
                         </div>
+                        <Zoom>
+                          <p className="descripton px-2">
+                            Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
+                            Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/
+                            основная квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
+                            фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной
+                            памяти + microSD (до 1 ТБ)/ 3G/ LTE/ GPS/ A-GPS/
+                            ГЛОНАСС/ BDS/ поддержка 2х SIM-карт (Nano-SIM)/
+                            Android 11.0 (One UI)/ 4500 мА*ч
+                          </p>
+                        </Zoom>
                       </div>
                     );
                   })}
@@ -477,7 +615,11 @@ const Category = () => {
                               onClick={() => saveRightProduct(index)}
                               className="border-0 save_btn"
                             >
-                              <img src="orange.png" alt="photo" />
+                              <img
+                                className="w-75"
+                                src="save_orange.png"
+                                alt="photo"
+                              />
                             </button>
                           </div>
                         </div>

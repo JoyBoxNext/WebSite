@@ -27,6 +27,27 @@ const HeaderWrapper = styled.div`
       width: 40% !important;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .MenuContainer {
+      top: 50% !important;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .MenuContainer {
+      top: 40% !important;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .MenuContainer {
+      top: 30% !important;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .MenuContainer {
+      top: 20% !important;
+    }
+  }
   .MenuContainer {
     background-color: #fff;
     top: 70%;
@@ -52,20 +73,8 @@ const HeaderWrapper = styled.div`
   .orange {
     color: #ff5314;
   }
-  .border_links {
-    border-right: 1px solid black;
-    &.active {
-      background-color: #ffe5dc;
-      color: rgba(0 0 0 0);
-    }
-  }
 
   @media screen and (max-width: 600px) {
-    .border_links {
-      border: 1px solid black;
-      border-radius: 5px;
-      margin: 15px 8px 0px 0px;
-    }
     .header_korzina,
     .header_icon {
       width: 30px !important;
@@ -75,6 +84,7 @@ const HeaderWrapper = styled.div`
       object-fit: contain !important;
     }
   }
+
   @media screen and (max-width: 450px) {
     .header_title,
     .header_subtitle {
@@ -85,6 +95,7 @@ const HeaderWrapper = styled.div`
       width: 20px !important;
     }
   }
+
   @media screen and (max-width: 994px) {
     .inputOrder {
       order: 1;
@@ -147,6 +158,11 @@ const HeaderWrapper = styled.div`
   .lg_menu {
     display: none;
   }
+  @media screen and (max-width: 400px) {
+    .korzina {
+      width: 10px !important;
+    }
+  }
   .korzina {
     position: absolute;
     top: 59px;
@@ -157,7 +173,7 @@ const HeaderWrapper = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     z-index: 1002;
-    min-width: 350px;
+    min-width: 300px;
 
     .title {
       font-size: 11px;
