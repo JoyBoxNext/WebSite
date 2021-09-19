@@ -12,7 +12,7 @@ import { useRouter } from "next/dist/client/router";
 import Badge from "@material-ui/core/Badge";
 import ModalProduct from "../../Components/ModalProduct";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
+import ActiveLink from "../../activeLink";
 
 const Header = () => {
   const [openSave, setOpenSave] = useState(false);
@@ -92,9 +92,7 @@ const Header = () => {
 
   useEffect(() => {
     datas();
-  }, [
-
-  ]);
+  }, []);
 
   const produktdata = useSelector((state) => state.BooksReducer.filterdata);
 
@@ -176,9 +174,7 @@ const Header = () => {
   const [indexs, setindexs] = useState(-1);
   useEffect(() => {
     saveProduct();
-  }, [
-
-  ]);
+  }, []);
 
   const deleteProduct = (index) => {
     setindexs(index);
@@ -214,10 +210,10 @@ const Header = () => {
     setOpenInput(!openInput);
   };
 
-  const newdata = useSelector(state => state.BooksReducer.newdata);
+  const newdata = useSelector((state) => state.BooksReducer.newdata);
   const newFilterdata = newdata?.filter((value) =>
     value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
-  )
+  );
   // const sendData = () => {
   //   const action = { type: "SEND_FILTER", payload: newFilterdata }
   //   dispatch(action)
@@ -559,23 +555,23 @@ const Header = () => {
 
                 <div className="d-flex flex-column justify-content-center align-items-center mt-3">
                   {savedData.length == 0 &&
-                    baraxolkaSaveProduct.length == 0 &&
-                    rightSaveProduct.length == 0 &&
-                    homeSaveProduct.length == 0 &&
-                    chooseSaveProduct.length == 0 &&
-                    newsSaveProduct.length == 0 &&
-                    notebookSaveProduct.length == 0 ? (
+                  baraxolkaSaveProduct.length == 0 &&
+                  rightSaveProduct.length == 0 &&
+                  homeSaveProduct.length == 0 &&
+                  chooseSaveProduct.length == 0 &&
+                  newsSaveProduct.length == 0 &&
+                  notebookSaveProduct.length == 0 ? (
                     <p>Корзина пустой</p>
                   ) : (
                     ""
                   )}
                   {savedData.length == 0 &&
-                    baraxolkaSaveProduct.length == 0 &&
-                    rightSaveProduct.length == 0 &&
-                    homeSaveProduct.length == 0 &&
-                    chooseSaveProduct.length == 0 &&
-                    newsSaveProduct.length == 0 &&
-                    notebookSaveProduct.length == 0 ? (
+                  baraxolkaSaveProduct.length == 0 &&
+                  rightSaveProduct.length == 0 &&
+                  homeSaveProduct.length == 0 &&
+                  chooseSaveProduct.length == 0 &&
+                  newsSaveProduct.length == 0 &&
+                  notebookSaveProduct.length == 0 ? (
                     ""
                   ) : (
                     <button onClick={open} className="orange_btn">
@@ -627,14 +623,14 @@ const Header = () => {
                 return (
                   <Link href={value.href} key={index}>
                     <a>
-                      <Button
+                      <ActiveLink
+                        href={value.href}
+                        onClick={handleMenuClose}
                         style={{ zIndex: "100" }}
-                        className={`border_links border-dark rounded-0 px-4 ${
-                          value.className
-                        } ${router.pathname === value.href ? "active" : ""}`}
+                        className={`${value.className}`}
                       >
                         {value.link}
-                      </Button>
+                      </ActiveLink>
                     </a>
                   </Link>
                 );
@@ -642,70 +638,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-        {/* <Fade top>
-          <div className="w-100 mt-3 d-flex justify-content-center flex-wrap align-items-center category">
-            <div>
-              <Button
-                className="Categories"
-                aria-controls="menu"
-                disableRipple
-                onClick={handleOpenMenu}
-                variant="contained"
-              >
-                <img className="me-1" src="iconCategories.svg" alt="photo" />
-                Категории
-                <img className="ms-1" src="iconCtegories2.svg" alt="photo" />
-              </Button>
-              <Menu
-                className="CategoriesMenu"
-                style={{ marginTop: "40px" }}
-                id="menu"
-                onClose={handleMenuClose}
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-              >
-                {pages.map((value, index) => {
-                  return (
-                    <MenuItem
-                      key={index}
-                      style={{ width: "300px" }}
-                      className="menuItem position-relative"
-                      onClick={handleMenuClose}
-                    >
-                      <Link href="/">
-                        <div>
-                          <a>{value.page}</a>
-                          <FontAwesomeIcon
-                            className="icon_right position-absolute"
-                            style={{ right: "10px", color: "#606060" }}
-                            icon={faAngleRight}
-                          />
-                        </div>
-                      </Link>
-                    </MenuItem>
-                  );
-                })}
-              </Menu>
-            </div>
-            <div className="d-flex flex-wrap">
-              {links.map((value, index) => {
-                return (
-                  <Link href={value.href} key={index}>
-                    <a>
-                      <Button
-                        style={{ zIndex: "100" }}
-                        className={`border_links border-dark rounded-0 px-4 ${value.className
-                          } ${router.pathname === value.href ? "active" : ""}`}
-                      >
-                        {value.link}
-                      </Button>
-                    </a>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </Fade> */}
         <ModalProduct openInput={openInput} open={open} />
       </div>
     </HeaderWrapper>

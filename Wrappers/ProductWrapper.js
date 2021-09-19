@@ -191,19 +191,17 @@ const ProductWrapper = styled.div`
         color: #8d8989;
         text-transform: uppercase;
         display: none;
-        transition: 1s !important;
       }
       &:hover {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
-        transition: 1s !important;
+        height: auto !important;
       }
       &:hover .descripton {
         display: block;
-        height: auto;
+        height: auto !important;
       }
     }
     .title {
