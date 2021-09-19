@@ -1,12 +1,10 @@
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../Containers/Header/Header";
 import Footer from "../Containers/Footer/Footer";
 import ProductWrapper from "../Wrappers/ProductWrapper";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
@@ -441,35 +439,44 @@ const Category = () => {
                   <h1 className="title my-4">Удивляйся и удивляй!</h1>
                 </div>
               </Fade>
-              <div className="row justify-content-center">
-                {datas?.map((value, index) => {
-                  return (
-                    <div className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative">
-                      <div className="cards_border ">
-                        <img className="skidka" src="skidka.jpg" alt="photo" />
-                        <div className="px-3">
-                          <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                            <Link href="/productCard">
-                              <a>
-                                <img
-                                  className="me-3 phone_photo"
-                                  src={value.img}
-                                  alt="photo"
-                                />
-                              </a>
-                            </Link>
-                            <div className="colorBoxes flex-column mb-5">
-                              <div className="p-1">
-                                <div className="col-3 colorBox black"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox white"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox green"></div>
-                              </div>
-                              <div className="p-1">
-                                <div className="col-3 colorBox gray"></div>
+              <Slide bottom>
+                <div className="row justify-content-center">
+                  {datas?.map((value, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
+                      >
+                        <div className="cards_border ">
+                          <img
+                            className="skidka"
+                            src="skidka.jpg"
+                            alt="photo"
+                          />
+                          <div className="px-3">
+                            <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                              <Link href="/productCard">
+                                <a>
+                                  <img
+                                    className="me-3 phone_photo"
+                                    src={value.img}
+                                    alt="photo"
+                                  />
+                                </a>
+                              </Link>
+                              <div className="colorBoxes flex-column mb-5">
+                                <div className="p-1">
+                                  <div className="col-3 colorBox black"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox white"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox green"></div>
+                                </div>
+                                <div className="p-1">
+                                  <div className="col-3 colorBox gray"></div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -516,57 +523,57 @@ const Category = () => {
                           </p>
                         </Zoom>
                       </div>
-                    </div>
-                  );
-                })}
-                <div className="my-2 bottom_text">
-                  <h1 className="text my-4">
-                    Часто задаваемые вопросы про Смартфоны
-                  </h1>
-                  <ul>
-                    {bottomText.map((value, index) => {
-                      return (
-                        <li className="li p-2" key={index}>
-                          <img className="me-2" src={value.img} alt="photo" />
-                          {value.title}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  <div className="mt-4">
-                    <div className="border_"></div>
-                    <div className="d-flex justify-content-center align-items-center  my-4">
-                      <Link href="https://www.instagram.com/?hl=ru">
-                        <a>
-                          <img
-                            className="icon me-3 fs-3"
-                            src="instagram.png"
-                            alt="instagram"
-                          />
-                        </a>
-                      </Link>
-                      <Link href="https://web.telegram.org">
-                        <a>
-                          <img
-                            className="icon me-3 fs-3"
-                            src="telegram.png"
-                            alt="telegram"
-                          />
-                        </a>
-                      </Link>
-                      <Link href="https://www.facebook.com">
-                        <a>
-                          <img
-                            className="icon fs-3"
-                            src="facebook.png"
-                            alt="facebook"
-                          />
-                        </a>
-                      </Link>
+                    );
+                  })}
+                  <div className="my-2 bottom_text">
+                    <h1 className="text my-4">
+                      Часто задаваемые вопросы про Смартфоны
+                    </h1>
+                    <ul>
+                      {bottomText.map((value, index) => {
+                        return (
+                          <li className="li p-2" key={index}>
+                            <img className="me-2" src={value.img} alt="photo" />
+                            {value.title}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    <div className="mt-4">
+                      <div className="border_"></div>
+                      <div className="d-flex justify-content-center align-items-center  my-4">
+                        <Link href="https://www.instagram.com/?hl=ru">
+                          <a>
+                            <img
+                              className="icon me-3 fs-3"
+                              src="instagram.png"
+                              alt="instagram"
+                            />
+                          </a>
+                        </Link>
+                        <Link href="https://web.telegram.org">
+                          <a>
+                            <img
+                              className="icon me-3 fs-3"
+                              src="telegram.png"
+                              alt="telegram"
+                            />
+                          </a>
+                        </Link>
+                        <Link href="https://www.facebook.com">
+                          <a>
+                            <img
+                              className="icon fs-3"
+                              src="facebook.png"
+                              alt="facebook"
+                            />
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Slide>
             </div>
           </div>
           <div className="rightSide mt-5 px-2">
