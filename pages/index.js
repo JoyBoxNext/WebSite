@@ -658,33 +658,14 @@ export default function Home() {
             <div className="mt-2">
               <div className="border_"></div>
               <div className="d-flex justify-content-center align-items-center  my-4">
-                <Link href="https://www.instagram.com/?hl=ru">
-                  <a>
-                    <img
-                      className="icon me-3 fs-3"
-                      src="instagram.png"
-                      alt="instagram"
-                    />
-                  </a>
-                </Link>
-                <Link href="https://web.telegram.org">
-                  <a>
-                    <img
-                      className="icon me-3 fs-3"
-                      src="telegram.png"
-                      alt="telegram"
-                    />
-                  </a>
-                </Link>
-                <Link href="https://www.facebook.com">
-                  <a>
-                    <img
-                      className="icon fs-3"
-                      src="facebook.png"
-                      alt="facebook"
-                    />
-                  </a>
-                </Link>
+                <Link href="https://www.instagram.com/?hl=ru"><a>
+                  <img className="icon me-3 fs-3" src="instagram.png" alt="instagram" />
+                </a></Link>
+                <Link href="https://web.telegram.org"><a>
+                  <img className="icon me-3 fs-3" src="telegram.png" alt="telegram" />
+                </a></Link>
+                <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" />
+                </a></Link>
               </div>
             </div>
           </Zoom>
@@ -696,4 +677,3 @@ export default function Home() {
     </HomeWrapper>
   );
 }
-//islom
