@@ -89,7 +89,7 @@ const ProductWrapper = styled.div`
     border-radius: 5px;
   }
   .save_btn {
-    background: transparent !important;
+    /* background: transparent !important; */
   }
   .subtitle {
     font-weight: 700;

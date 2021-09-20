@@ -237,13 +237,13 @@ export default function Home() {
                               </p>
                             </div>
                             <button
-                              onClick={() => saveHomeProduct(i)}
-                              className="bag border-0"
+                              onClick={() => saveProduct(index)}
+                              className="border-0 bag"
                             >
                               <img
-                                className="w-auto h-auto"
-                                src="icon.png"
-                                alt=""
+                                className="w-75 mb-2"
+                                src="bag.svg"
+                                alt="photo"
                               />
                             </button>
                           </div>
@@ -399,13 +399,13 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  onClick={() => saveHomeProduct(i)}
-                                  className="bag border-0"
+                                  onClick={() => saveProduct(index)}
+                                  className="border-0 bag"
                                 >
                                   <img
-                                    className="w-auto h-auto"
-                                    src="icon.png"
-                                    alt=""
+                                    className="w-75 mb-2"
+                                    src="bag.svg"
+                                    alt="photo"
                                   />
                                 </button>
                               </div>
@@ -488,13 +488,13 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  onClick={() => saveHomeProduct(i)}
-                                  className="bag border-0"
+                                  onClick={() => saveProduct(index)}
+                                  className="border-0 bag"
                                 >
                                   <img
-                                    className="w-auto h-auto"
-                                    src="icon.png"
-                                    alt=""
+                                    className="w-75 mb-2"
+                                    src="bag.svg"
+                                    alt="photo"
                                   />
                                 </button>
                               </div>
@@ -606,13 +606,13 @@ export default function Home() {
                                     </p>
                                   </div>
                                   <button
-                                    onClick={() => saveHomeProduct(i)}
-                                    className="bag border-0"
+                                    onClick={() => saveProduct(index)}
+                                    className="border-0 bag"
                                   >
                                     <img
-                                      className="w-auto h-auto"
-                                      src="icon.png"
-                                      alt=""
+                                      className="w-75 mb-2"
+                                      src="bag.svg"
+                                      alt="photo"
                                     />
                                   </button>
                                 </div>

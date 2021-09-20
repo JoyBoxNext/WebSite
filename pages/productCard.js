@@ -64,12 +64,12 @@ const ProductCard = () => {
                 <div className="firstContainerIpad firstContainerMacbook">
                   <div className="images d-flex">
                     <div className=" smallimg d-flex justify-content-start mt-5">
-                      <img className="active" src="p1small1.png" alt="" />
-                      <img src="p1small2.png" alt="" />
-                      <img src="p1small3.png" alt="" />
+                      <img className="active" src="p1small1.png" alt="smallimg" />
+                      <img src="p1small2.png" alt="smallimg" />
+                      <img src="p1small3.png" alt="smallimg" />
                     </div>
                     <div className="m-auto">
-                      <img className="bigimg" src="p1samsung.png" alt="" />
+                      <img className="bigimg" src="p1samsung.png" alt="bigimg" />
                     </div>
                   </div>
                   <div className="row colorMemories mt-3">
@@ -176,7 +176,6 @@ const ProductCard = () => {
                       loopFillGroupWithBlank={true}
                       navigation={true}
                       className="mySwiper"
-                      pagination={{ clickable: false }}
                       breakpoints={{
                         300: {
                           slidesPerView: 1,
@@ -204,7 +203,7 @@ const ProductCard = () => {
                             <Link href="/productCard">
                               <a>
                                 <div className="product-swiper-card p-3 text-start">
-                                  <img src={v.img} alt="" />
+                                  <img src={v.img} alt="photo" />
                                   <p className=" title fw-bold mt-2">
                                     {v.name}
                                   </p>
@@ -231,8 +230,8 @@ const ProductCard = () => {
                                     <div className="bag">
                                       <img
                                         className="w-auto h-auto"
-                                        src="icon.png"
-                                        alt=""
+                                        src="bag.svg"
+                                        alt="bag"
                                       />
                                     </div>
                                   </div>
@@ -253,6 +252,10 @@ const ProductCard = () => {
                     <div className="button_prev">
                       <FontAwesomeIcon icon={faArrowLeft} />
                     </div>
+                    <div className="dot_orange dot1"></div>
+                    <div className="dot_orange dot2"></div>
+                    <div className="dot_orange dot3"></div>
+                    <div className="dot_orange dot4"></div>
                   </div>
                 </div>
               </div>

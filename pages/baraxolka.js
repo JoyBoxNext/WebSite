@@ -183,17 +183,16 @@ const Product = () => {
                                 </h4>
                                 <div className="d-flex justify-content-between align-items-center">
                                   <p className="mb-0 desc">{value.desc}</p>
-                                  <div
-                                    style={{ cursor: "pointer" }}
-                                    className="bag"
-                                    onClick={() => savebaraxolka(index)}
+                                  <button
+                                    onClick={() => saveProduct(index)}
+                                    className="border-0 bag"
                                   >
                                     <img
-                                      className="w-auto h-auto"
-                                      src="icon.png"
+                                      className="w-75 mb-2"
+                                      src="bag.svg"
                                       alt="photo"
                                     />
-                                  </div>
+                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -286,17 +285,16 @@ const Product = () => {
                               </h4>
                               <div className="d-flex justify-content-between align-items-center">
                                 <p className="mb-0 desc">{value.desc}</p>
-                                <div
-                                  style={{ cursor: "pointer" }}
-                                  className="bag"
-                                  onClick={() => savebaraxolka(index)}
+                                <button
+                                  onClick={() => saveProduct(index)}
+                                  className="border-0 bag"
                                 >
                                   <img
-                                    className="w-auto h-auto"
-                                    src="icon.png"
+                                    className="w-75 mb-2"
+                                    src="bag.svg"
                                     alt="photo"
                                   />
-                                </div>
+                                </button>
                               </div>
                             </div>
                           </div>
@@ -388,17 +386,16 @@ const Product = () => {
                               </h4>
                               <div className="d-flex justify-content-between align-items-center">
                                 <p className="mb-0 desc">{value.desc}</p>
-                                <div
-                                  style={{ cursor: "pointer" }}
-                                  className="bag"
-                                  onClick={() => savebaraxolka(index)}
+                                <button
+                                  onClick={() => saveProduct(index)}
+                                  className="border-0 bag"
                                 >
                                   <img
-                                    className="w-auto h-auto"
-                                    src="icon.png"
+                                    className="w-75 mb-2"
+                                    src="bag.svg"
                                     alt="photo"
                                   />
-                                </div>
+                                </button>
                               </div>
                             </div>
                           </div>

@@ -339,16 +339,14 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${
-                                      show ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex align-items-center ${show ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${
-                                        checked == index ? "active" : ""
-                                      }`}
+                                      className={` box me-2 ${checked == index ? "active" : ""
+                                        }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -387,9 +385,8 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${
-                                      show2 ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
@@ -435,139 +432,137 @@ const Category = () => {
                   <h1 className="title my-4">Удивляйся и удивляй!</h1>
                 </div>
               </Fade>
-              <Slide bottom>
-                <div className="row justify-content-center">
-                  {datas?.map((value, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
-                      >
-                        <div className="cards_border mb-4">
-                          <img
-                            className="skidka"
-                            src="skidka.jpg"
-                            alt="photo"
-                          />
-                          <div className="px-3">
-                            <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                              <Link href="/productCard">
-                                <a>
-                                  <img
-                                    className="me-3 phone_photo"
-                                    src={value.img}
-                                    alt="photo"
-                                  />
-                                </a>
-                              </Link>
-                              <div className="colorBoxes flex-column mb-5">
-                                <div className="p-1">
-                                  <div className="col-3 colorBox black"></div>
-                                </div>
-                                <div className="p-1">
-                                  <div className="col-3 colorBox white"></div>
-                                </div>
-                                <div className="p-1">
-                                  <div className="col-3 colorBox green"></div>
-                                </div>
-                                <div className="p-1">
-                                  <div className="col-3 colorBox gray"></div>
-                                </div>
+              <div className="row justify-content-center">
+                {datas?.map((value, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
+                    >
+                      <div className="cards_border mb-4">
+                        <img
+                          className="skidka"
+                          src="skidka.jpg"
+                          alt="photo"
+                        />
+                        <div className="px-3">
+                          <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                            <Link href="/productCard">
+                              <a>
+                                <img
+                                  className="me-3 phone_photo"
+                                  src={value.img}
+                                  alt="photo"
+                                />
+                              </a>
+                            </Link>
+                            <div className="colorBoxes flex-column mb-5">
+                              <div className="p-1">
+                                <div className="col-3 colorBox black"></div>
+                              </div>
+                              <div className="p-1">
+                                <div className="col-3 colorBox white"></div>
+                              </div>
+                              <div className="p-1">
+                                <div className="col-3 colorBox green"></div>
+                              </div>
+                              <div className="p-1">
+                                <div className="col-3 colorBox gray"></div>
                               </div>
                             </div>
                           </div>
-                          <h5 className="fw-bold my-2 subtitle">
-                            {value.title}
-                          </h5>
-                          <div className="d-flex align-items-center">
-                            <p className="mb-0 bg_success aksiya__">
-                              {value.aksiya_}
-                            </p>
-                            <p className="mb-0 text_secondary aksiya ms-4">
-                              {value.aksiya}
-                            </p>
-                          </div>
-                          <h4 className="fw-bold price mb-0 mt-2">
-                            <span className="big_text mb-0">
-                              {value.big_price}
-                            </span>
-                            {value.price}
-                          </h4>
-                          <div className="d-flex justify-content-between align-items-center ">
-                            <p className="mb-0 desc">{value.desc}</p>
-                            <button
-                              onClick={() => saveProduct(index)}
-                              className="border-0 save_btn"
-                            >
-                              <img
-                                className="w-75 mb-2"
-                                src="save_orange.png"
-                                alt="photo"
-                              />
-                            </button>
-                          </div>
-                          <p className={"descripton px-2"}>
-                            Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
-                            Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/
-                            основная квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
-                            фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной
-                            памяти + microSD (до 1 ТБ)/ 3G/ LTE/ GPS/ A-GPS/
-                            ГЛОНАСС/ BDS/ поддержка 2х SIM-карт (Nano-SIM)/
-                            Android 11.0 (One UI)/ 4500 мА*ч
+                        </div>
+                        <h5 className="fw-bold my-2 subtitle">
+                          {value.title}
+                        </h5>
+                        <div className="d-flex align-items-center">
+                          <p className="mb-0 bg_success aksiya__">
+                            {value.aksiya_}
+                          </p>
+                          <p className="mb-0 text_secondary aksiya ms-4">
+                            {value.aksiya}
                           </p>
                         </div>
+                        <h4 className="fw-bold price mb-0 mt-2">
+                          <span className="big_text mb-0">
+                            {value.big_price}
+                          </span>
+                          {value.price}
+                        </h4>
+                        <div className="d-flex justify-content-between align-items-center ">
+                          <p className="mb-0 desc">{value.desc}</p>
+                          <button
+                            onClick={() => saveProduct(index)}
+                            className="border-0 bag"
+                          >
+                            <img
+                              className="w-75 mb-2"
+                              src="bag.svg"
+                              alt="photo"
+                            />
+                          </button>
+                        </div>
+                        <p className={"descripton px-2"}>
+                          Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
+                          Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/
+                          основная квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
+                          фронтальная 32 Мп/ RAM 4 ГБ/ 128 ГБ встроенной
+                          памяти + microSD (до 1 ТБ)/ 3G/ LTE/ GPS/ A-GPS/
+                          ГЛОНАСС/ BDS/ поддержка 2х SIM-карт (Nano-SIM)/
+                          Android 11.0 (One UI)/ 4500 мА*ч
+                        </p>
                       </div>
-                    );
-                  })}
-                  <div className="my-2 bottom_text">
-                    <h1 className="text my-4">
-                      Часто задаваемые вопросы про Смартфоны
-                    </h1>
-                    <ul>
-                      {bottomText.map((value, index) => {
-                        return (
-                          <li className="li p-2" key={index}>
-                            <img className="me-2" src={value.img} alt="photo" />
-                            {value.title}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                    <div className="mt-4">
-                      <div className="border_"></div>
-                      <div className="d-flex justify-content-center align-items-center  my-4">
-                        <Link href="https://www.instagram.com/?hl=ru">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="instagram.png"
-                              alt="instagram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://web.telegram.org">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="telegram.png"
-                              alt="telegram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://www.facebook.com">
-                          <a>
-                            <img
-                              className="icon fs-3"
-                              src="facebook.png"
-                              alt="facebook"
-                            />
-                          </a>
-                        </Link>
-                      </div>
+                    </div>
+                  );
+                })}
+                <div className="my-2 bottom_text">
+                  <h1 className="text my-4">
+                    Часто задаваемые вопросы про Смартфоны
+                  </h1>
+                  <ul>
+                    {bottomText.map((value, index) => {
+                      return (
+                        <li className="li p-2" key={index}>
+                          <img className="me-2" src={value.img} alt="photo" />
+                          {value.title}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <div className="mt-4">
+                    <div className="border_"></div>
+                    <div className="d-flex justify-content-center align-items-center  my-4">
+                      <Link href="https://www.instagram.com/?hl=ru">
+                        <a>
+                          <img
+                            className="icon me-3 fs-3"
+                            src="instagram.png"
+                            alt="instagram"
+                          />
+                        </a>
+                      </Link>
+                      <Link href="https://web.telegram.org">
+                        <a>
+                          <img
+                            className="icon me-3 fs-3"
+                            src="telegram.png"
+                            alt="telegram"
+                          />
+                        </a>
+                      </Link>
+                      <Link href="https://www.facebook.com">
+                        <a>
+                          <img
+                            className="icon fs-3"
+                            src="facebook.png"
+                            alt="facebook"
+                          />
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </Slide>
+              </div>
             </div>
           </div>
           <div className="rightSide mt-5 px-2">
@@ -609,12 +604,12 @@ const Category = () => {
                           <div className="d-flex justify-content-between align-items-center">
                             <p className="mb-0 desc">{value.desc}</p>
                             <button
-                              onClick={() => saveRightProduct(index)}
-                              className="border-0 save_btn"
+                              onClick={() => saveProduct(index)}
+                              className="border-0 bag"
                             >
                               <img
-                                className="w-75"
-                                src="save_orange.png"
+                                className="w-75 mb-2"
+                                src="bag.svg"
                                 alt="photo"
                               />
                             </button>
