@@ -1,8 +1,8 @@
 import { categoriesPhone, categoriesTv } from "./data";
 
 const dataLeft = {
-    "categoriesPhone" : categoriesPhone,
-    "categoriesTv" : categoriesTv,
+    "phones" : categoriesPhone,
+    "tv" : categoriesTv,
 }
 
 export default dataLeft;

@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Link from "next/link";
-import { bigCategores, categories, phones, rightSide } from "../Data/data";
+import { bigCategores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
 import Container from "../Containers/Container";
 import Slider from "@material-ui/core/Slider";
@@ -106,8 +106,7 @@ const Category = () => {
   const router = useRouter();
   const category = router.query.product;
   const datas = datacategory[category];
-  const dataLeft = datacategory[category];
-  console.log(dataLeft);
+  const categories = dataLeft[category];
   // const datasend = () => {
   //   const action = { type: "SEND", payload: datas };
   //   dispatch(action);
@@ -226,7 +225,7 @@ const Category = () => {
                           );
                         })}
 
-                        {dataLeft?.map((value, index) => {
+                        {categories?.map((value, index) => {
                           return (
                             <div className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12" key={index}>
                               <div className="d-flex justify-content-between mt-4">
@@ -361,7 +360,7 @@ const Category = () => {
                           );
                         })}
 
-                        {categores.map((value, index) => {
+                        {categories?.map((value, index) => {
                           return (
                             <div
                               className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
