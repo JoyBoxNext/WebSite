@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useSelector } from "react-redux";
 import { links, pages } from "../../Data/HeaderData";
 import HeaderWrapper from "./HeaderWrapper";
-import { Button, Menu, MenuItem } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { dispatch } from "../../redux/Store";
 import { useRouter } from "next/dist/client/router";
@@ -168,10 +168,8 @@ const Header = () => {
     (state) => state.BooksReducer.notebookProduct
   );
 
-  const indexdata = useSelector((state) => state.BooksReducer.index);
-
   const datalfilter = savedData.filter((v) => v.save);
-  const [indexs, setindexs] = useState(-1);
+  const [setindexs] = useState(-1);
   useEffect(() => {
     saveProduct();
   }, []);
@@ -210,17 +208,6 @@ const Header = () => {
     setOpenInput(!openInput);
   };
 
-  const newdata = useSelector((state) => state.BooksReducer.newdata);
-  const newFilterdata = newdata?.filter((value) =>
-    value.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
-  );
-  // const sendData = () => {
-  //   const action = { type: "SEND_FILTER", payload: newFilterdata }
-  //   dispatch(action)
-  // }
-  // useEffect(() => {
-  //   sendData()
-  // }, [])
   return (
     <HeaderWrapper>
       <div className="pt-4">
