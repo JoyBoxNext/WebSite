@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Link from "next/link";
-import { bigCategores, categores, phones, rightSide } from "../Data/data";
+import { bigCategores, phones, rightSide } from "../Data/data";
 import { bottomText } from "../Data/ProductData";
 import Container from "../Containers/Container";
 import Slider from "@material-ui/core/Slider";
@@ -18,6 +18,7 @@ import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import { useRouter } from "next/router";
 import datacategory from "../Data/index";
+import dataLeft from "../Data/indexLeft";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -105,6 +106,7 @@ const Category = () => {
   const router = useRouter();
   const category = router.query.product;
   const datas = datacategory[category];
+  const categories = dataLeft[category];
   // const datasend = () => {
   //   const action = { type: "SEND", payload: datas };
   //   dispatch(action);
@@ -112,7 +114,7 @@ const Category = () => {
   // useEffect(() => {
   //   datasend();
   // }, []);
-  console.log(datacategory);
+  // console.log(datacategory);
 
   const [tabPanel, setTabPanel] = useState(false);
 
@@ -204,16 +206,14 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${
-                                      show ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex align-items-center ${show ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${
-                                        checked == index ? "active" : ""
-                                      }`}
+                                      className={` box me-2 ${checked == index ? "active" : ""
+                                        }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -225,12 +225,9 @@ const Category = () => {
                           );
                         })}
 
-                        {categores.map((value, index) => {
+                        {categories?.map((value, index) => {
                           return (
-                            <div
-                              className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
-                              key={index}
-                            >
+                            <div className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12" key={index}>
                               <div className="d-flex justify-content-between mt-4">
                                 <p className="subtitle my-3">
                                   {value.name.title}
@@ -252,9 +249,8 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${
-                                      show2 ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
@@ -364,7 +360,7 @@ const Category = () => {
                           );
                         })}
 
-                        {categores.map((value, index) => {
+                        {categories?.map((value, index) => {
                           return (
                             <div
                               className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"

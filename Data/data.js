@@ -14,7 +14,7 @@ const bigCategores = [
   },
 ];
 
-const categores = [
+const categoriesPhone = [
   {
     name: {
       title: "Торговая марка",
@@ -58,6 +58,41 @@ const categores = [
         { title: "8192 Мб", subtitle: "68" },
         { title: "12288 Мб", subtitle: "11" },
         { title: "16394 Мб", subtitle: "4" },
+      ],
+    },
+  },
+];
+const categoriesTv = [
+  {
+    name: {
+      title: "Торговая марка",
+      icon: faAngleUp,
+      category: [
+        { title: "Samsung", subtitle: "94" },
+        { title: "LG", subtitle: "90" },
+        { title: "Mi", subtitle: "62" },
+        { title: "Toshiba", subtitle: "31" },
+        { title: "Artel", subtitle: "6" },
+      ],
+    },
+  },
+  {
+    name: {
+      title: "Встроеная память, Гб",
+      icon: faAngleUp,
+      category: [
+        { title: "80", subtitle: "4" },
+        { title: "160", subtitle: "31" },
+      ],
+    },
+  },
+  {
+    name: {
+      title: "Оперативная память",
+      icon: faAngleUp,
+      category: [
+        { title: "1024 Мб", subtitle: "22" },
+        { title: "2048 Мб", subtitle: "50" },
       ],
     },
   },
@@ -822,7 +857,8 @@ const home_images = [
 
 export {
   bigCategores,
-  categores,
+  categoriesPhone,
+  categoriesTv,
   phones,
   rightSide,
   home_images,
