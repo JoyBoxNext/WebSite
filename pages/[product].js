@@ -445,9 +445,9 @@ const Category = () => {
                     return (
                       <div
                         key={index}
-                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 position-relative"
+                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
                       >
-                        <div className="cards_border ">
+                        <div className="cards_border mb-4">
                           <img
                             className="skidka"
                             src="skidka.jpg"
@@ -510,9 +510,7 @@ const Category = () => {
                               />
                             </button>
                           </div>
-                        </div>
-                        <Zoom>
-                          <p className="descripton px-2">
+                          <p className={"descripton px-2"}>
                             Экран (6.5{`"`}, Super AMOLED, 2400x1080)/ Qualcomm
                             Snapdragon 720G (2 x 2.3 ГГц + 6 x 1.8 ГГц)/
                             основная квадро-камера: 64 Мп + 12 Мп + 5 Мп + 5 Мп,
@@ -521,7 +519,7 @@ const Category = () => {
                             ГЛОНАСС/ BDS/ поддержка 2х SIM-карт (Nano-SIM)/
                             Android 11.0 (One UI)/ 4500 мА*ч
                           </p>
-                        </Zoom>
+                        </div>
                       </div>
                     );
                   })}

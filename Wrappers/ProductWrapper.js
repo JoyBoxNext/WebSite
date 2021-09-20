@@ -169,40 +169,47 @@ const ProductWrapper = styled.div`
         line-height: 100%;
       }
     }
-
-    .cards_border {
-      border: 3px solid #2525eb;
-      background-color: white;
-      width: 100%;
-      height: auto;
-      z-index: 600;
-      .skidka {
-        width: 135px;
-        height: 33.43px;
-      }
-      .phone_photo {
-        width: 109px;
-        height: 138px;
-      }
-      .descripton {
-        height: 0;
-        overflow: hidden;
-        font-size: 9px;
-        color: #8d8989;
-        text-transform: uppercase;
-        display: none;
-      }
-      &:hover {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .card_product {
+      margin-bottom: 30px;
+      height: 340px;
+      .cards_border {
+        border: 3px solid #2525eb;
+        background-color: white;
         width: 100%;
-        height: auto !important;
+        z-index: 600;
+        position: relative;
+        transition: 0.5s;
+        height: 100%;
+        overflow: hidden;
+        .skidka {
+          width: 135px;
+          height: 33.43px;
+        }
+        .phone_photo {
+          width: 109px;
+          height: 138px;
+        }
+        .descripton {
+          font-size: 9px;
+          color: #8d8989;
+          text-transform: uppercase;
+          transition: 1s;
+        }
+
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 460px;
+          z-index: 700;
+        }
       }
-      &:hover .descripton {
-        display: block;
-        height: auto !important;
-      }
+      /* &:hover {
+        z-index: 700;
+        position: fixed;
+      } */
     }
     .title {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
