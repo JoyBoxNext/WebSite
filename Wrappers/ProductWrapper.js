@@ -11,12 +11,17 @@ const ProductWrapper = styled.div`
     color: #ff5314;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
+
     &.active {
       background-color: #ff5314;
       color: white;
       border: none;
       padding: 7px 24px;
+      border-radius: 5px 0 0 5px;
     }
+  }
+  .save_btn {
+    background-color: transparent !important;
   }
 
   @media screen and (max-width: 500px) {
@@ -166,6 +171,7 @@ const ProductWrapper = styled.div`
         line-height: 100%;
       }
     }
+
     .card_product {
       margin-bottom: 30px;
       height: 340px;
@@ -178,6 +184,7 @@ const ProductWrapper = styled.div`
         transition: 0.5s;
         height: 100%;
         overflow: hidden;
+
         .skidka {
           width: 135px;
           height: 33.43px;
