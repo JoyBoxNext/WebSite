@@ -26,8 +26,19 @@ const BaraxollaWrapper = styled.div`
     width: 190px;
     height: 183px;
   }
+  @media screen and (max-width: 700px) {
+    .baraxolka_padding {
+      padding: 20px 0 !important;
+    }
+    .container {
+      padding: 0 !important;
+    }
+  }
   .Sidebar {
     width: 100%;
+    .baraxolka_padding {
+      padding: 25px 45px;
+    }
     .item_one {
       background-color: #ff5314;
       color: #fff !important;
@@ -59,6 +70,9 @@ const BaraxollaWrapper = styled.div`
       margin: auto;
     }
     @media screen and (min-width: 1000px) {
+      .baraxolka_padding {
+        padding: 0 !important;
+      }
       .border_ {
         width: 420px !important;
       }

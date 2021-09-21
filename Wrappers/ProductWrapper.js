@@ -10,13 +10,19 @@ const ProductWrapper = styled.div`
     background-color: #fff;
     color: #ff5314;
     cursor: pointer;
-    border-radius: 0 5px 5px 0;
+    height: 38px;
 
     &.active {
       background-color: #ff5314;
       color: white;
       border: none;
       padding: 7px 24px;
+      border-radius: 5px 0 0 5px;
+    }
+    &.b_radius2 {
+      border-radius: 0 5px 5px 0;
+    }
+    &.b_radius {
       border-radius: 5px 0 0 5px;
     }
   }
@@ -228,21 +234,7 @@ const ProductWrapper = styled.div`
 
     @media screen and (max-width: 1027px) {
       .cards_border {
-        height: 95% !important;
-        &:hover .descripton {
-          visibility: visible;
-          position: absolute;
-          z-index: 700;
-        }
-        &:hover {
-          height: 385px !important;
-          z-index: 700;
-        }
-      }
-    }
-    @media screen and (max-width: 990px) {
-      .cards_border {
-        height: 95% !important;
+        height: 100% !important;
         &:hover .descripton {
           visibility: visible;
           position: absolute;
@@ -250,6 +242,20 @@ const ProductWrapper = styled.div`
         }
         &:hover {
           height: 400px !important;
+          z-index: 700;
+        }
+      }
+    }
+    @media screen and (max-width: 990px) {
+      .cards_border {
+        height: 100% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 410px !important;
           z-index: 700;
         }
       }
@@ -270,14 +276,14 @@ const ProductWrapper = styled.div`
     }
     @media screen and (max-width: 575px) {
       .cards_border {
-        height: 95% !important;
+        height: 100% !important;
         &:hover .descripton {
           visibility: visible;
           position: absolute;
           z-index: 700;
         }
         &:hover {
-          height: 400px !important;
+          height: 420px !important;
           z-index: 700;
         }
       }
@@ -347,16 +353,18 @@ const ProductWrapper = styled.div`
     .desc {
       font-size: 12px;
     }
+    .subtitle {
+      font-size: 13px;
+    }
     .bg_success {
       color: rgba(168, 160, 160, 1);
       font-weight: 500;
-      font-size: 16.285px;
+      font-size: 14px;
       text-decoration: line-through 1px rgba(0, 0, 0, 1);
     }
     .aksiya {
       background-color: #e2e38c;
-      font-size: 12px;
-      margin-top: 4px;
+      font-size: 11px;
     }
     .price {
       font-size: 17px;

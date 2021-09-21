@@ -237,7 +237,7 @@ export default function Home() {
                               </p>
                             </div>
                             <button
-                              onClick={() => saveProduct(index)}
+                              onClick={() => saveNotebookData(i)}
                               className="border-0 bag"
                             >
                               <img
@@ -399,7 +399,7 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  onClick={() => saveProduct(index)}
+                                  onClick={() => saveChooseDatas(i)}
                                   className="border-0 bag"
                                 >
                                   <img
@@ -477,7 +477,9 @@ export default function Home() {
                               <div className="d-flex justify-content-between">
                                 <div className="prices">
                                   <p className="m-0 fw-bold">
-                                    <span>{v.priceBig}</span>
+                                    <span className="big_price">
+                                      {v.priceBig}
+                                    </span>
                                     <span className="small_price">
                                       {v.price}
                                     </span>
@@ -488,7 +490,7 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  onClick={() => saveProduct(index)}
+                                  onClick={() => saveNewsData(i)}
                                   className="border-0 bag"
                                 >
                                   <img
@@ -671,14 +673,33 @@ export default function Home() {
             <div className="mt-2">
               <div className="border_"></div>
               <div className="d-flex justify-content-center align-items-center  my-4">
-                <Link href="https://www.instagram.com/?hl=ru"><a>
-                  <img className="icon me-3 fs-3" src="instagram.png" alt="instagram" />
-                </a></Link>
-                <Link href="https://web.telegram.org"><a>
-                  <img className="icon me-3 fs-3" src="telegram.png" alt="telegram" />
-                </a></Link>
-                <Link href="https://www.facebook.com"><a><img className="icon fs-3" src="facebook.png" alt="facebook" />
-                </a></Link>
+                <Link href="https://www.instagram.com/?hl=ru">
+                  <a>
+                    <img
+                      className="icon me-3 fs-3"
+                      src="instagram.png"
+                      alt="instagram"
+                    />
+                  </a>
+                </Link>
+                <Link href="https://web.telegram.org">
+                  <a>
+                    <img
+                      className="icon me-3 fs-3"
+                      src="telegram.png"
+                      alt="telegram"
+                    />
+                  </a>
+                </Link>
+                <Link href="https://www.facebook.com">
+                  <a>
+                    <img
+                      className="icon fs-3"
+                      src="facebook.png"
+                      alt="facebook"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
           </Zoom>
