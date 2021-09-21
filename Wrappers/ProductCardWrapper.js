@@ -189,36 +189,6 @@ const ProductCardWrapper = styled.div`
         margin: auto !important;
         display: flex;
       }
-      .dot_orange {
-        width: 6px;
-        height: 6px;
-        background-color: #ff5314;
-      }
-      .dot1 {
-        position: absolute;
-        left: -6px;
-        top: -6px;
-        background-color: #ff5314;
-      }
-      .dot2 {
-        position: absolute;
-        right: -6px;
-        top: -6px;
-        background-color: #ff5314;
-      }
-      .dot3 {
-        position: absolute;
-        left: -6px;
-        bottom: -6px;
-        background-color: #ff5314;
-      }
-      .dot4 {
-        position: absolute;
-        right: -20px;
-        bottom: -6px;
-        background-color: #ff5314;
-      }
-      
     }
     .dot_orange {
         width: 6px;

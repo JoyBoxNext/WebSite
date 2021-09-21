@@ -216,16 +216,14 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${
-                                      show ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex align-items-center ${show ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${
-                                        checked == index ? "active" : ""
-                                      }`}
+                                      className={` box me-2 ${checked == index ? "active" : ""
+                                        }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -264,9 +262,8 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${
-                                      show2 ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
@@ -355,16 +352,14 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${
-                                      show ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex align-items-center ${show ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${
-                                        checked == index ? "active" : ""
-                                      }`}
+                                      className={` box me-2 ${checked == index ? "active" : ""
+                                        }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -403,9 +398,8 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${
-                                      show2 ? "" : "d-none"
-                                    }`}
+                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
+                                      }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
