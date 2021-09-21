@@ -447,63 +447,57 @@ export default function Home() {
                     <Link href="/productCard">
                       <a>
                         <div key={i}>
-                          <a>
-                            <div
-                              className={`new-product-card text-center p-2 ${v.className}`}
-                              key={i}
-                            >
-                              <img
-                                style={{ objectFit: "contain" }}
-                                className="w-100 h-50 new_photos"
-                                src={v.img}
-                                alt="photo"
-                              />
-                              <Link href="/productCard">
-                                <a>
-                                  <p className="title fw-bold mt-2">
-                                    {v.title}
-                                  </p>
-                                </a>
-                              </Link>
-                              <div className="small d-flex ">
-                                <p className="oldPrice me-1 m-0 p-0">
-                                  {v.oldPrice}
-                                  <span className="sum">сум</span>
-                                </p>
-                                <div className="badgePrice">
-                                  <p className="m-0 p-0">{v.badgePrice} сум</p>
-                                </div>
+                          <div
+                            className={`new-product-card text-center p-2 ${v.className}`}
+                            key={i}
+                          >
+                            <img
+                              style={{ objectFit: "contain" }}
+                              className="w-100 h-50 new_photos"
+                              src={v.img}
+                              alt="photo"
+                            />
+                            <p className="title text-start fw-bold mt-2">
+                              {v.title}
+                            </p>
+                            <div className="small d-flex ">
+                              <p className="oldPrice me-1 m-0 p-0">
+                                {v.oldPrice}
+                                <span className="sum">сум</span>
+                              </p>
+                              <div className="badgePrice">
+                                <p className="m-0 p-0">{v.badgePrice} сум</p>
                               </div>
-                              <div className="d-flex justify-content-between">
-                                <div className="prices">
-                                  <p className="m-0 fw-bold">
-                                    <span>{v.priceBig}</span>
-                                    <span className="small_price">
-                                      {v.price}
-                                    </span>
-                                    <small className="sum">сум</small>
-                                  </p>
-                                  <p className="rentPrice">
-                                    от {v.rentPrice} сум/мес
-                                  </p>
-                                </div>
-                                <button
-                                  onClick={() => saveProduct(index)}
-                                  className="border-0 bag"
-                                >
-                                  <img
-                                    className="w-75 mb-2"
-                                    src="bag.svg"
-                                    alt="photo"
-                                  />
-                                </button>
-                              </div>
-                              <div className="dot_orange dot1"></div>
-                              <div className="dot_orange dot2"></div>
-                              <div className="dot_orange dot3"></div>
-                              <div className="dot_orange dot4"></div>
                             </div>
-                          </a>
+                            <div className="d-flex justify-content-between">
+                              <div className="prices">
+                                <p className="m-0 fw-bold">
+                                  <span>{v.priceBig}</span>
+                                  <span className="small_price">
+                                    {v.price}
+                                  </span>
+                                  <small className="sum">сум</small>
+                                </p>
+                                <p className="rentPrice">
+                                  от {v.rentPrice} сум/мес
+                                </p>
+                              </div>
+                              <button
+                                onClick={() => saveProduct(index)}
+                                className="border-0 bag"
+                              >
+                                <img
+                                  className="w-75 mb-2"
+                                  src="bag.svg"
+                                  alt="photo"
+                                />
+                              </button>
+                            </div>
+                            <div className="dot_orange dot1"></div>
+                            <div className="dot_orange dot2"></div>
+                            <div className="dot_orange dot3"></div>
+                            <div className="dot_orange dot4"></div>
+                          </div>
                         </div>
                       </a>
                     </Link>

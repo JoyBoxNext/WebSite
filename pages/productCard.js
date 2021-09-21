@@ -235,10 +235,7 @@ const ProductCard = () => {
                                       />
                                     </div>
                                   </div>
-                                  <div className="dot_orange dot1"></div>
-                                  <div className="dot_orange dot2"></div>
-                                  <div className="dot_orange dot3"></div>
-                                  <div className="dot_orange dot4"></div>
+                                  
                                 </div>
                               </a>
                             </Link>
