@@ -8,7 +8,6 @@ import HeaderWrapper from "./HeaderWrapper";
 import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { dispatch } from "../../redux/Store";
-import { useRouter } from "next/dist/client/router";
 import Badge from "@material-ui/core/Badge";
 import ModalProduct from "../../Components/ModalProduct";
 import Fade from "react-reveal/Fade";
@@ -18,7 +17,6 @@ const Header = () => {
   const [openSave, setOpenSave] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState("");
-  const router = useRouter();
 
   const [anchorEl, setAnchorEl] = useState(false);
 
@@ -169,37 +167,39 @@ const Header = () => {
   );
 
   const datalfilter = savedData.filter((v) => v.save);
-  const [setindexs] = useState(-1);
+
+  const [indexs, setindexs] = useState(-1);
+
   useEffect(() => {
     saveProduct();
   }, []);
 
   const deleteProduct = (index) => {
-    setindexs(index);
+    setindexs(indexs);
     datalfilter[index].save = !datalfilter[index].save;
   };
   const deleteProduct2 = (index) => {
-    setindexs(index);
+    setindexs(indexs);
     baraxolkaSaveProduct[index].save = !baraxolkaSaveProduct[index].save;
   };
   const deleteProduct3 = (index) => {
-    setindexs(index);
+    setindexs(indexs);
     rightSaveProduct[index].save = !rightSaveProduct[index].save;
   };
   const deleteProduct4 = (index) => {
-    setindexs(index);
+    setindexs(indexs);
     homeSaveProduct[index].save = !homeSaveProduct[index].save;
   };
   const deleteProduct5 = (index) => {
-    setindexs(index);
+    setindexs(indexs);
     chooseSaveProduct[index].save = !chooseSaveProduct[index].save;
   };
   const deleteProduct6 = (index) => {
-    setindexs(index);
+    setindexs(indexs);
     newsSaveProduct[index].save = !newsSaveProduct[index].save;
   };
   const deleteProduct7 = (index) => {
-    setindexs(index);
+    setindexs(indexs);
     notebookSaveProduct[index].save = !notebookSaveProduct[index].save;
   };
 

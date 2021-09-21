@@ -343,26 +343,6 @@ const tv = [
     desc: `от 1 362 000 сум/мес`,
     save: false,
   },
-  {
-    title: `Телевизор Samsung QE-75QN800A SMART 8K 2021 год`,
-    aksiya_: `16 800 000`,
-    img: "https://apollo-olx.cdnvideo.ru/v1/files/0qzok78l9n0q2-UZ/image;s=1000x700",
-    aksiya: `1 330 000 СУМ`,
-    big_price: "4,",
-    price: `300`,
-    desc: `от 1 362 000 сум/мес`,
-    save: false,
-  },
-  {
-    title: `Телевизор Samsung QE-75QN800A SMART 8K 2021 год`,
-    aksiya_: `16 800 000`,
-    img: "https://apollo-olx.cdnvideo.ru/v1/files/0qzok78l9n0q2-UZ/image;s=1000x700",
-    aksiya: `1 330 000 СУМ`,
-    big_price: "4,",
-    price: `300`,
-    desc: `от 1 362 000 сум/мес`,
-    save: false,
-  },
 ];
 
 const kitchen = [
@@ -436,7 +416,16 @@ const kitchen = [
     desc: `от 1 362 000 сум/мес`,
     save: false,
   },
-  
+  {
+    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    aksiya_: `16 800 000`,
+    img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
+    aksiya: `1 330 000 СУМ`,
+    big_price: "1,",
+    price: `10 у.е.`,
+    desc: `от 1 362 000 сум/мес`,
+    save: false,
+  },
 ];
 
 const homeTech = [
@@ -500,12 +489,31 @@ const homeTech = [
     desc: `от 1 362 000 сум/мес`,
     save: false,
   },
-  
+  {
+    title: `Стиральная машина Hofmann 6кг с дисплеем`,
+    aksiya_: `16 800 000`,
+    img: "https://apollo-olx.cdnvideo.ru/v1/files/nzp8rkrq46pc2-UZ/image;s=1000x700",
+    aksiya: `1 330 000 СУМ`,
+    big_price: "3,",
+    price: `05 у.е.`,
+    desc: `от 1 362 000 сум/мес`,
+    save: false,
+  },
+  {
+    title: `Стиральная машина Hofmann 6кг с дисплеем`,
+    aksiya_: `16 800 000`,
+    img: "https://apollo-olx.cdnvideo.ru/v1/files/nzp8rkrq46pc2-UZ/image;s=1000x700",
+    aksiya: `1 330 000 СУМ`,
+    big_price: "3,",
+    price: `05 у.е.`,
+    desc: `от 1 362 000 сум/мес`,
+    save: false,
+  },
 ];
 
 const laptops = [
   {
-    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012 в хорошем состоянии`,
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
     aksiya: `1 330 000 СУМ`,
@@ -515,7 +523,7 @@ const laptops = [
     save: false,
   },
   {
-    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012 в хорошем состоянии`,
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
     aksiya: `1 330 000 СУМ`,
@@ -525,7 +533,7 @@ const laptops = [
     save: false,
   },
   {
-    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012 в хорошем состоянии`,
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
     aksiya: `1 330 000 СУМ`,
@@ -535,7 +543,7 @@ const laptops = [
     save: false,
   },
   {
-    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012 в хорошем состоянии`,
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
     aksiya: `1 330 000 СУМ`,
@@ -545,7 +553,7 @@ const laptops = [
     save: false,
   },
   {
-    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012 в хорошем состоянии`,
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
     aksiya: `1 330 000 СУМ`,
@@ -555,7 +563,7 @@ const laptops = [
     save: false,
   },
   {
-    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012 в хорошем состоянии`,
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
     aksiya: `1 330 000 СУМ`,
@@ -564,7 +572,26 @@ const laptops = [
     desc: `от 1 362 000 сум/мес`,
     save: false,
   },
-  
+  {
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
+    aksiya_: `16 800 000`,
+    img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
+    aksiya: `1 330 000 СУМ`,
+    big_price: "4,",
+    price: `80 у.е.`,
+    desc: `от 1 362 000 сум/мес`,
+    save: false,
+  },
+  {
+    title: `Apple MacBook PRO 13 inch А1278 Core i7 MID 2012`,
+    aksiya_: `16 800 000`,
+    img: "https://apollo-olx.cdnvideo.ru/v1/files/3xymfifde4a81-UZ/image;s=1000x700 ",
+    aksiya: `1 330 000 СУМ`,
+    big_price: "4,",
+    price: `80 у.е.`,
+    desc: `от 1 362 000 сум/мес`,
+    save: false,
+  },
 ];
 
 const gamers = [
@@ -867,5 +894,5 @@ export {
   kitchen,
   homeTech,
   laptops,
-  gamers
+  gamers,
 };

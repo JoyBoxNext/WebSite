@@ -3,13 +3,7 @@ import styled from "styled-components";
 const ProductWrapper = styled.div`
   width: 100%;
   overflow-x: hidden;
-  .btn_orange {
-    background-color: #ff5314;
-    padding: 7px 24px;
-    color: #fff;
-    border-radius: 5px 0 0 5px;
-    cursor: pointer;
-  }
+
   .btn_light {
     border: 1px solid rgba(0, 0, 0, 0.4);
     padding: 6px 24px;
@@ -17,6 +11,12 @@ const ProductWrapper = styled.div`
     color: #ff5314;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
+    &.active {
+      background-color: #ff5314;
+      color: white;
+      border: none;
+      padding: 7px 24px;
+    }
   }
 
   @media screen and (max-width: 500px) {
@@ -95,6 +95,9 @@ const ProductWrapper = styled.div`
     font-weight: 700;
     font-size: 15px;
     color: rgba(0, 0, 0, 1);
+  }
+  .datas_subtitle {
+    height: 55px !important;
   }
   .LeftSide {
     width: 340px;
@@ -186,8 +189,9 @@ const ProductWrapper = styled.div`
           height: 33.43px;
         }
         .phone_photo {
-          width: 109px;
-          height: 138px;
+          width: 140px;
+          height: 140px;
+          object-fit: contain;
         }
         .descripton {
           font-size: 9px;
@@ -202,14 +206,80 @@ const ProductWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 460px;
+          height: 465px;
           z-index: 700;
         }
       }
-      /* &:hover {
-        z-index: 700;
-        position: fixed;
-      } */
+    }
+    @media screen and (max-width: 1195px) {
+      .cards_border {
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 440px !important;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1027px) {
+      .cards_border {
+        height: 95% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 385px !important;
+          z-index: 700;
+        }
+      }
+    }
+    @media screen and (max-width: 990px) {
+      .cards_border {
+        height: 95% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 400px !important;
+          z-index: 700;
+        }
+      }
+    }
+    @media screen and (max-width: 766px) {
+      .cards_border {
+        height: 100% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 440px !important;
+          z-index: 700;
+        }
+      }
+    }
+    @media screen and (max-width: 575px) {
+      .cards_border {
+        height: 95% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 400px !important;
+          z-index: 700;
+        }
+      }
     }
     .title {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -241,7 +311,7 @@ const ProductWrapper = styled.div`
       text-transform: uppercase;
       letter-spacing: 0.025em;
     }
-    .price,
+    .small_price,
     .big_text {
       font-weight: bold;
       line-height: 92%;
@@ -249,11 +319,11 @@ const ProductWrapper = styled.div`
       text-transform: uppercase;
       color: #000000;
     }
-    .price {
-      font-size: 21.5289px;
-      .big_text {
-        font-size: 25.5289px;
-      }
+    .small_price {
+      font-size: 20px;
+    }
+    .big_text {
+      font-size: 25px;
     }
     .desc {
       color: rgba(168, 160, 160, 1);

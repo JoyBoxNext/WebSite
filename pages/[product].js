@@ -135,11 +135,17 @@ const Category = () => {
                 <div className={classes.root}>
                   <div className="mt-4" position="static">
                     <div className="d-flex align-items-center">
-                      <div className="btn_orange" onClick={() => tabApp(0)}>
-                        Полная цена{" "}
+                      <div
+                        className={`btn_light ${tabPanel ? "" : "active"}`}
+                        onClick={() => tabApp(0)}
+                      >
+                        Полная цена
                       </div>
-                      <div className="btn_light" onClick={() => tabApp(1)}>
-                        Цена в месяц{" "}
+                      <div
+                        className={`btn_light ${tabPanel ? "active" : ""}`}
+                        onClick={() => tabApp(1)}
+                      >
+                        Цена в месяц
                       </div>
                     </div>
                   </div>
@@ -206,14 +212,16 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${show ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex align-items-center ${
+                                      show ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${checked == index ? "active" : ""
-                                        }`}
+                                      className={` box me-2 ${
+                                        checked == index ? "active" : ""
+                                      }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -227,7 +235,10 @@ const Category = () => {
 
                         {categories?.map((value, index) => {
                           return (
-                            <div className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12" key={index}>
+                            <div
+                              className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
+                              key={index}
+                            >
                               <div className="d-flex justify-content-between mt-4">
                                 <p className="subtitle my-3">
                                   {value.name.title}
@@ -249,8 +260,9 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex justify-content-between ${
+                                      show2 ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
@@ -441,7 +453,7 @@ const Category = () => {
                     return (
                       <div
                         key={index}
-                        className="col-10 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
+                        className="col-10 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
                       >
                         <div className="cards_border mb-4">
                           <img
@@ -449,12 +461,12 @@ const Category = () => {
                             src="skidka.jpg"
                             alt="photo"
                           />
-                          <div className="px-3">
-                            <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                          <div className="px-2">
+                            <div className="d-flex justify-content-center align-items-center mt-2">
                               <Link href="/productCard">
                                 <a>
                                   <img
-                                    className="me-3 phone_photo"
+                                    className="phone_photo"
                                     src={value.img}
                                     alt="photo"
                                   />
@@ -476,10 +488,10 @@ const Category = () => {
                               </div>
                             </div>
                           </div>
-                          <h5 className="fw-bold my-2 subtitle">
+                          <h5 className="fw-bold subtitle datas_subtitle p-2">
                             {value.title}
                           </h5>
-                          <div className="d-flex align-items-center">
+                          <div className="d-flex align-items-center ms-2">
                             <p className="mb-0 bg_success aksiya__">
                               {value.aksiya_}
                             </p>
@@ -487,14 +499,14 @@ const Category = () => {
                               {value.aksiya}
                             </p>
                           </div>
-                          <h4 className="fw-bold price mb-0 mt-2">
-                            <span className="big_text mb-0">
+                          <h4 className="fw-bold mb-0 mt-2">
+                            <span className="big_text mb-0 ms-1">
                               {value.big_price}
                             </span>
-                            {value.price}
+                            <span className="small_price">{value.price}</span>
                           </h4>
                           <div className="d-flex justify-content-between align-items-center ">
-                            <p className="mb-0 desc">{value.desc}</p>
+                            <p className="mb-0 desc ms-2">{value.desc}</p>
                             <button
                               onClick={() => saveProduct(index)}
                               className="border-0 save_btn"
