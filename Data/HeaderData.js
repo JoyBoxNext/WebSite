@@ -1,5 +1,5 @@
 const links = [
-  { link: "Скидки", href: "/skidka" },
+  { link: "Скидки", href: "/baraxolka" },
   { link: "Смартфоны", href: "/phones" },
   { link: "ТВ", href: "/tv" },
   {

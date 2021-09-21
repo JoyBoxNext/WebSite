@@ -82,14 +82,8 @@ const ProductWrapper = styled.div`
     border: 1px solid rgba(168, 160, 160, 1);
     border-radius: 0 5px 5px 0;
   }
-  /* .MuiButtonBase-root {
-    border-radius: 0 10px 10px 0;
-  } */
   .MuiTabs-scroller {
     border-radius: 5px;
-  }
-  .save_btn {
-    background: transparent !important;
   }
   .subtitle {
     font-weight: 700;

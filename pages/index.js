@@ -237,13 +237,13 @@ export default function Home() {
                               </p>
                             </div>
                             <button
-                              onClick={() => saveHomeProduct(i)}
-                              className="bag border-0"
+                              onClick={() => saveProduct(index)}
+                              className="border-0 bag"
                             >
                               <img
-                                className="w-auto h-auto"
-                                src="icon.png"
-                                alt=""
+                                className="w-75 mb-2"
+                                src="bag.svg"
+                                alt="photo"
                               />
                             </button>
                           </div>
@@ -399,13 +399,13 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  onClick={() => saveHomeProduct(i)}
-                                  className="bag border-0"
+                                  onClick={() => saveProduct(index)}
+                                  className="border-0 bag"
                                 >
                                   <img
-                                    className="w-auto h-auto"
-                                    src="icon.png"
-                                    alt=""
+                                    className="w-75 mb-2"
+                                    src="bag.svg"
+                                    alt="photo"
                                   />
                                 </button>
                               </div>
@@ -433,7 +433,7 @@ export default function Home() {
           {/* Container-mi */}
           <Fade right>
             <div>
-              <img className="w-100" src="reklama.png" alt="photo" />
+              <img className="w-100" src="miBand.png" alt="photo" />
             </div>
           </Fade>
 
@@ -441,11 +441,11 @@ export default function Home() {
           <Zoom>
             <div className="new-products border rounded-0 w-100 mt-5">
               <h2 className="title-section my-3">Новинки</h2>
-              <Link href="/">
-                <a>
-                  <div className="new-product-cards d-flex p-2">
-                    {NewProductCards.map((v, i) => {
-                      return (
+              <div className="new-product-cards d-flex p-2">
+                {NewProductCards.map((v, i) => {
+                  return (
+                    <Link href="/productCard">
+                      <a>
                         <div key={i}>
                           <a>
                             <div
@@ -488,13 +488,13 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  onClick={() => saveHomeProduct(i)}
-                                  className="bag border-0"
+                                  onClick={() => saveProduct(index)}
+                                  className="border-0 bag"
                                 >
                                   <img
-                                    className="w-auto h-auto"
-                                    src="icon.png"
-                                    alt=""
+                                    className="w-75 mb-2"
+                                    src="bag.svg"
+                                    alt="photo"
                                   />
                                 </button>
                               </div>
@@ -505,11 +505,11 @@ export default function Home() {
                             </div>
                           </a>
                         </div>
-                      );
-                    })}
-                  </div>
-                </a>
-              </Link>
+                      </a>
+                    </Link>
+                  );
+                })}
+              </div>
               <div className="button d-flex justify-content-center my-4">
                 <button className="border-0">
                   Перейти в раздел <br /> новинки
@@ -606,13 +606,13 @@ export default function Home() {
                                     </p>
                                   </div>
                                   <button
-                                    onClick={() => saveHomeProduct(i)}
-                                    className="bag border-0"
+                                    onClick={() => saveProduct(index)}
+                                    className="border-0 bag"
                                   >
                                     <img
-                                      className="w-auto h-auto"
-                                      src="icon.png"
-                                      alt=""
+                                      className="w-75 mb-2"
+                                      src="bag.svg"
+                                      alt="photo"
                                     />
                                   </button>
                                 </div>
@@ -634,7 +634,7 @@ export default function Home() {
             </div>
             <div className="button d-flex justify-content-center">
               <button className="border-0">
-                Перейти в раздел <br /> новинки
+                Перейти в раздел <br /> ноутбуки
               </button>
             </div>
           </Fade>
