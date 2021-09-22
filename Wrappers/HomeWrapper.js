@@ -291,6 +291,7 @@ const HomeWrapper = styled.div`
     .flex8 {
       display: flex;
       justify-content: space-around;
+      align-items: center;
       Button {
         background-color: transparent;
         border-left: 1px solid #fff;
@@ -351,7 +352,7 @@ const HomeWrapper = styled.div`
         .big_title {
           display: block  !important;
           font-weight: bold !important;
-          font-size: 20px !important;
+          font-size: 22px !important;
           line-height: 111% !important;
         }
         .prices {
@@ -700,12 +701,15 @@ const HomeWrapper = styled.div`
         }
         .prices {
           span {
-            font-size: 25px;
+            font-size: 22px;
           }
           .rentPrice {
             font-size: 10px;
             text-decoration: underline;
             color: gray;
+          }
+          .small_price {
+            font-size: 16px !important;
           }
         }
         img {

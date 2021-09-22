@@ -567,6 +567,21 @@ const ProductWrapper = styled.div`
       }
     }
   }
+  .bag {
+        background-color: #FF5314 !important;
+        padding: 18px !important;
+        margin: auto !important;
+        border-radius: 50% !important;
+        position: relative !important;
+        img {
+            position: absolute !important;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 18px !important;
+            object-fit: cover !important;
+        }
+    }
 `;
 
 export default ProductWrapper;

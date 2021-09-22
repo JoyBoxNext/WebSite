@@ -248,7 +248,7 @@ const Product = () => {
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                   <div className="row justify-content-center">
-                    {/* {baraxolka?.map((value, index) => {
+                    {baraxolka?.map((value, index) => {
                       return (
                         <Link href="/productCard" key={index}><a>
                           <div className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3">
@@ -311,7 +311,7 @@ const Product = () => {
                           </div>
                         </a></Link>
                       );
-                    })} */}
+                    })}
                     <div className="mt-4">
                       <div className="border_"></div>
                       <div className="d-flex justify-content-center align-items-center  my-4">
@@ -348,7 +348,7 @@ const Product = () => {
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                   <div className="row justify-content-center">
-                    {/* {baraxolka?.map((value, index) => {
+                    {baraxolka?.map((value, index) => {
                       return (
                         <div
                           className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3 "
@@ -407,12 +407,12 @@ const Product = () => {
                                     alt="photo"
                                   />
                                 </button>
-                              </div>
+                              </div>v 
                             </div>
                           </div>
                         </div>
                       );
-                    })} */}
+                    })}
                     <div className="mt-4">
                       <div className="border_"></div>
                       <div className="d-flex justify-content-center align-items-center  my-4">
