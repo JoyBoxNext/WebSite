@@ -122,22 +122,72 @@ export default function Home() {
                   </h1>
                 </div>
               </div>
-              <div className="blue" style={{ width: "10%" }}></div>
-              <div className="orange" style={{ width: "65%" }}></div>
+              <div className="flex4 blue" style={{ width: "10%" }}></div>
+              <div className="flex5 orange" style={{ width: "65%" }}></div>
               <div className="flex6 blue" style={{ width: "25%" }}>
                 <img className="w-100" src="logo4.png" alt="photo" />
               </div>
-              <div className="orange" style={{ width: "10%" }}></div>
+              <div className="flex7 orange" style={{ width: "10%" }}></div>
               <div className="flex8 blue py-3" style={{ width: "65%" }}>
-                <div className="">
+                <div className="buttons">
                   <Button className="btn_links">Скидки</Button>
                   <Button className="btn_links">Подборки</Button>
                   <Button className="btn_links">Товар дня</Button>
                   <Button className="btn_links">Новинки</Button>
                 </div>
+                <div className="d-none mini-content-flex8">
+                  <div className="text">
+                    <p className="subtitle m-1 top_title">
+                      заголовок редактируется через админ панель
+                    </p>
+                    <h1 className="title mb-3 big_title">Удиви своих друзей!</h1>
+                  </div>
+                  <div className="mini-content p-0">
+                    <div className="p-1">
+                      <p className="title-2 top_title">
+                        PlayStation 5 Digital version
+                      </p>
+                      <div className="d-flex titles-1 justify-content-between align-items-center">
+                        <p className="title mb-0 text-end small_title d-none">
+                          заголовок редактируется через админ панель
+                        </p>
+                        <p className="title mb-0 text-end samsung_title">
+                          с Samsung Galaxy A52
+                        </p>
+                      </div>
+                      <div className="d-flex priceText justify-content-between">
+                        <p className="subtitle top_title">
+                          редактируется через админ панель
+                        </p>
+                        <div className="d-block prices">
+                          <p className="oldPrice ">18,577,000</p>
+                          <div className="priceDec">
+                            <div className="price d-flex">
+                              от <p className="priceNum">15,845,000</p> сум
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="d-flex  justify-content-between  w-100">
+                      <img className="top_title" src="logo3.png" alt="photo" />
+                      <p className="bottom-text w-auto">
+                        Магазин бытовой техники <br /> и электроники
+                      </p>
+                    </div>
+                    <div className="dot_orange dot1"></div>
+                    <div className="dot_orange dot2"></div>
+                    <div className="dot_orange dot3"></div>
+                    <div className="dot_orange dot4"></div>
+                  </div>
+                </div>
               </div>
-              <div className="orange" style={{ width: "25%" }}></div>
-              <div className="blue" style={{ width: "10%" }}></div>
+              <div className="flex9 orange" style={{ width: "25%" }}>
+                <p className="d-flex justify-content-center align-items-center">
+                  Магазин бытовой техники и электроники
+                </p>
+              </div>
+              <div className="flex10 blue" style={{ width: "10%" }}></div>
             </div>
           </div>
 

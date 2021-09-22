@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const HomeWrapper = styled.div`
   font-family: "roboto", sans-serif;
+  overflow: auto!important;
   .blue {
     background-color: #2525eb;
   }
@@ -126,7 +127,7 @@ const HomeWrapper = styled.div`
     }
 
     @media screen and (max-width: 720px) {
-      .threePhone {
+      /* .threePhone {
         width: 140px !important;
         height: 55%;
       }
@@ -148,7 +149,7 @@ const HomeWrapper = styled.div`
       .btn_links {
         font-size: 10px !important;
         padding: 0 8px !important;
-      }
+      } */
     }
 
     @media screen and (max-width: 600px) {
@@ -162,7 +163,7 @@ const HomeWrapper = styled.div`
     }
 
     @media screen and (max-width: 450px) {
-      .threePhone {
+      /* .threePhone {
         width: 90px !important;
         height: 40%;
       }
@@ -191,7 +192,7 @@ const HomeWrapper = styled.div`
       }
       .flex8 {
         display: none !important;
-      }
+      } */
     }
 
     .blue {
@@ -299,6 +300,115 @@ const HomeWrapper = styled.div`
         text-transform: capitalize;
         padding: 0 35px;
         font-weight: lighter;
+      }
+    }
+    .flex9 {
+      padding: 10px 25px;
+    }
+    @media screen and (max-width:600px) and (min-width:320px) {
+      .flex1 {
+        display: none;
+      }
+      .flex2 {
+        width: 65% !important;
+        /* height: 250px !important; */
+        img {
+          margin: 30px 0 30px 0 !important;
+          width: 70% !important;
+          /* object-fit: cover !important; */
+          height: 70%;
+        }
+      }
+      .flex3 {
+        width: 30% !important;
+        .home_wonder_title {
+          font-weight: bold;
+          font-size: 15px !important;
+          line-height: 100% !important;
+        }
+      }
+      .flex4 {
+        width: 5% !important;
+      }
+      .flex5 {
+
+      }
+      .flex6 {
+        width: 30% !important;
+      }
+      .flex7 {
+        width: 5% !important;
+      }
+      .flex8 {
+        padding: 10px 0 10px 10px !important;
+        .mini-content-flex8 {
+          display: block !important;
+          position: relative;
+        }
+        .buttons {
+          display: none;
+        }
+        .big_title {
+          display: block  !important;
+          font-weight: bold !important;
+          font-size: 20px !important;
+          line-height: 111% !important;
+        }
+        .prices {
+          position: absolute;
+          right: 0;
+          top: 40%;
+          .oldPrice {
+            margin: 0 !important;
+          }
+          .priceDec {
+            /* justify-content: flex-end; */
+            background-color: #ff5314;
+            align-items: center;
+            padding: 5px 5px 5px 0;
+            .priceNum {
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+        .mini-content {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          justify-content: space-between;
+          .title-2 {
+            display: none;
+          }
+          .titles-1 {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 65%;
+            .samsung_title {
+              font-size: 9px;
+            }
+            .small_title {
+              align-items: end !important;
+            }
+            .text-end {
+              text-align: left !important;
+              
+            }
+          }
+          .bottom-text {
+            display: none;
+          }
+        }
+
+      }
+      .flex9 {
+        width: 30% !important;
+        p {
+          font-weight: normal;
+          font-size: 10px;
+        }
+      }
+      .flex10 {
+        width: 5% !important;
       }
     }
   }
@@ -443,6 +553,11 @@ const HomeWrapper = styled.div`
           background-color: #ff5314;
         }
       }
+    }
+    @media screen and (max-width:800px) and (min-width:320px) {
+        .title-section {
+          font-size: 40px !important;
+        }
     }
   }
 
@@ -624,6 +739,11 @@ const HomeWrapper = styled.div`
         }
       }
     }
+    @media screen and (max-width:800px) and (min-width:320px) {
+        .title-section {
+          font-size: 40px !important;
+        }
+    }
   }
   .button {
     button {
@@ -738,6 +858,11 @@ const HomeWrapper = styled.div`
       .bag {
         background-color: #ff5314;
       }
+    }
+    @media screen and (max-width:800px) and (min-width:320px) {
+        .title-section {
+          font-size: 40px !important;
+        }
     }
   }
   .bag {
