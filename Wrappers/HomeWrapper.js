@@ -14,6 +14,7 @@ const HomeWrapper = styled.div`
     color: white;
     .threePhone {
       width: 250px !important;
+      object-fit: contain !important;
     }
 
     @media screen and (max-width: 1200px) {
@@ -493,7 +494,7 @@ const HomeWrapper = styled.div`
 
   //Container-2
   .container-2 {
-    background: url("/Korobka.png"), #2525eb;
+    background: url("/bgContainer2.jpeg"), #2525eb;
     background-size: 100% 100%;
     color: white;
     padding: 30px 30px;
@@ -554,11 +555,6 @@ const HomeWrapper = styled.div`
           background-color: #ff5314;
         }
       }
-    }
-    @media screen and (max-width:800px) and (min-width:320px) {
-        .title-section {
-          font-size: 40px !important;
-        }
     }
   }
 
@@ -743,11 +739,6 @@ const HomeWrapper = styled.div`
         }
       }
     }
-    @media screen and (max-width:800px) and (min-width:320px) {
-        .title-section {
-          font-size: 40px !important;
-        }
-    }
   }
   .button {
     button {
@@ -862,11 +853,6 @@ const HomeWrapper = styled.div`
       .bag {
         background-color: #ff5314;
       }
-    }
-    @media screen and (max-width:800px) and (min-width:320px) {
-        .title-section {
-          font-size: 40px !important;
-        }
     }
   }
   .bag {
@@ -988,6 +974,22 @@ const HomeWrapper = styled.div`
     font-size: 45px;
     font-weight: bold;
   }
+  
+  @media screen and (max-width: 1000px) {
+      .title-section {
+        font-size: 40px !important;        
+      } 
+    }
+    @media screen and (max-width:800px) {
+        .title-section {
+          font-size: 37px !important;
+        }
+    }
+    @media screen and (max-width: 650px) {
+      .title-section {
+        font-size: 31px !important;        
+      } 
+    }
 
   .brands {
     .button_bottom {
