@@ -347,7 +347,7 @@ const tv = [
 
 const kitchen = [
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находкa`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,
@@ -357,7 +357,7 @@ const kitchen = [
     save: false,
   },
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находка`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,
@@ -367,7 +367,7 @@ const kitchen = [
     save: false,
   },
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находка`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,
@@ -377,7 +377,7 @@ const kitchen = [
     save: false,
   },
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находка`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,
@@ -387,7 +387,7 @@ const kitchen = [
     save: false,
   },
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находка`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,
@@ -397,7 +397,7 @@ const kitchen = [
     save: false,
   },
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находка`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,
@@ -407,7 +407,7 @@ const kitchen = [
     save: false,
   },
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находка`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,
@@ -417,7 +417,7 @@ const kitchen = [
     save: false,
   },
   {
-    title: `Кофемашина с капучинатором – это настоящая находка для кофеманов`,
+    title: `Кофемашина с капучинатором – это настоящая находка`,
     aksiya_: `16 800 000`,
     img: "https://apollo-olx.cdnvideo.ru/v1/files/5qz6bw829x9m1-UZ/image;s=1000x700",
     aksiya: `1 330 000 СУМ`,

@@ -136,13 +136,17 @@ const Category = () => {
                   <div className="mt-4" position="static">
                     <div className="d-flex align-items-center">
                       <div
-                        className={`btn_light ${tabPanel ? "" : "active"}`}
+                        className={`btn_light ${
+                          tabPanel ? "" : "active b_radius"
+                        }`}
                         onClick={() => tabApp(0)}
                       >
                         Полная цена
                       </div>
                       <div
-                        className={`btn_light ${tabPanel ? "active" : ""}`}
+                        className={`btn_light ${
+                          tabPanel ? "active b_radius2" : ""
+                        }`}
                         onClick={() => tabApp(1)}
                       >
                         Цена в месяц
@@ -576,7 +580,7 @@ const Category = () => {
               </Slide>
             </div>
           </div>
-          <div className="rightSide mt-5 px-2">
+          <div className="rightSide mt-5 ps-2">
             <Fade bottom cascade>
               <div className="row w-100 mt-5">
                 {rightSelectorData.map((value, index) => {
@@ -616,7 +620,7 @@ const Category = () => {
                             <p className="mb-0 desc">{value.desc}</p>
                             <button
                               onClick={() => saveRightProduct(index)}
-                              className="border-0 save_btn"
+                              className="border-0 save_btn p-0"
                             >
                               <img
                                 className="w-75"

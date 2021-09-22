@@ -86,7 +86,7 @@ const Product = () => {
           <div className="Sidebar">
             <div className="container">
               <Fade top>
-                <div className="p-3">
+                <div className="baraxolka_padding">
                   <h1 className="title">Барахолка!</h1>
                   <p className="subtitle">
                     Сервис объединяет тысячи частных объявлений и коммерческих
@@ -131,16 +131,16 @@ const Product = () => {
                     </Tabs>
                   </AppBar>
                 </Zoom>
-                <Zoom>
-                  <TabPanel value={value} index={0}>
-                    <div className="row justify-content-center">
-                      {baraxolka?.map((value, index) => {
-                        return (
-                          <div
-                            className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
-                            key={index}
-                          >
-                            <Link href="/productCard"><a>
+                <TabPanel value={value} index={0}>
+                  <div className="row justify-content-center">
+                    {baraxolka?.map((value, index) => {
+                      return (
+                        <div
+                          className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
+                          key={index}
+                        >
+                          <Link href="/productCard">
+                            <a>
                               <div className="cards_border">
                                 <img src="skidka.jpg" alt="photo" />
                                 <div className="px-3">
@@ -185,8 +185,8 @@ const Product = () => {
                                   <div className="d-flex justify-content-between align-items-center">
                                     <p className="mb-0 desc">{value.desc}</p>
                                     <button
-                                      onClick={() => saveProduct(index)}
-                                      className="border-0 bag"
+                                      onClick={() => savebaraxolka(index)}
+                                      className="border-0 bag m-0 mb-2"
                                     >
                                       <img
                                         className="w-75 mb-2"
@@ -197,45 +197,45 @@ const Product = () => {
                                   </div>
                                 </div>
                               </div>
-                            </a></Link>
-                          </div>
-                        );
-                      })}
-                      <div className="mt-4">
-                        <div className="border_"></div>
-                        <div className="d-flex justify-content-center align-items-center  my-4">
-                          <Link href="https://www.instagram.com/?hl=ru">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="instagram.png"
-                                alt="instagram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://web.telegram.org">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="telegram.png"
-                                alt="telegram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://www.facebook.com">
-                            <a>
-                              <img
-                                className="icon fs-3"
-                                src="facebook.png"
-                                alt="facebook"
-                              />
                             </a>
                           </Link>
                         </div>
+                      );
+                    })}
+                    <div className="mt-4">
+                      <div className="border_"></div>
+                      <div className="d-flex justify-content-center align-items-center  my-4">
+                        <Link href="https://www.instagram.com/?hl=ru">
+                          <a>
+                            <img
+                              className="icon me-3 fs-3"
+                              src="instagram.png"
+                              alt="instagram"
+                            />
+                          </a>
+                        </Link>
+                        <Link href="https://web.telegram.org">
+                          <a>
+                            <img
+                              className="icon me-3 fs-3"
+                              src="telegram.png"
+                              alt="telegram"
+                            />
+                          </a>
+                        </Link>
+                        <Link href="https://www.facebook.com">
+                          <a>
+                            <img
+                              className="icon fs-3"
+                              src="facebook.png"
+                              alt="facebook"
+                            />
+                          </a>
+                        </Link>
                       </div>
                     </div>
-                  </TabPanel>
-                </Zoom>
+                  </div>
+                </TabPanel>
                 <TabPanel value={value} index={1}>
                   <div className="row justify-content-center">
                     {/* {baraxolka?.map((value, index) => {
