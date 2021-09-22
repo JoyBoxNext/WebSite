@@ -1,6 +1,6 @@
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Containers/Header/Header";
 import Footer from "../Containers/Footer/Footer";
 import ProductWrapper from "../Wrappers/ProductWrapper";
@@ -34,6 +34,7 @@ function valuetext(valueSlider) {
   return `${valueSlider}°C`;
 }
 // Category
+
 const Category = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -67,26 +68,11 @@ const Category = () => {
   const hide2 = () => {
     setShow2(!show2);
   };
-  //============================================================================================================================
-  //phonesData
-  const phoneData = () => {
-    const action = { type: t.PHONES_DATA, payload: phones };
-    dispatch(action);
-  };
-  phoneData();
-
-  const data = useSelector((state) => state.BooksReducer.filterdata);
-
-  const saveProduct = (index) => {
-    data[index].save = !data[index].save;
-    const action = { type: "A", payload: index };
-    dispatch(action);
-  };
 
   //============================================================================================================================
   //rightSide
   const rightData = () => {
-    const action = { type: t.RIGHT_DATA, payload: rightSide };
+    const action = { type: "", payload: rightSide };
     dispatch(action);
   };
   rightData();
@@ -101,25 +87,30 @@ const Category = () => {
     dispatch(action);
     console.log(rightSelectorData[index].save, index);
   };
-
+  const [tabPanel, setTabPanel] = useState(false);
+  const tabApp = (id) => {
+    setTabPanel(id);
+  };
   // =============
   const router = useRouter();
   const category = router.query.product;
   const datas = datacategory[category];
   const categories = dataLeft[category];
-  // const datasend = () => {
-  //   const action = { type: "SEND", payload: datas };
-  //   dispatch(action);
-  // }
-  // useEffect(() => {
-  //   datasend();
-  // }, []);
-  // console.log(datacategory);
-
-  const [tabPanel, setTabPanel] = useState(false);
-
-  const tabApp = (id) => {
-    setTabPanel(id);
+  console.log(datas?.[0].title);
+  const datasend = () => {
+    const action = { type: t.SEND, payload: datas };
+    dispatch(action);
+  };
+  useEffect(() => {
+    datasend();
+  }, [datas, datas?.length, datas?.[0].title]);
+  datasend();
+  const data = useSelector((state) => state.BooksReducer.newFilter);
+  // console.log(data);
+  const saveProduct = (index) => {
+    data[index].save = !data[index].save;
+    const action = { type: "A", payload: index };
+    dispatch(action);
   };
 
   return (
@@ -216,14 +207,16 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${show ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex align-items-center ${
+                                      show ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${checked == index ? "active" : ""
-                                        }`}
+                                      className={` box me-2 ${
+                                        checked == index ? "active" : ""
+                                      }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -262,8 +255,9 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex justify-content-between ${
+                                      show2 ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
@@ -352,14 +346,16 @@ const Category = () => {
                               {value.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex align-items-center ${show ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex align-items-center ${
+                                      show ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <button
                                       onClick={() => toggle(index)}
-                                      className={` box me-2 ${checked == index ? "active" : ""
-                                        }`}
+                                      className={` box me-2 ${
+                                        checked == index ? "active" : ""
+                                      }`}
                                     ></button>
                                     <p className="my-1 subtitle">
                                       {value.subtitle}
@@ -398,8 +394,9 @@ const Category = () => {
                               {value.name.category.map((value, index) => {
                                 return (
                                   <div
-                                    className={`d-flex justify-content-between ${show2 ? "" : "d-none"
-                                      }`}
+                                    className={`d-flex justify-content-between ${
+                                      show2 ? "" : "d-none"
+                                    }`}
                                     key={index}
                                   >
                                     <div className="d-flex align-items-center mt-2">
@@ -447,7 +444,7 @@ const Category = () => {
               </Fade>
               <Slide bottom>
                 <div className="row justify-content-center">
-                  {datas?.map((value, index) => {
+                  {data?.map((value, index) => {
                     return (
                       <div
                         key={index}
@@ -529,6 +526,7 @@ const Category = () => {
                       </div>
                     );
                   })}
+                  {data?.length === 0 ? "Product not fined" : ""}
                   <div className="my-2 bottom_text">
                     <h1 className="text my-4">
                       Часто задаваемые вопросы про Смартфоны
@@ -583,7 +581,7 @@ const Category = () => {
           <div className="rightSide mt-5 ps-2">
             <Fade bottom cascade>
               <div className="row w-100 mt-5">
-                {rightSelectorData.map((value, index) => {
+                {rightSide.map((value, index) => {
                   return (
                     <div
                       className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"

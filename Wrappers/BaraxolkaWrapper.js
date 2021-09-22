@@ -23,8 +23,9 @@ const BaraxollaWrapper = styled.div`
     width: 100% !important;
   }
   .baraxolka_photo {
-    width: 190px;
+    width: 144px;
     height: 183px;
+    object-fit: contain;
   }
   @media screen and (max-width: 700px) {
     .baraxolka_padding {
@@ -88,9 +89,37 @@ const BaraxollaWrapper = styled.div`
         line-height: 100%;
       }
     }
-    .cards_border {
-      border: 3px solid #2525eb;
+
+    .baraxolka_product {
+      height: 395px;
+      .cards_border {
+        border: 3px solid #2525eb;
+        background-color: white;
+        width: 100%;
+        z-index: 600;
+        position: relative;
+        transition: 0.5s;
+        height: 100%;
+        overflow: hidden;
+
+        .descripton {
+          font-size: 11px;
+          color: rgba(141, 137, 137, 1);
+          text-transform: uppercase;
+          transition: 1s;
+        }
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 465px;
+          z-index: 700;
+        }
+      }
     }
+
     .text_secondary {
       background-color: #e2e38c;
       font-weight: 500;
@@ -103,7 +132,7 @@ const BaraxollaWrapper = styled.div`
       text-decoration: line-through 1px rgba(0, 0, 0, 1);
     }
     .model {
-      font-size: 18.9907px;
+      font-size: 18px;
     }
     .aksiya__ {
       font-weight: 500;

@@ -8,7 +8,6 @@ import Link from "next/link";
 import Footer from "../Containers/Footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { home_images } from "../Data/data";
-
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -22,77 +21,37 @@ import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import { useSelector } from "react-redux";
 import { homeDatas } from "../Data/homeData";
-import { ChooseData } from "./../Data/ChooseData";
 import Header from "./../Containers/Header/Header";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
+import { ChooseData } from "./../Data/ChooseData";
 // import Swiper from "react-id-swiper";
 
 export default function Home() {
   //==========homeFunction==========
-  const homeFunction = () => {
-    const action = { type: t.HOME_DATA, payload: homeDatas };
-    dispatch(action);
-  };
-  homeFunction();
 
-  //==========chooseFunction==========
-  const chooseFunction = () => {
-    const action = { type: t.CHOOSE_DATA, payload: ChooseData };
-    dispatch(action);
-  };
-  chooseFunction();
-
-  //==========newsFunction==========
-  const newsFunction = () => {
-    const action = { type: t.NEWS_DATA, payload: NewProductCards };
-    dispatch(action);
-  };
-  newsFunction();
-
-  //==========notebookFunction==========
-  const notebookFunction = () => {
-    const action = { type: t.NOTEBOOK_DATA, payload: LaptopData };
-    dispatch(action);
-  };
-  notebookFunction();
-
-  //homeData
-  const homeData = useSelector((state) => state.BooksReducer.homeFilter);
-
-  const saveHomeProduct = (index) => {
-    homeData[index].save = !homeData[index].save;
-    const action = { type: "A", payload: index };
-    dispatch(action);
-  };
-
-  //chooseData
-  const ChooseDatas = useSelector((state) => state.BooksReducer.chooseData);
-
-  const saveChooseDatas = (index) => {
-    ChooseDatas[index].save = !ChooseDatas[index].save;
-    const action = { type: "A", payload: index };
-    dispatch(action);
-  };
-
-  //newsData
   const newsData = useSelector((state) => state.BooksReducer.newsData);
-
   const saveNewsData = (index) => {
     newsData[index].save = !newsData[index].save;
     const action = { type: "A", payload: index };
     dispatch(action);
   };
 
-  //notebook
-  const notebookData = useSelector((state) => state.BooksReducer.notebookData);
+  const chooseData = () => {
+    const action = { type: t.CHOOSE_DATA, payload: ChooseData };
+    dispatch(action);
+  };
 
+  chooseData();
+  const notebookData = useSelector((state) => state.BooksReducer.notebookData);
   const saveNotebookData = (index) => {
     notebookData[index].save = !notebookData[index].save;
     const action = { type: "A", payload: index };
     dispatch(action);
   };
+  const choosedata = useSelector((state) => state.BooksReducer.chooseData);
 
+  const saveChooseDatas = () => {};
   return (
     <HomeWrapper>
       <Container>
@@ -189,7 +148,7 @@ export default function Home() {
               <Link href="/">
                 <a>
                   <div className="cards d-flex justify-content-center">
-                    {homeData.map((v, i) => {
+                    {homeDatas.map((v, i) => {
                       return (
                         <div className={`card m-1 p-3 ${v.className}`} key={i}>
                           <div className="d-flex justify-content-center align-items-center ps-4 my-3">
@@ -350,7 +309,7 @@ export default function Home() {
                   navigation={true}
                   className="mySwiper"
                 >
-                  {ChooseDatas.map((v, i) => {
+                  {choosedata.map((v, i) => {
                     return (
                       <SwiperSlide className=" h-100 p-3" key={i}>
                         <Link href="/productCard">

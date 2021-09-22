@@ -61,7 +61,7 @@ const Product = () => {
 
   //baraxolka
   const baraxolkaPhonesData = () => {
-    const action = { type: t.BARAXOLKA_DATA, payload: baraxolkaPhones };
+    const action = { type: "", payload: baraxolkaPhones };
     dispatch(action);
   };
   baraxolkaPhonesData();
@@ -132,11 +132,11 @@ const Product = () => {
                   </AppBar>
                 </Zoom>
                 <TabPanel value={value} index={0}>
-                  <div className="row justify-content-center">
+                  <div className="row justify-content-center ">
                     {baraxolka?.map((value, index) => {
                       return (
                         <div
-                          className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3"
+                          className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
                           key={index}
                         >
                           <Link href="/productCard">
@@ -195,6 +195,16 @@ const Product = () => {
                                       />
                                     </button>
                                   </div>
+                                  <p className={"descripton px-1"}>
+                                    Экран (6.5{`"`}, Super AMOLED, 2400x1080)/
+                                    Qualcomm Snapdragon 720G (2 x 2.3 ГГц + 6 x
+                                    1.8 ГГц)/ основная квадро-камера: 64 Мп + 12
+                                    Мп + 5 Мп + 5 Мп, фронтальная 32 Мп/ RAM 4
+                                    ГБ/ 128 ГБ встроенной памяти + microSD (до 1
+                                    ТБ)/ 3G/ LTE/ GPS/ A-GPS/ ГЛОНАСС/ BDS/
+                                    поддержка 2х SIM-карт (Nano-SIM)/ Android
+                                    11.0 (One UI)/ 4500 мА*ч
+                                  </p>
                                 </div>
                               </div>
                             </a>

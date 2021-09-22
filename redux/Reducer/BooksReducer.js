@@ -7,101 +7,40 @@ const initialState = {
 
   phonesdata: [],
   filterdata: [],
-  saveProduct: [],
-
-  baraxolkaData: [],
-  baraxolkaFilterdata: [],
-  baraxolkaSaveProduct: [],
-
-  rightData: [],
-  rightFilter: [],
-  rightSideProduct: [],
-
-  homeData: [],
-  homeFilter: [],
-  homeProduct: [],
-
   chooseData: [],
-  chooseFilter: [],
-  chooseProduct: [],
-
-  newsData: [],
-  newsFilter: [],
-  newsProduct: [],
-
-  notebookData: [],
-  notebookFilter: [],
-  notebookProduct: [],
 
   newdata: [],
-  newFilter: []
+  newFilter: [],
+  savedata: [],
 };
 
 const BooksReducer = (state = initialState, action) => {
   switch (action.type) {
     case t.CHEKED:
       return { ...state, chekbox: action.payload };
-    case "SEND" : return {...state , newdata: action.payload}
-    case "SEND_FILTER" : return {...state , newFilter: action.payload}
+    case t.SEND:
+      return { ...state, newdata: action.payload };
     case t.CHEKED2:
       return { ...state, chekbox: action.payload };
-
-    case t.BOOKS_DATA:
+    case t.SEND_FILTER:
       return {
         ...state,
-        filterdata: action.payload,
-        baraxolkaFilterdata: action.payload2,
-        rightFilter: action.payload3,
-        homeFilter: action.payload4,
-        chooseFilter: action.payload5,
-        newsFilter: action.payload6,
-        notebookFilter: action.payload7,
+        newFilter: action.payload,
       };
 
     case t.SAVE_PRODUCT:
-      return {
-        ...state,
-        saveProduct: action.payload,
-        baraxolkaSaveProduct: action.payload2,
-        rightSideProduct: action.payload3,
-        homeProduct: action.payload4,
-        chooseProduct: action.payload5,
-        newsProduct: action.payload6,
-        notebookProduct: action.payload7,
-      };
-
-    //product
-    case t.PHONES_DATA:
-      return { ...state, phonesdata: action.payload };
-
-    //baraxolka
-    case t.BARAXOLKA_DATA:
-      return { ...state, baraxolkaData: action.payload };
-
-    //rightdata
-    case t.RIGHT_DATA:
-      return { ...state, rightData: action.payload };
-
-    //homeData
-    case t.HOME_DATA:
-      return { ...state, homeData: action.payload };
-
-    //chooseData
-    case t.CHOOSE_DATA:
-      return { ...state, chooseData: action.payload };
-
-    //news
-    case t.NEWS_DATA:
-      return { ...state, newsData: action.payload };
-
-    //notebook
-    case t.NOTEBOOK_DATA:
-      return { ...state, notebookData: action.payload };
-
-    //A
+      if (action.payload == "" || action.payload == 0) {
+        return { ...state };
+      } else {
+        return {
+          ...state,
+          savedata: action.payload,
+        };
+      }
     case "A":
       return { ...state, index: action.payload };
-
+    case t.CHOOSE_DATA:
+      return { ...state, chooseData: action.payload };
     default:
       return state;
   }
