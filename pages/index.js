@@ -43,12 +43,15 @@ export default function Home() {
   };
 
   chooseData();
+
   const notebookData = useSelector((state) => state.BooksReducer.notebookData);
+
   const saveNotebookData = (index) => {
     notebookData[index].save = !notebookData[index].save;
     const action = { type: "A", payload: index };
     dispatch(action);
   };
+
   const choosedata = useSelector((state) => state.BooksReducer.chooseData);
 
   const saveChooseDatas = () => {};
@@ -140,7 +143,9 @@ export default function Home() {
                     <p className="subtitle m-1 top_title">
                       заголовок редактируется через админ панель
                     </p>
-                    <h1 className="title mb-3 big_title">Удиви своих друзей!</h1>
+                    <h1 className="title mb-3 big_title">
+                      Удиви своих друзей!
+                    </h1>
                   </div>
                   <div className="mini-content p-0">
                     <div className="p-1">
