@@ -114,7 +114,82 @@ const BaraxollaWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 465px;
+          height: 545px;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .cards_border {
+        height: 95% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 470px !important;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .cards_border {
+        height: 100% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 520px !important;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 765px) {
+      .cards_border {
+        height: 95% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 450px !important;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .cards_border {
+        height: 95% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 470px !important;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .cards_border {
+        height: 100% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 500px !important;
           z-index: 700;
         }
       }

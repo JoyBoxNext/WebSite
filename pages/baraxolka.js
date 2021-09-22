@@ -61,7 +61,7 @@ const Product = () => {
 
   //baraxolka
   const baraxolkaPhonesData = () => {
-    const action = { type: "", payload: baraxolkaPhones };
+    const action = { type: t.BARAXOLKA_DATA, payload: baraxolkaPhones };
     dispatch(action);
   };
   baraxolkaPhonesData();
@@ -77,6 +77,8 @@ const Product = () => {
     dispatch(action);
     console.log(baraxolka[index].save, index);
   };
+
+  const baraxolkas = useSelector((state) => state.BooksReducer.baraxolkaData);
 
   return (
     <Container>
@@ -133,7 +135,7 @@ const Product = () => {
                 </Zoom>
                 <TabPanel value={value} index={0}>
                   <div className="row justify-content-center ">
-                    {baraxolka?.map((value, index) => {
+                    {baraxolkas?.map((value, index) => {
                       return (
                         <div
                           className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"

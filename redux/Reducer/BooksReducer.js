@@ -9,6 +9,8 @@ const initialState = {
   filterdata: [],
   chooseData: [],
 
+  baraxolkaData: [],
+
   newdata: [],
   newFilter: [],
   savedata: [],
@@ -39,8 +41,13 @@ const BooksReducer = (state = initialState, action) => {
       }
     case "A":
       return { ...state, index: action.payload };
+
     case t.CHOOSE_DATA:
       return { ...state, chooseData: action.payload };
+
+    case t.BARAXOLKA_DATA:
+      return { ...state, baraxolkaData: action.payload };
+
     default:
       return state;
   }
