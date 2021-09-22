@@ -200,7 +200,7 @@ export default function Home() {
           <Zoom>
             <div className="container-2 mt-5">
               <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
-              <Link href="/">
+              <Link href="/productCard">
                 <a>
                   <div className="cards d-flex justify-content-center">
                     {homeDatas.map((v, i) => {

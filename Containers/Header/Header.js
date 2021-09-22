@@ -198,8 +198,8 @@ const Header = () => {
               {pages.map((value, index) => {
                 return (
                   <div key={index} className="menuItem">
-                    <Link href="/">
-                      <div>
+                    <Link href={value.href}>
+                      <div style={{cursor:"pointer"}}>
                         <a>{value.page}</a>
                         <FontAwesomeIcon
                           className="icon_right position-absolute"
