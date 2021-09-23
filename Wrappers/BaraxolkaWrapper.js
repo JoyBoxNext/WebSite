@@ -70,6 +70,14 @@ const BaraxollaWrapper = styled.div`
       width: auto;
       margin: auto;
     }
+    @media screen and (min-width: 1450px) {
+      .baraxolka_padding {
+        padding: 0 !important;
+      }
+      .border_ {
+        width: 420px !important;
+      }
+    }
     @media screen and (min-width: 1000px) {
       .baraxolka_padding {
         padding: 0 !important;
@@ -91,7 +99,7 @@ const BaraxollaWrapper = styled.div`
     }
 
     .baraxolka_product {
-      height: 395px;
+      height: 390px;
       .cards_border {
         border: 3px solid #2525eb;
         background-color: white;
@@ -115,6 +123,21 @@ const BaraxollaWrapper = styled.div`
         }
         &:hover {
           height: 545px;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1450px) {
+      .cards_border {
+        height: 97% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 470px !important;
           z-index: 700;
         }
       }
@@ -189,7 +212,7 @@ const BaraxollaWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 500px !important;
+          height: 540px !important;
           z-index: 700;
         }
       }
@@ -207,7 +230,7 @@ const BaraxollaWrapper = styled.div`
       text-decoration: line-through 1px rgba(0, 0, 0, 1);
     }
     .model {
-      font-size: 18px;
+      font-size: 15px;
     }
     .aksiya__ {
       font-weight: 500;
@@ -229,9 +252,9 @@ const BaraxollaWrapper = styled.div`
       color: #000000;
     }
     .price {
-      font-size: 21.5289px;
+      font-size: 21px;
       .big_text {
-        font-size: 27.0014px;
+        font-size: 27px;
       }
     }
     .save_btn {
@@ -249,7 +272,8 @@ const BaraxollaWrapper = styled.div`
     }
   }
   .bag {
-    margin-bottom: 10px;
+    margin-bottom: 15px !important;
+    margin: 0 !important;
     &:hover {
       background-color: #ff5314;
       color: white;
@@ -270,6 +294,27 @@ const BaraxollaWrapper = styled.div`
   }
   .PrivateTabIndicator-root-2 {
     display: none !important;
+  }
+  .btn_bx,
+  .btn_bx2,
+  .btn_bx3 {
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+    text-align: center;
+  }
+  .active {
+    background-color: #ff5314;
+    color: #fff !important;
+  }
+  .btn_bx {
+    border: 1px solid #ff5314;
+    color: #ff5314;
+  }
+  .btn_bx3 {
+    border: 1px solid #a6a6a6;
+    color: #a6a6a6;
   }
 `;
 export default BaraxollaWrapper;

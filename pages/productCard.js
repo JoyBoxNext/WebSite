@@ -64,12 +64,20 @@ const ProductCard = () => {
                 <div className="firstContainerIpad firstContainerMacbook">
                   <div className="images d-flex">
                     <div className=" smallimg d-flex justify-content-start mt-5">
-                      <img className="active" src="p1small1.png" alt="smallimg" />
+                      <img
+                        className="active"
+                        src="p1small1.png"
+                        alt="smallimg"
+                      />
                       <img src="p1small2.png" alt="smallimg" />
                       <img src="p1small3.png" alt="smallimg" />
                     </div>
                     <div className="m-auto">
-                      <img className="bigimg" src="p1samsung.png" alt="bigimg" />
+                      <img
+                        className="bigimg"
+                        src="p1samsung.png"
+                        alt="bigimg"
+                      />
                     </div>
                   </div>
                   <div className="row colorMemories mt-3">
@@ -235,7 +243,6 @@ const ProductCard = () => {
                                       />
                                     </div>
                                   </div>
-                                  
                                 </div>
                               </a>
                             </Link>
@@ -328,11 +335,9 @@ const ProductCard = () => {
             </div>
           </div>
           <ModalProduct openInput={openInput} open={open} />
-          <Fade>
-            <Footer />
-          </Fade>
         </div>
       </Container>
+      <Footer />
     </ProductCardWrapper>
   );
 };

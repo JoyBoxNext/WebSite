@@ -6,7 +6,7 @@ const ActiveLinkWrapper = styled.div`
   button {
     border-right: 1px solid black !important;
     border: none;
-    padding: 7px 17px !important;
+    padding: 7px 20px !important;
     background-color: white;
   }
   @media screen and (max-width: 600px) {

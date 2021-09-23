@@ -706,11 +706,9 @@ export default function Home() {
               </div>
             </div>
           </Zoom>
-          <Fade bottom>
-            <Footer />
-          </Fade>
         </div>
       </Container>
+      <Footer />
     </HomeWrapper>
   );
 }
