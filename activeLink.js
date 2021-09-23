@@ -9,6 +9,56 @@ const ActiveLinkWrapper = styled.div`
     padding: 7px 20px !important;
     background-color: white;
   }
+  @media screen and (max-width: 1990px) {
+    button {
+      padding: 7px 37px !important;
+    }
+  }
+  @media screen and (max-width: 1900px) {
+    button {
+      padding: 7px 34px !important;
+    }
+  }
+  @media screen and (max-width: 1860px) {
+    button {
+      padding: 7px 31px !important;
+    }
+  }
+  @media screen and (max-width: 1800px) {
+    button {
+      padding: 7px 28px !important;
+    }
+  }
+  @media screen and (max-width: 1750px) {
+    button {
+      padding: 7px 22px !important;
+    }
+  }
+  @media screen and (max-width: 1750px) {
+    button {
+      padding: 7px 18px !important;
+    }
+  }
+  @media screen and (max-width: 1650px) {
+    button {
+      padding: 7px 26px !important;
+    }
+  }
+  @media screen and (max-width: 1550px) {
+    button {
+      padding: 7px 20px !important;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    button {
+      padding: 7px 17px !important;
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    button {
+      padding: 7px 32px !important;
+    }
+  }
   @media screen and (max-width: 600px) {
     button {
       border: 1px solid black;

@@ -309,7 +309,7 @@ export default function Home() {
                             - 2,732,000
                           </p>
                         </div>
-                        <div className="priceContainer">
+                        <div className="priceContainer d-grid">
                           <div className="bgPrice w-100 rounded">
                             <p className="price small">
                               от <span className="price">15,845,000</span> сум
@@ -373,12 +373,17 @@ export default function Home() {
                         <Link href="/productCard">
                           <a>
                             <div className="choose-card p-2">
+                              <img
+                                className="skidka"
+                                src="skidka.svg"
+                                alt="photo"
+                              />
                               <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                                <Link href="/productCard">
-                                  <a>
-                                    <img src={v.img} alt="photo" />
-                                  </a>
-                                </Link>
+                                <img
+                                  style={{ marginTop: "20px !important" }}
+                                  src={v.img}
+                                  alt="photo"
+                                />
                                 <div className="colorBoxes flex-column mb-5">
                                   <div className="p-1">
                                     <div className="col-3 colorBox black"></div>
@@ -569,13 +574,13 @@ export default function Home() {
                               <div className="laptop-card p-2" key={i}>
                                 <img
                                   className="discount"
-                                  src="skidka.jpg"
+                                  src="skidka.svg"
                                   alt="photo"
                                 />
                                 <div className="d-flex flex-column justify-content-center align-items-center">
                                   <img
                                     className="acer"
-                                    src="acer.png"
+                                    src="acer.svg.svg"
                                     alt="acer"
                                   />
                                   <img

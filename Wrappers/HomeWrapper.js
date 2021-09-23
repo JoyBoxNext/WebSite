@@ -397,6 +397,11 @@ const HomeWrapper = styled.div`
       border: 10px solid #ff8253;
       margin: auto;
       position: relative;
+      .skidka {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       .title {
         line-height: 16px !important;
         font-size: 12px;
