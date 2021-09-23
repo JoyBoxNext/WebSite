@@ -797,7 +797,7 @@ const HomeWrapper = styled.div`
 
   @media screen and (min-width: 1025px) {
     .mini-content {
-      border: 4px solid #fff !important;
+      border: 5px solid #fff !important;
       .dot_orange {
         width: 5px;
         height: 5px;
@@ -827,8 +827,19 @@ const HomeWrapper = styled.div`
   }
 
   @media screen and (max-width: 1025px) {
-    .top_title {
-      display: none;
+    .container-1 {
+      .text {
+        padding: 10px 10px !important;
+        .top_title1 {
+          display: none !important;
+          font-weight: bold;
+          font-size: 29px !important;
+          line-height: 100% !important;
+        }
+      }
+      .textPlayS {
+        display: none !important;
+      }
     }
     .big_title {
       font-size: 17px !important;
