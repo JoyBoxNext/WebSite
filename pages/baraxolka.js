@@ -10,6 +10,7 @@ import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Footer from "../Containers/Footer/Footer";
 import Fade from "react-reveal/Fade";
+import Messeger from "../Components/messeger";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -194,38 +195,7 @@ const Product = () => {
                           </div>
                         );
                       })}
-                      <div className="mt-4">
-                        <div className="border_"></div>
-                        <div className="d-flex justify-content-center align-items-center  my-4">
-                          <Link href="https://www.instagram.com/?hl=ru">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="instagram.png"
-                                alt="instagram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://web.telegram.org">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="telegram.png"
-                                alt="telegram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://www.facebook.com">
-                            <a>
-                              <img
-                                className="icon fs-3"
-                                src="facebook.png"
-                                alt="facebook"
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
+                      <Messeger />
                     </div>
                   </div>
 
@@ -312,38 +282,7 @@ const Product = () => {
                           </div>
                         );
                       })}
-                      <div className="mt-4">
-                        <div className="border_"></div>
-                        <div className="d-flex justify-content-center align-items-center  my-4">
-                          <Link href="https://www.instagram.com/?hl=ru">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="instagram.png"
-                                alt="instagram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://web.telegram.org">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="telegram.png"
-                                alt="telegram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://www.facebook.com">
-                            <a>
-                              <img
-                                className="icon fs-3"
-                                src="facebook.png"
-                                alt="facebook"
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
+                      <Messeger />
                     </div>
                   </div>
 
@@ -429,38 +368,7 @@ const Product = () => {
                           </div>
                         );
                       })}
-                      <div className="mt-4">
-                        <div className="border_"></div>
-                        <div className="d-flex justify-content-center align-items-center  my-4">
-                          <Link href="https://www.instagram.com/?hl=ru">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="instagram.png"
-                                alt="instagram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://web.telegram.org">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="telegram.png"
-                                alt="telegram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://www.facebook.com">
-                            <a>
-                              <img
-                                className="icon fs-3"
-                                src="facebook.png"
-                                alt="facebook"
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
+                      <Messeger />
                     </div>
                   </div>
                 </div>
