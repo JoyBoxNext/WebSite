@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HomeWrapper = styled.div`
   font-family: "roboto", sans-serif;
-  overflow: auto!important;
+  overflow: auto !important;
   .blue {
     background-color: #2525eb;
   }
@@ -14,7 +14,6 @@ const HomeWrapper = styled.div`
     color: white;
     .top_title1 {
       font-size: 14px !important;
-
     }
     .threePhone {
       width: 250px !important;
@@ -29,62 +28,77 @@ const HomeWrapper = styled.div`
         text-transform: uppercase;
       }
     }
-      .mini-content {
-        border: none;
-        padding: 8px;
-        position: relative;
-        z-index: 0;
-        .title {
-          font-weight: normal;
-          font-size: 13px;
+    .mini-content {
+      border: none;
+      padding: 8px;
+      position: relative;
+      z-index: 0;
+      .title {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 100%;
+      }
+      .subtitle {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 100%;
+      }
+      .oldPrice {
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 100%;
+        text-decoration-line: line-through;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 3px;
+        display: flex;
+        justify-content: end;
+      }
+      .priceDec {
+        background-color: #ff5314;
+        padding: 7px 4px;
+        margin-right: -8px !important;
+        .price {
+          font-size: 10px;
           line-height: 100%;
+          padding: 0;
+          margin: 0;
+          .priceNum {
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0.045em;
+            text-transform: lowercase;
+            padding: 0;
+            margin: 0;
+          }
         }
+      }
+      .bottom-text {
+        font-weight: normal !important;
+        font-size: 8px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0 8px 8px 0 !important;
+      }
+      .miniContentLogo {
+        margin-top: 7px;
+      }
+    }
+    .flex1 {
+      .text {
+        padding: 10px 20px;
         .subtitle {
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 100%;
-        }
-        .oldPrice {
           font-weight: bold;
           font-size: 11px;
           line-height: 100%;
-          text-decoration-line: line-through;
-          padding: 0;
-          margin: 0;
-          margin-bottom: 3px;
-          display: flex;
-          justify-content: end;
         }
-        .priceDec {
-          background-color: #ff5314;
-          padding: 7px 4px;
-          margin-right: -8px !important;
-          .price {
-            font-size: 10px;
-            line-height: 100%;
-            padding: 0;
-            margin: 0;
-            .priceNum {
-              font-size: 16px;
-              line-height: 100%;
-              letter-spacing: 0.045em;
-              text-transform: lowercase;
-              padding: 0;
-              margin: 0;
-            }
-          }
-        }
-        .bottom-text {
-          font-weight: normal !important;
-          font-size: 8px;
-          display: flex;
-          align-items: flex-end;
-          justify-content: flex-end;
-          padding: 0;
-          margin: 0 8px 8px 0 !important;
-        }
-        .miniContentLogo {
-          margin-top: 7px;
+        .title {
+          font-weight: bold;
+          font-size: 29.974px;
+          line-height: 100%;
+          text-transform: uppercase;
         }
       }
     }
@@ -122,7 +136,7 @@ const HomeWrapper = styled.div`
     .flex9 {
       padding: 10px 25px;
     }
-    @media screen and (max-width:600px) and (min-width:320px) {
+    @media screen and (max-width: 600px) and (min-width: 320px) {
       .flex1 {
         display: none;
       }
@@ -148,7 +162,6 @@ const HomeWrapper = styled.div`
         width: 5% !important;
       }
       .flex5 {
-
       }
       .flex6 {
         width: 30% !important;
@@ -166,7 +179,7 @@ const HomeWrapper = styled.div`
           display: none;
         }
         .big_title {
-          display: block  !important;
+          display: block !important;
           font-weight: bold !important;
           font-size: 22px !important;
           line-height: 111% !important;
@@ -208,14 +221,12 @@ const HomeWrapper = styled.div`
             }
             .text-end {
               text-align: left !important;
-              
             }
           }
           .bottom-text {
             display: none;
           }
         }
-
       }
       .flex9 {
         width: 30% !important;
@@ -752,146 +763,125 @@ const HomeWrapper = styled.div`
     }
   }
   @media screen and (max-width: 1200px) {
-      .threePhone {
-        width: 180px !important;
-        height: 80%;
-        margin-top: 25px;
-      }
-      .threePhone_title {
-        font-size: 32px !important;
-      }
-      .flex3 .home_wonder_title {
-        font-size: 40px !important;
-      }
-      .btn_links {
-        font-size: 14px !important;
-        padding: 0 22px !important;
-      }
-      .productDayText .left_clock {
-        font-size: 10px !important;
-      }
+    .threePhone {
+      width: 180px !important;
+      height: 80%;
+      margin-top: 25px;
     }
+    .threePhone_title {
+      font-size: 32px !important;
+    }
+    .flex3 .home_wonder_title {
+      font-size: 40px !important;
+    }
+    .btn_links {
+      font-size: 14px !important;
+      padding: 0 22px !important;
+    }
+    .productDayText .left_clock {
+      font-size: 10px !important;
+    }
+  }
 
-    @media screen and (min-width: 1025px) {
-      .mini-content {
-        border: 4px solid #fff !important;
-        .dot_orange {
-          width: 5px;
-          height: 5px;
-          background-color: #ff5314;
-        }
-        .dot1 {
-          position: absolute;
-          left: -5px;
-          top: -5px;
-        }
-        .dot2 {
-          position: absolute;
-          right: -5px;
-          top: -5px;
-        }
-        .dot3 {
-          position: absolute;
-          left: -5px;
-          bottom: -5px;
-        }
-        .dot4 {
-          position: absolute;
-          right: -5px;
-          bottom: -5px;
-        }
+  @media screen and (min-width: 1025px) {
+    .mini-content {
+      border: 4px solid #fff !important;
+      .dot_orange {
+        width: 5px;
+        height: 5px;
+        background-color: #ff5314;
+      }
+      .dot1 {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+      }
+      .dot2 {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+      }
+      .dot3 {
+        position: absolute;
+        left: -5px;
+        bottom: -5px;
+      }
+      .dot4 {
+        position: absolute;
+        right: -5px;
+        bottom: -5px;
       }
     }
+  }
 
-    @media screen and (max-width: 1025px) {
-      .top_title {
-        display: none;
-      }
-      .big_title {
-        font-size: 17px !important;
-      }
-      .small_title {
-        font-size: 5px !important;
-        display: block !important;
-      }
-      .oldPrice {
-        /* text-align: right !important; */
-        margin-top: 10px !important;
-        display: flex;
-        justify-content: end;
-      }
-      .price {
-        display: flex !important;
-        justify-content: center !important;
-        align-content: center !important;
-      }
-      .btn_links {
-        font-size: 11px !important;
-        padding: 0 15px !important;
-      }
+  @media screen and (max-width: 1025px) {
+    .top_title {
+      display: none;
     }
+    .big_title {
+      font-size: 17px !important;
+    }
+    .small_title {
+      font-size: 5px !important;
+      display: block !important;
+    }
+    .oldPrice {
+      /* text-align: right !important; */
+      margin-top: 10px !important;
+      display: flex;
+      justify-content: end;
+    }
+    .price {
+      display: flex !important;
+      justify-content: center !important;
+      align-content: center !important;
+    }
+    .btn_links {
+      font-size: 11px !important;
+      padding: 0 15px !important;
+    }
+  }
 
-    @media screen and (max-width: 1000px) {
-      .threePhone {
-        width: 150px !important;
-        height: 60%;
-        margin-top: 50px;
-      }
-      .flex2 .threePhone_title {
-        font-size: 26px !important;
-      }
-      .flex3 .home_wonder_title {
-        font-size: 30px !important;
-      }
+  @media screen and (max-width: 1000px) {
+    .threePhone {
+      width: 150px !important;
+      height: 60%;
+      margin-top: 50px;
     }
+    .flex2 .threePhone_title {
+      font-size: 26px !important;
+    }
+    .flex3 .home_wonder_title {
+      font-size: 30px !important;
+    }
+  }
 
-    @media screen and (max-width: 830px) {
-      .threePhone {
-        width: 200px !important;
-        height: 65%;
-        margin-top: 60px;
-      }
-      .flex2 .threePhone_title {
-        font-size: 22px !important;
-      }
-      .btn_links {
-        font-size: 14px !important;
-        padding: 0 12px !important;
-      }
-      .title-section {
-        font-size: 20px !important;
-      }
+  @media screen and (max-width: 830px) {
+    .threePhone {
+      width: 200px !important;
+      height: 65%;
+      margin-top: 60px;
     }
-    @media screen and (max-width: 600px) {
-      .threePhone {
-        width: 120px !important;
-        height: 50%;
-      }
-      .flex2 .threePhone_title {
-        font-size: 12px !important;
-      }
+    .flex2 .threePhone_title {
+      font-size: 22px !important;
     }
-    .blue {
-      background-color: #2525eb;
+    .btn_links {
+      font-size: 14px !important;
+      padding: 0 12px !important;
     }
-    .orange {
-      background-color: #ff5314;
+    .title-section {
+      font-size: 20px !important;
     }
-    .flex1 {
-      .text {
-        padding: 10px 20px;
-        .subtitle {
-          font-weight: bold;
-          font-size: 11px;
-          line-height: 100%;
-        }
-        .title {
-          font-weight: bold;
-          font-size: 29.974px;
-          line-height: 100%;
-          text-transform: uppercase;
-        }
-      }
+  }
+  @media screen and (max-width: 600px) {
+    .threePhone {
+      width: 120px !important;
+      height: 50%;
+    }
+    .flex2 .threePhone_title {
+      font-size: 12px !important;
+    }
+  }
   @media screen and (max-width: 950px) {
     .four {
       display: none !important;
@@ -930,22 +920,22 @@ const HomeWrapper = styled.div`
     font-size: 45px;
     font-weight: bold;
   }
-  
+
   @media screen and (max-width: 1000px) {
-      .title-section {
-        font-size: 40px !important;        
-      } 
+    .title-section {
+      font-size: 40px !important;
     }
-    @media screen and (max-width:800px) {
-        .title-section {
-          font-size: 37px !important;
-        }
+  }
+  @media screen and (max-width: 800px) {
+    .title-section {
+      font-size: 37px !important;
     }
-    @media screen and (max-width: 650px) {
-      .title-section {
-        font-size: 31px !important;        
-      } 
+  }
+  @media screen and (max-width: 650px) {
+    .title-section {
+      font-size: 31px !important;
     }
+  }
 
   .brands {
     .button_bottom {
@@ -957,7 +947,6 @@ const HomeWrapper = styled.div`
       width: auto;
       border: none;
     }
-    //Slick
   }
   .home_photo {
     width: 150px;
