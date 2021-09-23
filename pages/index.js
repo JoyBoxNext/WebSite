@@ -161,7 +161,8 @@ export default function Home() {
                           с Samsung Galaxy A52
                         </p>
                         <p className="title mb-0 text-end small_title">
-                          заголовок <br /> редактируется <br /> через админ панель
+                          заголовок <br /> редактируется <br /> через админ
+                          панель
                         </p>
                       </div>
                       <div className="d-flex priceText justify-content-between">
@@ -175,7 +176,9 @@ export default function Home() {
                               от <p className="priceNum">15,845,000</p>
                             </div>
                           </div>
-                            <p className="rentPrice d-none">от 1,185,577 сум/мес</p>
+                          <p className="rentPrice d-none">
+                            от 1,185,577 сум/мес
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -278,7 +281,7 @@ export default function Home() {
           <Fade left>
             <div className="productDay px-lg-4 mt-5">
               <div className="row justify-content-center p-3 w-100">
-                <div className="col-12 col-sm-5 col-md-5 col-lg-5">
+                <div className="col-12 col-sm-4 col-md-5 col-lg-5">
                   <div className="productDayText m-0 mt-lg-3 ">
                     <div className="row pe-0">
                       <div className="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -298,10 +301,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-12 col-sm-7 col-md-7 col-lg-7 col-lg-7 d-flex justify-content-center align-items-center m-0">
+                <div className="col-12 col-sm-8 col-md-7 col-lg-7 col-lg-7 d-flex justify-content-center align-items-center m-0">
                   <div className={`productBoard `}>
                     <div className="row justify-content-center align-items-center">
-                      <div className="col-12 col-lg-6 col-xl-6">
+                      <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                         <h2 className="right_title">
                           Samsung side by side-washer
                         </h2>
@@ -313,8 +316,8 @@ export default function Home() {
                         </div>
                         <div className="priceContainer d-grid">
                           <div className="bgPrice w-100 rounded">
-                            <p className="price small">
-                              от <span className="price">15,845,000</span> сум
+                            <p className="small">
+                              от <span className="price__">15,845,000</span> сум
                             </p>
                           </div>
                           <img

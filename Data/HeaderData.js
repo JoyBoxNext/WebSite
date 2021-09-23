@@ -9,34 +9,34 @@ const links = [
   {
     link: "Аксессуары",
     href: "/homeTech",
-    className: "link2 d-block d-md-none",
+    className: "link_access",
   },
   {
     link: "Техника для дома",
     href: "/homeTech",
-    className: "link3 d-none d-lg-block",
+    className: "home",
   },
   {
     link: " Ноутбук, ПК, планшет",
     href: "/laptops",
-    className: "link4 d-none d-xl-block",
+    className: "laptop",
   },
   {
     link: "Для геймеров",
     href: "/gamers",
-    className: "link5 d-none d-xxl-block gamer",
+    className: "gamer",
   },
 ];
 
 const pages = [
-  { page: "Акции", href:"/baraxolka" },
-  { page: "Смартфоны", href:"/phones" },
-  { page: "Техника для кухни", href:"/kitchen" },
-  { page: "Техника для дома", href:"/homeTech" },
-  { page: "Телевизоры, аудиотехника", href:"/tv" },
-  { page: "Смарт-гаджеты", href:"/laptops" },
-  { page: "Фото, Видео, авто", href:"/" },
-  { page: "Дом, Сад", href:"/" },
+  { page: "Акции", href: "/baraxolka" },
+  { page: "Смартфоны", href: "/phones" },
+  { page: "Техника для кухни", href: "/kitchen" },
+  { page: "Техника для дома", href: "/homeTech" },
+  { page: "Телевизоры, аудиотехника", href: "/tv" },
+  { page: "Смарт-гаджеты", href: "/laptops" },
+  { page: "Фото, Видео, авто", href: "/" },
+  { page: "Дом, Сад", href: "/" },
 ];
 
 export { links, pages };

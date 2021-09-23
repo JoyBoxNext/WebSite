@@ -18,8 +18,31 @@ const HeaderWrapper = styled.div`
   .flex {
     display: flex;
   }
+  .link_access {
+    display: none;
+  }
+  .gamer,
+  .home,
+  .laptop {
+    display: block !important;
+  }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1510px) {
+    .gamer {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    .laptop {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 1030px) {
+    .home {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 600px) {
     .flex {
       display: flex !important;
       flex-direction: column !important;

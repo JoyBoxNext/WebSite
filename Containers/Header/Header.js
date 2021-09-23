@@ -177,7 +177,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="w-100 mt-3 d-flex justify-content-between align-items-center category">
+        <div className="w-100 mt-3 d-flex  align-items-center category">
           <div className="flex position-relative">
             <Button
               className="Categories mb-3"

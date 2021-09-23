@@ -288,32 +288,88 @@ const HomeWrapper = styled.div`
           padding: 0;
           margin: 0;
         }
-        .price {
-          font-size: 18px !important;
+        .price__ {
+          font-size: 18px;
           margin: 0;
           padding: 0;
         }
       }
-      @media screen and (max-width: 700px) {
-        .priceContainer {
-          display: flex;
-          align-items: center;
+    }
+
+    @media screen and (max-width: 920px) {
+      .productBoard {
+        padding: 20px !important;
+      }
+    }
+    @media screen and (max-width: 850px) {
+      .productBoard {
+        padding: 20px !important;
+        .right_title {
+          font-size: 17px !important;
         }
-        .productDay {
-          padding: 0 !important;
+        .price__ {
+          font-size: 13px !important;
         }
       }
-      @media screen and (max-width: 500px) {
-        .priceContainer {
-          display: block;
-          align-items: center;
-          .bgPrice {
-            width: 100%;
-          }
+    }
+    @media screen and (max-width: 720px) {
+      .priceContainer {
+        display: flex;
+        align-items: center;
+      }
+      .productDay {
+        padding: 0 !important;
+      }
+      .right_green_price,
+      .oldPrice {
+        font-size: 10px !important;
+      }
+      .price__ {
+        font-size: 10px !important;
+      }
+      .productDayWasher {
+        width: 180px !important;
+      }
+    }
+
+    @media screen and (max-width: 690px) {
+      .priceContainer {
+        display: flex;
+        align-items: center;
+      }
+      .productDay {
+        padding: 0 !important;
+      }
+      .right_green_price,
+      .oldPrice {
+        font-size: 9px !important;
+      }
+      .productDayWasher {
+        width: 165px !important;
+      }
+      .right_title {
+        font-size: 4px;
+      }
+      .productBoard {
+        .price__ {
+          font-size: 10px !important;
         }
-        .productDay {
-          padding: 0 !important;
+        .small {
+          font-size: 1px !important;
         }
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .priceContainer {
+        display: block;
+        align-items: center;
+        .bgPrice {
+          width: 100%;
+        }
+      }
+      .productDay {
+        padding: 0 !important;
       }
     }
     .yellowCont {

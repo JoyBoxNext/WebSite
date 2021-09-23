@@ -56,14 +56,33 @@ const ActiveLinkWrapper = styled.div`
   }
   @media screen and (max-width: 1450px) {
     button {
-      padding: 7px 32px !important;
+      padding: 7px 31px !important;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    button {
+      padding: 7px 22px !important;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    button {
+      padding: 7px 18px !important;
+    }
+  }
+  @media screen and (max-width: 670px) {
+    button {
+      padding: 7px 10px !important;
+      font-size: 15px !important;
     }
   }
   @media screen and (max-width: 600px) {
     button {
       border: 1px solid black;
       border-radius: 5px;
-      margin: 15px 8px 0px 0px;
+      margin: 15px 8px 10px 0px;
+    }
+    .link_access {
+      display: block !important;
     }
   }
 `;
