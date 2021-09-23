@@ -73,7 +73,7 @@ export default function Home() {
                   <h1 className="mb-3 big_title">Удиви своих друзей!</h1>
                 </div>
                 <div className="mini-content p-0">
-                  <div className="p-2">
+                  <div className="p-2 pe-0">
                     <p className="textPlayS">PlayStation 5 Digital version</p>
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="title mb-0 text-end small_title d-none">
@@ -83,17 +83,18 @@ export default function Home() {
                         с Samsung Galaxy A52
                       </p>
                     </div>
-                    <div className="d-flex justify-content-between">
+                    <div className="textPrice">
                       <p className="subtitle top_title">
                         редактируется <br /> через админ панель
                       </p>
-                      <div className="d-block">
+                      <div className="d-block prices">
                         <p className="oldPrice ">18,577,000</p>
                         <div className="priceDec">
                           <div className="price d-flex">
                             от <p className="priceNum">15,845,000</p> сум
                           </div>
                         </div>
+                        <p className="rentPrice d-none">от 1,185,577 сум/мес</p>
                       </div>
                     </div>
                   </div>
@@ -156,11 +157,11 @@ export default function Home() {
                         PlayStation 5 Digital version
                       </p>
                       <div className="d-flex titles-1 justify-content-between align-items-center">
-                        <p className="title mb-0 text-end small_title d-none">
-                          заголовок редактируется через админ панель
-                        </p>
-                        <p className="title mb-0 text-end d-none">
+                        <p className="title mb-0 text-end">
                           с Samsung Galaxy A52
+                        </p>
+                        <p className="title mb-0 text-end small_title">
+                          заголовок <br /> редактируется <br /> через админ панель
                         </p>
                       </div>
                       <div className="d-flex priceText justify-content-between">
@@ -171,16 +172,17 @@ export default function Home() {
                           <p className="oldPrice ">18,577,000</p>
                           <div className="priceDec">
                             <div className="price d-flex">
-                              от <p className="priceNum">15,845,000</p> сум
+                              от <p className="priceNum">15,845,000</p>
                             </div>
                           </div>
+                            <p className="rentPrice d-none">от 1,185,577 сум/мес</p>
                         </div>
                       </div>
                     </div>
                     <div className="d-flex  justify-content-between  w-100">
                       <img className="top_title" src="logo3.png" alt="photo" />
                       <p className="bottom-text w-auto">
-                        Магазин бытовой техники <br /> и электроники
+                        Магазин бытовой техники и электроники
                       </p>
                     </div>
                     <div className="dot_orange dot1"></div>

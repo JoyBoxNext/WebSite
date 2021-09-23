@@ -40,7 +40,7 @@ const HomeWrapper = styled.div`
       }
       .subtitle {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 100%;
       }
       .oldPrice {
@@ -57,12 +57,13 @@ const HomeWrapper = styled.div`
       .priceDec {
         background-color: #ff5314;
         padding: 7px 4px;
-        margin-right: -8px !important;
+        /* margin-right: -8px !important; */
         .price {
           font-size: 10px;
           line-height: 100%;
           padding: 0;
           margin: 0;
+          align-items: baseline !important;
           .priceNum {
             font-size: 16px;
             line-height: 100%;
@@ -100,6 +101,10 @@ const HomeWrapper = styled.div`
           line-height: 100%;
           text-transform: uppercase;
         }
+      }
+      .textPrice {
+        display: flex;
+        justify-content: space-between;
       }
     }
     .flex2 {
@@ -148,7 +153,7 @@ const HomeWrapper = styled.div`
         display: none;
       }
       .flex2 {
-        width: 65% !important;
+        width: 62.1% !important;
         /* height: 250px !important; */
         img {
           margin: 30px 0 30px 0 !important;
@@ -158,23 +163,11 @@ const HomeWrapper = styled.div`
         }
       }
       .flex3 {
-        width: 30% !important;
         .home_wonder_title {
           font-weight: bold;
           font-size: 15px !important;
           line-height: 100% !important;
         }
-      }
-      .flex4 {
-        width: 5% !important;
-      }
-      .flex5 {
-      }
-      .flex6 {
-        width: 30% !important;
-      }
-      .flex7 {
-        width: 5% !important;
       }
       .flex8 {
         padding: 10px 0 10px 10px !important;
@@ -208,6 +201,10 @@ const HomeWrapper = styled.div`
               padding: 0;
             }
           }
+          .rentPrice {
+            display: flex;
+            font-size: 12px !important;
+          }
         }
         .mini-content {
           display: flex !important;
@@ -217,14 +214,17 @@ const HomeWrapper = styled.div`
             display: none;
           }
           .titles-1 {
-            display: flex;
-            flex-direction: column-reverse;
+            display: grid !important;
             width: 65%;
             .samsung_title {
               font-size: 9px;
             }
             .small_title {
+              display: block !important;
               align-items: end !important;
+              margin-top: 50px !important;
+              font-size: 5px;
+              line-height: 100%;
             }
             .text-end {
               text-align: left !important;
@@ -236,14 +236,16 @@ const HomeWrapper = styled.div`
         }
       }
       .flex9 {
-        width: 30% !important;
+        padding: 10px !important;
+        display: flex !important;
+        align-items: center !important;
         p {
-          font-weight: normal;
-          font-size: 10px;
+          font-weight: normal !important;
+          font-size: 10px !important;
+          line-height: 100% !important;
         }
       }
       .flex10 {
-        width: 5% !important;
       }
     }
   }
@@ -828,6 +830,12 @@ const HomeWrapper = styled.div`
 
   @media screen and (max-width: 1025px) {
     .container-1 {
+      .big_title {
+        font-weight: bold;
+        font-size: 27px !important;
+        line-height: 100%;
+        text-transform: uppercase;
+      }
       .text {
         padding: 10px 10px !important;
         .top_title1 {
@@ -840,7 +848,42 @@ const HomeWrapper = styled.div`
       .textPlayS {
         display: none !important;
       }
+      .samsung_title {
+        display: flex !important;
+      }
+      .subtitle,
+      .top_title {
+        display: none !important;
+      }
+      .textPrice {
+        display: flex !important;
+        justify-content: flex-end !important;
+      }
+      .miniContentLogo {
+        display: none;
+      }
+      .rentPrice {
+        display: flex !important;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 100%;
+      }
+      .bottom-text {
+        display: none !important;
+      }
+      .priceNum {
+        font-weight: bold;
+        font-size: 29px;
+        line-height: 100%;
+        letter-spacing: 0.045em;
+        text-transform: lowercase;
+        align-items: flex-end !important;
+      }
     }
+    .threePhone {
+      margin: auto !important;
+    }
+
     .big_title {
       font-size: 17px !important;
     }
@@ -946,6 +989,25 @@ const HomeWrapper = styled.div`
   @media screen and (max-width: 800px) {
     .title-section {
       font-size: 37px !important;
+    }
+    .container-1 {
+      .flex1 {
+        .rentPrice {
+          font-weight: normal;
+          font-size: 13px !important;
+          line-height: 100%;
+          margin: 5px !important;
+        }
+      }
+      .threePhone_title {
+        font-weight: bold;
+        font-size: 23px !important;
+        line-height: 100%;
+        .threePhone {
+          width: auto !important;
+          height: auto !important;
+        }
+      }
     }
   }
   @media screen and (max-width: 650px) {
