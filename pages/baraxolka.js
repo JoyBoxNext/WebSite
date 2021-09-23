@@ -4,8 +4,6 @@ import { baraxolkaPhones } from "../Data/data";
 import Container from "./../Containers/Container";
 import Header from "./../Containers/Header/Header";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import BaraxollaWrapper from "../Wrappers/BaraxolkaWrapper";
 import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
@@ -61,7 +59,7 @@ const Product = () => {
         <BaraxollaWrapper>
           <div className="d-flex">
             <div className="Sidebar">
-              <div className="container">
+              <div className="">
                 <Fade top>
                   <div className="baraxolka_padding">
                     <h1 className="title">Барахолка!</h1>
@@ -111,7 +109,7 @@ const Product = () => {
                             <Link href="/productCard">
                               <a>
                                 <div className="cards_border">
-                                  <img src="skidka.jpg" alt="photo" />
+                                  <img src="skidka.svg" alt="photo" />
                                   <div className="px-3">
                                     <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                                       <img

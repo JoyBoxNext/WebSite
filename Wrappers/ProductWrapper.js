@@ -213,7 +213,7 @@ const ProductWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 465px;
+          height: 475px;
           z-index: 700;
         }
       }
