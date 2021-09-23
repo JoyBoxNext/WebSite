@@ -14,7 +14,6 @@ const ProductCardWrapper = styled.div`
     font-weight: bold;
     font-size: 45.3237px;
     line-height: 100%;
-    
   }
   .badge {
     background-color: #d3e38c;
@@ -191,34 +190,34 @@ const ProductCardWrapper = styled.div`
       }
     }
     .dot_orange {
-        width: 6px;
-        height: 6px;
-        background-color: #ff5314;
-      }
-      .dot1 {
-        position: absolute;
-        left: -6px;
-        top: -6px;
-        background-color: #ff5314;
-      }
-      .dot2 {
-        position: absolute;
-        right: -6px;
-        top: -6px;
-        background-color: #ff5314;
-      }
-      .dot3 {
-        position: absolute;
-        left: -6px;
-        bottom: -6px;
-        background-color: #ff5314;
-      }
-      .dot4 {
-        position: absolute;
-        right: -6px;
-        bottom: -6px;
-        background-color: #ff5314;
-      }
+      width: 6px;
+      height: 6px;
+      background-color: #ff5314;
+    }
+    .dot1 {
+      position: absolute;
+      left: -6px;
+      top: -6px;
+      background-color: #ff5314;
+    }
+    .dot2 {
+      position: absolute;
+      right: -6px;
+      top: -6px;
+      background-color: #ff5314;
+    }
+    .dot3 {
+      position: absolute;
+      left: -6px;
+      bottom: -6px;
+      background-color: #ff5314;
+    }
+    .dot4 {
+      position: absolute;
+      right: -6px;
+      bottom: -6px;
+      background-color: #ff5314;
+    }
   }
 
   .newProducts {
@@ -541,7 +540,7 @@ const ProductCardWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width:1440px) and (min-width:1200px) {
+  @media screen and (max-width: 1440px) and (min-width: 1200px) {
     .firstContainer {
       .characteristic-container {
         width: 30% !important;
@@ -698,7 +697,7 @@ const ProductCardWrapper = styled.div`
       font-size: 14px;
       .p-text {
         order: 2;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 13.8982px;
