@@ -681,19 +681,7 @@ const HomeWrapper = styled.div`
       }
     }
   }
-  .bag {
-    background-color: #ff5314;
-    padding: 20px;
-    margin: auto;
-    border-radius: 50%;
-    position: relative;
-    img {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+  
   @media screen and (max-width: 1200px) {
     .new-products .title {
       font-size: 13px !important;
@@ -915,12 +903,6 @@ const HomeWrapper = styled.div`
       }
     }
   }
-
-  .title-section {
-    font-size: 45px;
-    font-weight: bold;
-  }
-
   @media screen and (max-width: 1000px) {
     .title-section {
       font-size: 40px !important;
@@ -936,7 +918,10 @@ const HomeWrapper = styled.div`
       font-size: 31px !important;
     }
   }
-
+  .title-section {
+    font-size: 45px;
+    font-weight: bold;
+  }
   .brands {
     .button_bottom {
       padding: 10px 40px;
@@ -953,6 +938,19 @@ const HomeWrapper = styled.div`
   }
   .apple {
     width: 100px;
+  }
+  .bag {
+    background-color: #ff5314;
+    padding: 20px;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 `;
 
