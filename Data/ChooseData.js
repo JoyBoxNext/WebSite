@@ -8,6 +8,7 @@ const ChooseData = [
     price: ",470,999 ",
     rentPrice: "1 362 000",
     save: false,
+    className: "mt-5",
   },
 
   {
@@ -57,4 +58,4 @@ const ChooseData = [
   },
 ];
 
-export  {ChooseData};
+export { ChooseData };

@@ -252,7 +252,7 @@ const BaraxollaWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 550px !important;
+          height: 520px !important;
           z-index: 700;
         }
       }

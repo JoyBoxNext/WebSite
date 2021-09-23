@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="row">
           {FooterData.map((v, i) => {
             return (
-              <div key={i} className="col-sm-6 col-md-4 p-5">
+              <div key={i} className="col-sm-6 col-md-6 col-lg-4 p-5">
                 <div className="">
                   <h4 className="fw-bold mb-4">{v.title}</h4>
                   {v.subtitle.map((v, i) => {

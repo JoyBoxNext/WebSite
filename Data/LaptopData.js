@@ -1,6 +1,6 @@
 const LaptopData = [
   {
-    img: "Laptop.png",
+    img: "laptop.svg",
     title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -10,7 +10,7 @@ const LaptopData = [
     save: false,
   },
   {
-    img: "Laptop.png",
+    img: "laptop.svg",
     title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -20,7 +20,7 @@ const LaptopData = [
     save: false,
   },
   {
-    img: "Laptop.png",
+    img: "laptop.svg",
     title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -30,7 +30,7 @@ const LaptopData = [
     save: false,
   },
   {
-    img: "Laptop.png",
+    img: "laptop.svg",
     title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -40,7 +40,7 @@ const LaptopData = [
     save: false,
   },
   {
-    img: "Laptop.png",
+    img: "laptop.svg",
     title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -50,7 +50,7 @@ const LaptopData = [
     save: false,
   },
   {
-    img: "Laptop.png",
+    img: "laptop.svg",
     title: "НОУТБУК ACER NITRO 5 16’ AN515 amd Ryzen 5 4600H, 16 ram, 512ssd",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
