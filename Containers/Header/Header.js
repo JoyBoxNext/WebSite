@@ -14,11 +14,17 @@ import Fade from "react-reveal/Fade";
 import ActiveLink from "../../activeLink";
 
 const Header = () => {
+  const [openInput, setOpenInput] = useState(false);
+
   const [openSave, setOpenSave] = useState(true);
 
   const [searchTerm, setSearchTerm] = useState("");
 
   const [anchorEl, setAnchorEl] = useState(false);
+
+  const open = () => {
+    setOpenInput(!openInput);
+  };
 
   const handleOpenMenu = () => {
     setAnchorEl(!anchorEl);
@@ -70,10 +76,6 @@ const Header = () => {
     newFilterData?.length,
     indeX,
   ]);
-  const [openInput, setOpenInput] = useState(false);
-  const open = () => {
-    setOpenInput(!openInput);
-  };
   const savedataproduct = useSelector((state) => state.BooksReducer.savedata);
   return (
     <HeaderWrapper>

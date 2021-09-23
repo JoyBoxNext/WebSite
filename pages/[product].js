@@ -346,7 +346,7 @@ const Category = () => {
                   return (
                     <div
                       key={index}
-                      className="col-10 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
+                      className="col-10 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
                     >
                       <div className="cards_border mb-4">
                         <img className="skidka" src="skidka.jpg" alt="photo" />
@@ -397,7 +397,7 @@ const Category = () => {
                         <div className="d-flex justify-content-between align-items-center ">
                           <p className="mb-0 desc ms-2">{value.desc}</p>
                           <button
-                            onClick={() => saveProduct(index)}
+                            // onClick={() => saveProduct(index)}
                             className="border-0 save_btn"
                           >
                             <img
@@ -421,22 +421,6 @@ const Category = () => {
                   );
                 })}
                 {data?.length === 0 ? "Product not fined" : ""}
-                <div className="my-2 bottom_text">
-                  <h1 className="text my-4">
-                    Часто задаваемые вопросы про Смартфоны
-                  </h1>
-                  <ul>
-                    {bottomText.map((value, index) => {
-                      return (
-                        <li className="li p-2" key={index}>
-                          <img className="me-2" src={value.img} alt="photo" />
-                          {value.title}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  <Messeger />
-                </div>
               </div>
             </div>
           </div>
@@ -481,7 +465,7 @@ const Category = () => {
                               <div className="d-flex justify-content-between align-items-center">
                                 <p className="mb-0 desc">{value.desc}</p>
                                 <button
-                                  onClick={() => saveRightProduct(index)}
+                                  // onClick={() => saveRightProduct(index)}
                                   className="border-0 bag p-0"
                                 >
                                   <img
@@ -501,27 +485,8 @@ const Category = () => {
               </div>
             </Fade>
           </div>
-          <div className="my-2 d-none bottom_block_text  d-flex justify-content-center align-items-center m-auto">
-            <Zoom bottom>
-              <h1 className="text my-4 ">
-                Часто задаваемые вопросы про Смартфоны
-              </h1>
-            </Zoom>
-            <ul className="m-auto">
-              {bottomText.map((value, index) => {
-                return (
-                  <li className="li" key={index}>
-                    <img className="me-1" src={value.img} alt="photo" />
-                    {value.title}
-                  </li>
-                );
-              })}
-            </ul>
-            <Fade top>
-              <Messeger />
-            </Fade>
-          </div>
         </div>
+        <Messeger />
       </ProductWrapper>
       <Footer />
     </>
