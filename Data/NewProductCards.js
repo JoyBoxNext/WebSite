@@ -17,7 +17,7 @@ const NewProductCards = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
-    className: "two",
+    className: "twoNew",
     save: false,
   },
   {
@@ -28,7 +28,7 @@ const NewProductCards = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
-    className: "three",
+    className: "threeNew",
     save: false,
   },
   {
@@ -39,7 +39,7 @@ const NewProductCards = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
-    className: "four",
+    className: "fourNew",
     save: false,
   },
   {
@@ -50,7 +50,7 @@ const NewProductCards = [
     priceBig: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
-    className: "five",
+    className: "fiveNew",
     save: false,
   },
 ];

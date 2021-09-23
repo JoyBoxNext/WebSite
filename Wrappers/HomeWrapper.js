@@ -16,7 +16,7 @@ const HomeWrapper = styled.div`
       font-size: 14px !important;
     }
     .threePhone {
-      width: 250px !important;
+      width: 250px;
       object-fit: contain !important;
     }
     .text {
@@ -170,7 +170,7 @@ const HomeWrapper = styled.div`
         }
       }
       .flex8 {
-        padding: 10px 0 10px 10px !important;
+        /* padding: 10px 0 10px 10px !important; */
         .mini-content-flex8 {
           display: block !important;
           position: relative;
@@ -196,6 +196,7 @@ const HomeWrapper = styled.div`
             background-color: #ff5314;
             align-items: center;
             padding: 5px 5px 5px 0;
+            margin: 5px auto !important;
             .priceNum {
               margin: 0;
               padding: 0;
@@ -342,6 +343,7 @@ const HomeWrapper = styled.div`
       .card {
         border: 2px solid #ff8253;
         margin: auto;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
         .title {
           line-height: 16px !important;
           font-size: 12px;
@@ -410,6 +412,7 @@ const HomeWrapper = styled.div`
         margin-bottom: 10px !important;
         padding: 0 !important;
         margin: 0 !important;
+        text-transform: uppercase !important;
       }
       .small {
         .oldPrice {
@@ -515,6 +518,7 @@ const HomeWrapper = styled.div`
           line-height: 16px;
           font-size: 14px;
           margin-bottom: 10px !important;
+          text-transform: uppercase !important;
         }
         .small {
           .oldPrice {
@@ -591,13 +595,33 @@ const HomeWrapper = styled.div`
   @media screen and (max-width: 750px) {
     .discount {
       position: absolute !important;
-      top: 13.5px !important;
-      left: 121px !important;
+      /* top: 13.5px !important;
+      left: 121px !important; */
+      top: 0px !important;
+      left: 0px !important;
     }
     .acer {
       position: absolute !important;
       top: 55px !important;
       left: 47% !important;
+    }
+
+    .new-products {
+      .new-product-card {
+        .oldPrice,
+        .sum {
+          font-size: 10px !important;
+          line-height: 115%;
+        }
+        .badgePrice {
+          display: flex;
+          align-items: center !important;
+          p {
+            font-size: 10px;
+            line-height: 115%;
+          }
+        }
+      }
     }
   }
   @media screen and (max-width: 700px) {
@@ -619,13 +643,7 @@ const HomeWrapper = styled.div`
   .laptops {
     padding: 0 16px;
     margin-bottom: 30px;
-    position: relative;
     height: auto;
-    .discount {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-    }
     .acer {
       position: absolute;
       top: 55px;
@@ -648,12 +666,14 @@ const HomeWrapper = styled.div`
     .laptop-card {
       border: 2px solid #2525eb;
       margin: auto;
+      position: relative;
       .title {
         line-height: 16px !important;
         font-size: 12px;
         margin-bottom: 10px !important;
         padding: 0 !important;
         margin: 0 !important;
+        text-transform: uppercase !important;
       }
       .small {
         .oldPrice {
@@ -692,6 +712,11 @@ const HomeWrapper = styled.div`
       .bag {
         background-color: #ff5314;
       }
+      .discount {
+      position: absolute;
+      top: 0px !important;
+      left: 0px !important;
+    }
     }
   }
 
@@ -783,7 +808,7 @@ const HomeWrapper = styled.div`
   }
   @media screen and (max-width: 1200px) {
     .threePhone {
-      width: 180px !important;
+      /* width: 180px !important; */
       height: 80%;
       margin-top: 25px;
     }
@@ -799,6 +824,11 @@ const HomeWrapper = styled.div`
     }
     .productDayText .left_clock {
       font-size: 10px !important;
+    }
+  }
+  @media screen and (max-width: 1070px) {
+    .fiveNew {
+      display: none !important;
     }
   }
 
@@ -853,8 +883,12 @@ const HomeWrapper = styled.div`
       .textPlayS {
         display: none !important;
       }
+      .small_title {
+        padding: 10px;
+      }
       .samsung_title {
         display: flex !important;
+        padding: 10px;
       }
       .subtitle,
       .top_title {
@@ -929,7 +963,6 @@ const HomeWrapper = styled.div`
 
   @media screen and (max-width: 830px) {
     .threePhone {
-      width: 200px !important;
       height: 65%;
       margin-top: 60px;
     }
@@ -957,9 +990,39 @@ const HomeWrapper = styled.div`
     .four {
       display: none !important;
     }
+    .new-products {
+      .new-product-card {
+        .oldPrice,
+        .sum {
+          font-size: 7px !important;
+          line-height: 115%;
+        }
+        .badgePrice {
+          display: flex;
+          align-items: center !important;
+          p {
+            font-size: 5px;
+            line-height: 115%;
+          }
+        }
+        .prices {
+          font-size: 13px;
+          line-height: 92%;
+          margin-top: 5px;
+        }
+      }
+    }
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 780px) {
+    .fourNew {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 750px) {
     .three {
+      display: none !important;
+    }
+    .fourNew {
       display: none !important;
     }
     .lg {
@@ -1018,6 +1081,36 @@ const HomeWrapper = styled.div`
   @media screen and (max-width: 650px) {
     .title-section {
       font-size: 31px !important;
+    }
+    .threeNew {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width:450px) {
+    .twoNew {
+      display: none !important;
+    }
+    .new-products {
+      .new-product-card {
+        .oldPrice,
+        .sum {
+          font-size: 12px !important;
+          line-height: 115%;
+        }
+        .badgePrice {
+          display: flex;
+          align-items: center !important;
+          p {
+            font-size: 10px;
+            line-height: 115%;
+          }
+        }
+        .prices {
+          font-size: 30px;
+          line-height: 92%;
+          margin-top: 5px;
+        }
+      }
     }
   }
   .title-section {
