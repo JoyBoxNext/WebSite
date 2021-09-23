@@ -153,7 +153,7 @@ const Product = () => {
                                     <div className="d-flex justify-content-between align-items-center">
                                       <p className="mb-0 desc">{value.desc}</p>
                                       <button
-                                        onClick={() => savebaraxolka(index)}
+                                        // onClick={() => savebaraxolka(index)}
                                         className="border-0 bag m-0 mb-2"
                                       >
                                         <img
@@ -253,7 +253,7 @@ const Product = () => {
                                     <div className="d-flex justify-content-between align-items-center">
                                       <p className="mb-0 desc">{value.desc}</p>
                                       <button
-                                        onClick={() => savebaraxolka(index)}
+                                        // onClick={() => savebaraxolka(index)}
                                         className="border-0 bag m-0 mb-2"
                                       >
                                         <img
@@ -340,7 +340,7 @@ const Product = () => {
                                     <div className="d-flex justify-content-between align-items-center">
                                       <p className="mb-0 desc">{value.desc}</p>
                                       <button
-                                        onClick={() => savebaraxolka(index)}
+                                        // onClick={() => savebaraxolka(index)}
                                         className="border-0 bag m-0 mb-2"
                                       >
                                         <img

@@ -259,7 +259,7 @@ export default function Home() {
                               </p>
                             </div>
                             <button
-                              onClick={() => saveNotebookData(i)}
+                              // onClick={() => saveNotebookData(i)}
                               className="border-0 bag"
                             >
                               <img
@@ -426,7 +426,7 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  onClick={() => saveChooseDatas(i)}
+                                  // onClick={() => saveChooseDatas(i)}
                                   className="border-0 bag"
                                 >
                                   <img
@@ -507,7 +507,7 @@ export default function Home() {
                                 </p>
                               </div>
                               <button
-                                onClick={() => saveProduct(index)}
+                                // onClick={() => saveProduct(index)}
                                 className="border-0 bag"
                               >
                                 <img
@@ -624,7 +624,7 @@ export default function Home() {
                                     </p>
                                   </div>
                                   <button
-                                    onClick={() => saveProduct(index)}
+                                    // onClick={() => saveProduct(index)}
                                     className="border-0 bag"
                                   >
                                     <img

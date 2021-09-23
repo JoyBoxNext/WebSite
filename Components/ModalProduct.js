@@ -1,6 +1,6 @@
 import { Button } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
-import React, { useState } from "react";
+import React from "react";
 import ModalProductWrapper from "../Wrappers/ModalProductWrapper";
 
 const ModalProduct = ({ openInput, open }) => {
