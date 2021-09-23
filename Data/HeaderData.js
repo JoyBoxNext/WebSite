@@ -1,16 +1,15 @@
 const links = [
-  { link: "Скидки", href: "/baraxolka", className: "ms-3" },
+  { link: "Скидки", href: "/baraxolka" },
   { link: "Смартфоны", href: "/phones" },
   { link: "ТВ", href: "/tv" },
   {
     link: "Техника для кухни",
     href: "/kitchen",
-    className: "link1 col-12",
   },
   {
     link: "Аксессуары",
     href: "/homeTech",
-    className: "link2 mx-4 d-block d-md-none",
+    className: "link2 d-block d-md-none",
   },
   {
     link: "Техника для дома",

@@ -1,20 +1,19 @@
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
-const bigCategores = [
-  {
-    title: "Популярные фильтры",
-    icon: faAngleUp,
-    category: [
-      { subtitle: "Кредит" },
-      { subtitle: "Оплата частями" },
-      { subtitle: "Акции" },
-      { subtitle: "Скидки" },
-      { subtitle: "Подарки" },
-    ],
-  },
-];
-
 const categoriesPhone = [
+  {
+    name: {
+      title: "Популярные фильтры",
+      icon: faAngleUp,
+      category: [
+        { title: "Кредит" },
+        { title: "Оплата частями" },
+        { title: "Акции" },
+        { title: "Скидки" },
+        { title: "Подарки" },
+      ],
+    },
+  },
   {
     name: {
       title: "Торговая марка",
@@ -62,6 +61,7 @@ const categoriesPhone = [
     },
   },
 ];
+
 const categoriesTv = [
   {
     name: {
@@ -883,7 +883,6 @@ const home_images = [
 ];
 
 export {
-  bigCategores,
   categoriesPhone,
   categoriesTv,
   phones,

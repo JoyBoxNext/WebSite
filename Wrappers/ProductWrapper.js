@@ -567,6 +567,23 @@ const ProductWrapper = styled.div`
       }
     }
   }
+  .filter_sm {
+    display: none;
+    border: 1px solid black;
+    padding: 5px 28px;
+    border-radius: 7px;
+    background-color: white;
+  }
+  @media screen and (max-width: 520px) {
+    .filter_sm {
+      display: block !important;
+    }
+    .left_access {
+    }
+  }
+  .left_access {
+    display: block;
+  }
 `;
 
 export default ProductWrapper;

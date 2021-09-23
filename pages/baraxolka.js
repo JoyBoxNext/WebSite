@@ -81,176 +81,181 @@ const Product = () => {
   const baraxolkas = useSelector((state) => state.BooksReducer.baraxolkaData);
 
   return (
-    <Container>
-      <Header />
-      <BaraxollaWrapper>
-        <div className="d-flex">
-          <div className="Sidebar">
-            <div className="container">
-              <Fade top>
-                <div className="baraxolka_padding">
-                  <h1 className="title">Барахолка!</h1>
-                  <p className="subtitle">
-                    Сервис объединяет тысячи частных объявлений и коммерческих
-                    предложений от организаций. Легко ориентироваться в обширном
-                    информационном пространстве помогают удобный интерфейс и
-                    эффективная поисковая система Для просмотра и поиска
-                    объявлений регистрация не нужна.
-                  </p>
+    <>
+      <Container>
+        <Header />
+        <BaraxollaWrapper>
+          <div className="d-flex">
+            <div className="Sidebar">
+              <div className="container">
+                <Fade top>
+                  <div className="baraxolka_padding">
+                    <h1 className="title">Барахолка!</h1>
+                    <p className="subtitle">
+                      Сервис объединяет тысячи частных объявлений и коммерческих
+                      предложений от организаций. Легко ориентироваться в
+                      обширном информационном пространстве помогают удобный
+                      интерфейс и эффективная поисковая система Для просмотра и
+                      поиска объявлений регистрация не нужна.
+                    </p>
 
-                  <ul className="subtitle">
-                    Часто задаваемые вопросы про Смартфоныs
-                    <li className="subtitle">— покупателя;</li>
-                    <li className="subtitle">— клиента</li>
-                    <li className="subtitle">— поставщика услуги;</li>
-                    <li className="subtitle">— товар.</li>
-                  </ul>
-                </div>
-              </Fade>
-              <div className={classes.root}>
-                <Zoom>
-                  <AppBar className="shadow-none mb-5 appbar" position="static">
-                    <Tabs
-                      value={value}
-                      onChange={handleChange}
-                      aria-label="simple tabs example"
+                    <ul className="subtitle">
+                      Часто задаваемые вопросы про Смартфоныs
+                      <li className="subtitle">— покупателя;</li>
+                      <li className="subtitle">— клиента</li>
+                      <li className="subtitle">— поставщика услуги;</li>
+                      <li className="subtitle">— товар.</li>
+                    </ul>
+                  </div>
+                </Fade>
+                <div className={classes.root}>
+                  <Zoom>
+                    <AppBar
+                      className="shadow-none mb-5 appbar"
+                      position="static"
                     >
-                      <Tab
-                        className="item_one rounded mx-2"
-                        label="Полная цена"
-                        {...a11yProps(0)}
-                      />
-                      <Tab
-                        className="item_two rounded mx-2"
-                        label="По возрастанию"
-                        {...a11yProps(1)}
-                      />
-                      <Tab
-                        className="item_three rounded mx-2 m-0"
-                        label="По убыванию"
-                        {...a11yProps(2)}
-                      />
-                    </Tabs>
-                  </AppBar>
-                </Zoom>
-                <TabPanel value={value} index={0}>
-                  <div className="row justify-content-center ">
-                    {baraxolkas?.map((value, index) => {
-                      return (
-                        <div
-                          className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
-                          key={index}
-                        >
-                          <Link href="/productCard">
-                            <a>
-                              <div className="cards_border">
-                                <img src="skidka.jpg" alt="photo" />
-                                <div className="px-3">
-                                  <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                                    <img
-                                      className="baraxolka_photo"
-                                      src={value.img}
-                                      alt="photo"
-                                    />
-                                    <div className="colorBoxes flex-column mb-5">
-                                      <div className="p-1">
-                                        <div className="col-3 colorBox black"></div>
-                                      </div>
-                                      <div className="p-1">
-                                        <div className="col-3 colorBox white"></div>
-                                      </div>
-                                      <div className="p-1">
-                                        <div className="col-3 colorBox green"></div>
-                                      </div>
-                                      <div className="p-1">
-                                        <div className="col-3 colorBox gray"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <h5 className="fw-bold my-2 text model fw-bold">
-                                    {value.title}
-                                  </h5>
-                                  <div className="d-flex align-items-center">
-                                    <p className="mb-0 bg_success aksiya__">
-                                      {value.aksiya_}
-                                    </p>
-                                    <p className="mb-0 text_secondary aksiya ms-4">
-                                      {value.aksiya}
-                                    </p>
-                                  </div>
-                                  <h4 className="fw-bold price mb-0 mt-2">
-                                    <span className="big_text mb-0">
-                                      {value.big_price}
-                                    </span>
-                                    {value.price}
-                                  </h4>
-                                  <div className="d-flex justify-content-between align-items-center">
-                                    <p className="mb-0 desc">{value.desc}</p>
-                                    <button
-                                      onClick={() => savebaraxolka(index)}
-                                      className="border-0 bag m-0 mb-2"
-                                    >
+                      <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        aria-label="simple tabs example"
+                      >
+                        <Tab
+                          className="item_one rounded mx-2"
+                          label="Полная цена"
+                          {...a11yProps(0)}
+                        />
+                        <Tab
+                          className="item_two rounded mx-2"
+                          label="По возрастанию"
+                          {...a11yProps(1)}
+                        />
+                        <Tab
+                          className="item_three rounded mx-2 m-0"
+                          label="По убыванию"
+                          {...a11yProps(2)}
+                        />
+                      </Tabs>
+                    </AppBar>
+                  </Zoom>
+                  <TabPanel value={value} index={0}>
+                    <div className="row justify-content-center ">
+                      {baraxolkas?.map((value, index) => {
+                        return (
+                          <div
+                            className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
+                            key={index}
+                          >
+                            <Link href="/productCard">
+                              <a>
+                                <div className="cards_border">
+                                  <img src="skidka.jpg" alt="photo" />
+                                  <div className="px-3">
+                                    <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                                       <img
-                                        className="w-75 mb-2"
-                                        src="bag.svg"
+                                        className="baraxolka_photo"
+                                        src={value.img}
                                         alt="photo"
                                       />
-                                    </button>
+                                      <div className="colorBoxes flex-column mb-5">
+                                        <div className="p-1">
+                                          <div className="col-3 colorBox black"></div>
+                                        </div>
+                                        <div className="p-1">
+                                          <div className="col-3 colorBox white"></div>
+                                        </div>
+                                        <div className="p-1">
+                                          <div className="col-3 colorBox green"></div>
+                                        </div>
+                                        <div className="p-1">
+                                          <div className="col-3 colorBox gray"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <h5 className="fw-bold my-2 text model fw-bold">
+                                      {value.title}
+                                    </h5>
+                                    <div className="d-flex align-items-center">
+                                      <p className="mb-0 bg_success aksiya__">
+                                        {value.aksiya_}
+                                      </p>
+                                      <p className="mb-0 text_secondary aksiya ms-4">
+                                        {value.aksiya}
+                                      </p>
+                                    </div>
+                                    <h4 className="fw-bold price mb-0 mt-2">
+                                      <span className="big_text mb-0">
+                                        {value.big_price}
+                                      </span>
+                                      {value.price}
+                                    </h4>
+                                    <div className="d-flex justify-content-between align-items-center">
+                                      <p className="mb-0 desc">{value.desc}</p>
+                                      <button
+                                        onClick={() => savebaraxolka(index)}
+                                        className="border-0 bag m-0 mb-2"
+                                      >
+                                        <img
+                                          className="w-75 mb-2"
+                                          src="bag.svg"
+                                          alt="photo"
+                                        />
+                                      </button>
+                                    </div>
+                                    <p className={"descripton px-1"}>
+                                      Экран (6.5{`"`}, Super AMOLED, 2400x1080)/
+                                      Qualcomm Snapdragon 720G (2 x 2.3 ГГц + 6
+                                      x 1.8 ГГц)/ основная квадро-камера: 64 Мп
+                                      + 12 Мп + 5 Мп + 5 Мп, фронтальная 32 Мп/
+                                      RAM 4 ГБ/ 128 ГБ встроенной памяти +
+                                      microSD (до 1 ТБ)/ 3G/ LTE/ GPS/ A-GPS/
+                                      ГЛОНАСС/ BDS/ поддержка 2х SIM-карт
+                                      (Nano-SIM)/ Android 11.0 (One UI)/ 4500
+                                      мА*ч
+                                    </p>
                                   </div>
-                                  <p className={"descripton px-1"}>
-                                    Экран (6.5{`"`}, Super AMOLED, 2400x1080)/
-                                    Qualcomm Snapdragon 720G (2 x 2.3 ГГц + 6 x
-                                    1.8 ГГц)/ основная квадро-камера: 64 Мп + 12
-                                    Мп + 5 Мп + 5 Мп, фронтальная 32 Мп/ RAM 4
-                                    ГБ/ 128 ГБ встроенной памяти + microSD (до 1
-                                    ТБ)/ 3G/ LTE/ GPS/ A-GPS/ ГЛОНАСС/ BDS/
-                                    поддержка 2х SIM-карт (Nano-SIM)/ Android
-                                    11.0 (One UI)/ 4500 мА*ч
-                                  </p>
                                 </div>
-                              </div>
+                              </a>
+                            </Link>
+                          </div>
+                        );
+                      })}
+                      <div className="mt-4">
+                        <div className="border_"></div>
+                        <div className="d-flex justify-content-center align-items-center  my-4">
+                          <Link href="https://www.instagram.com/?hl=ru">
+                            <a>
+                              <img
+                                className="icon me-3 fs-3"
+                                src="instagram.png"
+                                alt="instagram"
+                              />
+                            </a>
+                          </Link>
+                          <Link href="https://web.telegram.org">
+                            <a>
+                              <img
+                                className="icon me-3 fs-3"
+                                src="telegram.png"
+                                alt="telegram"
+                              />
+                            </a>
+                          </Link>
+                          <Link href="https://www.facebook.com">
+                            <a>
+                              <img
+                                className="icon fs-3"
+                                src="facebook.png"
+                                alt="facebook"
+                              />
                             </a>
                           </Link>
                         </div>
-                      );
-                    })}
-                    <div className="mt-4">
-                      <div className="border_"></div>
-                      <div className="d-flex justify-content-center align-items-center  my-4">
-                        <Link href="https://www.instagram.com/?hl=ru">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="instagram.png"
-                              alt="instagram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://web.telegram.org">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="telegram.png"
-                              alt="telegram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://www.facebook.com">
-                          <a>
-                            <img
-                              className="icon fs-3"
-                              src="facebook.png"
-                              alt="facebook"
-                            />
-                          </a>
-                        </Link>
                       </div>
                     </div>
-                  </div>
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                  <div className="row justify-content-center">
-                    {/* {baraxolka?.map((value, index) => {
+                  </TabPanel>
+                  <TabPanel value={value} index={1}>
+                    <div className="row justify-content-center">
+                      {/* {baraxolka?.map((value, index) => {
                       return (
                         <Link href="/productCard" key={index}><a>
                           <div className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3">
@@ -314,43 +319,43 @@ const Product = () => {
                         </a></Link>
                       );
                     })} */}
-                    <div className="mt-4">
-                      <div className="border_"></div>
-                      <div className="d-flex justify-content-center align-items-center  my-4">
-                        <Link href="https://www.instagram.com/?hl=ru">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="instagram.png"
-                              alt="instagram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://web.telegram.org">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="telegram.png"
-                              alt="telegram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://www.facebook.com">
-                          <a>
-                            <img
-                              className="icon fs-3"
-                              src="facebook.png"
-                              alt="facebook"
-                            />
-                          </a>
-                        </Link>
+                      <div className="mt-4">
+                        <div className="border_"></div>
+                        <div className="d-flex justify-content-center align-items-center  my-4">
+                          <Link href="https://www.instagram.com/?hl=ru">
+                            <a>
+                              <img
+                                className="icon me-3 fs-3"
+                                src="instagram.png"
+                                alt="instagram"
+                              />
+                            </a>
+                          </Link>
+                          <Link href="https://web.telegram.org">
+                            <a>
+                              <img
+                                className="icon me-3 fs-3"
+                                src="telegram.png"
+                                alt="telegram"
+                              />
+                            </a>
+                          </Link>
+                          <Link href="https://www.facebook.com">
+                            <a>
+                              <img
+                                className="icon fs-3"
+                                src="facebook.png"
+                                alt="facebook"
+                              />
+                            </a>
+                          </Link>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                  <div className="row justify-content-center">
-                    {/* {baraxolka?.map((value, index) => {
+                  </TabPanel>
+                  <TabPanel value={value} index={2}>
+                    <div className="row justify-content-center">
+                      {/* {baraxolka?.map((value, index) => {
                       return (
                         <div
                           className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3 "
@@ -415,49 +420,48 @@ const Product = () => {
                         </div>
                       );
                     })} */}
-                    <div className="mt-4">
-                      <div className="border_"></div>
-                      <div className="d-flex justify-content-center align-items-center  my-4">
-                        <Link href="https://www.instagram.com/?hl=ru">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="instagram.png"
-                              alt="instagram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://web.telegram.org">
-                          <a>
-                            <img
-                              className="icon me-3 fs-3"
-                              src="telegram.png"
-                              alt="telegram"
-                            />
-                          </a>
-                        </Link>
-                        <Link href="https://www.facebook.com">
-                          <a>
-                            <img
-                              className="icon fs-3"
-                              src="facebook.png"
-                              alt="facebook"
-                            />
-                          </a>
-                        </Link>
+                      <div className="mt-4">
+                        <div className="border_"></div>
+                        <div className="d-flex justify-content-center align-items-center  my-4">
+                          <Link href="https://www.instagram.com/?hl=ru">
+                            <a>
+                              <img
+                                className="icon me-3 fs-3"
+                                src="instagram.png"
+                                alt="instagram"
+                              />
+                            </a>
+                          </Link>
+                          <Link href="https://web.telegram.org">
+                            <a>
+                              <img
+                                className="icon me-3 fs-3"
+                                src="telegram.png"
+                                alt="telegram"
+                              />
+                            </a>
+                          </Link>
+                          <Link href="https://www.facebook.com">
+                            <a>
+                              <img
+                                className="icon fs-3"
+                                src="facebook.png"
+                                alt="facebook"
+                              />
+                            </a>
+                          </Link>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </TabPanel>
+                  </TabPanel>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </BaraxollaWrapper>
-      <Fade bottom>
-        <Footer />
-      </Fade>
-    </Container>
+        </BaraxollaWrapper>
+      </Container>
+      <Footer />
+    </>
   );
 };
 
