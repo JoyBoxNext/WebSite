@@ -81,46 +81,46 @@ const ProductCard = () => {
                     </div>
                   </div>
                   <div className="row colorMemories mt-3">
-                    <div className="col-6 col-sm-">
+                    <div className="col-8 col-sm-6">
                       <p className="colorText">
                         Цвет товара: <span>Черный</span>
                       </p>
                       <div className="colorBoxes">
-                        <div className="p-2">
+                        <div className="BoxPad">
                           <div className="d-flex align-items-center justify-content-center colorBox black"></div>
                         </div>
-                        <div className="p-2">
+                        <div className="BoxPad">
                           <div className="colorBox white"></div>
                         </div>
-                        <div className="p-2">
+                        <div className="BoxPad">
                           <div className="colorBox green"></div>
                         </div>
-                        <div className="p-2">
+                        <div className="BoxPad">
                           <div className="colorBox gray"></div>
                         </div>
                       </div>
                     </div>
-                    <div className=" col-6 col-sm-">
-                      <p className="">Память:</p>
+                    <div className=" col-4 col-sm-6">
+                      <p className="colorText">Память:</p>
                       <div className="row">
                         <div className="memorie">
-                          <div className="p-2">
+                          <div className="BoxPad">
                             <div className="col-4 whiteBox">64</div>
                           </div>
-                          <div className="p-2">
+                          <div className="BoxPad">
                             <div className="col-4 whiteBox">128</div>
                           </div>
-                          <div className="p-2">
+                          <div className="BoxPad">
                             <div className="col-4 whiteBox">256</div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="row priceButton">
-                      <div className="prices col-sm- mt-4">
-                        <div className="d-flex justify-content-between">
-                          <h4 className="oldPrice">16 800 000</h4>
-                          <p className="badge d-flex align-items-center rounded-0 text-dark m-0">
+                    <div className="row priceButton w-100 p-0 m-0">
+                      <div className="prices col-8 col-sm-12 col-md-12 col-lg-12 mt-4">
+                        <div className="d-flex">
+                          <h4 className="oldPrice me-2">16 800 000</h4>
+                          <p className="badge d-flex align-items-center rounded-0 text-dark m-0 ms-2">
                             1 330 000 сум
                           </p>
                         </div>
@@ -129,12 +129,12 @@ const ProductCard = () => {
                         </h3>
                         <p className="rentPrice">от 1 362 000 сум/мес</p>
                       </div>
-                      <div className="button col-sm- d-flex flex-wrap">
-                        <Button onClick={open} className="checkout">
+                      <div className="button col-4 col-sm-12 col-md-12  col-lg-12  d-flex flex-wrap  m-0">
+                        <Button onClick={open} className="checkout m-0">
                           Оформить заказ
                         </Button>
                         <Link href="/">
-                          <a className="link-korzinka">Перейти в корзину</a>
+                          <a className="link-korzinka  p-0 m-0">Перейти в корзину</a>
                         </Link>
                       </div>
                     </div>
@@ -191,7 +191,7 @@ const ProductCard = () => {
                         480: {
                           slidesPerView: 2,
                         },
-                        990: {
+                        800: {
                           slidesPerView: 3,
                         },
                         1200: {

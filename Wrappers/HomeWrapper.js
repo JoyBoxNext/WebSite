@@ -406,6 +406,8 @@ const HomeWrapper = styled.div`
           margin-bottom: 10px !important;
           padding: 0 !important;
           margin: 0 !important;
+          text-transform: uppercase !important;
+
         }
         .small {
           .oldPrice {

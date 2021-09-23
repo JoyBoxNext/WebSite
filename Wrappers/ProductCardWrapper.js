@@ -21,12 +21,11 @@ const ProductCardWrapper = styled.div`
   .firstContainer {
     background-color: #eff9fe;
     .colorText {
-      min-width: 200px !important;
+      /* min-width: 200px !important; */
     }
     .smallimg {
       display: flex;
       flex-direction: column;
-      /* justify-content: center; */
       img {
         width: 40px;
         height: 40px;
@@ -37,13 +36,15 @@ const ProductCardWrapper = styled.div`
     }
     .bigimg {
       width: 230px !important;
-      /* max-height: 530px;             */
     }
     .colorBoxes {
       display: flex;
       .colorBox {
         border: 2px solid black;
         border-radius: 10px;
+      }
+      .colorBox {
+        padding: 8px;
       }
       .black {
         background-color: black;
@@ -89,7 +90,6 @@ const ProductCardWrapper = styled.div`
       }
     }
     Button {
-      /* width: 100%; */
       background-color: #ff5314;
       color: white;
       margin-bottom: 20px;
@@ -152,6 +152,7 @@ const ProductCardWrapper = styled.div`
         margin-bottom: 10px !important;
         padding: 0 !important;
         margin: 0 !important;
+        text-transform: uppercase !important;
       }
       .small {
         .oldPrice {
@@ -289,7 +290,7 @@ const ProductCardWrapper = styled.div`
         display: flex !important;
         flex-wrap: wrap;
         .images {
-          width: 480px;
+          width: 420px;
           display: flex !important;
         }
         .colorMemories {
@@ -303,6 +304,9 @@ const ProductCardWrapper = styled.div`
           .memorie {
             display: flex;
             flex-wrap: nowrap;
+            .BoxPad {
+              padding: 8px;
+            }
           }
         }
 
@@ -339,9 +343,9 @@ const ProductCardWrapper = styled.div`
             }
           }
           .button {
-            /* max-width: 45% !important; */
             display: flex;
             flex-wrap: wrap;
+            width: 90% !important;
             .checkout {
               width: 100% !important;
               font-size: 15px;
@@ -354,12 +358,6 @@ const ProductCardWrapper = styled.div`
           }
         }
       }
-      /* @media screen and (max-width: 1200px) {
-        .characteristic-container {
-          width: 100% !important;
-        }
-      }
-      */
 
       @media screen and (min-width: 800px) {
         .characteristic-container {
@@ -464,6 +462,9 @@ const ProductCardWrapper = styled.div`
             display: flex;
             flex-wrap: nowrap;
           }
+          .BoxPad {
+            padding: 8px;
+          }
         }
 
         .priceButton {
@@ -499,7 +500,7 @@ const ProductCardWrapper = styled.div`
             }
           }
           .button {
-            /* max-width: 45% !important; */
+            width: 90% !important;
             display: flex;
             flex-wrap: wrap;
             .checkout {
@@ -597,11 +598,17 @@ const ProductCardWrapper = styled.div`
       .firstContainerIpad {
         display: flex !important;
         .images {
-          width: 480px;
           display: flex !important;
+          .bigimg {
+            flex: 1 !important;
+            margin: 40px !important;
+          }
         }
         .colorMemories {
           display: block;
+          .BoxPad {
+            padding: 4px;
+          }
           .row {
             display: block;
           }
@@ -618,22 +625,21 @@ const ProductCardWrapper = styled.div`
           .prices {
             display: block;
             .oldPrice {
-              font-size: 20px;
+              font-size: 15px;
               line-height: 115.5%;
               text-decoration-line: line-through;
               text-transform: uppercase;
             }
             .badge {
-              font-size: 13px;
+              font-size: 10px;
               line-height: 115.5%;
               letter-spacing: 0.025em;
               text-transform: uppercase;
               max-height: 23px;
             }
             .price {
-              /* max-width: 80% !important; */
               .bigPrice {
-                font-size: 50px;
+                font-size: 30px;
                 line-height: 92%;
                 letter-spacing: -0.03em;
                 text-transform: uppercase;
@@ -649,7 +655,7 @@ const ProductCardWrapper = styled.div`
             display: flex;
             flex-wrap: wrap;
             .checkout {
-              width: 100% !important;
+              width: 70% !important;
               font-size: 15px;
               max-height: 50px;
               border-radius: 5px;
@@ -685,6 +691,14 @@ const ProductCardWrapper = styled.div`
       .swiper-pagination {
         display: none;
         justify-content: center;
+      }
+      .colorMemories {
+        .colorBoxes {
+          padding: 4px !important;
+        }
+        .memorie {
+          padding: 4px !important;
+        }
       }
     }
   }
@@ -746,15 +760,24 @@ const ProductCardWrapper = styled.div`
           display: flex;
           flex-wrap: wrap;
         }
+        .BoxPad {
+          padding: 4px;
+        }
+        .colorText {
+          font-size: 14px !important;
+          width: 100% !important;
+        }
       }
 
       .priceButton {
         display: flex;
         flex-wrap: wrap;
+        margin: auto !important;
+
         .prices {
           display: block;
           .oldPrice {
-            font-size: 15px;
+            font-size: 11px;
             line-height: 115.5%;
             text-decoration-line: line-through;
             text-transform: uppercase;
@@ -776,13 +799,15 @@ const ProductCardWrapper = styled.div`
           }
         }
         .button {
-          max-width: 45% !important;
           display: flex;
           flex-wrap: wrap;
+          margin-top: 10px !important;
+          margin-bottom: 0 !important;
           .checkout {
             font-size: 12px;
             max-height: 50px;
             border-radius: 5px;
+            margin-bottom: 0 !important;
           }
           .link-korzinka {
             font-size: 12px;
