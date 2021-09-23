@@ -4,45 +4,12 @@ import { baraxolkaPhones } from "../Data/data";
 import Container from "./../Containers/Container";
 import Header from "./../Containers/Header/Header";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import BaraxollaWrapper from "../Wrappers/BaraxolkaWrapper";
 import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Footer from "../Containers/Footer/Footer";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -92,7 +59,7 @@ const Product = () => {
         <BaraxollaWrapper>
           <div className="d-flex">
             <div className="Sidebar">
-              <div className="container">
+              <div className="">
                 <Fade top>
                   <div className="baraxolka_padding">
                     <h1 className="title">Барахолка!</h1>
@@ -142,7 +109,7 @@ const Product = () => {
                             <Link href="/productCard">
                               <a>
                                 <div className="cards_border">
-                                  <img src="skidka.jpg" alt="photo" />
+                                  <img src="skidka.svg" alt="photo" />
                                   <div className="px-3">
                                     <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                                       <img

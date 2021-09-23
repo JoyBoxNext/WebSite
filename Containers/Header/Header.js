@@ -199,7 +199,7 @@ const Header = () => {
                 return (
                   <div key={index} className="menuItem">
                     <Link href={value.href}>
-                      <div style={{cursor:"pointer"}}>
+                      <div style={{ cursor: "pointer" }}>
                         <a>{value.page}</a>
                         <FontAwesomeIcon
                           className="icon_right position-absolute"

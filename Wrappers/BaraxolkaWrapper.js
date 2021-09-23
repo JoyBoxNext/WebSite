@@ -231,6 +231,7 @@ const BaraxollaWrapper = styled.div`
     }
     .model {
       font-size: 15px;
+      text-transform: uppercase;
     }
     .aksiya__ {
       font-weight: 500;
@@ -298,11 +299,12 @@ const BaraxollaWrapper = styled.div`
   .btn_bx,
   .btn_bx2,
   .btn_bx3 {
-    padding: 8px 25px;
+    padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
-    width: 180px;
+    width: 165px;
     text-align: center;
+    font-weight: bold;
   }
   .active {
     background-color: #ff5314;

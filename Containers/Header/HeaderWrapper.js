@@ -18,6 +18,7 @@ const HeaderWrapper = styled.div`
   .flex {
     display: flex;
   }
+
   @media screen and (max-width: 800px) {
     .flex {
       display: flex !important;
@@ -289,6 +290,13 @@ const HeaderWrapper = styled.div`
       padding: 10px;
     }
   }
+
+  //category medias
+  /* @media screen and (max-width: 1980px) {
+    .category {
+      padding: 0 85px;
+    }
+  } */
 `;
 
 export default HeaderWrapper;
