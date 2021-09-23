@@ -480,47 +480,51 @@ const Category = () => {
                       key={index}
                     >
                       <hr className="d-none d-xl-flex" />
-                      <div className="right_flex d-xxl-flex">
-                        <div className="d-flex justify-content-center align-items-center">
-                          <img
-                            className="me-3 phone"
-                            src={value.img}
-                            alt="photo"
-                          />
-                        </div>
-                        <div>
-                          <h5 className="fw-bold my-2 subtitle">
-                            {value.title}
-                          </h5>
-                          <div className="d-flex justify-content-between">
-                            <p className="mb-0 bg_success aksiya__">
-                              {value.aksiya_}
-                            </p>
-                            <p className="mb-0 text_secondary aksiya">
-                              {value.aksiya}
-                            </p>
-                          </div>
-                          <h4 className="fw-bold price mb-0">
-                            <span className="big_text mb-0">
-                              {value.big_price}
-                            </span>
-                            {value.price}
-                          </h4>
-                          <div className="d-flex justify-content-between align-items-center">
-                            <p className="mb-0 desc">{value.desc}</p>
-                            <button
-                              onClick={() => saveRightProduct(index)}
-                              className="border-0 save_btn p-0"
-                            >
+                      <Link href="/productCard">
+                        <a>
+                          <div className="right_flex d-xxl-flex">
+                            <div className="d-flex justify-content-center align-items-center">
                               <img
-                                className="w-75"
-                                src="save_orange.png"
+                                className="me-3 phone"
+                                src={value.img}
                                 alt="photo"
                               />
-                            </button>
+                            </div>
+                            <div>
+                              <h5 className="fw-bold my-2 subtitle">
+                                {value.title}
+                              </h5>
+                              <div className="d-flex justify-content-between">
+                                <p className="mb-0 bg_success aksiya__">
+                                  {value.aksiya_}
+                                </p>
+                                <p className="mb-0 text_secondary aksiya">
+                                  {value.aksiya}
+                                </p>
+                              </div>
+                              <h4 className="fw-bold price mb-0">
+                                <span className="big_text mb-0">
+                                  {value.big_price}
+                                </span>
+                                {value.price}
+                              </h4>
+                              <div className="d-flex justify-content-between align-items-center">
+                                <p className="mb-0 desc">{value.desc}</p>
+                                <button
+                                  onClick={() => saveRightProduct(index)}
+                                  className="border-0 bag p-0"
+                                >
+                                  <img
+                                    className="w-75"
+                                    src="bag.svg"
+                                    alt="photo"
+                                  />
+                                </button>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                        </a>
+                      </Link>
                     </div>
                   );
                 })}

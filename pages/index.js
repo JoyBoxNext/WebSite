@@ -110,7 +110,7 @@ export default function Home() {
                   <div className="dot_orange dot4"></div>
                 </div>
               </div>
-              <div className="flex2 d-flex blue" style={{ width: "40%" }}>
+              <div className="flex2 d-flex blue" style={{ width: "37.1%" }}>
                 <h1 className="threePhone_title">16:9</h1>
                 <img
                   className="threePhone"
@@ -118,20 +118,20 @@ export default function Home() {
                   alt="phone"
                 />
               </div>
-              <div className="flex3 orange" style={{ width: "25%" }}>
+              <div className="flex3 orange" style={{ width: "26.7%" }}>
                 <div className="h-100 d-flex align-items-center">
                   <h1 className="h2 text-center home_wonder_title">
                     Удивляй! Hayron qil!
                   </h1>
                 </div>
               </div>
-              <div className="flex4 blue" style={{ width: "10%" }}></div>
-              <div className="flex5 orange" style={{ width: "65%" }}></div>
-              <div className="flex6 blue" style={{ width: "25%" }}>
+              <div className="flex4 blue" style={{ width: "11.2%" }}></div>
+              <div className="flex5 orange" style={{ width: "62.1%" }}></div>
+              <div className="flex6 blue" style={{ width: "26.7%" }}>
                 <img className="w-100" src="logo4.png" alt="photo" />
               </div>
-              <div className="flex7 orange" style={{ width: "10%" }}></div>
-              <div className="flex8 blue py-3" style={{ width: "65%" }}>
+              <div className="flex7 orange" style={{ width: "11.2%" }}></div>
+              <div className="flex8 blue py-3" style={{ width: "62.1%" }}>
                 <div className="buttons">
                   <Button className="btn_links">Скидки</Button>
                   <Button className="btn_links">Подборки</Button>
@@ -187,12 +187,12 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex9 orange" style={{ width: "25%" }}>
+              <div className="flex9 orange" style={{ width: "26.7%" }}>
                 <p className="d-flex justify-content-center align-items-center">
                   Магазин бытовой техники и электроники
                 </p>
               </div>
-              <div className="flex10 blue" style={{ width: "10%" }}></div>
+              <div className="flex10 blue" style={{ width: "11.2%" }}></div>
             </div>
           </div>
 
@@ -200,7 +200,7 @@ export default function Home() {
           <Zoom>
             <div className="container-2 mt-5">
               <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
-              <Link href="/">
+              <Link href="/productCard">
                 <a>
                   <div className="cards d-flex justify-content-center">
                     {homeDatas.map((v, i) => {
@@ -458,12 +458,11 @@ export default function Home() {
               <div className="new-product-cards d-flex p-2">
                 {NewProductCards.map((v, i) => {
                   return (
-                    <Link href="/productCard">
+                    <Link href="/productCard" key={i}>
                       <a>
-                        <div key={i}>
+                        <div >
                           <div
                             className={`new-product-card text-center p-2 ${v.className}`}
-                            key={i}
                           >
                             <img
                               style={{ objectFit: "contain" }}

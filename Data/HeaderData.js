@@ -29,14 +29,14 @@ const links = [
 ];
 
 const pages = [
-  { page: "Акции" },
-  { page: "Смартфоны" },
-  { page: "Техника для кухни" },
-  { page: "Техника для дома" },
-  { page: "Телевизоры, аудиотехника" },
-  { page: "Смарт-гаджеты" },
-  { page: "Фото, Видео, авто" },
-  { page: "Дом, Сад" },
+  { page: "Акции", href:"/baraxolka" },
+  { page: "Смартфоны", href:"/phones" },
+  { page: "Техника для кухни", href:"/kitchen" },
+  { page: "Техника для дома", href:"/homeTech" },
+  { page: "Телевизоры, аудиотехника", href:"/tv" },
+  { page: "Смарт-гаджеты", href:"/laptops" },
+  { page: "Фото, Видео, авто", href:"/" },
+  { page: "Дом, Сад", href:"/" },
 ];
 
 export { links, pages };

@@ -253,109 +253,9 @@ const Product = () => {
                       </div>
                     </div>
                   </TabPanel>
-                  <TabPanel value={value} index={1}>
-                    <div className="row justify-content-center">
-                      {/* {baraxolka?.map((value, index) => {
-                      return (
-                        <Link href="/productCard" key={index}><a>
-                          <div className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3">
-                            <div className="cards_border">
-                              <img src="skidka.jpg" alt="photo" />
-                              <div className="px-3">
-                                <div className="d-flex justify-content-center align-items-center ps-4 my-3">
-                                  <img
-                                    className="baraxolka_photo"
-                                    src={value.img}
-                                    alt="photo"
-                                  />
-                                  <div className="colorBoxes flex-column mb-5">
-                                    <div className="p-1">
-                                      <div className="col-3 colorBox black"></div>
-                                    </div>
-                                    <div className="p-1">
-                                      <div className="col-3 colorBox white"></div>
-                                    </div>
-                                    <div className="p-1">
-                                      <div className="col-3 colorBox green"></div>
-                                    </div>
-                                    <div className="p-1">
-                                      <div className="col-3 colorBox gray"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <h5 className="fw-bold my-2 text model fw-bold">
-                                  {value.title}
-                                </h5>
-                                <div className="d-flex align-items-center">
-                                  <p className="mb-0 bg_success aksiya__">
-                                    {value.aksiya_}
-                                  </p>
-                                  <p className="mb-0 text_secondary aksiya ms-4">
-                                    {value.aksiya}
-                                  </p>
-                                </div>
-                                <h4 className="fw-bold price mb-0 mt-2">
-                                  <span className="big_text mb-0">
-                                    {value.big_price}
-                                  </span>
-                                  {value.price}
-                                </h4>
-                                <div className="d-flex justify-content-between align-items-center">
-                                  <p className="mb-0 desc">{value.desc}</p>
-                                  <button
-                                    onClick={() => saveProduct(index)}
-                                    className="border-0 bag"
-                                  >
-                                    <img
-                                      className="w-75 mb-2"
-                                      src="bag.svg"
-                                      alt="photo"
-                                    />
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a></Link>
-                      );
-                    })} */}
-                      <div className="mt-4">
-                        <div className="border_"></div>
-                        <div className="d-flex justify-content-center align-items-center  my-4">
-                          <Link href="https://www.instagram.com/?hl=ru">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="instagram.png"
-                                alt="instagram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://web.telegram.org">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="telegram.png"
-                                alt="telegram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://www.facebook.com">
-                            <a>
-                              <img
-                                className="icon fs-3"
-                                src="facebook.png"
-                                alt="facebook"
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </TabPanel>
-                  <TabPanel value={value} index={2}>
-                    <div className="row justify-content-center">
-                      {/* {baraxolka?.map((value, index) => {
+
+                  <div className="row justify-content-center">
+                    {baraxolka?.map((value, index) => {
                       return (
                         <div
                           className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-3 "
@@ -419,41 +319,40 @@ const Product = () => {
                           </div>
                         </div>
                       );
-                    })} */}
-                      <div className="mt-4">
-                        <div className="border_"></div>
-                        <div className="d-flex justify-content-center align-items-center  my-4">
-                          <Link href="https://www.instagram.com/?hl=ru">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="instagram.png"
-                                alt="instagram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://web.telegram.org">
-                            <a>
-                              <img
-                                className="icon me-3 fs-3"
-                                src="telegram.png"
-                                alt="telegram"
-                              />
-                            </a>
-                          </Link>
-                          <Link href="https://www.facebook.com">
-                            <a>
-                              <img
-                                className="icon fs-3"
-                                src="facebook.png"
-                                alt="facebook"
-                              />
-                            </a>
-                          </Link>
-                        </div>
+                    })}
+                    <div className="mt-4">
+                      <div className="border_"></div>
+                      <div className="d-flex justify-content-center align-items-center  my-4">
+                        <Link href="https://www.instagram.com/?hl=ru">
+                          <a>
+                            <img
+                              className="icon me-3 fs-3"
+                              src="instagram.png"
+                              alt="instagram"
+                            />
+                          </a>
+                        </Link>
+                        <Link href="https://web.telegram.org">
+                          <a>
+                            <img
+                              className="icon me-3 fs-3"
+                              src="telegram.png"
+                              alt="telegram"
+                            />
+                          </a>
+                        </Link>
+                        <Link href="https://www.facebook.com">
+                          <a>
+                            <img
+                              className="icon fs-3"
+                              src="facebook.png"
+                              alt="facebook"
+                            />
+                          </a>
+                        </Link>
                       </div>
                     </div>
-                  </TabPanel>
+                  </div>
                 </div>
               </div>
             </div>

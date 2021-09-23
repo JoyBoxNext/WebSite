@@ -116,16 +116,16 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .bag {
-        background-color: #FF5314;
-        padding: 20px;
-        margin: auto;
-        border-radius: 50%;
-        position: relative;
+        background-color: #FF5314 !important;
+        padding: 20px !important;
+        margin: auto !important;
+        border-radius: 50% !important;
+        position: relative !important;
         img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            position: absolute !important;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
             width: 18px !important;
             object-fit: cover !important;
         }

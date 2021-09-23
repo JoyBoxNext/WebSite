@@ -14,6 +14,7 @@ const HomeWrapper = styled.div`
     color: white;
     .threePhone {
       width: 250px !important;
+      object-fit: contain !important;
     }
 
     @media screen and (max-width: 1200px) {
@@ -291,6 +292,7 @@ const HomeWrapper = styled.div`
     .flex8 {
       display: flex;
       justify-content: space-around;
+      align-items: center;
       Button {
         background-color: transparent;
         border-left: 1px solid #fff;
@@ -351,7 +353,7 @@ const HomeWrapper = styled.div`
         .big_title {
           display: block  !important;
           font-weight: bold !important;
-          font-size: 20px !important;
+          font-size: 22px !important;
           line-height: 111% !important;
         }
         .prices {
@@ -492,7 +494,7 @@ const HomeWrapper = styled.div`
 
   //Container-2
   .container-2 {
-    background: url("/Korobka.png"), #2525eb;
+    background: url("/bgContainer2.jpeg"), #2525eb;
     background-size: 100% 100%;
     color: white;
     padding: 30px 30px;
@@ -553,11 +555,6 @@ const HomeWrapper = styled.div`
           background-color: #ff5314;
         }
       }
-    }
-    @media screen and (max-width:800px) and (min-width:320px) {
-        .title-section {
-          font-size: 40px !important;
-        }
     }
   }
 
@@ -700,12 +697,15 @@ const HomeWrapper = styled.div`
         }
         .prices {
           span {
-            font-size: 25px;
+            font-size: 22px;
           }
           .rentPrice {
             font-size: 10px;
             text-decoration: underline;
             color: gray;
+          }
+          .small_price {
+            font-size: 16px !important;
           }
         }
         img {
@@ -738,11 +738,6 @@ const HomeWrapper = styled.div`
           bottom: -5px;
         }
       }
-    }
-    @media screen and (max-width:800px) and (min-width:320px) {
-        .title-section {
-          font-size: 40px !important;
-        }
     }
   }
   .button {
@@ -858,11 +853,6 @@ const HomeWrapper = styled.div`
       .bag {
         background-color: #ff5314;
       }
-    }
-    @media screen and (max-width:800px) and (min-width:320px) {
-        .title-section {
-          font-size: 40px !important;
-        }
     }
   }
   .bag {
@@ -984,6 +974,22 @@ const HomeWrapper = styled.div`
     font-size: 45px;
     font-weight: bold;
   }
+  
+  @media screen and (max-width: 1000px) {
+      .title-section {
+        font-size: 40px !important;        
+      } 
+    }
+    @media screen and (max-width:800px) {
+        .title-section {
+          font-size: 37px !important;
+        }
+    }
+    @media screen and (max-width: 650px) {
+      .title-section {
+        font-size: 31px !important;        
+      } 
+    }
 
   .brands {
     .button_bottom {
