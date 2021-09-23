@@ -7,7 +7,7 @@ const HomeWrapper = styled.div`
     background-color: #2525eb;
   }
   .orange {
-    background-color: #ff5314;
+    background-color: #ff4001;
   }
 
   .container-1 {
@@ -109,6 +109,9 @@ const HomeWrapper = styled.div`
         line-height: 100%;
         display: flex;
         align-items: flex-end;
+        .threePhone {
+          margin: auto;
+        }
       }
     }
     .flex3 {
@@ -134,7 +137,11 @@ const HomeWrapper = styled.div`
       }
     }
     .flex9 {
-      padding: 10px 25px;
+      padding: 10px 30px;
+      p {
+        font-size: 22px;
+        line-height: 100%;
+      }
     }
     @media screen and (max-width: 600px) and (min-width: 320px) {
       .flex1 {
@@ -332,7 +339,6 @@ const HomeWrapper = styled.div`
       margin-bottom: 30px;
       .card {
         border: 2px solid #ff8253;
-        /* max-width: 230px; */
         margin: auto;
         .title {
           line-height: 16px !important;
@@ -681,7 +687,15 @@ const HomeWrapper = styled.div`
       }
     }
   }
-  
+
+  @media screen and (max-width: 1800px) {
+    .big_title {
+      font-weight: bold !important;
+      font-size: 29px !important;
+      line-height: 100%;
+    }
+  }
+
   @media screen and (max-width: 1200px) {
     .new-products .title {
       font-size: 13px !important;
@@ -700,10 +714,20 @@ const HomeWrapper = styled.div`
     .price {
       font-size: 12px !important;
     }
+    .flex9 {
+      p {
+        font-size: 19px !important;
+      }
+    }
   }
   @media screen and (max-width: 1105px) {
     .five {
       display: none !important;
+    }
+    .flex9 {
+      p {
+        font-size: 13px !important;
+      }
     }
   }
   @media screen and (max-width: 1000px) {

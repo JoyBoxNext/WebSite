@@ -62,7 +62,7 @@ export default function Home() {
           <Header />
 
           {/* Container-1 */}
-          <div className="container-1  mt-5">
+          <div className="container-1  mt-2">
             <div className="d-flex flex-wrap">
               <div className="flex1 blue" style={{ width: "25%" }}>
                 <div className="text">
@@ -188,7 +188,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex9 orange" style={{ width: "26.7%" }}>
-                <p className="d-flex justify-content-center align-items-center">
+                <p className="d-flex justify-content-center align-items-center p-0 m-0">
                   Магазин бытовой техники и электроники
                 </p>
               </div>
