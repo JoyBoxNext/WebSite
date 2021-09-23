@@ -109,12 +109,22 @@ const BaraxollaWrapper = styled.div`
         transition: 0.5s;
         height: 100%;
         overflow: hidden;
-
+        .colorBoxes2 {
+          display: none !important;
+        }
         .descripton {
           font-size: 11px;
           color: rgba(141, 137, 137, 1);
           text-transform: uppercase;
           transition: 1s;
+          line-height: 11px;
+        }
+        &:hover .colorBoxes {
+          display: none;
+        }
+        &:hover .colorBoxes2 {
+          display: flex !important;
+          margin: 0 !important;
         }
         &:hover .descripton {
           visibility: visible;
@@ -122,7 +132,7 @@ const BaraxollaWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 545px;
+          height: 520px;
           z-index: 700;
         }
       }
@@ -130,14 +140,29 @@ const BaraxollaWrapper = styled.div`
 
     @media screen and (max-width: 1450px) {
       .cards_border {
-        height: 97% !important;
+        height: 100% !important;
         &:hover .descripton {
           visibility: visible;
           position: absolute;
           z-index: 700;
         }
         &:hover {
-          height: 470px !important;
+          height: 510px !important;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1400px) {
+      .cards_border {
+        height: 96% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 480px !important;
           z-index: 700;
         }
       }
@@ -160,6 +185,21 @@ const BaraxollaWrapper = styled.div`
 
     @media screen and (max-width: 992px) {
       .cards_border {
+        height: 95% !important;
+        &:hover .descripton {
+          visibility: visible;
+          position: absolute;
+          z-index: 700;
+        }
+        &:hover {
+          height: 490px !important;
+          z-index: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 765px) {
+      .cards_border {
         height: 100% !important;
         &:hover .descripton {
           visibility: visible;
@@ -167,13 +207,13 @@ const BaraxollaWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 520px !important;
+          height: 530px !important;
           z-index: 700;
         }
       }
     }
 
-    @media screen and (max-width: 765px) {
+    @media screen and (max-width: 570px) {
       .cards_border {
         height: 95% !important;
         &:hover .descripton {
@@ -182,7 +222,7 @@ const BaraxollaWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 450px !important;
+          height: 460px !important;
           z-index: 700;
         }
       }
@@ -203,7 +243,7 @@ const BaraxollaWrapper = styled.div`
       }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 380px) {
       .cards_border {
         height: 100% !important;
         &:hover .descripton {
@@ -212,7 +252,7 @@ const BaraxollaWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 540px !important;
+          height: 550px !important;
           z-index: 700;
         }
       }

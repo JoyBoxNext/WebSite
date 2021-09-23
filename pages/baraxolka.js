@@ -103,7 +103,7 @@ const Product = () => {
                       {baraxolkas?.map((value, index) => {
                         return (
                           <div
-                            className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
+                            className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
                             key={index}
                           >
                             <Link href="/productCard">
@@ -162,7 +162,21 @@ const Product = () => {
                                         />
                                       </button>
                                     </div>
-                                    <p className={"descripton px-2 mt-2"}>
+                                    <div className="colorBoxes colorBoxes2 d-flex mb-5">
+                                      <div className="p-1">
+                                        <div className="col-3 colorBox black"></div>
+                                      </div>
+                                      <div className="p-1">
+                                        <div className="col-3 colorBox white"></div>
+                                      </div>
+                                      <div className="p-1">
+                                        <div className="col-3 colorBox green"></div>
+                                      </div>
+                                      <div className="p-1">
+                                        <div className="col-3 colorBox gray"></div>
+                                      </div>
+                                    </div>
+                                    <p className={"descripton px-1 mt-2 mb-0"}>
                                       Экран (6.5{`"`}, Super AMOLED, 2400x1080)/
                                       Qualcomm Snapdragon 720G (2 x 2.3 ГГц + 6
                                       x 1.8 ГГц)/ основная квадро-камера: 64 Мп
@@ -279,6 +293,7 @@ const Product = () => {
                                         />
                                       </button>
                                     </div>
+
                                     <p className={"descripton px-2 mt-2"}>
                                       Экран (6.5{`"`}, Super AMOLED, 2400x1080)/
                                       Qualcomm Snapdragon 720G (2 x 2.3 ГГц + 6
