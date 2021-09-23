@@ -18,6 +18,7 @@ import Zoom from "react-reveal/Zoom";
 import { useRouter } from "next/router";
 import datacategory from "../Data/index";
 import dataLeft from "../Data/indexLeft";
+import Messeger from "../Components/messeger";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -434,38 +435,7 @@ const Category = () => {
                       );
                     })}
                   </ul>
-                  <div className="mt-4">
-                    <div className="border_"></div>
-                    <div className="d-flex justify-content-center align-items-center  my-4">
-                      <Link href="https://www.instagram.com/?hl=ru">
-                        <a>
-                          <img
-                            className="icon me-3 fs-3"
-                            src="instagram.png"
-                            alt="instagram"
-                          />
-                        </a>
-                      </Link>
-                      <Link href="https://web.telegram.org">
-                        <a>
-                          <img
-                            className="icon me-3 fs-3"
-                            src="telegram.png"
-                            alt="telegram"
-                          />
-                        </a>
-                      </Link>
-                      <Link href="https://www.facebook.com">
-                        <a>
-                          <img
-                            className="icon fs-3"
-                            src="facebook.png"
-                            alt="facebook"
-                          />
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
+                  <Messeger />
                 </div>
               </div>
             </div>
@@ -548,38 +518,7 @@ const Category = () => {
               })}
             </ul>
             <Fade top>
-              <div className="mt-4">
-                <div className="border_"></div>
-                <div className="d-flex justify-content-center align-items-center  my-4">
-                  <Link href="https://www.instagram.com/?hl=ru">
-                    <a>
-                      <img
-                        className="icon me-3 fs-3"
-                        src="instagram.png"
-                        alt="instagram"
-                      />
-                    </a>
-                  </Link>
-                  <Link href="https://web.telegram.org">
-                    <a>
-                      <img
-                        className="icon me-3 fs-3"
-                        src="telegram.png"
-                        alt="telegram"
-                      />
-                    </a>
-                  </Link>
-                  <Link href="https://www.facebook.com">
-                    <a>
-                      <img
-                        className="icon fs-3"
-                        src="facebook.png"
-                        alt="facebook"
-                      />
-                    </a>
-                  </Link>
-                </div>
-              </div>
+              <Messeger />
             </Fade>
           </div>
         </div>

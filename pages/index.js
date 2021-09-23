@@ -25,6 +25,7 @@ import Header from "./../Containers/Header/Header";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import { ChooseData } from "./../Data/ChooseData";
+import Messeger from "../Components/messeger";
 // import Swiper from "react-id-swiper";
 
 export default function Home() {
@@ -73,9 +74,7 @@ export default function Home() {
                 </div>
                 <div className="mini-content p-0">
                   <div className="p-2">
-                    <p className="textPlayS">
-                      PlayStation 5 Digital version
-                    </p>
+                    <p className="textPlayS">PlayStation 5 Digital version</p>
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="title mb-0 text-end small_title d-none">
                         заголовок редактируется через админ панель
@@ -99,7 +98,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="d-flex  justify-content-between  w-100">
-                    <img className="miniContentLogo h-100" src="logo3.png" alt="photo" />
+                    <img
+                      className="miniContentLogo h-100"
+                      src="logo3.png"
+                      alt="photo"
+                    />
                     <p className="bottom-text w-auto">
                       Магазин бытовой техники <br /> и электроники
                     </p>
@@ -460,7 +463,7 @@ export default function Home() {
                   return (
                     <Link href="/productCard" key={i}>
                       <a>
-                        <div >
+                        <div>
                           <div
                             className={`new-product-card text-center p-2 ${v.className}`}
                           >
@@ -671,42 +674,8 @@ export default function Home() {
               </div>
             </div>
           </Fade>
-
-          <Zoom>
-            <div className="mt-2">
-              <div className="border_"></div>
-              <div className="d-flex justify-content-center align-items-center  my-4">
-                <Link href="https://www.instagram.com/?hl=ru">
-                  <a>
-                    <img
-                      className="icon me-3 fs-3"
-                      src="instagram.png"
-                      alt="instagram"
-                    />
-                  </a>
-                </Link>
-                <Link href="https://web.telegram.org">
-                  <a>
-                    <img
-                      className="icon me-3 fs-3"
-                      src="telegram.png"
-                      alt="telegram"
-                    />
-                  </a>
-                </Link>
-                <Link href="https://www.facebook.com">
-                  <a>
-                    <img
-                      className="icon fs-3"
-                      src="facebook.png"
-                      alt="facebook"
-                    />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </Zoom>
         </div>
+        <Messeger />
       </Container>
       <Footer />
     </HomeWrapper>
