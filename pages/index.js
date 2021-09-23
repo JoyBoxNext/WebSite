@@ -66,27 +66,27 @@ export default function Home() {
             <div className="d-flex flex-wrap">
               <div className="flex1 blue" style={{ width: "25%" }}>
                 <div className="text">
-                  <p className="subtitle m-1 top_title">
-                    заголовок редактируется через админ панель
+                  <p className="m-1 top_title1">
+                    заголовок редактируется <br /> через админ панель
                   </p>
-                  <h1 className="title mb-3 big_title">Удиви своих друзей!</h1>
+                  <h1 className="mb-3 big_title">Удиви своих друзей!</h1>
                 </div>
                 <div className="mini-content p-0">
-                  <div className="p-1">
-                    <p className="title top_title">
+                  <div className="p-2">
+                    <p className="textPlayS">
                       PlayStation 5 Digital version
                     </p>
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="title mb-0 text-end small_title d-none">
                         заголовок редактируется через админ панель
                       </p>
-                      <p className="title mb-0 text-end samsung_title">
+                      <p className="title mb-0 text-end samsung_title d-none">
                         с Samsung Galaxy A52
                       </p>
                     </div>
                     <div className="d-flex justify-content-between">
                       <p className="subtitle top_title">
-                        редактируется через админ панель
+                        редактируется <br /> через админ панель
                       </p>
                       <div className="d-block">
                         <p className="oldPrice ">18,577,000</p>
@@ -99,7 +99,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="d-flex  justify-content-between  w-100">
-                    <img className="top_title" src="logo3.png" alt="photo" />
+                    <img className="miniContentLogo h-100" src="logo3.png" alt="photo" />
                     <p className="bottom-text w-auto">
                       Магазин бытовой техники <br /> и электроники
                     </p>
@@ -156,7 +156,7 @@ export default function Home() {
                         <p className="title mb-0 text-end small_title d-none">
                           заголовок редактируется через админ панель
                         </p>
-                        <p className="title mb-0 text-end samsung_title">
+                        <p className="title mb-0 text-end d-none">
                           с Samsung Galaxy A52
                         </p>
                       </div>
