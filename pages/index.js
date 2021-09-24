@@ -253,7 +253,7 @@ export default function Home() {
                         <div className="d-flex justify-content-between">
                           <div className="prices">
                             <p className="m-0 fw-bold">
-                              <span className="text-dark">{v.priceBig}</span>
+                              <span className="text-dark">{v.big_price}</span>
                               <b className="text-dark">{v.price}</b>
                               <small className="text-dark">сум</small>
                             </p>
@@ -416,7 +416,7 @@ export default function Home() {
                             <div className="d-flex justify-content-between">
                               <div className="prices">
                                 <p className="m-0 fw-bold">
-                                  <span>{v.priceBig}</span>
+                                  <span>{v.big_price}</span>
                                   {v.price}
                                   <small>сум</small>
                                 </p>
@@ -493,7 +493,7 @@ export default function Home() {
                           <div className="d-flex justify-content-between">
                             <div className="prices">
                               <p className="m-0 fw-bold">
-                                <span>{v.priceBig}</span>
+                                <span>{v.big_price}</span>
                                 <span className="small_price">{v.price}</span>
                                 <small className="sum">сум</small>
                               </p>
@@ -606,7 +606,7 @@ export default function Home() {
                               <div className="d-flex justify-content-between">
                                 <div className="prices">
                                   <p className="m-0 fw-bold">
-                                    <span>{v.priceBig}</span>
+                                    <span>{v.big_price}</span>
                                     {v.price}
                                     <small>сум</small>
                                   </p>
