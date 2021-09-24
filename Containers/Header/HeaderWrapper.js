@@ -130,6 +130,7 @@ const HeaderWrapper = styled.div`
     .search,
     .input-group {
       margin-top: 30px;
+      box-shadow: inset 0px 0px 8px 1px rgba(0, 0, 0, 0.15);
     }
   }
   .search {
@@ -151,6 +152,7 @@ const HeaderWrapper = styled.div`
   .search,
   .input-group {
     z-index: 1001;
+    box-shadow: inset 0px 0px 8px 1px rgba(0, 0, 0, 0.15);
   }
   Button {
     box-shadow: none;
