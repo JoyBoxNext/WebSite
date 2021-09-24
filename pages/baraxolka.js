@@ -29,24 +29,24 @@ const Product = () => {
           <div className="d-flex">
             <div className="Sidebar">
               <div className="">
-                  <div className="baraxolka_padding">
-                    <h1 className="title">Барахолка!</h1>
-                    <p className="subtitle">
-                      Сервис объединяет тысячи частных объявлений и коммерческих
-                      предложений от организаций. Легко ориентироваться в
-                      обширном информационном пространстве помогают удобный
-                      интерфейс и эффективная поисковая система Для просмотра и
-                      поиска объявлений регистрация не нужна.
-                    </p>
+                <div className="baraxolka_padding">
+                  <h1 className="title">Барахолка!</h1>
+                  <p className="subtitle">
+                    Сервис объединяет тысячи частных объявлений и коммерческих
+                    предложений от организаций. Легко ориентироваться в обширном
+                    информационном пространстве помогают удобный интерфейс и
+                    эффективная поисковая система Для просмотра и поиска
+                    объявлений регистрация не нужна.
+                  </p>
 
-                    <ul className="subtitle">
-                      Часто задаваемые вопросы про Смартфоныs
-                      <li className="subtitle">— покупателя;</li>
-                      <li className="subtitle">— клиента</li>
-                      <li className="subtitle">— поставщика услуги;</li>
-                      <li className="subtitle">— товар.</li>
-                    </ul>
-                  </div>
+                  <ul className="subtitle">
+                    Часто задаваемые вопросы про Смартфоныs
+                    <li className="subtitle">— покупателя;</li>
+                    <li className="subtitle">— клиента</li>
+                    <li className="subtitle">— поставщика услуги;</li>
+                    <li className="subtitle">— товар.</li>
+                  </ul>
+                </div>
                 <div className="d-grid d-md-flex justify-content-center align-items-center">
                   <div
                     className={`btn_bx mx-2 ${tabPanel ? "" : "active"}`}
@@ -78,13 +78,16 @@ const Product = () => {
                                 <div className="cards_border">
                                   <img src="skidka.svg" alt="photo" />
                                   <div className="px-3">
-                                    <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                                    <div className="d-flex justify-content-center align-items-center ps-4 mt-2 mb-3">
                                       <img
-                                        className="baraxolka_photo w-100"
+                                        className="baraxolka_photo mt-2"
                                         src={value.img}
                                         alt="photo"
                                       />
-                                      <div className="colorBoxes flex-column mb-5">
+                                      <div
+                                        className="colorBoxes flex-column"
+                                        style={{ marginBottom: "100px" }}
+                                      >
                                         <div className="p-1">
                                           <div className="col-3 colorBox black"></div>
                                         </div>

@@ -1,6 +1,6 @@
 const homeDatas = [
   {
-    img: "SwiperProduct3.png",
+    img: "twoPhone.png",
     title: "Samsung a52 4/256 dual sim onyx black",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -11,7 +11,7 @@ const homeDatas = [
   },
 
   {
-    img: "SwiperProduct3.png",
+    img: "twoPhone.png",
     title: "Samsung a52 4/256 dual sim onyx black",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -23,7 +23,7 @@ const homeDatas = [
   },
 
   {
-    img: "SwiperProduct3.png",
+    img: "twoPhone.png",
     title: "Samsung a52 4/256 dual sim onyx black",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -35,7 +35,7 @@ const homeDatas = [
   },
 
   {
-    img: "SwiperProduct3.png",
+    img: "twoPhone.png",
     title: "Samsung a52 4/256 dual sim onyx black",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",
@@ -47,7 +47,7 @@ const homeDatas = [
   },
 
   {
-    img: "SwiperProduct3.png",
+    img: "twoPhone.png",
     title: "Samsung a52 4/256 dual sim onyx black",
     oldPrice: "16 800 000 ",
     badgePrice: "1 330 000",

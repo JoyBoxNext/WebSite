@@ -339,13 +339,16 @@ const Category = () => {
                             <Link href="/productCard">
                               <a>
                                 <img
-                                  className="phone_photo"
+                                  className="phone_photo mt-1"
                                   src={value.img}
                                   alt="photo"
                                 />
                               </a>
                             </Link>
-                            <div className="colorBoxes flex-column mb-5">
+                            <div
+                              className="colorBoxes flex-column"
+                              style={{ marginBottom: "65px" }}
+                            >
                               <div className="p-1">
                                 <div className="col-3 colorBox black"></div>
                               </div>
@@ -361,7 +364,7 @@ const Category = () => {
                             </div>
                           </div>
                         </div>
-                        <h5 className="fw-bold subtitle datas_subtitle p-2">
+                        <h5 className="fw-bold subtitle datas_subtitle p-2 mb-0 pb-0">
                           {value.title}
                         </h5>
                         <div className="d-flex align-items-center ms-2">

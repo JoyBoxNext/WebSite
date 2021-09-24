@@ -33,7 +33,9 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.13.2",
+    "csswring": "^7.0.0",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "gulp-postcss": "^9.0.1"
   }
 }

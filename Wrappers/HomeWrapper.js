@@ -400,14 +400,21 @@ const HomeWrapper = styled.div`
         border: 2px solid #ff8253;
         margin: auto;
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+        position: relative;
+        border-radius: 0 !important;
+        .skidka_card {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
         .title {
           line-height: 16px !important;
           font-size: 12px;
-          margin-bottom: 10px !important;
+          margin: 0;
+          margin-bottom: 5px !important;
           padding: 0 !important;
-          margin: 0 !important;
           text-transform: uppercase !important;
-
+          font-weight: bold !important;
         }
         .small {
           .oldPrice {
@@ -427,11 +434,16 @@ const HomeWrapper = styled.div`
             background-color: #d3e38c;
             padding: 2px 5px;
             color: black !important;
+            font-weight: 500;
+            border-radius: 1.4px;
           }
         }
         .prices {
           span {
-            font-size: 25px;
+            font-size: 24px;
+          }
+          b {
+            font-size: 18px;
           }
           .rentPrice {
             font-size: 10px;
@@ -444,9 +456,6 @@ const HomeWrapper = styled.div`
           max-width: 172px;
           margin: auto !important;
           display: flex;
-        }
-        .bag {
-          background-color: #ff5314;
         }
       }
     }
@@ -461,16 +470,23 @@ const HomeWrapper = styled.div`
       position: relative;
       .skidka {
         position: absolute;
-        top: 0;
+        width: 134px;
+        top: -1px;
         left: 0;
+      }
+      .choose_photo {
+        width: 107px;
+        height: 137px;
+        margin: 0 !important;
       }
       .title {
         line-height: 16px !important;
-        font-size: 12px;
-        margin-bottom: 10px !important;
+        font-size: 14px;
+        margin-bottom: 5px !important;
         padding: 0 !important;
         margin: 0 !important;
         text-transform: uppercase !important;
+        font-weight: bold !important;
       }
       .small {
         .oldPrice {
@@ -490,11 +506,18 @@ const HomeWrapper = styled.div`
           background-color: #d3e38c;
           padding: 2px 5px;
           color: black !important;
+          font-weight: 500;
+          border-radius: 1.4px;
         }
       }
       .prices {
         span {
-          font-size: 25px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .b {
+          font-size: 18px;
+          font-weight: bold;
         }
         .rentPrice {
           font-size: 10px;
@@ -594,14 +617,19 @@ const HomeWrapper = styled.div`
             background-color: #d3e38c;
             padding: 2px 5px;
             color: black !important;
+            font-weight: 500;
+            border-radius: 1.4px;
           }
         }
         .prices {
           span {
-            font-size: 22px;
+            font-size: 25px;
+          }
+          .small_price {
+            font-size: 40px !important;
           }
           .rentPrice {
-            font-size: 10px;
+            font-size: 11px;
             text-decoration: underline;
             color: gray;
           }
@@ -730,7 +758,7 @@ const HomeWrapper = styled.div`
         font-size: 12px;
         margin-bottom: 10px !important;
         padding: 0 !important;
-        margin: 0 !important;
+        margin: 0;
         text-transform: uppercase !important;
       }
       .small {
@@ -751,6 +779,8 @@ const HomeWrapper = styled.div`
           background-color: #d3e38c;
           padding: 2px 5px;
           color: black !important;
+          border-radius: 1.4px !important;
+          font-weight: 500 !important;
         }
       }
       .prices {
@@ -767,14 +797,14 @@ const HomeWrapper = styled.div`
         max-height: 206px;
         max-width: 172px;
       }
-      .bag {
+      /* .bag {
         background-color: #ff5314;
-      }
+      } */
       .discount {
-      position: absolute;
-      top: 0px !important;
-      left: 0px !important;
-    }
+        position: absolute;
+        top: 0px !important;
+        left: 0px !important;
+      }
     }
   }
 
@@ -1144,7 +1174,7 @@ const HomeWrapper = styled.div`
       display: none !important;
     }
   }
-  @media screen and (max-width:450px) {
+  @media screen and (max-width: 450px) {
     .twoNew {
       display: none !important;
     }
