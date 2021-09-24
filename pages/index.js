@@ -216,10 +216,21 @@ export default function Home() {
                 <div className="cards d-flex justify-content-center">
                   {homeDatas.map((v, i) => {
                     return (
-                      <div className={`card m-1 p-3 ${v.className}`} key={i}>
+                      <div className={`card mx-2 p-3 ${v.className}`} key={i}>
+                        <img
+                          className="skidka_card"
+                          src="skidka.svg"
+                          alt="skidka"
+                        />
                         <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                           <img
-                            className="container2_photo w-100"
+                            className="container2_photo"
+                            style={{
+                              marginTop: "20px !important",
+                              width: "100px",
+                              height: "127px",
+                              objectFit: "contain",
+                            }}
                             src={v.img}
                             alt="photo"
                           />
@@ -238,26 +249,28 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                        <p className="text-dark title fw-bold mt-2">
+                        <p className="text-dark title fw-bold mt-1 mb-0">
                           {v.title}
                         </p>
                         <div className="small d-flex p-0 m-0">
-                          <p className="oldPrice me-1 m-0 p-0">
+                          <p className="oldPrice me-3 mt-1 m-0 p-0">
                             {v.oldPrice}
                             <span className="sum">сум</span>
                           </p>
-                          <div className="badgePrice">
+                          <div className="badgePrice mt-1">
                             <p className="m-0 p-0">{v.badgePrice} сум</p>
                           </div>
                         </div>
                         <div className="d-flex justify-content-between">
                           <div className="prices">
                             <p className="m-0 fw-bold">
-                              <span className="text-dark">{v.big_price}</span>
+                              <span className="text-dark m-0 p-0">
+                                {v.big_price}
+                              </span>
                               <b className="text-dark">{v.price}</b>
                               <small className="text-dark">сум</small>
                             </p>
-                            <p className="rentPrice">
+                            <p className="rentPrice mb-0">
                               от {v.rentPrice} сум/мес
                             </p>
                           </div>
@@ -266,7 +279,7 @@ export default function Home() {
                             className="border-0 bag"
                           >
                             <img
-                              className="w-75 mb-2"
+                              className="w-75 mb-2 "
                               src="bag.svg"
                               alt="photo"
                             />
@@ -385,10 +398,11 @@ export default function Home() {
                             <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                               <img
                                 style={{ marginTop: "20px !important" }}
+                                className="choose_photo"
                                 src={v.img}
                                 alt="photo"
                               />
-                              <div className="colorBoxes flex-column mb-5">
+                              <div className="colorBoxes flex-column mb-5 ms-1">
                                 <div className="p-1">
                                   <div className="col-3 colorBox black"></div>
                                 </div>
@@ -405,17 +419,17 @@ export default function Home() {
                             </div>
                             <p className=" title fw-bold mt-2">{v.title}</p>
                             <div className="small d-flex p-0 m-0">
-                              <p className="oldPrice me-1 m-0 p-0">
+                              <p className="oldPrice me-3 m-0 p-0 mt-1">
                                 {v.oldPrice}
                                 <span className="sum">сум</span>
                               </p>
-                              <div className="badgePrice">
+                              <div className="badgePrice mt-1">
                                 <p className="m-0 p-0">{v.badgePrice} сум</p>
                               </div>
                             </div>
                             <div className="d-flex justify-content-between">
                               <div className="prices">
-                                <p className="m-0 fw-bold">
+                                <p className="m-0 fw-bold b">
                                   <span>{v.big_price}</span>
                                   {v.price}
                                   <small>сум</small>
@@ -482,7 +496,7 @@ export default function Home() {
                             {v.title}
                           </p>
                           <div className="small d-flex ">
-                            <p className="oldPrice me-1 m-0 p-0">
+                            <p className="oldPrice me-3 ms-1 m-0 p-0">
                               {v.oldPrice}
                               <span className="sum">сум</span>
                             </p>
@@ -494,10 +508,10 @@ export default function Home() {
                             <div className="prices">
                               <p className="m-0 fw-bold">
                                 <span>{v.big_price}</span>
-                                <span className="small_price">{v.price}</span>
+                                <b className="small_price">{v.price}</b>
                                 <small className="sum">сум</small>
                               </p>
-                              <p className="rentPrice">
+                              <p className="rentPrice ">
                                 от {v.rentPrice} сум/мес
                               </p>
                             </div>
@@ -587,15 +601,9 @@ export default function Home() {
                                   alt="photo"
                                 />
                               </div>
-                              <Link href="/">
-                                <a>
-                                  <p className="title fw-bold mt-2">
-                                    {v.title}
-                                  </p>
-                                </a>
-                              </Link>
+                              <p className="title fw-bold mt-2">{v.title}</p>
                               <div className="small d-flex p-0 m-0">
-                                <p className="oldPrice me-1 m-0 p-0">
+                                <p className="oldPrice me-3 ms-1 m-0 p-0">
                                   {v.oldPrice}
                                   <span className="sum">сум</span>
                                 </p>
@@ -610,7 +618,7 @@ export default function Home() {
                                     {v.price}
                                     <small>сум</small>
                                   </p>
-                                  <p className="rentPrice">
+                                  <p className="rentPrice ms-1">
                                     от {v.rentPrice} сум/мес
                                   </p>
                                 </div>

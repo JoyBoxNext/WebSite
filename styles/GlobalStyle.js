@@ -228,6 +228,14 @@ const GlobalStyle = createGlobalStyle`
       border-radius: 20px;
     }
   }
+  @media screen and (max-width: 1930px) and (min-width: 1440px) {
+    .bag {
+          background-color: #FF5314  !important;
+          width: 32px !important;
+          height: 32px !important;
+          margin: 20px 0 0 0 !important;
+        }
+  }
 `;
 
 export default GlobalStyle;
