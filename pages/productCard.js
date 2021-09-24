@@ -5,6 +5,7 @@ import Container from "../Containers/Container";
 import Footer from "../Containers/Footer/Footer";
 import { Button } from "@material-ui/core";
 import Link from "next/link";
+import Messeger from "../Components/messeger"
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -65,11 +66,11 @@ const ProductCard = () => {
                   </div>
                 </div>
                 <div className="row colorMemories mt-3">
-                  <div className="col-8 col-sm-6">
-                    <p className="colorText">
+                  <div className="col-6 col-sm-6">
+                    <p className="colorText colorTextWidth">
                       Цвет товара: <span>Черный</span>
                     </p>
-                    <div className="colorBoxes">
+                    <div className="colorBoxes colorHover">
                       <div className="BoxPad">
                         <div className="d-flex align-items-center justify-content-center colorBox black"></div>
                       </div>
@@ -84,24 +85,24 @@ const ProductCard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className=" col-4 col-sm-6">
+                  <div className=" col-6 col-sm-6">
                     <p className="colorText">Память:</p>
                     <div className="row">
                       <div className="memorie">
                         <div className="BoxPad">
-                          <div className="col-4 whiteBox">64</div>
+                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">64</div>
                         </div>
                         <div className="BoxPad">
-                          <div className="col-4 whiteBox">128</div>
+                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">128</div>
                         </div>
                         <div className="BoxPad">
-                          <div className="col-4 whiteBox">256</div>
+                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">256</div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="row priceButton w-100 p-0 m-0">
-                    <div className="prices col-8 col-sm-12 col-md-12 col-lg-12 mt-4">
+                    <div className="prices col-6 col-sm-12 col-md-12 col-lg-12 mt-4">
                       <div className="d-flex">
                         <h4 className="oldPrice me-2">16 800 000</h4>
                         <p className="badge d-flex align-items-center rounded-0 text-dark m-0 ms-2">
@@ -111,10 +112,10 @@ const ProductCard = () => {
                       <h3 className="price fw-bold">
                         <span className="bigPrice">15</span>,470,999
                       </h3>
-                      <p className="rentPrice">от 1 362 000 сум/мес</p>
+                      <p className="rentPrice mb-2">от 1 362 000 сум/мес</p>
                     </div>
-                    <div className="button col-4 col-sm-12 col-md-12  col-lg-12  d-flex flex-wrap  m-0">
-                      <Button onClick={open} className="checkout m-0">
+                    <div className="button col-6 col-sm-12 col-md-12  col-lg-12  d-flex flex-wrap align-items-end  m-0">
+                      <Button onClick={open} className="checkout m-0 p-3 my-md-2">
                         Оформить заказ
                       </Button>
                       <Link href="/">
@@ -245,38 +246,7 @@ const ProductCard = () => {
             </div>
             <Button className="newProducts">Перейти в раздел новинки</Button>
           </div>
-          <div className="mt-4">
-            <div className="border_"></div>
-            <div className="d-flex justify-content-center align-items-center  my-4">
-              <Link href="https://www.instagram.com/?hl=ru">
-                <a>
-                  <img
-                    className="icon me-3 fs-3"
-                    src="instagram.png"
-                    alt="instagram"
-                  />
-                </a>
-              </Link>
-              <Link href="https://web.telegram.org">
-                <a>
-                  <img
-                    className="icon me-3 fs-3"
-                    src="telegram.png"
-                    alt="telegram"
-                  />
-                </a>
-              </Link>
-              <Link href="https://www.facebook.com">
-                <a>
-                  <img
-                    className="icon fs-3"
-                    src="facebook.png"
-                    alt="facebook"
-                  />
-                </a>
-              </Link>
-            </div>
-          </div>
+          <Messeger/>
           <div className="button d-flex flex-wrap">
             <div
               className={`row modal_product justify-content-center align-items-center }`}

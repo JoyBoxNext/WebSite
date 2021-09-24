@@ -20,8 +20,8 @@ const ProductCardWrapper = styled.div`
   }
   .firstContainer {
     background-color: #eff9fe;
-    .colorText {
-      /* min-width: 200px !important; */
+    .colorTextWidth {
+      min-width: 160px;
     }
     .smallimg {
       display: flex;
@@ -42,6 +42,12 @@ const ProductCardWrapper = styled.div`
       .colorBox {
         border: 2px solid black;
         border-radius: 10px;
+      }
+      .colorBox:hover {
+        border: 2px solid #ff5314;
+        transform: translateY(-3px);
+        box-shadow: 0  4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10.0619px;
       }
       .colorBox {
         padding: 8px;
@@ -67,16 +73,22 @@ const ProductCardWrapper = styled.div`
         width: 40px;
       }
     }
+    .colorHover {
+    }
     .memorie {
       display: flex;
       .whiteBox {
-        border: 2px solid black;
-        border-radius: 10px;
+        border: 2.7px solid black;
+        border-radius: 5.6px;
         background-color: white;
         text-align: center;
         height: 33px;
         width: 65px;
         font-weight: bold;
+      }
+      .whiteBox:hover {
+        background-color: #ff5314;
+        color: white;
       }
     }
     .prices {

@@ -17,6 +17,7 @@ const HomeWrapper = styled.div`
     }
     .threePhone {
       width: 250px;
+      -o-object-fit: contain !important;
       object-fit: contain !important;
     }
     .text {
@@ -47,22 +48,28 @@ const HomeWrapper = styled.div`
         font-weight: bold;
         font-size: 11px;
         line-height: 100%;
+        -webkit-text-decoration-line: line-through;
         text-decoration-line: line-through;
         padding: 0;
         margin: 0;
         margin-bottom: 3px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: end;
       }
       .priceDec {
         background-color: #ff5314;
         padding: 7px 4px;
-        /* margin-right: -8px !important; */
         .price {
           font-size: 10px;
           line-height: 100%;
           padding: 0;
           margin: 0;
+          -webkit-box-align: baseline !important;
+          -ms-flex-align: baseline !important;
           align-items: baseline !important;
           .priceNum {
             font-size: 16px;
@@ -77,8 +84,14 @@ const HomeWrapper = styled.div`
       .bottom-text {
         font-weight: normal !important;
         font-size: 8px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: flex-end;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
         padding: 0;
         margin: 0 8px 8px 0 !important;
@@ -103,7 +116,11 @@ const HomeWrapper = styled.div`
         }
       }
       .textPrice {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
       }
     }
@@ -112,7 +129,11 @@ const HomeWrapper = styled.div`
       .threePhone_title {
         font-size: 36px;
         line-height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: flex-end;
         .threePhone {
           margin: auto;
@@ -127,8 +148,13 @@ const HomeWrapper = styled.div`
       }
     }
     .flex8 {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-pack: distribute;
       justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       Button {
         background-color: transparent;
@@ -154,11 +180,9 @@ const HomeWrapper = styled.div`
       }
       .flex2 {
         width: 62.1% !important;
-        /* height: 250px !important; */
         img {
           margin: 30px 0 30px 0 !important;
           width: 70% !important;
-          /* object-fit: cover !important; */
           height: 70%;
         }
       }
@@ -192,8 +216,9 @@ const HomeWrapper = styled.div`
             margin: 0 !important;
           }
           .priceDec {
-            /* justify-content: flex-end; */
             background-color: #ff5314;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             padding: 5px 5px 5px 0;
             margin: 5px auto !important;
@@ -203,18 +228,26 @@ const HomeWrapper = styled.div`
             }
           }
           .rentPrice {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             font-size: 12px !important;
           }
         }
         .mini-content {
+          display: -webkit-box !important;
+          display: -ms-flexbox !important;
           display: flex !important;
+          -ms-flex-wrap: wrap !important;
           flex-wrap: wrap !important;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
           .title-2 {
             display: none;
           }
           .titles-1 {
+            display: -ms-grid !important;
             display: grid !important;
             width: 65%;
             .samsung_title {
@@ -222,6 +255,8 @@ const HomeWrapper = styled.div`
             }
             .small_title {
               display: block !important;
+              -webkit-box-align: end !important;
+              -ms-flex-align: end !important;
               align-items: end !important;
               margin-top: 50px !important;
               font-size: 5px;
@@ -238,7 +273,11 @@ const HomeWrapper = styled.div`
       }
       .flex9 {
         padding: 10px !important;
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
+        -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
         align-items: center !important;
         p {
           font-weight: normal !important;
@@ -256,7 +295,8 @@ const HomeWrapper = styled.div`
     background-image: url("BgProductDay.png");
     background-size: cover;
     width: 100% !important;
-    /* padding: 30px; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     h2 {
       font-size: 29px;
@@ -278,7 +318,10 @@ const HomeWrapper = styled.div`
         color: black !important;
       }
       .bgPrice {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap !important;
         flex-wrap: nowrap !important;
         background-color: #ff5314;
         color: white;
@@ -315,7 +358,11 @@ const HomeWrapper = styled.div`
     }
     @media screen and (max-width: 720px) {
       .priceContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
       }
       .productDay {
@@ -335,7 +382,11 @@ const HomeWrapper = styled.div`
 
     @media screen and (max-width: 690px) {
       .priceContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
       }
       .productDay {
@@ -364,6 +415,8 @@ const HomeWrapper = styled.div`
     @media screen and (max-width: 500px) {
       .priceContainer {
         display: block;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         .bgPrice {
           width: 100%;
@@ -399,6 +452,7 @@ const HomeWrapper = styled.div`
       .card {
         border: 2px solid #ff8253;
         margin: auto;
+        -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
         .title {
           line-height: 16px !important;
@@ -407,7 +461,6 @@ const HomeWrapper = styled.div`
           padding: 0 !important;
           margin: 0 !important;
           text-transform: uppercase !important;
-
         }
         .small {
           .oldPrice {
@@ -419,6 +472,7 @@ const HomeWrapper = styled.div`
             .sum {
               font-size: 8px;
               text-decoration: none !important;
+              -webkit-text-decoration: transparent !important;
               text-decoration: transparent !important;
             }
           }
@@ -443,6 +497,8 @@ const HomeWrapper = styled.div`
           /* max-height: 206px; */
           max-width: 172px;
           margin: auto !important;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
         }
         .bag {
@@ -482,6 +538,7 @@ const HomeWrapper = styled.div`
           .sum {
             font-size: 8px;
             text-decoration: none !important;
+            -webkit-text-decoration: transparent !important;
             text-decoration: transparent !important;
           }
         }
@@ -505,6 +562,8 @@ const HomeWrapper = styled.div`
       img {
         max-width: 162px;
         margin: auto !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
       }
       .bag {
@@ -550,9 +609,12 @@ const HomeWrapper = styled.div`
     .img {
       position: absolute !important;
       right: 0px !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       img {
         max-width: 100% !important;
+        -o-object-fit: cover;
         object-fit: cover;
       }
     }
@@ -567,7 +629,6 @@ const HomeWrapper = styled.div`
       padding: 0 !important;
       .new-product-card {
         border: 2.5px solid #2525eb66;
-        /* max-width: 230px; */
         margin: 0;
         border-top: 0;
         border-bottom: 0;
@@ -586,6 +647,7 @@ const HomeWrapper = styled.div`
             .sum {
               font-size: 8px;
               text-decoration: none !important;
+              -webkit-text-decoration: transparent !important;
               text-decoration: transparent !important;
             }
           }
@@ -653,8 +715,6 @@ const HomeWrapper = styled.div`
   @media screen and (max-width: 750px) {
     .discount {
       position: absolute !important;
-      /* top: 13.5px !important;
-      left: 121px !important; */
       top: 0px !important;
       left: 0px !important;
     }
@@ -672,7 +732,11 @@ const HomeWrapper = styled.div`
           line-height: 115%;
         }
         .badgePrice {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center !important;
+          -ms-flex-align: center !important;
           align-items: center !important;
           p {
             font-size: 10px;
@@ -743,6 +807,7 @@ const HomeWrapper = styled.div`
           .sum {
             font-size: 8px;
             text-decoration: none !important;
+            -webkit-text-decoration: transparent !important;
             text-decoration: transparent !important;
           }
         }
@@ -771,10 +836,10 @@ const HomeWrapper = styled.div`
         background-color: #ff5314;
       }
       .discount {
-      position: absolute;
-      top: 0px !important;
-      left: 0px !important;
-    }
+        position: absolute;
+        top: 0px !important;
+        left: 0px !important;
+      }
     }
   }
 
@@ -945,6 +1010,8 @@ const HomeWrapper = styled.div`
         padding: 10px;
       }
       .samsung_title {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
         padding: 10px;
       }
@@ -953,13 +1020,19 @@ const HomeWrapper = styled.div`
         display: none !important;
       }
       .textPrice {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
+        -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
         justify-content: flex-end !important;
       }
       .miniContentLogo {
         display: none;
       }
       .rentPrice {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
         font-weight: normal;
         font-size: 17px;
@@ -974,6 +1047,8 @@ const HomeWrapper = styled.div`
         line-height: 100%;
         letter-spacing: 0.045em;
         text-transform: lowercase;
+        -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
         align-items: flex-end !important;
       }
     }
@@ -991,12 +1066,21 @@ const HomeWrapper = styled.div`
     .oldPrice {
       /* text-align: right !important; */
       margin-top: 10px !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: end;
     }
     .price {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
       display: flex !important;
+      -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
       justify-content: center !important;
+      -ms-flex-line-pack: center !important;
       align-content: center !important;
     }
     .btn_links {
@@ -1056,7 +1140,11 @@ const HomeWrapper = styled.div`
           line-height: 115%;
         }
         .badgePrice {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center !important;
+          -ms-flex-align: center !important;
           align-items: center !important;
           p {
             font-size: 5px;
@@ -1144,7 +1232,7 @@ const HomeWrapper = styled.div`
       display: none !important;
     }
   }
-  @media screen and (max-width:450px) {
+  @media screen and (max-width: 450px) {
     .twoNew {
       display: none !important;
     }
@@ -1156,7 +1244,11 @@ const HomeWrapper = styled.div`
           line-height: 115%;
         }
         .badgePrice {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center !important;
+          -ms-flex-align: center !important;
           align-items: center !important;
           p {
             font-size: 10px;
@@ -1202,6 +1294,8 @@ const HomeWrapper = styled.div`
       position: absolute;
       left: 50%;
       top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
   }
