@@ -7,7 +7,6 @@ import BaraxollaWrapper from "../Wrappers/BaraxolkaWrapper";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Footer from "../Containers/Footer/Footer";
-import Fade from "react-reveal/Fade";
 import Messeger from "../Components/messeger";
 
 const Product = () => {
@@ -30,7 +29,6 @@ const Product = () => {
           <div className="d-flex">
             <div className="Sidebar">
               <div className="">
-                <Fade top>
                   <div className="baraxolka_padding">
                     <h1 className="title">Барахолка!</h1>
                     <p className="subtitle">
@@ -49,7 +47,6 @@ const Product = () => {
                       <li className="subtitle">— товар.</li>
                     </ul>
                   </div>
-                </Fade>
                 <div className="d-grid d-md-flex justify-content-center align-items-center">
                   <div
                     className={`btn_bx mx-2 ${tabPanel ? "" : "active"}`}

@@ -9,12 +9,9 @@ import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Link from "next/link";
-import { bigCategores, phones, rightSide } from "../Data/data";
-import { bottomText } from "../Data/ProductData";
+import { rightSide } from "../Data/data";
 import Container from "../Containers/Container";
 import Slider from "@material-ui/core/Slider";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 import { useRouter } from "next/router";
 import datacategory from "../Data/index";
 import dataLeft from "../Data/indexLeft";
@@ -113,162 +110,71 @@ const Category = () => {
       <ProductWrapper>
         <div className="d-flex D_flex">
           <div className="LeftSide">
-            <Zoom>
-              <div className="container mt-3">
-                <div className={classes.root}>
-                  <div className="mt-4" position="static">
+            <div className="container mt-3">
+              <div className={classes.root}>
+                <div className="mt-4" position="static">
+                  <div className="d-flex align-items-center">
+                    <div
+                      className={`btn_light ${
+                        tabPanel ? "" : "active b_radius"
+                      }`}
+                      onClick={() => tabApp(0)}
+                    >
+                      Полная цена
+                    </div>
+                    <div
+                      className={`btn_light ${
+                        tabPanel ? "active b_radius2" : ""
+                      }`}
+                      onClick={() => tabApp(1)}
+                    >
+                      Цена в месяц
+                    </div>
+                  </div>
+                </div>
+                <div className={`px-2 ${tabPanel == 0 ? "d-block" : "d-none"}`}>
+                  <div className="">
+                    <p className="mb-1 my-3 fw-bold">Цена</p>
                     <div className="d-flex align-items-center">
-                      <div
-                        className={`btn_light ${
-                          tabPanel ? "" : "active b_radius"
-                        }`}
-                        onClick={() => tabApp(0)}
-                      >
-                        Полная цена
+                      <div className="d-flex align-items-center mt-3">
+                        <p className="mb-0 me-2 subtitle">От</p>
+                        <input
+                          type="text"
+                          placeholder="3.000.000"
+                          className="input rounded"
+                        />
                       </div>
-                      <div
-                        className={`btn_light ${
-                          tabPanel ? "active b_radius2" : ""
-                        }`}
-                        onClick={() => tabApp(1)}
-                      >
-                        Цена в месяц
+                      <div className="d-flex align-items-center mt-3">
+                        <p className="mb-0 mx-2 subtitle">До</p>
+                        <input
+                          type="text"
+                          placeholder="3.000.000"
+                          className="input rounded"
+                        />
                       </div>
                     </div>
                   </div>
-                  <div
-                    className={`px-2 ${tabPanel == 0 ? "d-block" : "d-none"}`}
-                  >
-                    <div className="">
-                      <p className="mb-1 my-3 fw-bold">Цена</p>
-                      <div className="d-flex align-items-center">
-                        <div className="d-flex align-items-center mt-3">
-                          <p className="mb-0 me-2 subtitle">От</p>
-                          <input
-                            type="text"
-                            placeholder="3.000.000"
-                            className="input rounded"
-                          />
-                        </div>
-                        <div className="d-flex align-items-center mt-3">
-                          <p className="mb-0 mx-2 subtitle">До</p>
-                          <input
-                            type="text"
-                            placeholder="3.000.000"
-                            className="input rounded"
-                          />
-                        </div>
-                      </div>
+                  <div>
+                    <div className={classes.root}>
+                      <Slider
+                        className="my-4"
+                        value={valueSlider}
+                        onChange={handleSliderChange}
+                        valueLabelDisplay="auto"
+                        aria-labelledby="range-slider"
+                        getAriaValueText={valuetext}
+                      />
                     </div>
-                    <div>
-                      <div className={classes.root}>
-                        <Slider
-                          className="my-4"
-                          value={valueSlider}
-                          onChange={handleSliderChange}
-                          valueLabelDisplay="auto"
-                          aria-labelledby="range-slider"
-                          getAriaValueText={valuetext}
-                        />
-                      </div>
-                      <div className="d-flex align-items-center">
-                        <button className="filter_sm me-2" onClick={hide}>
-                          Фильтры
-                        </button>
-                        <button className="filter_sm ms-2">Сортировать</button>
-                      </div>
-                      {show ? (
-                        ""
-                      ) : (
-                        <div className={`row w-100 left_access`}>
-                          {categories?.map((value, index) => {
-                            return (
-                              <div
-                                className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
-                                key={index}
-                              >
-                                <div className="d-flex justify-content-between mt-4">
-                                  <p className="subtitle my-3">
-                                    {value.name.title}
-                                  </p>
-                                  {
-                                    <FontAwesomeIcon
-                                      onClick={hide2}
-                                      className={`mt-3 mx-3 icon`}
-                                      icon={
-                                        show2 ? value.name.icon : faAngleDown
-                                      }
-                                    />
-                                  }
-                                </div>
-                                {value.name.category.map((value, index) => {
-                                  return (
-                                    <div
-                                      className={`d-flex justify-content-between ${
-                                        show2 ? "" : "d-none"
-                                      }`}
-                                      key={index}
-                                    >
-                                      <div className="d-flex align-items-center mt-2">
-                                        <input
-                                          type="checkbox"
-                                          className="myinput"
-                                        />
-                                        <p className="mb-0 subtitle ms-2">
-                                          {value.title}
-                                        </p>
-                                      </div>
-                                      <div className="">
-                                        <p className="my-1 subtitle numbers me-3">
-                                          {value.subtitle}
-                                        </p>
-                                      </div>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      )}
+                    <div className="d-flex align-items-center">
+                      <button className="filter_sm me-2" onClick={hide}>
+                        Фильтры
+                      </button>
+                      <button className="filter_sm ms-2">Сортировать</button>
                     </div>
-                  </div>
-                  <div
-                    className={`px-2 ${tabPanel == 1 ? "d-block" : "d-none"}`}
-                  >
-                    <div className="">
-                      <p className="mb-1 my-3 fw-bold">Цена</p>
-                      <div className="d-flex align-items-center">
-                        <div className="d-flex align-items-center mt-3">
-                          <p className="mb-0 me-2 subtitle">От</p>
-                          <input
-                            type="text"
-                            value="2.000.000"
-                            className="input rounded"
-                          />
-                        </div>
-                        <div className="d-flex align-items-center mt-3">
-                          <p className="mb-0 mx-2 subtitle">До</p>
-                          <input
-                            type="text"
-                            value="2.000.000"
-                            className="input rounded"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className={classes.root}>
-                        <Slider
-                          className="my-4"
-                          value={valueSlider}
-                          onChange={handleSliderChange}
-                          valueLabelDisplay="auto"
-                          aria-labelledby="range-slider"
-                          getAriaValueText={valuetext}
-                        />
-                      </div>
-                      <div className="row w-100">
+                    {show ? (
+                      ""
+                    ) : (
+                      <div className={`row w-100 left_access`}>
                         {categories?.map((value, index) => {
                           return (
                             <div
@@ -316,11 +222,94 @@ const Category = () => {
                           );
                         })}
                       </div>
+                    )}
+                  </div>
+                </div>
+                <div className={`px-2 ${tabPanel == 1 ? "d-block" : "d-none"}`}>
+                  <div className="">
+                    <p className="mb-1 my-3 fw-bold">Цена</p>
+                    <div className="d-flex align-items-center">
+                      <div className="d-flex align-items-center mt-3">
+                        <p className="mb-0 me-2 subtitle">От</p>
+                        <input
+                          type="text"
+                          value="2.000.000"
+                          className="input rounded"
+                        />
+                      </div>
+                      <div className="d-flex align-items-center mt-3">
+                        <p className="mb-0 mx-2 subtitle">До</p>
+                        <input
+                          type="text"
+                          value="2.000.000"
+                          className="input rounded"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className={classes.root}>
+                      <Slider
+                        className="my-4"
+                        value={valueSlider}
+                        onChange={handleSliderChange}
+                        valueLabelDisplay="auto"
+                        aria-labelledby="range-slider"
+                        getAriaValueText={valuetext}
+                      />
+                    </div>
+                    <div className="row w-100">
+                      {categories?.map((value, index) => {
+                        return (
+                          <div
+                            className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
+                            key={index}
+                          >
+                            <div className="d-flex justify-content-between mt-4">
+                              <p className="subtitle my-3">
+                                {value.name.title}
+                              </p>
+                              {
+                                <FontAwesomeIcon
+                                  onClick={hide2}
+                                  className={`mt-3 mx-3 icon`}
+                                  icon={show2 ? value.name.icon : faAngleDown}
+                                />
+                              }
+                            </div>
+                            {value.name.category.map((value, index) => {
+                              return (
+                                <div
+                                  className={`d-flex justify-content-between ${
+                                    show2 ? "" : "d-none"
+                                  }`}
+                                  key={index}
+                                >
+                                  <div className="d-flex align-items-center mt-2">
+                                    <input
+                                      type="checkbox"
+                                      className="myinput"
+                                    />
+                                    <p className="mb-0 subtitle ms-2">
+                                      {value.title}
+                                    </p>
+                                  </div>
+                                  <div className="">
+                                    <p className="my-1 subtitle numbers me-3">
+                                      {value.subtitle}
+                                    </p>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
               </div>
-            </Zoom>
+            </div>
           </div>
           <div className="Sidebar">
             <div className="container ">
@@ -333,11 +322,9 @@ const Category = () => {
                   Цене
                 </span>
               </h6>
-              <Fade left>
-                <div className="d-flex justify-content-between align-items-center">
-                  <h1 className="title my-4">Удивляйся и удивляй!</h1>
-                </div>
-              </Fade>
+              <div className="d-flex justify-content-between align-items-center">
+                <h1 className="title my-4">Удивляйся и удивляй!</h1>
+              </div>
               <div className="row justify-content-center">
                 {data?.map((value, index) => {
                   return (
@@ -422,65 +409,63 @@ const Category = () => {
             </div>
           </div>
           <div className="rightSide mt-5 ps-2">
-            <Fade bottom cascade>
-              <div className="row w-100 mt-5">
-                {rightSide.map((value, index) => {
-                  return (
-                    <div
-                      className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"
-                      key={index}
-                    >
-                      <hr className="d-none d-xl-flex" />
-                      <Link href="/productCard">
-                        <a>
-                          <div className="right_flex d-xxl-flex">
-                            <div className="d-flex justify-content-center align-items-center">
-                              <img
-                                className="me-3 phone"
-                                src={value.img}
-                                alt="photo"
-                              />
+            <div className="row w-100 mt-5">
+              {rightSide.map((value, index) => {
+                return (
+                  <div
+                    className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"
+                    key={index}
+                  >
+                    <hr className="d-none d-xl-flex" />
+                    <Link href="/productCard">
+                      <a>
+                        <div className="right_flex d-xxl-flex">
+                          <div className="d-flex justify-content-center align-items-center">
+                            <img
+                              className="me-3 phone"
+                              src={value.img}
+                              alt="photo"
+                            />
+                          </div>
+                          <div>
+                            <h5 className="fw-bold my-2 subtitle">
+                              {value.title}
+                            </h5>
+                            <div className="d-flex justify-content-between">
+                              <p className="mb-0 bg_success aksiya__">
+                                {value.aksiya_}
+                              </p>
+                              <p className="mb-0 text_secondary aksiya">
+                                {value.aksiya}
+                              </p>
                             </div>
-                            <div>
-                              <h5 className="fw-bold my-2 subtitle">
-                                {value.title}
-                              </h5>
-                              <div className="d-flex justify-content-between">
-                                <p className="mb-0 bg_success aksiya__">
-                                  {value.aksiya_}
-                                </p>
-                                <p className="mb-0 text_secondary aksiya">
-                                  {value.aksiya}
-                                </p>
-                              </div>
-                              <h4 className="fw-bold price mb-0">
-                                <span className="big_text mb-0">
-                                  {value.big_price}
-                                </span>
-                                {value.price}
-                              </h4>
-                              <div className="d-flex justify-content-between align-items-center">
-                                <p className="mb-0 desc">{value.desc}</p>
-                                <button
-                                  onClick={() => saveRightProduct(index)}
-                                  className="border-0 bag p-0"
-                                >
-                                  <img
-                                    className="w-75"
-                                    src="bag.svg"
-                                    alt="photo"
-                                  />
-                                </button>
-                              </div>
+                            <h4 className="fw-bold price mb-0">
+                              <span className="big_text mb-0">
+                                {value.big_price}
+                              </span>
+                              {value.price}
+                            </h4>
+                            <div className="d-flex justify-content-between align-items-center">
+                              <p className="mb-0 desc">{value.desc}</p>
+                              <button
+                                onClick={() => saveRightProduct(index)}
+                                className="border-0 bag p-0"
+                              >
+                                <img
+                                  className="w-75"
+                                  src="bag.svg"
+                                  alt="photo"
+                                />
+                              </button>
                             </div>
                           </div>
-                        </a>
-                      </Link>
-                    </div>
-                  );
-                })}
-              </div>
-            </Fade>
+                        </div>
+                      </a>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <Messeger />

@@ -10,7 +10,6 @@ import React, { useEffect, useState } from "react";
 import { dispatch } from "../../redux/Store";
 import Badge from "@material-ui/core/Badge";
 import ModalProduct from "../../Components/ModalProduct";
-import Fade from "react-reveal/Fade";
 import ActiveLink from "../../activeLink";
 
 const Header = () => {
@@ -50,7 +49,6 @@ const Header = () => {
     setOpenSave(!openSave);
   };
   const indeX = useSelector((state) => state.BooksReducer.index);
-  // const [indexs, setindexs] = useState(-1);
   useEffect(() => {
     filterdata();
   }, [
@@ -72,57 +70,45 @@ const Header = () => {
       <div className="pt-4">
         <div className="row justify-content-center align-items-center w-100">
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
-            <Fade left>
-              <Link href="/">
-                <a>
-                  <img className="w-100 logo" src="logo.png" alt="photo" />
-                </a>
-              </Link>
-            </Fade>
+            <Link href="/">
+              <a>
+                <img className="w-100 logo" src="logo.png" alt="photo" />
+              </a>
+            </Link>
           </div>
-          <Fade top>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 order-3 order-sm-3 order-md-3 order-lg-0 inputOrder">
-              <div className="d-flex justify-content-center align-items-center">
-                <Button className="search px-5">Поиск</Button>
-                <input
-                  className="w-100 input-group"
-                  type="text"
-                  onChange={(event) => {
-                    setSearchTerm(event.target.value);
-                  }}
-                />
-              </div>
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 order-3 order-sm-3 order-md-3 order-lg-0 inputOrder">
+            <div className="d-flex justify-content-center align-items-center">
+              <Button className="search px-5">Поиск</Button>
+              <input
+                className="w-100 input-group"
+                type="text"
+                onChange={(event) => {
+                  setSearchTerm(event.target.value);
+                }}
+              />
             </div>
-          </Fade>
+          </div>
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 order-0 order-sm-0 order-md-0 order-lg-3 iconsOrder">
             <div className="d-flex align-items-center position-relative justify-content-end">
-              <Fade right>
-                <Button className="d-block">
-                  <img
-                    className="header_icon"
-                    src="IconPerson.svg"
-                    alt="photo"
-                  />
-                  <p className="m-0 header_title">Покупателям</p>
-                </Button>
-              </Fade>
-              <Fade right>
-                <Button className="d-block" onClick={saveProduct}>
-                  <img
-                    className="header_korzina"
-                    src="iconBasket.svg"
-                    alt="photo"
-                  />
-                  <p className="m-0 header_subtitle">
-                    <Badge
-                      badgeContent={savedataproduct?.length}
-                      color="secondary"
-                    >
-                      Корзина
-                    </Badge>
-                  </p>
-                </Button>
-              </Fade>
+              <Button className="d-block">
+                <img className="header_icon" src="IconPerson.svg" alt="photo" />
+                <p className="m-0 header_title">Покупателям</p>
+              </Button>
+              <Button className="d-block" onClick={saveProduct}>
+                <img
+                  className="header_korzina"
+                  src="iconBasket.svg"
+                  alt="photo"
+                />
+                <p className="m-0 header_subtitle">
+                  <Badge
+                    badgeContent={savedataproduct?.length}
+                    color="secondary"
+                  >
+                    Корзина
+                  </Badge>
+                </p>
+              </Button>
               <div className={`korzina ${openSave ? "d-none" : "d-block"}`}>
                 {savedataproduct?.map((value, index) => (
                   <div>
