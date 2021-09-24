@@ -29,15 +29,6 @@ import Messeger from "../Components/messeger";
 // import Swiper from "react-id-swiper";
 
 export default function Home() {
-  //==========homeFunction==========
-
-  const newsData = useSelector((state) => state.BooksReducer.newsData);
-  const saveNewsData = (index) => {
-    newsData[index].save = !newsData[index].save;
-    const action = { type: "A", payload: index };
-    dispatch(action);
-  };
-
   const chooseData = () => {
     const action = { type: t.CHOOSE_DATA, payload: ChooseData };
     dispatch(action);
@@ -45,17 +36,32 @@ export default function Home() {
 
   chooseData();
 
-  const notebookData = useSelector((state) => state.BooksReducer.notebookData);
+  const choosedata = useSelector((state) => state.BooksReducer.chooseData);
 
-  const saveNotebookData = (index) => {
-    notebookData[index].save = !notebookData[index].save;
-    const action = { type: "A", payload: index };
+  const saveChooseDatas = (index) => {
+    let a = choosedata?.[index];
+    const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
 
-  const choosedata = useSelector((state) => state.BooksReducer.chooseData);
+  const saveRightProduct = (index) => {
+    let a = homeDatas?.[index];
+    const action = { type: t.SAVE_PRODUCT, payload: a };
+    dispatch(action);
+  };
 
-  const saveChooseDatas = () => {};
+  const newsData = (index) => {
+    let a = NewProductCards?.[index];
+    const action = { type: t.SAVE_PRODUCT, payload: a };
+    dispatch(action);
+  };
+
+  const laptopSaveData = (index) => {
+    let a = LaptopData?.[index];
+    const action = { type: t.SAVE_PRODUCT, payload: a };
+    dispatch(action);
+  };
+
   return (
     <HomeWrapper>
       <Container>
@@ -259,7 +265,7 @@ export default function Home() {
                               </p>
                             </div>
                             <button
-                              // onClick={() => saveNotebookData(i)}
+                              onClick={() => saveRightProduct(i)}
                               className="border-0 bag"
                             >
                               <img
@@ -426,7 +432,7 @@ export default function Home() {
                                   </p>
                                 </div>
                                 <button
-                                  // onClick={() => saveChooseDatas(i)}
+                                  onClick={() => saveChooseDatas(i)}
                                   className="border-0 bag"
                                 >
                                   <img
@@ -507,7 +513,7 @@ export default function Home() {
                                 </p>
                               </div>
                               <button
-                                // onClick={() => saveProduct(index)}
+                                onClick={() => newsData(i)}
                                 className="border-0 bag"
                               >
                                 <img
@@ -624,7 +630,7 @@ export default function Home() {
                                     </p>
                                   </div>
                                   <button
-                                    // onClick={() => saveProduct(index)}
+                                    onClick={() => laptopSaveData(i)}
                                     className="border-0 bag"
                                   >
                                     <img

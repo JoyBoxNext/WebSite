@@ -134,7 +134,9 @@ const ProductCard = () => {
                           Оформить заказ
                         </Button>
                         <Link href="/">
-                          <a className="link-korzinka  p-0 m-0">Перейти в корзину</a>
+                          <a className="link-korzinka  p-0 m-0 mb-2">
+                            Перейти в корзину
+                          </a>
                         </Link>
                       </div>
                     </div>

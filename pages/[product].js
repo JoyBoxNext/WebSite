@@ -72,16 +72,6 @@ const Category = () => {
   };
   rightData();
 
-  const rightSelectorData = useSelector(
-    (state) => state.BooksReducer.rightFilter
-  );
-
-  const saveRightProduct = (index) => {
-    rightSelectorData[index].save = !rightSelectorData[index].save;
-    const action = { type: "A", payload: index };
-    dispatch(action);
-    console.log(rightSelectorData[index].save, index);
-  };
   const [tabPanel, setTabPanel] = useState(false);
   const tabApp = (id) => {
     setTabPanel(id);
@@ -100,11 +90,18 @@ const Category = () => {
     datasend();
   }, [datas, datas?.length, datas?.[0].title]);
   datasend();
+
   const data = useSelector((state) => state.BooksReducer.newFilter);
-  // console.log(data);
+
   const saveProduct = (index) => {
-    data[index].save = !data[index].save;
-    const action = { type: "A", payload: index };
+    let a = datas?.[index];
+    const action = { type: t.SAVE_PRODUCT, payload: a };
+    dispatch(action);
+  };
+
+  const saveRightProduct = (index) => {
+    let a = rightSide?.[index];
+    const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
 
@@ -397,7 +394,7 @@ const Category = () => {
                         <div className="d-flex justify-content-between align-items-center ">
                           <p className="mb-0 desc ms-2">{value.desc}</p>
                           <button
-                            // onClick={() => saveProduct(index)}
+                            onClick={() => saveProduct(index)}
                             className="border-0 save_btn"
                           >
                             <img
@@ -465,7 +462,7 @@ const Category = () => {
                               <div className="d-flex justify-content-between align-items-center">
                                 <p className="mb-0 desc">{value.desc}</p>
                                 <button
-                                  // onClick={() => saveRightProduct(index)}
+                                  onClick={() => saveRightProduct(index)}
                                   className="border-0 bag p-0"
                                 >
                                   <img

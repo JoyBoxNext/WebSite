@@ -34,13 +34,17 @@ const BooksReducer = (state = initialState, action) => {
       if (action.payload == "" || action.payload == 0) {
         return { ...state };
       } else {
+        const saves__data = [...state.savedata];
+        saves__data.push(action.payload);
         return {
           ...state,
-          savedata: action.payload,
+          savedata: saves__data,
         };
       }
-    case "A":
-      return { ...state, index: action.payload };
+    case "DELETE":
+      const saves__data = [...state.savedata];
+      saves__data.splice(action.payload, 1);
+      return { ...state, savedata: saves__data };
 
     case t.CHOOSE_DATA:
       return { ...state, chooseData: action.payload };

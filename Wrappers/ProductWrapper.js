@@ -382,6 +382,8 @@ const ProductWrapper = styled.div`
     width: 20px;
     height: 20px;
     cursor: pointer;
+    box-shadow: none !important;
+    outline: none !important;
   }
   .myinput[type="checkbox"]:before {
     position: relative;

@@ -15,6 +15,9 @@ const HeaderWrapper = styled.div`
       color: white !important;
     }
   }
+  .badge {
+    color: red;
+  }
   .flex {
     display: flex;
   }

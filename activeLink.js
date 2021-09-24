@@ -8,6 +8,9 @@ const ActiveLinkWrapper = styled.div`
     border: none;
     padding: 7px 20px !important;
     background-color: white;
+    &:hover {
+      background-color: #ffe5dc;
+    }
   }
   @media screen and (max-width: 1990px) {
     button {

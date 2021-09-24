@@ -36,9 +36,7 @@ const Header = () => {
 
   //====================================================================================================
   //===phonesData===
-
   const newdata = useSelector((state) => state.BooksReducer.newdata);
-  // console.log(newdata);
   const filterNewData = newdata?.filter((value) =>
     value?.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
   );
@@ -48,18 +46,6 @@ const Header = () => {
   };
 
   //==========================================================================================================
-
-  const newFilter = useSelector((state) => state.BooksReducer.newFilter);
-
-  const newFilterData = newFilter?.filter((v) => v.save);
-
-  const saveProducts = () => {
-    const action = {
-      type: t.SAVE_PRODUCT,
-      payload: newFilterData,
-    };
-    dispatch(action);
-  };
   const saveProduct = () => {
     setOpenSave(!openSave);
   };
@@ -67,16 +53,20 @@ const Header = () => {
   // const [indexs, setindexs] = useState(-1);
   useEffect(() => {
     filterdata();
-    saveProducts();
   }, [
     newdata?.length,
     newdata?.[0]?.title,
     filterNewData?.length,
     filterNewData?.[0]?.title,
-    newFilterData?.length,
     indeX,
   ]);
+
   const savedataproduct = useSelector((state) => state.BooksReducer.savedata);
+  const deleteProduct = (index) => {
+    const action = { type: "DELETE", payload: index };
+    dispatch(action);
+  };
+
   return (
     <HeaderWrapper>
       <div className="pt-4">
@@ -124,9 +114,11 @@ const Header = () => {
                     alt="photo"
                   />
                   <p className="m-0 header_subtitle">
-                    <Badge color="error">
+                    <Badge
+                      badgeContent={savedataproduct?.length}
+                      color="secondary"
+                    >
                       Корзина
-                      {/* {savedataproduct?.length} */}
                     </Badge>
                   </p>
                 </Button>
@@ -170,10 +162,14 @@ const Header = () => {
                     </div>
                   </div>
                 ))}
-                <div className="d-flex flex-column justify-content-center align-items-center mt-3">
-                  <button onClick={open} className="orange_btn">
-                    Оформить заказ
-                  </button>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                  {savedataproduct.length === 0 ? (
+                    "Корзина пустой"
+                  ) : (
+                    <button onClick={open} className="orange_btn mt-3">
+                      Оформить заказ
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

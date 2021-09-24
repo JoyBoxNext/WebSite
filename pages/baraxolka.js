@@ -3,55 +3,24 @@ import React, { useState } from "react";
 import { baraxolkaPhones } from "../Data/data";
 import Container from "./../Containers/Container";
 import Header from "./../Containers/Header/Header";
-import { makeStyles } from "@material-ui/core/styles";
 import BaraxollaWrapper from "../Wrappers/BaraxolkaWrapper";
-import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Footer from "../Containers/Footer/Footer";
 import Fade from "react-reveal/Fade";
 import Messeger from "../Components/messeger";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
-
 const Product = () => {
-  const classes = useStyles();
-  // const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  //baraxolka
-  const baraxolkaPhonesData = () => {
-    const action = { type: t.BARAXOLKA_DATA, payload: baraxolkaPhones };
-    dispatch(action);
-  };
-  baraxolkaPhonesData();
-
-  const baraxolka = useSelector(
-    (state) => state.BooksReducer.baraxolkaFilterdata
-  );
-  console.log(baraxolka);
-
-  const savebaraxolka = (index) => {
-    baraxolka[index].save = !baraxolka[index].save;
-    const action = { type: "A", payload: index };
-    dispatch(action);
-    console.log(baraxolka[index].save, index);
-  };
-
   const [tabPanel, setTabPanel] = useState(false);
   const tabApp = (id) => {
     setTabPanel(id);
   };
 
-  const baraxolkas = useSelector((state) => state.BooksReducer.baraxolkaData);
+  const baraxolkaSaveDatas = (index) => {
+    let a = baraxolkaPhones?.[index];
+    const action = { type: t.SAVE_PRODUCT, payload: a };
+    dispatch(action);
+  };
 
   return (
     <>
@@ -101,7 +70,7 @@ const Product = () => {
                 <div>
                   <div className={`${tabPanel == 0 ? "d-block" : "d-none"}`}>
                     <div className="row justify-content-center mt-4">
-                      {baraxolkas?.map((value, index) => {
+                      {baraxolkaPhones?.map((value, index) => {
                         return (
                           <div
                             className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
@@ -153,7 +122,9 @@ const Product = () => {
                                     <div className="d-flex justify-content-between align-items-center">
                                       <p className="mb-0 desc">{value.desc}</p>
                                       <button
-                                        // onClick={() => savebaraxolka(index)}
+                                        onClick={() =>
+                                          baraxolkaSaveDatas(index)
+                                        }
                                         className="border-0 bag m-0 mb-2"
                                       >
                                         <img
@@ -201,7 +172,7 @@ const Product = () => {
 
                   <div className={`${tabPanel == 1 ? "d-block" : "d-none"}`}>
                     <div className="row justify-content-center mt-4">
-                      {baraxolkas?.map((value, index) => {
+                      {baraxolkaPhones?.map((value, index) => {
                         return (
                           <div
                             className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
@@ -288,7 +259,7 @@ const Product = () => {
 
                   <div className={`${tabPanel == 2 ? "d-block" : "d-none"}`}>
                     <div className="row justify-content-center mt-4">
-                      {baraxolkas?.map((value, index) => {
+                      {baraxolkaPhones?.map((value, index) => {
                         return (
                           <div
                             className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 mb-3 pt-0 p-0 px-2 baraxolka_product position-relative"
