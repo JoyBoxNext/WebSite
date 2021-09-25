@@ -185,7 +185,7 @@ const ProductWrapper = styled.div`
 
     .card_product {
       margin-bottom: 30px;
-      height: 340px;
+      height: 315px;
       .cards_border {
         border: 3px solid #2525eb;
         background-color: white;
@@ -218,11 +218,29 @@ const ProductWrapper = styled.div`
           z-index: 700;
         }
         &:hover {
-          height: 475px;
+          height: 450px;
           z-index: 700;
         }
       }
     }
+
+    /* @media screen and (max-width: 1445px) {
+      .card_product {
+        .cards_border {
+          height: 55% !important;
+          &:hover .descripton {
+            visibility: visible;
+            position: absolute;
+            z-index: 700;
+          }
+          &:hover {
+            height: 400px !important;
+            z-index: 700;
+          }
+        }
+      }
+    } */
+
     @media screen and (max-width: 1195px) {
       .cards_border {
         &:hover .descripton {
@@ -348,6 +366,7 @@ const ProductWrapper = styled.div`
       text-decoration-line: underline;
     }
   }
+
   @media screen and (max-width: 1100px) {
     .rightSide {
       display: none !important;
@@ -372,11 +391,12 @@ const ProductWrapper = styled.div`
       height: 116px;
       margin-top: 15px;
     }
+
     .desc {
       font-size: 12px;
     }
     .subtitle {
-      font-size: 13px;
+      font-size: 16px;
     }
     .bg_success {
       color: rgba(168, 160, 160, 1);
@@ -387,6 +407,7 @@ const ProductWrapper = styled.div`
     .aksiya {
       background-color: #e2e38c;
       font-size: 11px;
+      font-weight: 500;
     }
     .price {
       font-size: 17px;
@@ -395,6 +416,104 @@ const ProductWrapper = styled.div`
       font-size: 25px;
     }
   }
+
+  //media 1440px rightside
+  @media screen and (max-width: 1445px) {
+    .rightSide {
+      .phone {
+        width: 64px !important;
+        height: 81px !important;
+      }
+      .subtitle {
+        font-size: 12.5px !important;
+        line-height: 100% !important;
+      }
+      .aksiya__,
+      .aksiya {
+        line-height: 100% !important;
+        font-weight: 500 !important;
+      }
+      .aksiya {
+        font-size: 8px !important;
+      }
+      .aksiya__ {
+        font-size: 10px !important;
+      }
+      .desc {
+        font-weight: 500 !important;
+        font-size: 10px !important;
+        line-height: 115.5% !important;
+        margin-top: 3px !important;
+      }
+      .rightSide {
+        .bag2 {
+          width: 23px !important;
+          height: 23px !important;
+        }
+      }
+    }
+    /* .Sidebar {
+      .cards_border {
+        width: 184px !important;
+      }
+      .phone_photo {
+        width: 80px !important;
+        height: 100px !important;
+        margin-top: 25px !important;
+      }
+      .skidka {
+        width: 100px !important;
+        height: 24px !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+      }
+      .colorBoxes {
+        margin: 20px 0 !important;
+        .colorBox {
+          width: 13px !important;
+          height: 13px !important;
+        }
+      }
+      .datas_subtitle,
+      .aksiya,
+      .aksiya {
+        line-height: 115.5%;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .datas_subtitle {
+        font-size: 10px;
+        letter-spacing: -0.03em;
+        font-weight: bold;
+        height: 35px !important;
+      }
+      .aksiya__ {
+        font-size: 7px;
+        color: #a8a0a0;
+      }
+      .aksiya {
+        font-size: 6px;
+        letter-spacing: 0.025em;
+      }
+      .big_text {
+        font-size: 18px;
+        line-height: 92%;
+        letter-spacing: -0.03em;
+      }
+      .small_price {
+        font-size: 16px;
+      }
+      .desc {
+        font-size: 7px;
+      }
+    } */
+  }
+  .colorBoxes {
+    margin-bottom: 65px;
+  }
+
+  //inputs=====
   .myinput {
     width: 20px;
     height: 20px;
