@@ -17,12 +17,11 @@ SwiperCore.use([Pagination, Navigation]);
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
-  faAngleUp,
   faArrowLeft,
   faArrowRight,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import ProductSwiperData from "../Data/ProductSwiperData";
+import {characteristicData, ProductSwiperData} from "../Data/ProductSwiperData";
 import ModalProduct from "../Components/ModalProduct";
 
 const ProductCard = () => {
@@ -142,13 +141,9 @@ const ProductCard = () => {
                     .
                   </div>
                   <ul>
-                    <li>экран: 6.53{`"`} (2340×1080) 60 Гц</li>
-                    <li>оперативная память: 4 ГБ</li>
-                    <li>память: 64 ГБ, слот для карты памяти</li>
-                    <li>3 камеры: 48 МП, 2 МП, 2 МП</li>
-                    <li>аккумулятор: 6000 мА·ч</li>
-                    <li>процессор: Qualcomm Snapdragon 662</li>
-                    <li>SIM-карты: 2 (nano SIM)</li>
+                    {characteristicData.map((v,i)=>{
+                      return <li key={i}>{v.p}</li>
+                    })}
                   </ul>
                   <div className="buttonBottom">
                     <FontAwesomeIcon icon={faAngleDown} />

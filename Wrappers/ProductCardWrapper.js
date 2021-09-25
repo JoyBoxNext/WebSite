@@ -111,7 +111,8 @@ const ProductCardWrapper = styled.div`
       color: gray;
     }
     .characteristic {
-      border: 2px solid blue;
+      border: 2.3px solid #2525EB;
+      border-radius: 3.5px;
       width: 100%;
       .link-characteristic {
         color: blue !important;
@@ -121,11 +122,11 @@ const ProductCardWrapper = styled.div`
         align-items: center !important;
         justify-content: center;
         border: 3px solid black;
-        border-radius: 10px;
+        border-radius: 8px;
         background-color: #91d9f8;
-        margin: 0 auto -15px;
-        max-width: 65px;
-        height: 45px;
+        margin: 8px auto -16px;
+        max-width: 38px;
+        height: 38px;
         font-size: 30px;
       }
     }

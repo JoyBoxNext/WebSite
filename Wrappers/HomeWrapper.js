@@ -173,6 +173,8 @@ const HomeWrapper = styled.div`
     .flex9 {
       padding: 10px 30px;
       p {
+        font-size: 20px;
+        font-weight: normal;
         font-size: 22px;
         line-height: 100%;
       }
@@ -905,7 +907,9 @@ const HomeWrapper = styled.div`
     }
     .flex9 {
       p {
-        font-size: 19px !important;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 100%;
       }
     }
   }
@@ -1333,7 +1337,6 @@ const HomeWrapper = styled.div`
       transform: translate(-50%, -50%);
     }
   }
-
 `;
 
 export default HomeWrapper;

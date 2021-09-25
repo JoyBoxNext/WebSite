@@ -55,4 +55,14 @@ const ProductSwiperData = [
   },
 ];
 
-export default ProductSwiperData;
+const characteristicData = [
+  {p:`экран: 6.53" (2340×1080) 60 Гц`},
+  {p:`оперативная память: 4 ГБ`},
+  {p:`память: 64 ГБ, слот для карты памяти`},
+  {p:`3 камеры: 48 МП, 2 МП, 2 МП`},
+  {p:`аккумулятор: 6000 мА·ч`},
+  {p:`процессор: Qualcomm Snapdragon 662`},
+  {p:`SIM-карты: 2 (nano SIM)`}
+]
+
+export {ProductSwiperData, characteristicData};
