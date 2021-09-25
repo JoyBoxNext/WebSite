@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import Link from "next/link";
-import { rightSide } from "../Data/data";
+import { rightSide, Slider_bottom } from "../Data/data";
 import Container from "../Containers/Container";
 import Slider from "@material-ui/core/Slider";
 import { useRouter } from "next/router";
@@ -52,10 +52,6 @@ const Category = () => {
       const action = { type: t.CHEKED, payload: i };
       dispatch(action);
     }
-  };
-
-  const hide = () => {
-    setShow(!show);
   };
 
   const hide2 = () => {
@@ -175,14 +171,22 @@ const Category = () => {
                             key={index}
                           >
                             <div className="d-flex justify-content-between mt-4">
-                              <p className="subtitle my-3">
+                              <p
+                                className={`subtitle my-3 ${
+                                  show2 ? "" : value.name.className
+                                }`}
+                              >
                                 {value.name.title}
                               </p>
                               {
                                 <FontAwesomeIcon
                                   onClick={hide2}
                                   className={`mt-3 mx-3 icon`}
-                                  icon={show2 ? value.name.icon : faAngleDown}
+                                  icon={
+                                    show2
+                                      ? value.name.iconUp
+                                      : value.name.iconDown
+                                  }
                                 />
                               }
                             </div>
@@ -265,7 +269,11 @@ const Category = () => {
                                 <FontAwesomeIcon
                                   onClick={hide2}
                                   className={`mt-3 mx-3 icon`}
-                                  icon={show2 ? value.name.icon : faAngleDown}
+                                  icon={
+                                    show2
+                                      ? value.name.iconUp
+                                      : value.name.iconDown
+                                  }
                                 />
                               }
                             </div>
@@ -409,6 +417,32 @@ const Category = () => {
                 )}
               </div>
             </div>
+            {/* ============== */}
+            <div>
+              {Slider_bottom.map((value, index) => {
+                return (
+                  <div key={index}>
+                    <h4 className="sidebarBottom_title fw-bold mt-4 mb-5">
+                      {value.text}
+                    </h4>
+                    {value.titles.map((value, index) => {
+                      return (
+                        <div className="d-flex" key={index}>
+                          <img
+                            className="sidebarBottom_photo me-2"
+                            src={value.img}
+                            alt="finger"
+                          />
+                          <p className="sidebarBottom_title fw-bold">
+                            {value.subtitle}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <div className="rightSide mt-5 px-2">
             <div className="row w-100 mt-5 m-0">
@@ -476,6 +510,7 @@ const Category = () => {
             </div>
           </div>
         </div>
+
         <Messeger />
       </ProductWrapper>
       <Footer />

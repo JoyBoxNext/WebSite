@@ -1,10 +1,11 @@
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const categoriesPhone = [
   {
     name: {
       title: "Популярные фильтры",
-      icon: faAngleUp,
+      iconUp: faAngleUp,
+      iconDown: faAngleDown,
       category: [
         { title: "Кредит" },
         { title: "Оплата частями" },
@@ -17,7 +18,7 @@ const categoriesPhone = [
   {
     name: {
       title: "Торговая марка",
-      icon: faAngleUp,
+      className: "d-none",
       category: [
         { title: "Samsung", subtitle: "94" },
         { title: "Apple", subtitle: "90" },
@@ -32,7 +33,7 @@ const categoriesPhone = [
   {
     name: {
       title: "Встроеная память, Гб",
-      icon: faAngleUp,
+      className: "d-none",
       category: [
         { title: "8", subtitle: "4" },
         { title: "16", subtitle: "31" },
@@ -47,7 +48,7 @@ const categoriesPhone = [
   {
     name: {
       title: "Оперативная память",
-      icon: faAngleUp,
+      className: "d-none",
       category: [
         { title: "1024 Мб", subtitle: "22" },
         { title: "2048 Мб", subtitle: "50" },
@@ -886,7 +887,29 @@ const home_images = [
   { img: "home_lg.png", className: "lg" },
 ];
 
+const Slider_bottom = [
+  {
+    text: "Часто задаваемые вопросы про Смартфоны",
+    titles: [
+      { img: "finger1.png", subtitle: "Какие Смартфоны самые дешевые?" },
+      {
+        img: "finger2.png",
+        subtitle: "Какие Смартфоны самые популярные в 2021 году?",
+      },
+      {
+        img: "finger3.png",
+        subtitle: "Какие Смартфоны актуальны в 2021 году?",
+      },
+      {
+        img: "finger4.png",
+        subtitle: "Какие Смартфоны относятся к преимум сегменту?",
+      },
+    ],
+  },
+];
+
 export {
+  Slider_bottom,
   categoriesPhone,
   categoriesTv,
   phones,
