@@ -334,7 +334,7 @@ export default function Home() {
                           </p>
                         </div>
                         <img
-                          className="product_logo h-100"
+                          className="product_logo"
                           src="logo3.png"
                           alt="photo"
                         />
