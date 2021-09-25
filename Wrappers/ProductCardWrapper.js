@@ -46,7 +46,7 @@ const ProductCardWrapper = styled.div`
       .colorBox:hover {
         border: 2px solid #ff5314;
         transform: translateY(-3px);
-        box-shadow: 0  4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10.0619px;
       }
       .colorBox {
@@ -612,14 +612,18 @@ const ProductCardWrapper = styled.div`
         .images {
           display: flex !important;
           .bigimg {
+            width: 300px !important;
             flex: 1 !important;
-            margin: 40px !important;
+            margin: 60px !important;
           }
         }
         .colorMemories {
           display: block;
           .BoxPad {
             padding: 4px;
+            .whiteBox {
+              
+            }
           }
           .row {
             display: block;
@@ -663,7 +667,6 @@ const ProductCardWrapper = styled.div`
             }
           }
           .button {
-            /* max-width: 45% !important; */
             display: flex;
             flex-wrap: wrap;
             .checkout {
@@ -744,8 +747,11 @@ const ProductCardWrapper = styled.div`
         justify-content: space-between;
         .badge {
           order: 2;
-          height: 30px;
-          align-items: flex-end !important;
+          height: 17px;
+          display: flex;
+          align-items: center !important;
+          margin: 0 !important;
+          margin-top: 44px !important;
         }
       }
       .contant-title-2 {
@@ -773,7 +779,7 @@ const ProductCardWrapper = styled.div`
           flex-wrap: wrap;
         }
         .BoxPad {
-          padding: 4px;
+          padding: 8px;
         }
         .colorText {
           font-size: 14px !important;
@@ -845,7 +851,7 @@ const ProductCardWrapper = styled.div`
         display: none;
       }
       .swiper-pagination {
-        display: flex;
+        display: flex !important;
         justify-content: center;
       }
       .swiper-pagination-bullet {

@@ -5,7 +5,7 @@ import Container from "../Containers/Container";
 import Footer from "../Containers/Footer/Footer";
 import { Button } from "@material-ui/core";
 import Link from "next/link";
-import Messeger from "../Components/messeger"
+import Messeger from "../Components/messeger";
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -42,7 +42,7 @@ const ProductCard = () => {
               <p className="p-text mt-5 fw-bold mb-0">
                 Электроника * смартфоны
               </p>
-              <p className="badge rounded-0 text-dark m-0 ms-3 p-2">
+              <p className="badge rounded-0 text-dark m-0 ms-3 mt-4 p-2">
                 Выбор покупателей
               </p>
             </div>
@@ -90,13 +90,19 @@ const ProductCard = () => {
                     <div className="row">
                       <div className="memorie">
                         <div className="BoxPad">
-                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">64</div>
+                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">
+                            64
+                          </div>
                         </div>
                         <div className="BoxPad">
-                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">128</div>
+                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">
+                            128
+                          </div>
                         </div>
                         <div className="BoxPad">
-                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">256</div>
+                          <div className="col-4 whiteBox d-flex align-items-center justify-content-center">
+                            256
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -115,7 +121,10 @@ const ProductCard = () => {
                       <p className="rentPrice mb-2">от 1 362 000 сум/мес</p>
                     </div>
                     <div className="button col-6 col-sm-12 col-md-12  col-lg-12  d-flex flex-wrap align-items-end  m-0">
-                      <Button onClick={open} className="checkout m-0 p-3 my-md-2">
+                      <Button
+                        onClick={open}
+                        className="checkout m-0 p-3 my-md-2"
+                      >
                         Оформить заказ
                       </Button>
                       <Link href="/">
@@ -160,6 +169,7 @@ const ProductCard = () => {
               <div className="row">
                 <div className="col-md-12 product-swiper swiper_content">
                   <Swiper
+                    pagination={true}
                     slidesPerView={5}
                     spaceBetween={0}
                     slidesPerGroup={1}
@@ -174,7 +184,7 @@ const ProductCard = () => {
                       480: {
                         slidesPerView: 2,
                       },
-                      800: {
+                      750: {
                         slidesPerView: 3,
                       },
                       1200: {
@@ -246,7 +256,7 @@ const ProductCard = () => {
             </div>
             <Button className="newProducts">Перейти в раздел новинки</Button>
           </div>
-          <Messeger/>
+          <Messeger />
           <div className="button d-flex flex-wrap">
             <div
               className={`row modal_product justify-content-center align-items-center }`}

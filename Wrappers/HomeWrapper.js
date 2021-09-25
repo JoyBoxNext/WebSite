@@ -156,15 +156,18 @@ const HomeWrapper = styled.div`
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      Button {
+      .btn_links {
         background-color: transparent;
-        border-left: 1px solid #fff;
         border-right: 1px solid #fff;
         border-radius: 0;
         color: white;
         text-transform: capitalize;
         padding: 0 35px;
         font-weight: lighter;
+      }
+      .btn_links1 {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
       }
     }
     .flex9 {

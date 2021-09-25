@@ -72,7 +72,7 @@ const Header = () => {
           <div className="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
             <Link href="/">
               <a>
-                <img className="w-100 logo" src="logo.png" alt="photo" />
+                <img className="w-100 logo" src="logo.svg" alt="photo" />
               </a>
             </Link>
           </div>

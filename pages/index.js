@@ -141,7 +141,7 @@ export default function Home() {
               <div className="flex7 orange" style={{ width: "11.2%" }}></div>
               <div className="flex8 blue py-3" style={{ width: "62.1%" }}>
                 <div className="buttons">
-                  <Button className="btn_links">Скидки</Button>
+                  <Button className="btn_links btn_links1">Скидки</Button>
                   <Button className="btn_links">Подборки</Button>
                   <Button className="btn_links">Товар дня</Button>
                   <Button className="btn_links">Новинки</Button>
