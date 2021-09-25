@@ -214,32 +214,45 @@ const HeaderWrapper = styled.div`
     top: 59px;
     left: 0;
     font-weight: bold;
-    padding: 20px;
+    padding: 10px;
     z-index: 2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     z-index: 1002;
-    min-width: 300px;
-    max-height: 400px;
-    overflow-y: auto;
+    min-width: 338px;
+    max-height: 500px;
+    overflow-y: auto !important;
 
     .title {
       font-size: 11px;
       padding-right: 100px;
+      font-weight: bold !important;
+      line-height: 100%;
     }
     .aksiya_ {
       font-weight: 500;
-      font-size: 14.5px;
+      font-size: 14px;
+      line-height: 115.5%;
       color: #a8a0a0;
       text-decoration: line-through;
     }
     .aksiya {
-      font-weight: 500;
       font-size: 7px;
+      line-height: 115.5%;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      font-weight: 500;
       background-color: #d3e38c;
+      margin-top: 2px;
     }
     .price {
-      font-size: 23px;
+      font-size: 18px;
+      line-height: 92%;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+    .small_price {
+      font-size: 16px;
     }
     .icon {
       color: #ff5314;
@@ -248,23 +261,72 @@ const HeaderWrapper = styled.div`
       top: 0;
     }
     .delete {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 115.5%;
       color: #6c6c6c;
       position: absolute;
       right: 0;
       bottom: -10%;
     }
     .photo {
-      width: 50px;
-      height: auto;
+      width: 57px;
+      height: 70px;
+      object-fit: cover;
+    }
+    .orange_btn {
+      font-size: 11px;
+    }
+    .post {
+      color: #6c6c6c;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 115.5%;
+      text-decoration-line: underline;
+      text-align: center;
+      margin-top: 10px;
     }
   }
   @media screen and (max-width: 1550px) {
     .korzina {
       position: absolute;
       top: 65px;
-      width: 350px;
+      width: 338px;
       left: -100px;
       padding: 20px;
+    }
+  }
+  @media screen and (max-width: 1441px) {
+    .korzina {
+      position: absolute;
+      top: 65px;
+      left: -100px;
+      padding: 20px;
+      width: 266px !important;
+      max-height: 380px !important;
+      .title {
+        font-size: 8px;
+      }
+      .aksiya_ {
+        font-size: 10px;
+      }
+      .aksiya {
+        margin-top: 0;
+        font-size: 7px;
+      }
+      .price {
+        font-size: 17px;
+      }
+      .delete {
+        font-size: 10px;
+      }
+      .photo {
+        width: 45px;
+        height: 51px;
+      }
+      .orange_btn {
+        font-size: 8px;
+      }
     }
   }
   @media screen and (max-width: 1310px) {
@@ -280,6 +342,43 @@ const HeaderWrapper = styled.div`
       top: 65px;
       left: -100px;
       padding: 15px;
+    }
+  }
+  @media screen and (max-width: 1025px) {
+    .korzina {
+      position: absolute;
+      top: 65px;
+      left: -100px;
+      padding: 15px;
+      width: 310px !important;
+      max-height: 380px !important;
+      .title {
+        font-size: 10px;
+      }
+      .aksiya_ {
+        font-size: 13px;
+      }
+      .aksiya {
+        margin-top: 0;
+        font-size: 7px;
+      }
+      .price {
+        font-size: 17px;
+      }
+      .small_price {
+        font-size: 14px !important;
+        margin-top: 2px;
+      }
+      .delete {
+        font-size: 13px;
+      }
+      .photo {
+        width: 52px;
+        height: 64px;
+      }
+      .orange_btn {
+        font-size: 13px;
+      }
     }
   }
   @media screen and (max-width: 990px) {
@@ -333,8 +432,36 @@ const HeaderWrapper = styled.div`
       position: absolute;
       top: 59px;
       left: -150px;
-      /* width: 320px; */
       padding: 10px;
+      width: 310px !important;
+      max-height: 380px !important;
+      .title {
+        font-size: 10px;
+      }
+      .aksiya_ {
+        font-size: 13px;
+      }
+      .aksiya {
+        margin-top: 0;
+        font-size: 7px;
+      }
+      .price {
+        font-size: 17px;
+      }
+      .small_price {
+        font-size: 14px !important;
+        margin-top: 2px;
+      }
+      .delete {
+        font-size: 13px;
+      }
+      .photo {
+        width: 52px;
+        height: 64px;
+      }
+      .orange_btn {
+        font-size: 13px;
+      }
     }
   }
 

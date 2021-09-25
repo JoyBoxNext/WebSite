@@ -250,28 +250,33 @@ const ProductWrapper = styled.div`
     } */
 
     @media screen and (max-width: 1900px) {
-      .sidebarBottom_title {
+      .sidebarBottom_title,
+      .sidebarBottom_subtitle {
         font-size: 38px !important;
       }
     }
     @media screen and (max-width: 1720px) {
-      .sidebarBottom_title {
+      .sidebarBottom_title,
+      .sidebarBottom_subtitle {
         font-size: 34px !important;
       }
     }
     @media screen and (max-width: 1550px) {
-      .sidebarBottom_title {
+      .sidebarBottom_title,
+      .sidebarBottom_subtitle {
         font-size: 30px !important;
       }
     }
     @media screen and (max-width: 1440px) {
-      .sidebarBottom_title {
+      .sidebarBottom_title,
+      .sidebarBottom_subtitle {
         font-size: 27px !important;
       }
     }
 
     @media screen and (max-width: 1320px) {
-      .sidebarBottom_title {
+      .sidebarBottom_title,
+      .sidebarBottom_subtitle {
         font-size: 23px !important;
       }
     }
@@ -288,7 +293,8 @@ const ProductWrapper = styled.div`
           z-index: 700;
         }
       }
-      .sidebarBottom_title {
+      .sidebarBottom_title,
+      .sidebarBottom_subtitle {
         font-size: 20px !important;
       }
     }
@@ -306,6 +312,20 @@ const ProductWrapper = styled.div`
           z-index: 700;
         }
       }
+      .sidebarBottom_title {
+        font-size: 42px !important;
+        line-height: 100% !important;
+        font-weight: bold !important;
+      }
+      .sidebarBottom_subtitle {
+        font-style: normal !important;
+        font-weight: 500 !important;
+        font-size: 37px !important;
+        line-height: 100% !important;
+      }
+      .sidebar_bottom {
+        margin-left: 50px !important;
+      }
     }
     @media screen and (max-width: 990px) {
       .cards_border {
@@ -320,7 +340,41 @@ const ProductWrapper = styled.div`
           z-index: 700;
         }
       }
+      .sidebarBottom_title {
+        font-size: 38px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 32px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 60px !important;
+      }
     }
+
+    @media screen and (max-width: 900px) {
+      .sidebarBottom_title {
+        font-size: 32px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 28px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 80px !important;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .sidebarBottom_title {
+        font-size: 28px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 22px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 80px !important;
+      }
+    }
+
     @media screen and (max-width: 766px) {
       .cards_border {
         height: 100% !important;
@@ -333,6 +387,15 @@ const ProductWrapper = styled.div`
           height: 440px !important;
           z-index: 700;
         }
+      }
+      .sidebarBottom_title {
+        font-size: 24px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 18px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 50px !important;
       }
     }
     @media screen and (max-width: 575px) {
@@ -347,6 +410,15 @@ const ProductWrapper = styled.div`
           height: 420px !important;
           z-index: 700;
         }
+      }
+      .sidebarBottom_title {
+        font-size: 25px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 20px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 30px !important;
       }
     }
     .title {
@@ -641,13 +713,97 @@ const ProductWrapper = styled.div`
       position: absolute;
       top: 8px !important;
     }
+    .Sidebar {
+      width: 480px !important;
+    }
+    .left_flex {
+      width: 480px !important;
+    }
+    .MuiSlider-root {
+      width: 95% !important;
+    }
   }
+  @media screen and (max-width: 471px) {
+    .Sidebar {
+      width: 460px !important;
+    }
+    .left_flex {
+      width: 460px !important;
+    }
+    .MuiSlider-root {
+      width: 90% !important;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .Sidebar {
+      width: 440px !important;
+    }
+    .left_flex {
+      width: 440px !important;
+    }
+    .MuiSlider-root {
+      width: 90% !important;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .Sidebar {
+      width: 420px !important;
+    }
+    .left_flex {
+      width: 420px !important;
+    }
+    .MuiSlider-root {
+      width: 90% !important;
+    }
+  }
+
   @media screen and (max-width: 400px) {
-    .MuiSlider-thumb {
-      width: 25px;
-      height: 25px;
-      position: absolute;
-      top: 14px !important;
+    .Sidebar {
+      width: 390px !important;
+    }
+    .left_flex {
+      width: 390px !important;
+    }
+    .MuiSlider-root {
+      width: 90% !important;
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    .Sidebar {
+      width: 360px !important;
+    }
+    .left_flex {
+      width: 360px !important;
+    }
+    .MuiSlider-root {
+      width: 90% !important;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .Sidebar {
+      width: 340px !important;
+    }
+    .left_flex {
+      width: 340px !important;
+    }
+    .MuiSlider-root {
+      width: 90% !important;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .Sidebar {
+      width: 320px !important;
+    }
+    .left_flex {
+      width: 320px !important;
+    }
+    .MuiSlider-root {
+      width: 90% !important;
     }
   }
   .MuiSlider-valueLabel {

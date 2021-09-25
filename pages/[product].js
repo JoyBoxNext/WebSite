@@ -109,7 +109,7 @@ const Category = () => {
         <div className="d-flex D_flex">
           <div className="LeftSide">
             <div className="container mt-3">
-              <div className={classes.root}>
+              <div className="left_flex">
                 <div className="mt-4" position="static">
                   <div className="d-flex align-items-center">
                     <div
@@ -167,7 +167,7 @@ const Category = () => {
                       {categories?.map((value, index) => {
                         return (
                           <div
-                            className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
+                            className="col-sm-6 col-md-6 col-lg-6 col-xl-12 col-xxl-12"
                             key={index}
                           >
                             <div className="d-flex justify-content-between mt-4">
@@ -330,7 +330,7 @@ const Category = () => {
                   return (
                     <div
                       key={index}
-                      className="col-10 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3 px-1 mb-3 d-flex flex-wrap card_product position-relative"
+                      className="col-10 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 d-flex flex-wrap card_product position-relative"
                     >
                       <div className="cards_border mb-4">
                         <img className="skidka" src="skidka.jpg" alt="photo" />
@@ -421,7 +421,7 @@ const Category = () => {
             <div>
               {Slider_bottom.map((value, index) => {
                 return (
-                  <div key={index}>
+                  <div className="sidebar_bottom" key={index}>
                     <h4 className="sidebarBottom_title fw-bold mt-4 mb-5">
                       {value.text}
                     </h4>
@@ -433,7 +433,7 @@ const Category = () => {
                             src={value.img}
                             alt="finger"
                           />
-                          <p className="sidebarBottom_title fw-bold">
+                          <p className="sidebarBottom_subtitle fw-bold">
                             {value.subtitle}
                           </p>
                         </div>
