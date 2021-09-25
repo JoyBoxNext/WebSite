@@ -164,6 +164,9 @@ const HomeWrapper = styled.div`
         text-transform: capitalize;
         padding: 0 35px;
         font-weight: lighter;
+        &:hover {
+          background-color: #ffffff44;
+        }
       }
       .btn_links1 {
         border-left: 1px solid #fff;
@@ -1333,7 +1336,6 @@ const HomeWrapper = styled.div`
       transform: translate(-50%, -50%);
     }
   }
-
 `;
 
 export default HomeWrapper;

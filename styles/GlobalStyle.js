@@ -115,7 +115,7 @@ const GlobalStyle = createGlobalStyle`
         position: unset;
     }
 
-    .bag {
+    .bag, .bag2 {
         background-color: #FF5314 !important;
         padding: 20px !important;
         margin: auto !important;
@@ -228,7 +228,7 @@ const GlobalStyle = createGlobalStyle`
       border-radius: 20px;
     }
   }
-  .bag{
+  .bag, .bag2{
     padding: 18px !important;
   }
   @media screen and (max-width: 1930px) and (min-width: 1440px) {

@@ -841,6 +841,7 @@ const rightSide = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "border_top",
   },
   {
     img: "SwiperProduct1.png",
@@ -851,6 +852,7 @@ const rightSide = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "border_top",
   },
   {
     img: "SwiperProduct1.png",
@@ -861,6 +863,7 @@ const rightSide = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "border_top",
   },
   {
     img: "SwiperProduct1.png",
@@ -871,6 +874,7 @@ const rightSide = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "border_top",
   },
 ];
 

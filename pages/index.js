@@ -385,7 +385,7 @@ export default function Home() {
               >
                 {choosedata.map((v, i) => {
                   return (
-                    <SwiperSlide className=" h-100 p-3" key={i}>
+                    <SwiperSlide className="h-100 p-3" key={i}>
                       <Link href="/productCard">
                         <a>
                           <div className="choose-card p-2">

@@ -353,12 +353,24 @@ const ProductWrapper = styled.div`
       display: none !important;
     }
   }
+
   .rightSide {
     flex: 1;
     margin-top: 90px !important;
+    .border_top {
+      border-top: 1px solid rgba(190, 186, 186, 1);
+    }
+    .top {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 100%;
+    }
     .phone {
       width: 84.1px;
       height: 116px;
+      margin-top: 15px;
     }
     .desc {
       font-size: 12px;
