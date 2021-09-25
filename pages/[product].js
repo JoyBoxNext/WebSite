@@ -142,7 +142,7 @@ const Category = () => {
                         <p className="mb-0 me-2 subtitle">От</p>
                         <input
                           type="text"
-                          placeholder="3.000.000"
+                          value="2.000.000"
                           className="input rounded"
                         />
                       </div>
@@ -150,7 +150,7 @@ const Category = () => {
                         <p className="mb-0 mx-2 subtitle">До</p>
                         <input
                           type="text"
-                          placeholder="3.000.000"
+                          value="2.000.000"
                           className="input rounded"
                         />
                       </div>
@@ -167,64 +167,54 @@ const Category = () => {
                         getAriaValueText={valuetext}
                       />
                     </div>
-                    <div className="d-flex align-items-center">
-                      <button className="filter_sm me-2" onClick={hide}>
-                        Фильтры
-                      </button>
-                      <button className="filter_sm ms-2">Сортировать</button>
-                    </div>
-                    {show ? (
-                      ""
-                    ) : (
-                      <div className={`row w-100 left_access`}>
-                        {categories?.map((value, index) => {
-                          return (
-                            <div
-                              className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
-                              key={index}
-                            >
-                              <div className="d-flex justify-content-between mt-4">
-                                <p className="subtitle my-3">
-                                  {value.name.title}
-                                </p>
-                                {
-                                  <FontAwesomeIcon
-                                    onClick={hide2}
-                                    className={`mt-3 mx-3 icon`}
-                                    icon={show2 ? value.name.icon : faAngleDown}
-                                  />
-                                }
-                              </div>
-                              {value.name.category.map((value, index) => {
-                                return (
-                                  <div
-                                    className={`d-flex justify-content-between ${
-                                      show2 ? "" : "d-none"
-                                    }`}
-                                    key={index}
-                                  >
-                                    <div className="d-flex align-items-center mt-2">
-                                      <input
-                                        type="checkbox"
-                                        className="myinput"
-                                      />
-                                      <p className="mb-0 subtitle ms-2">
-                                        {value.title}
-                                      </p>
-                                    </div>
-                                    <div className="">
-                                      <p className="my-1 subtitle numbers me-3">
-                                        {value.subtitle}
-                                      </p>
-                                    </div>
-                                  </div>
-                                );
-                              })}
+                    <div className="row w-100">
+                      {categories?.map((value, index) => {
+                        return (
+                          <div
+                            className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
+                            key={index}
+                          >
+                            <div className="d-flex justify-content-between mt-4">
+                              <p className="subtitle my-3">
+                                {value.name.title}
+                              </p>
+                              {
+                                <FontAwesomeIcon
+                                  onClick={hide2}
+                                  className={`mt-3 mx-3 icon`}
+                                  icon={show2 ? value.name.icon : faAngleDown}
+                                />
+                              }
                             </div>
-                          );
-                        })}
-                      </div>
-                    )}
+                            {value.name.category.map((value, index) => {
+                              return (
+                                <div
+                                  className={`d-flex justify-content-between ${
+                                    show2 ? "" : "d-none"
+                                  }`}
+                                  key={index}
+                                >
+                                  <div className="d-flex align-items-center mt-2">
+                                    <input
+                                      type="checkbox"
+                                      className="myinput"
+                                    />
+                                    <p className="mb-0 subtitle ms-2">
+                                      {value.title}
+                                    </p>
+                                  </div>
+                                  <div className="">
+                                    <p className="my-1 subtitle numbers me-3">
+                                      {value.subtitle}
+                                    </p>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
                 <div className={`px-2 ${tabPanel == 1 ? "d-block" : "d-none"}`}>
@@ -419,15 +409,16 @@ const Category = () => {
               </div>
             </div>
           </div>
-          <div className="rightSide mt-5 ps-2">
-            <div className="row w-100 mt-5">
+          <div className="rightSide mt-5 px-2">
+            <div className="row w-100 mt-5 m-0">
+              <p className="top mb-0 mt-3">ТОП-5</p>
               {rightSide.map((value, index) => {
                 return (
                   <div
-                    className="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4"
+                    className={`col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4 ${value.className}`}
                     key={index}
                   >
-                    <hr className="d-none d-xl-flex" />
+                    {/* <hr className="d-none d-xl-flex" /> */}
                     <Link href="/productCard">
                       <a>
                         <div className="right_flex d-xxl-flex">
@@ -439,7 +430,7 @@ const Category = () => {
                             />
                           </div>
                           <div>
-                            <h5 className="fw-bold my-2 subtitle">
+                            <h5 className="fw-bold mt-3 subtitle">
                               {value.title}
                             </h5>
                             <div className="d-flex justify-content-between">
@@ -450,20 +441,23 @@ const Category = () => {
                                 {value.aksiya}
                               </p>
                             </div>
-                            <h4 className="fw-bold price mb-0">
-                              <span className="big_text mb-0">
-                                {value.big_price}
-                              </span>
-                              {value.price}
-                            </h4>
                             <div className="d-flex justify-content-between align-items-center">
-                              <p className="mb-0 desc">{value.desc}</p>
+                              <div>
+                                <h4 className="fw-bold price mb-0">
+                                  <span className="big_text mb-0">
+                                    {value.big_price}
+                                  </span>
+                                  {value.price}
+                                </h4>
+                                <p className="mb-0 desc">{value.desc}</p>
+                              </div>
                               <button
                                 onClick={() => saveRightProduct(index)}
-                                className="border-0 bag p-0"
+                                className="border-0 bag2 p-0"
+                                style={{ marginTop: "10px !important" }}
                               >
                                 <img
-                                  className="w-75"
+                                  className="w-75 mt-0"
                                   src="bag.svg"
                                   alt="photo"
                                 />

@@ -94,19 +94,26 @@ const Header = () => {
                 <img className="header_icon" src="IconPerson.svg" alt="photo" />
                 <p className="m-0 header_title">Покупателям</p>
               </Button>
-              <Button className="d-block" onClick={saveProduct}>
+              <Button className="d-block header_button" onClick={saveProduct}>
                 <img
                   className="header_korzina"
                   src="iconBasket.svg"
                   alt="photo"
                 />
                 <p className="m-0 header_subtitle">
-                  <Badge
+                  {/* <Badge
                     badgeContent={savedataproduct?.length}
                     color="secondary"
                   >
-                    Корзина
-                  </Badge>
+                  </Badge> */}
+                  <p
+                    className={`badge_title fw-bold ${
+                      savedataproduct.length === 0 ? "d-none" : ""
+                    }`}
+                  >
+                    {savedataproduct?.length}
+                  </p>
+                  Корзина
                 </p>
               </Button>
               <div className={`korzina ${openSave ? "d-none" : "d-block"}`}>

@@ -80,7 +80,7 @@ const Product = () => {
                                   <div className="px-3">
                                     <div className="d-flex justify-content-center align-items-center ps-4 mt-2 mb-3">
                                       <img
-                                        className="baraxolka_photo mt-2"
+                                        className="baraxolka_photo mt-3"
                                         src={value.img}
                                         alt="photo"
                                       />

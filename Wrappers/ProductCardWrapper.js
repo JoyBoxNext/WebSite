@@ -241,6 +241,12 @@ const ProductCardWrapper = styled.div`
     color: white;
     margin: 20px auto;
     border-radius: 10px;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #ff5314;
+      color: #fff;
+    }
   }
 
   .swiper-slide img {
@@ -623,7 +629,6 @@ const ProductCardWrapper = styled.div`
           .BoxPad {
             padding: 4px;
             .whiteBox {
-              
             }
           }
           .row {

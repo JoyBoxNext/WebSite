@@ -15,6 +15,23 @@ const HeaderWrapper = styled.div`
       color: white !important;
     }
   }
+  .header_button {
+    position: relative;
+    .badge_title {
+      position: absolute;
+      bottom: 8px;
+      left: 35px;
+      width: 17px;
+      height: 17px;
+      background-color: #ff5314;
+      color: #fff;
+      border-radius: 2.8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+    }
+  }
   .badge {
     color: red;
   }
