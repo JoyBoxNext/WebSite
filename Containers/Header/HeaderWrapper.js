@@ -203,6 +203,8 @@ const HeaderWrapper = styled.div`
     background-color: #fff;
     z-index: 1002;
     min-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
 
     .title {
       font-size: 11px;

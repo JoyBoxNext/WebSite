@@ -228,6 +228,9 @@ const GlobalStyle = createGlobalStyle`
       border-radius: 20px;
     }
   }
+  .bag{
+    padding: 18px !important;
+  }
   @media screen and (max-width: 1930px) and (min-width: 1440px) {
     .bag {
           background-color: #FF5314  !important;

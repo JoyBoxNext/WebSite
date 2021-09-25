@@ -35,7 +35,11 @@ const BooksReducer = (state = initialState, action) => {
         return { ...state };
       } else {
         const saves__data = [...state.savedata];
-        saves__data.push(action.payload);
+        const p = action.payload;
+        const f = saves__data.filter(
+          (v) => v.title == p.title && v.price == p.price
+        );
+        f.length == 0 && saves__data.push(action.payload);
         return {
           ...state,
           savedata: saves__data,
