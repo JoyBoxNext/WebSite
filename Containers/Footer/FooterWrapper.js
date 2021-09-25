@@ -6,7 +6,7 @@ const FooterWrapper = styled.div`
   ul,
   li,
   a {
-    text-align: center;
+    text-align: start;
     color: white !important;
   }
   @media screen and (max-width: 1980px) {

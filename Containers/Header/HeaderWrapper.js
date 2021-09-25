@@ -192,7 +192,7 @@ const HeaderWrapper = styled.div`
     width: 500px !important;
   }
   .menuItem {
-    width: 300px !important;
+    width: 250px !important;
   }
   .sm_border {
     border: 1px solid black;

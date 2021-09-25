@@ -55,7 +55,7 @@ const ProductCard = () => {
             <div className="d-flex flex-wrap">
               <div className="firstContainerIpad firstContainerMacbook">
                 <div className="images d-flex">
-                  <div className=" smallimg d-flex justify-content-start mt-5">
+                  <div className=" smallimg d-flex justify-content-start mt-sm-5">
                     <img className="active" src="p1small1.png" alt="smallimg" />
                     <img src="p1small2.png" alt="smallimg" />
                     <img src="p1small3.png" alt="smallimg" />
@@ -146,7 +146,7 @@ const ProductCard = () => {
                     })}
                   </ul>
                   <div className="buttonBottom">
-                    <FontAwesomeIcon icon={faAngleDown} />
+                    <FontAwesomeIcon style={{fontSize:"x-large"}} icon={faAngleDown} />
                   </div>
                 </div>
                 <Link href="/">
@@ -182,7 +182,7 @@ const ProductCard = () => {
                       750: {
                         slidesPerView: 3,
                       },
-                      1200: {
+                      950: {
                         slidesPerView: 4,
                       },
                       1420: {

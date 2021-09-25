@@ -35,7 +35,7 @@ const ProductCardWrapper = styled.div`
       }
     }
     .bigimg {
-      width: 230px !important;
+      width: 250px;
     }
     .colorBoxes {
       display: flex;
@@ -111,7 +111,7 @@ const ProductCardWrapper = styled.div`
       color: gray;
     }
     .characteristic {
-      border: 2.3px solid #2525EB;
+      border: 2.3px solid #2525eb;
       border-radius: 3.5px;
       width: 100%;
       .link-characteristic {
@@ -236,11 +236,19 @@ const ProductCardWrapper = styled.div`
 
   .newProducts {
     display: flex;
+    border-radius: 12px;
     justify-content: center;
     background-color: #ff5314;
     color: white;
     margin: 20px auto;
-    border-radius: 10px;
+    padding: 14px 40px;
+    max-width: 210px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 115.5%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
     &:hover,
     &:focus,
     &:active {
@@ -461,7 +469,7 @@ const ProductCardWrapper = styled.div`
       }
     }
     .firstContainer {
-      background-color: transparent;
+      background-color: #eff9fe;
       .firstContainerMacbook {
         display: flex !important;
         flex-wrap: wrap;
@@ -505,7 +513,6 @@ const ProductCardWrapper = styled.div`
               max-height: 23px;
             }
             .price {
-              /* max-width: 80% !important; */
               .bigPrice {
                 font-size: 50px;
                 line-height: 92%;
@@ -557,6 +564,29 @@ const ProductCardWrapper = styled.div`
         display: none;
         justify-content: center;
       }
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width:900px) {
+    .bigimg {
+      width: 300px !important;
+    }
+  }
+  @media screen and (max-width:660px) and (min-width:600px) {
+    .bigimg {
+      width: 200px !important;
+    }
+  }
+  @media screen and (max-width:345px) and (min-width:300px) {
+    .bigimg {
+      width: 180px !important;
+    }
+  }
+  @media screen and (min-width:720px) {
+    .smallimg {
+      width: 100px;
+      align-items: center;
+      margin-top: 60px !important;
     }
   }
 
@@ -618,8 +648,11 @@ const ProductCardWrapper = styled.div`
         display: flex !important;
         .images {
           display: flex !important;
+          .smallimg {
+            
+          }
           .bigimg {
-            width: 300px !important;
+            /* width: 300px !important; */
             flex: 1 !important;
             margin: 60px !important;
           }
@@ -746,7 +779,6 @@ const ProductCardWrapper = styled.div`
       .badge {
         order: 1;
         margin: auto 0 !important;
-        /* width: 103px; */
       }
       .contant-title-1 {
         display: flex;
@@ -777,6 +809,8 @@ const ProductCardWrapper = styled.div`
       .images {
         max-width: 335px;
         display: flex !important;
+        margin: auto !important;
+        margin-top: 0 !important;
       }
       .colorMemories {
         .colorBoxes,
@@ -784,6 +818,10 @@ const ProductCardWrapper = styled.div`
           display: flex;
           flex-wrap: wrap;
         }
+      .whiteBox {
+        height: 28px;
+        width: 55px;
+      }
         .BoxPad {
           padding: 8px;
         }
