@@ -127,7 +127,7 @@ const ProductCard = () => {
                         Оформить заказ
                       </Button>
                       <Link href="/">
-                        <a className="link-korzinka  p-0 m-0 mb-2">
+                        <a className="link-korzinka2  p-0 m-0 mb-2">
                           Перейти в корзину
                         </a>
                       </Link>
@@ -150,7 +150,7 @@ const ProductCard = () => {
                   </div>
                 </div>
                 <Link href="/">
-                  <a className="link-korzinka text-primary">
+                  <a className="link-korzinka ms-2">
                     Все характеристики
                   </a>
                 </Link>
@@ -185,7 +185,7 @@ const ProductCard = () => {
                       950: {
                         slidesPerView: 4,
                       },
-                      1420: {
+                      1200: {
                         slidesPerView: 5,
                       },
                       1800: {
@@ -200,7 +200,7 @@ const ProductCard = () => {
                             <a>
                               <div className="product-swiper-card p-3 text-start">
                                 <img src={v.img} alt="photo" />
-                                <p className=" title fw-bold mt-2">{v.name}</p>
+                                <p className=" title fw-bold mt-2" style={{fontWeight:"bold !important"}}>{v.name}</p>
                                 <div className="small d-flex p-0 m-0">
                                   <p className="oldPrice me-1 m-0 p-0">
                                     {v.oldPrice}
@@ -213,7 +213,7 @@ const ProductCard = () => {
                                 <div className="d-flex justify-content-between">
                                   <div className="prices">
                                     <p className="m-0 fw-bold">
-                                      <span>{v.priceBig}</span>
+                                      <span>{v.big_price}</span>
                                       {v.price}
                                       <small>сум</small>
                                     </p>

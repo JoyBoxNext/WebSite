@@ -7,7 +7,7 @@ config.autoAddCss = false;
 import GlobalStyle from '../styles/GlobalStyle';
 import { Provider } from 'react-redux';
 import Store from "../redux/Store";
-import Router, { useRouter } from "next/router";
+import Router from "next/router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 //Binding events.

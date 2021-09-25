@@ -108,6 +108,10 @@ const ProductCardWrapper = styled.div`
     }
     .link-korzinka {
       text-decoration: underline;
+      color: #2525EB;
+    }
+    .link-korzinka2 {
+      text-decoration: underline;
       color: gray;
     }
     .characteristic {
@@ -160,12 +164,11 @@ const ProductCardWrapper = styled.div`
       margin-left: -2.5px !important;
       margin: 0;
       .title {
-        line-height: 16px !important;
-        font-size: 12px;
-        margin-bottom: 10px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        text-transform: uppercase !important;
+        font-weight: bold !important;
+        font-size: 11px;
+        line-height: 115.5%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
       }
       .small {
         .oldPrice {
@@ -188,7 +191,13 @@ const ProductCardWrapper = styled.div`
         }
       }
       .prices {
+        margin-top: -8px !important;
+        .fw-bold {
+          margin-bottom: -3px !important;
+        }
         span {
+          margin: 0 !important;
+          padding: 0 !important;
           font-size: 25px;
         }
         .rentPrice {
@@ -379,7 +388,7 @@ const ProductCardWrapper = styled.div`
               max-height: 50px;
               border-radius: 5px;
             }
-            .link-korzinka {
+            .link-korzinka2 {
               font-size: 12px;
             }
           }
@@ -535,16 +544,10 @@ const ProductCardWrapper = styled.div`
               max-height: 50px;
               border-radius: 5px;
             }
-            .link-korzinka {
+            .link-korzinka2 {
               font-size: 12px;
             }
           }
-        }
-      }
-
-      .characteristic-container {
-        .link-korzinka {
-          display: none;
         }
       }
     }
@@ -567,22 +570,27 @@ const ProductCardWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width:1200px) and (min-width:900px) {
+  @media screen and (max-width: 1200px) and (min-width: 900px) {
     .bigimg {
       width: 300px !important;
     }
+    .characteristic-container {
+      .link-korzinka {
+        display: none;
+      }
+    }
   }
-  @media screen and (max-width:660px) and (min-width:600px) {
+  @media screen and (max-width: 660px) and (min-width: 600px) {
     .bigimg {
       width: 200px !important;
     }
   }
-  @media screen and (max-width:345px) and (min-width:300px) {
+  @media screen and (max-width: 345px) and (min-width: 300px) {
     .bigimg {
       width: 180px !important;
     }
   }
-  @media screen and (min-width:720px) {
+  @media screen and (min-width: 720px) {
     .smallimg {
       width: 100px;
       align-items: center;
@@ -649,7 +657,6 @@ const ProductCardWrapper = styled.div`
         .images {
           display: flex !important;
           .smallimg {
-            
           }
           .bigimg {
             /* width: 300px !important; */
@@ -714,19 +721,10 @@ const ProductCardWrapper = styled.div`
               max-height: 50px;
               border-radius: 5px;
             }
-            .link-korzinka {
+            .link-korzinka2 {
               font-size: 12px;
             }
           }
-        }
-      }
-
-      .characteristic-container {
-        .characteristic {
-          max-width: 100%;
-        }
-        .link-korzinka {
-          display: none;
         }
       }
     }
@@ -818,10 +816,10 @@ const ProductCardWrapper = styled.div`
           display: flex;
           flex-wrap: wrap;
         }
-      .whiteBox {
-        height: 28px;
-        width: 55px;
-      }
+        .whiteBox {
+          height: 28px;
+          width: 55px;
+        }
         .BoxPad {
           padding: 8px;
         }
@@ -871,7 +869,7 @@ const ProductCardWrapper = styled.div`
             border-radius: 5px;
             margin-bottom: 0 !important;
           }
-          .link-korzinka {
+          .link-korzinka2 {
             font-size: 12px;
           }
         }
