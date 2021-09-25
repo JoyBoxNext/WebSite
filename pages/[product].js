@@ -322,7 +322,7 @@ const Category = () => {
                   return (
                     <div
                       key={index}
-                      className="col-10 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 px-1 mb-3 card_product position-relative"
+                      className="col-10 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3 px-1 mb-3 d-flex flex-wrap card_product position-relative"
                     >
                       <div className="cards_border mb-4">
                         <img className="skidka" src="skidka.jpg" alt="photo" />
@@ -337,10 +337,7 @@ const Category = () => {
                                 />
                               </a>
                             </Link>
-                            <div
-                              className="colorBoxes flex-column"
-                              style={{ marginBottom: "65px" }}
-                            >
+                            <div className="colorBoxes flex-column">
                               <div className="p-1">
                                 <div className="col-3 colorBox black"></div>
                               </div>
@@ -367,14 +364,18 @@ const Category = () => {
                             {value.aksiya}
                           </p>
                         </div>
-                        <h4 className="fw-bold mb-0 mt-2">
-                          <span className="big_text mb-0 ms-1">
-                            {value.big_price}
-                          </span>
-                          <span className="small_price">{value.price}</span>
-                        </h4>
                         <div className="d-flex justify-content-between align-items-center ">
-                          <p className="mb-0 desc ms-2">{value.desc}</p>
+                          <div>
+                            <h4 className="fw-bold mb-0">
+                              <span className="big_text mb-0 ms-1">
+                                {value.big_price}
+                              </span>
+                              <span className="small_price">{value.price}</span>
+                            </h4>
+                            <p className="mb-0 desc ms-2 mt-1 mb-2">
+                              {value.desc}
+                            </p>
+                          </div>
                           <button
                             onClick={() => saveProduct(index)}
                             className="border-0 save_btn"
@@ -415,16 +416,16 @@ const Category = () => {
               {rightSide.map((value, index) => {
                 return (
                   <div
-                    className={`col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4 ${value.className}`}
+                    className={`col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4 p-0 m-0 ${value.className}`}
                     key={index}
                   >
                     {/* <hr className="d-none d-xl-flex" /> */}
                     <Link href="/productCard">
                       <a>
-                        <div className="right_flex d-xxl-flex">
+                        <div className="right_flex d-flex">
                           <div className="d-flex justify-content-center align-items-center">
                             <img
-                              className="me-3 phone"
+                              className="me-2 phone"
                               src={value.img}
                               alt="photo"
                             />
@@ -433,15 +434,15 @@ const Category = () => {
                             <h5 className="fw-bold mt-3 subtitle">
                               {value.title}
                             </h5>
-                            <div className="d-flex justify-content-between">
-                              <p className="mb-0 bg_success aksiya__">
+                            <div className="d-flex">
+                              <p className="mb-0 bg_success aksiya__ me-2">
                                 {value.aksiya_}
                               </p>
-                              <p className="mb-0 text_secondary aksiya">
+                              <p className="mb-0 text_secondary aksiya ms-2">
                                 {value.aksiya}
                               </p>
                             </div>
-                            <div className="d-flex justify-content-between align-items-center">
+                            <div className="d-flex align-items-center">
                               <div>
                                 <h4 className="fw-bold price mb-0">
                                   <span className="big_text mb-0">
@@ -454,7 +455,9 @@ const Category = () => {
                               <button
                                 onClick={() => saveRightProduct(index)}
                                 className="border-0 bag2 p-0"
-                                style={{ marginTop: "10px !important" }}
+                                style={{
+                                  margin: "10px 0 0 10px !important",
+                                }}
                               >
                                 <img
                                   className="w-75 mt-0"
