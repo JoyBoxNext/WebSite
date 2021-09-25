@@ -166,6 +166,14 @@ const ProductWrapper = styled.div`
   }
   .Sidebar {
     flex: 3 !important;
+    .sidebarBottom_title {
+      font-size: 42px;
+      line-height: 100%;
+    }
+    .sidebarBottom_photo {
+      width: 16px;
+      height: 28px;
+    }
     .border_ {
       border-bottom: 3px solid #969696;
       width: 402px;
@@ -241,6 +249,33 @@ const ProductWrapper = styled.div`
       }
     } */
 
+    @media screen and (max-width: 1900px) {
+      .sidebarBottom_title {
+        font-size: 38px !important;
+      }
+    }
+    @media screen and (max-width: 1720px) {
+      .sidebarBottom_title {
+        font-size: 34px !important;
+      }
+    }
+    @media screen and (max-width: 1550px) {
+      .sidebarBottom_title {
+        font-size: 30px !important;
+      }
+    }
+    @media screen and (max-width: 1440px) {
+      .sidebarBottom_title {
+        font-size: 27px !important;
+      }
+    }
+
+    @media screen and (max-width: 1320px) {
+      .sidebarBottom_title {
+        font-size: 23px !important;
+      }
+    }
+
     @media screen and (max-width: 1195px) {
       .cards_border {
         &:hover .descripton {
@@ -252,6 +287,9 @@ const ProductWrapper = styled.div`
           height: 500px !important;
           z-index: 700;
         }
+      }
+      .sidebarBottom_title {
+        font-size: 20px !important;
       }
     }
 
@@ -394,6 +432,7 @@ const ProductWrapper = styled.div`
 
     .desc {
       font-size: 12px;
+      color: rgba(168, 160, 160, 1);
     }
     .subtitle {
       font-size: 16px;
@@ -402,7 +441,7 @@ const ProductWrapper = styled.div`
       color: rgba(168, 160, 160, 1);
       font-weight: 500;
       font-size: 14px;
-      text-decoration: line-through 1px rgba(0, 0, 0, 1);
+      text-decoration: line-through 1px #a8a0a0;
     }
     .aksiya {
       background-color: #e2e38c;
