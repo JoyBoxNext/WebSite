@@ -43,6 +43,7 @@ const Category = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(true);
   const checked = useSelector((state) => state.BooksReducer.chekbox);
+
   const toggle = (i) => {
     if (checked == -1) {
       const action = { type: t.CHEKED, payload: i };
@@ -90,6 +91,7 @@ const Category = () => {
 
   const data = useSelector((state) => state.BooksReducer.newFilter);
 
+  //saves
   const saveProduct = (index) => {
     let a = datas?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
@@ -407,7 +409,13 @@ const Category = () => {
                     </div>
                   );
                 })}
-                {data?.length === 0 ? "Product not fined" : ""}
+                {data?.length === 0 ? (
+                  <h3 className="fw-bold text-center text-secondary">
+                    Product not found
+                  </h3>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </div>

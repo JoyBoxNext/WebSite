@@ -255,7 +255,6 @@ export default function Home() {
                         <div className="small d-flex p-0 m-0">
                           <p className="oldPrice me-3 mt-1 m-0 p-0">
                             {v.oldPrice}
-                            <span className="sum">сум</span>
                           </p>
                           <div className="badgePrice mt-1">
                             <p className="m-0 p-0">{v.badgePrice} сум</p>

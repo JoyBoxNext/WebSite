@@ -104,6 +104,11 @@ const ProductWrapper = styled.div`
   .datas_subtitle {
     height: 55px !important;
   }
+  @media screen and (max-width: 1025px) {
+    .LeftSide {
+      margin-top: 30px !important;
+    }
+  }
   .LeftSide {
     width: 340px;
     margin-top: 130px;
@@ -445,6 +450,11 @@ const ProductWrapper = styled.div`
   }
 
   //slider
+  @media screen and (max-width: 1025px) {
+    .MuiSlider-root {
+      width: 450px !important;
+    }
+  }
   .MuiSlider-root {
     color: #ff5314 !important;
   }
