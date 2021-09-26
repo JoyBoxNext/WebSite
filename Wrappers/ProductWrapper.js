@@ -56,13 +56,6 @@ const ProductWrapper = styled.div`
       color: white;
       border: none;
       padding: 7px 24px;
-      border-radius: 5px 0 0 5px;
-    }
-    &.b_radius2 {
-      border-radius: 0 5px 5px 0;
-    }
-    &.b_radius {
-      border-radius: 5px 0 0 5px;
     }
   }
   .save_btn {
@@ -270,23 +263,6 @@ const ProductWrapper = styled.div`
         }
       }
     }
-
-    /* @media screen and (max-width: 1445px) {
-      .card_product {
-        .cards_border {
-          height: 55% !important;
-          &:hover .descripton {
-            visibility: visible;
-            position: absolute;
-            z-index: 700;
-          }
-          &:hover {
-            height: 400px !important;
-            z-index: 700;
-          }
-        }
-      }
-    } */
 
     @media screen and (max-width: 1900px) {
       .sidebarBottom_title,
@@ -741,10 +717,20 @@ const ProductWrapper = styled.div`
   }
 
   //slider
-  @media screen and (max-width: 1025px) {
-    .MuiSlider-root {
-      width: 450px !important;
+  @media screen and (max-width: 1920px) and (min-width: 1025px) {
+    .btn_light {
+      &.active {
+        border-radius: 5px 0 0 5px;
+      }
+      &.b_radius2 {
+        border-radius: 0 5px 5px 0;
+      }
+      &.b_radius {
+        border-radius: 5px 0 0 5px;
+      }
     }
+  }
+  @media screen and (max-width: 1025px) {
     .s_13,
     .s_14,
     .s_15,
@@ -759,6 +745,22 @@ const ProductWrapper = styled.div`
     }
     .border_ {
       width: 359px !important;
+    }
+    .btn_light {
+      width: 60% !important;
+      text-align: center !important;
+      margin: 20px 0 15px 40px;
+      border-radius: 4px !important;
+    }
+    .left_card {
+      padding-left: 40px !important;
+    }
+    .LeftSide .input {
+      width: 50% !important;
+      padding: 15px 0 !important;
+      &::placeholder {
+        margin: 20px !important;
+      }
     }
   }
   @media screen and (max-width: 500px) {

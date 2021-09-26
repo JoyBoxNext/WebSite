@@ -110,10 +110,10 @@ const Category = () => {
       <ProductWrapper>
         <div className="d-flex D_flex">
           <div className="LeftSide">
-            <div className="container mt-3">
-              <div className="left_flex">
-                <div className="mt-4" position="static">
-                  <div className="d-flex align-items-center">
+            <div className="container-fluid mt-3">
+              <div className="left_flex row">
+                <div className="mt-4 col-md-4 col-lg-12 " position="static">
+                  <div className="d-lg-flex align-items-center ">
                     <div
                       className={`btn_light ${
                         tabPanel ? "" : "active b_radius"
@@ -131,21 +131,19 @@ const Category = () => {
                       Цена в месяц
                     </div>
                   </div>
-                </div>
-                <div className={`px-2 ${tabPanel == 0 ? "d-block" : "d-none"}`}>
-                  <div className="">
-                    <p className="mb-1 my-3 fw-bold">Цена</p>
-                    <div className="d-flex align-items-center">
+                  <div className="left_card">
+                    <p className="mb-1 my-3 ms-1 fw-bold">Цена</p>
+                    <div className="d-flex align-items-center flex-wrap">
                       <div className="d-flex align-items-center mt-3">
-                        <p className="mb-0 me-2 subtitle">От</p>
+                        <p className="mb-0 me-2 ms-1 subtitle">От</p>
                         <input
                           type="text"
                           value="2.000.000"
                           className="input rounded"
                         />
                       </div>
-                      <div className="d-flex align-items-center mt-3">
-                        <p className="mb-0 mx-2 subtitle">До</p>
+                      <div className="d-flex align-items-center mt-3 flex-wrap">
+                        <p className="mb-0 me-2 ms-1 subtitle">До</p>
                         <input
                           type="text"
                           value="2.000.000"
@@ -153,11 +151,9 @@ const Category = () => {
                         />
                       </div>
                     </div>
-                  </div>
-                  <div>
-                    <div className={classes.root}>
+                    <div className={""}>
                       <Slider
-                        className="my-4"
+                        className="my-4 w-100"
                         value={valueSlider}
                         onChange={handleSliderChange}
                         valueLabelDisplay="auto"
@@ -165,6 +161,14 @@ const Category = () => {
                         getAriaValueText={valuetext}
                       />
                     </div>
+                  </div>
+                </div>
+                <div
+                  className={`px-2 col-md-8 col-lg-12 ${
+                    tabPanel == 0 ? "d-block" : "d-none"
+                  }`}
+                >
+                  <div>
                     <div className="row w-100">
                       {categories?.map((value, index) => {
                         return (
