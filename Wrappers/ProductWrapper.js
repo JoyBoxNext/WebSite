@@ -100,9 +100,20 @@ const ProductWrapper = styled.div`
     font-weight: 700;
     font-size: 15px;
     color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
   }
   .datas_subtitle {
-    height: 55px !important;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px !important;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
   }
   @media screen and (max-width: 1025px) {
     .LeftSide {
@@ -169,6 +180,7 @@ const ProductWrapper = styled.div`
     .sidebarBottom_title {
       font-size: 42px;
       line-height: 100%;
+      text-transform: uppercase !important;
     }
     .sidebarBottom_photo {
       width: 16px;

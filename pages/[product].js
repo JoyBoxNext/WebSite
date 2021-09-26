@@ -40,7 +40,6 @@ const Category = () => {
     setValueSlider(newvalueSlider);
   };
 
-  const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(true);
   const checked = useSelector((state) => state.BooksReducer.chekbox);
 
@@ -99,6 +98,10 @@ const Category = () => {
     const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
+
+  // const Textcut = (event) => {
+  // };
+  // Textcut();
 
   return (
     <>
