@@ -24,7 +24,6 @@ import { homeDatas } from "../Data/homeData";
 import Header from "./../Containers/Header/Header";
 import { ChooseData } from "./../Data/ChooseData";
 import Messeger from "../Components/messeger";
-import { useState } from "react";
 // import Swiper from "react-id-swiper";
 
 export default function Home() {
@@ -36,7 +35,7 @@ export default function Home() {
   chooseData();
 
   const choosedata = useSelector((state) => state.BooksReducer.chooseData);
-  const [time, setTime] = useState("");
+
   const saveChooseDatas = (index) => {
     let a = choosedata?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
