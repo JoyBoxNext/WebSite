@@ -125,21 +125,21 @@ const Header = () => {
                       <div className="d-flex justify-content-between align-items-center">
                         <div className="position-relative">
                           <div className="pe-4 p-xxl-0">
-                            <p className="mb-0 title fw-bold ">{value.title}</p>
+                            <p className="mb-0 title">{value.title}</p>
                           </div>
                           <FontAwesomeIcon
                             className="icon text-end"
                             icon={faAngleDown}
                           />
                           <div className="d-flex align-items-center">
-                            <p className="mb-0 me-4 aksiya_">{value.aksiya_}</p>
+                            <p className="mb-0 me-3 aksiya_">{value.aksiya_}</p>
                             <p className="mb-0 aksiya">{value.aksiya}</p>
                           </div>
-                          <h6 className="fw-bold mb-0">
+                          <h6 className="fw-bold mb-0 d-flex align-items-center">
                             <span className="big_text mb-0 price">
                               {value.big_price}
                             </span>
-                            {value.price}
+                            <div className="small_price">{value.price}</div>
                           </h6>
                           <div>
                             <h6
@@ -159,9 +159,12 @@ const Header = () => {
                   {savedataproduct.length === 0 ? (
                     "Корзина пустой"
                   ) : (
-                    <button onClick={open} className="orange_btn mt-3">
-                      Оформить заказ
-                    </button>
+                    <div>
+                      <button onClick={open} className="orange_btn mt-3">
+                        Оформить заказ
+                      </button>
+                      <p className="post">Перейти в корзину</p>
+                    </div>
                   )}
                 </div>
               </div>
