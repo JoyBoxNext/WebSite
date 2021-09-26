@@ -150,6 +150,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_5",
   },
   {
     title: `6Samsung a52 4/256 dual sim onyx black`,
@@ -160,6 +161,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_6",
   },
   {
     title: `7Samsung a52 4/256 dual sim onyx black`,
@@ -170,6 +172,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_7",
   },
   {
     title: `8Samsung a52 4/256 dual sim onyx black`,
@@ -180,6 +183,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_8",
   },
   {
     title: `9Samsung a52 4/256 dual sim onyx black`,
@@ -190,6 +194,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_9",
   },
   {
     title: `10Samsung a52 4/256 dual sim onyx black`,
@@ -200,6 +205,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_10",
   },
   {
     title: `11Samsung a52 4/256 dual sim onyx black`,
@@ -210,6 +216,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_11",
   },
   {
     title: `12Samsung a52 4/256 dual sim onyx black`,
@@ -220,6 +227,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_12",
   },
   {
     title: `13Samsung a52 4/256 dual sim onyx black`,
@@ -230,6 +238,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_13",
   },
   {
     title: `14Samsung a52 4/256 dual sim onyx black`,
@@ -240,6 +249,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_14",
   },
   {
     title: `15Samsung a52 4/256 dual sim onyx black`,
@@ -250,6 +260,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_15",
   },
   {
     title: `16Samsung a52 4/256 dual sim onyx black`,
@@ -260,6 +271,7 @@ const phones = [
     price: `470,999`,
     desc: `от 1 362 000 сум/мес`,
     save: false,
+    className: "s_16",
   },
 ];
 

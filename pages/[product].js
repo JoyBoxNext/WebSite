@@ -75,7 +75,7 @@ const Category = () => {
   const category = router.query.product;
   const datas = datacategory[category];
   const categories = dataLeft[category];
-  console.log(datas?.[0].title);
+  // console.log(datas?.[0].title);
   const datasend = () => {
     const action = { type: t.SEND, payload: datas };
     dispatch(action);
@@ -99,6 +99,8 @@ const Category = () => {
     const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
+
+  //masala
 
   return (
     <>
@@ -221,93 +223,6 @@ const Category = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`px-2 ${tabPanel == 1 ? "d-block" : "d-none"}`}>
-                  <div className="">
-                    <p className="mb-1 my-3 fw-bold">Цена</p>
-                    <div className="d-flex align-items-center">
-                      <div className="d-flex align-items-center mt-3">
-                        <p className="mb-0 me-2 subtitle">От</p>
-                        <input
-                          type="text"
-                          value="2.000.000"
-                          className="input rounded"
-                        />
-                      </div>
-                      <div className="d-flex align-items-center mt-3">
-                        <p className="mb-0 mx-2 subtitle">До</p>
-                        <input
-                          type="text"
-                          value="2.000.000"
-                          className="input rounded"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className={classes.root}>
-                      <Slider
-                        className="my-4"
-                        value={valueSlider}
-                        onChange={handleSliderChange}
-                        valueLabelDisplay="auto"
-                        aria-labelledby="range-slider"
-                        getAriaValueText={valuetext}
-                      />
-                    </div>
-                    <div className="row w-100">
-                      {categories?.map((value, index) => {
-                        return (
-                          <div
-                            className="col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12"
-                            key={index}
-                          >
-                            <div className="d-flex justify-content-between mt-4">
-                              <p className="subtitle my-3">
-                                {value.name.title}
-                              </p>
-                              {
-                                <FontAwesomeIcon
-                                  onClick={hide2}
-                                  className={`mt-3 mx-3 icon`}
-                                  icon={
-                                    show2
-                                      ? value.name.iconUp
-                                      : value.name.iconDown
-                                  }
-                                />
-                              }
-                            </div>
-                            {value.name.category.map((value, index) => {
-                              return (
-                                <div
-                                  className={`d-flex justify-content-between ${
-                                    show2 ? "" : "d-none"
-                                  }`}
-                                  key={index}
-                                >
-                                  <div className="d-flex align-items-center mt-2">
-                                    <input
-                                      type="checkbox"
-                                      className="myinput"
-                                    />
-                                    <p className="mb-0 subtitle ms-2">
-                                      {value.title}
-                                    </p>
-                                  </div>
-                                  <div className="">
-                                    <p className="my-1 subtitle numbers me-3">
-                                      {value.subtitle}
-                                    </p>
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -330,7 +245,7 @@ const Category = () => {
                   return (
                     <div
                       key={index}
-                      className="col-10 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3 px-1 mb-3 d-flex flex-wrap card_product position-relative"
+                      className={`col-10 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 px-1 mb-3 d-flex flex-wrap card_product position-relative ${value.className}`}
                     >
                       <div className="cards_border mb-4">
                         <img className="skidka" src="skidka.jpg" alt="photo" />
@@ -418,6 +333,13 @@ const Category = () => {
               </div>
             </div>
             {/* ============== */}
+            <div className="sidebar_boxes d-flex justify-content-center align-items-center">
+              <p className="small_boxes">1</p>
+              <p className="small_boxes">2</p>
+              <p className="small_boxes">3</p>
+              <p className="small_boxes">4</p>
+            </div>
+            <p className="avto_text">автопродление страницы</p>
             <div>
               {Slider_bottom.map((value, index) => {
                 return (
