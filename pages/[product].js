@@ -40,7 +40,6 @@ const Category = () => {
     setValueSlider(newvalueSlider);
   };
 
-  const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(true);
   const checked = useSelector((state) => state.BooksReducer.chekbox);
 

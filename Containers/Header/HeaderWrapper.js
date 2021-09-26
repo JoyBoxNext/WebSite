@@ -183,6 +183,7 @@ const HeaderWrapper = styled.div`
   .Categories {
     background-color: #ff5314;
     color: white;
+    padding: 7px 16px !important;
     &:hover {
       background-color: #ff5314;
       color: white !important;
@@ -464,6 +465,11 @@ const HeaderWrapper = styled.div`
       }
     }
   }
+
+  /* .category {
+    .Categories {
+    }
+  } */
 
   //category medias
   /* @media screen and (max-width: 1980px) {
