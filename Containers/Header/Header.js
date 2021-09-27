@@ -204,6 +204,7 @@ const Header = () => {
                             icon={faAngleRight}
                           />
                         </div>
+                        {value.page}
                       </a>
                     </Link>
                   </div>

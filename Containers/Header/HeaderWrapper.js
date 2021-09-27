@@ -79,12 +79,17 @@ const HeaderWrapper = styled.div`
 
   @media screen and (max-width: 800px) {
     .MenuContainer {
-      top: 50% !important;
+      top: 100% !important;
     }
   }
   @media screen and (max-width: 700px) {
     .MenuContainer {
-      top: 40% !important;
+      top: 100% !important;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .MenuContainer {
+      top: 30% !important;
     }
   }
   @media screen and (max-width: 550px) {
@@ -94,7 +99,7 @@ const HeaderWrapper = styled.div`
   }
   @media screen and (max-width: 400px) {
     .MenuContainer {
-      top: 20% !important;
+      top: 100% !important;
     }
     .sm_links {
       display: none;
@@ -127,6 +132,7 @@ const HeaderWrapper = styled.div`
     .menuItem {
       z-index: 10000;
       padding: 8px 0;
+      font-weight: bold;
     }
   }
   .logo {
@@ -136,6 +142,7 @@ const HeaderWrapper = styled.div`
     color: #ff5314;
   }
 
+  /* @media */
   @media screen and (max-width: 600px) {
     .header_korzina,
     .header_icon {
