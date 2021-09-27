@@ -642,6 +642,7 @@ const HomeWrapper = styled.div`
     }
     .container-2-Tel {
       display: block !important;
+      padding: 20px 10px !important;
       .title-section {
         font-weight: bold !important;
         font-size: 40px !important;
@@ -661,8 +662,8 @@ const HomeWrapper = styled.div`
         line-height: 100% !important;
         margin-bottom: 35px !important;
       }
-      .choose-cards:nth-child(2) {
-        margin-top: 24px;
+      .choose-card:nth-child(1) {
+        margin-bottom: 24px;
       }
       .button_next,
       .button_prev {
@@ -674,6 +675,7 @@ const HomeWrapper = styled.div`
     }
     .new-products-Tel {
       display: block !important;
+      padding: 0 !important;
       .new-product-cards {
         position: relative;
         .swiper-pagination {
@@ -874,7 +876,7 @@ const HomeWrapper = styled.div`
       }
     }
   }
-  @media screen and (max-width: 700px) {
+  /* @media screen and (max-width: 700px) {
     .discount {
       position: absolute !important;
       top: 13.5px !important;
@@ -887,7 +889,7 @@ const HomeWrapper = styled.div`
       top: 13.5px !important;
       left: 3.7% !important;
     }
-  }
+  } */
 
   //Laptops
   .laptops,

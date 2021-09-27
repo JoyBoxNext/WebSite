@@ -740,7 +740,9 @@ export default function Home() {
             <h2 className="title-section my-3">Новинки</h2>
             <div className="new-product-cards d-flex p-2">
               <Swiper
-                pagination={true}
+                pagination={{
+                  dynamicBullets: true,
+                }}
                 slidesPerView={5}
                 spaceBetween={0}
                 slidesPerGroup={1}
@@ -945,13 +947,16 @@ export default function Home() {
           {/* LaptopsTel */}
           <div className="laptopsTel d-none w-100 mt-5">
             <h2 className="title-section my-3">Топ предложения - Ноутбуки</h2>
-            <div className="laptop-cards swiper_content">
+            <div className="laptop-cards">
               {LaptopData.map((v, i) => {
                 return (
                   <Link href="/productCard" key={i}>
                     <a>
                       <div className="h-100 p-2" key={i}>
-                        <div className={`laptop-card p-2 ${v.className}`} key={i}>
+                        <div
+                          className={`laptop-card p-2 ${v.className}`}
+                          key={i}
+                        >
                           <img
                             className="discount"
                             src="skidka.svg"
@@ -1016,9 +1021,9 @@ export default function Home() {
             </div>
           </div>
           <div className="button d-flex justify-content-center">
-            <button className="border-0">
+            <Button className="border-0">
               Перейти в раздел <br /> ноутбуки
-            </button>
+            </Button>
           </div>
 
           {/* //brands */}
