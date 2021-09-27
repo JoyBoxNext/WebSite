@@ -714,9 +714,21 @@ const HomeWrapper = styled.div`
     }
     .laptopsTel {
       display: block !important;
+      padding: 0 !important;
+      .laptop-card {
+        margin-bottom: 25px !important;
+      }
       .button_next,
       .button_prev {
         display: none !important;
+      }
+    }
+    //Button button
+    .button {
+      button {
+        padding: 10px 25px !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
       }
     }
   }
@@ -835,11 +847,16 @@ const HomeWrapper = styled.div`
   }
   .button {
     button {
-      padding: 10px 35px;
+      padding: 17px 45px;
       background-color: #ff5314;
       color: white;
-      font-weight: bold;
       border-radius: 15px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 115.5%;
+      text-align: center;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
     }
   }
   @media screen and (max-width: 750px) {
@@ -981,6 +998,13 @@ const HomeWrapper = styled.div`
       font-weight: bold !important;
       font-size: 29px !important;
       line-height: 100%;
+    }
+    .button {
+      button {
+        padding: 14px 35px;
+        border-radius: 12px;
+        font-size: 12px;
+      }
     }
   }
 
@@ -1222,6 +1246,13 @@ const HomeWrapper = styled.div`
       font-size: 11px !important;
       padding: 0 15px !important;
     }
+    .button {
+      button {
+        padding: 10px 25px;
+        border-radius: 7px;
+        font-size: 8px;
+      }
+    }
   }
 
   @media screen and (max-width: 1000px) {
@@ -1404,13 +1435,16 @@ const HomeWrapper = styled.div`
   }
   .brands {
     .button_bottom {
-      padding: 10px 40px;
+      padding: 13px 45px;
       background-color: #ff5314;
       color: white;
       font-weight: bold;
-      border-radius: 15px;
+      border-radius: 12px;
       width: auto;
       border: none;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 100%;
     }
   }
   .home_photo {
@@ -1434,9 +1468,6 @@ const HomeWrapper = styled.div`
       transform: translate(-50%, -50%);
     }
   }
-  /* @media screen and (max-width:600px) {
-    
-  } */
 `;
 
 export default HomeWrapper;
