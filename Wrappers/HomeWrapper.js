@@ -298,6 +298,88 @@ const HomeWrapper = styled.div`
     }
   }
 
+  //Container-2
+  .container-2,
+  .container-2-Tel {
+    background: url("/bgContainer2.jpeg"), #2525eb;
+    background-size: 100% 100%;
+    color: white;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    .container2_photo {
+      width: 100% !important;
+    }
+    .cards {
+      margin-bottom: 30px;
+      .card {
+        border: 2px solid #ff8253;
+        margin: auto;
+        -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+        position: relative;
+        border-radius: 0 !important;
+        .skidka_card {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .title {
+          line-height: 16px !important;
+          /* font-size: 12px; */
+          margin: 0;
+          margin-bottom: 5px !important;
+          padding: 0 !important;
+          text-transform: uppercase !important;
+          font-weight: bold !important;
+        }
+        .small {
+          .oldPrice {
+            font-size: 10px;
+            text-decoration: line-through;
+            color: gray;
+            padding: 0;
+            margin: 0;
+            .sum {
+              font-size: 8px;
+              text-decoration: none !important;
+              -webkit-text-decoration: transparent !important;
+              text-decoration: transparent !important;
+            }
+          }
+          .badgePrice {
+            font-size: 8px;
+            background-color: #d3e38c;
+            padding: 2px 5px;
+            color: black !important;
+            font-weight: 500;
+            border-radius: 1.4px;
+          }
+        }
+        .prices {
+          span {
+            font-size: 24px;
+          }
+          b {
+            font-size: 18px;
+          }
+          .rentPrice {
+            font-size: 10px;
+            text-decoration: underline;
+            color: gray;
+          }
+        }
+        img {
+          /* max-height: 206px; */
+          max-width: 172px;
+          margin: auto !important;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
+      }
+    }
+  }
+
   //productDay
   .productDay {
     background-image: url("BgProductDay.png");
@@ -445,89 +527,9 @@ const HomeWrapper = styled.div`
     }
   }
 
-  //Container-2
-  .container-2 {
-    background: url("/bgContainer2.jpeg"), #2525eb;
-    background-size: 100% 100%;
-    color: white;
-    padding: 30px 30px;
-    margin-bottom: 30px;
-    .container2_photo {
-      width: 100% !important;
-    }
-    .cards {
-      margin-bottom: 30px;
-      .card {
-        border: 2px solid #ff8253;
-        margin: auto;
-        -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
-        position: relative;
-        border-radius: 0 !important;
-        .skidka_card {
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-        .title {
-          line-height: 16px !important;
-          font-size: 12px;
-          margin: 0;
-          margin-bottom: 5px !important;
-          padding: 0 !important;
-          text-transform: uppercase !important;
-          font-weight: bold !important;
-        }
-        .small {
-          .oldPrice {
-            font-size: 10px;
-            text-decoration: line-through;
-            color: gray;
-            padding: 0;
-            margin: 0;
-            .sum {
-              font-size: 8px;
-              text-decoration: none !important;
-              -webkit-text-decoration: transparent !important;
-              text-decoration: transparent !important;
-            }
-          }
-          .badgePrice {
-            font-size: 8px;
-            background-color: #d3e38c;
-            padding: 2px 5px;
-            color: black !important;
-            font-weight: 500;
-            border-radius: 1.4px;
-          }
-        }
-        .prices {
-          span {
-            font-size: 24px;
-          }
-          b {
-            font-size: 18px;
-          }
-          .rentPrice {
-            font-size: 10px;
-            text-decoration: underline;
-            color: gray;
-          }
-        }
-        img {
-          /* max-height: 206px; */
-          max-width: 172px;
-          margin: auto !important;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-        }
-      }
-    }
-  }
-
   //ChooseClients
-  .choose {
+  .choose,
+  .chooseTel {
     margin-bottom: 30px;
     .choose-card {
       border: 10px solid #ff8253;
@@ -629,6 +631,94 @@ const HomeWrapper = styled.div`
     }
   }
 
+  //TEL-CONTAINERS-MEDIA
+  @media screen and (max-width: 500px) {
+    .container-2,
+    .choose,
+    .miBand,
+    .new-products,
+    .laptops {
+      display: none !important;
+    }
+    .container-2-Tel {
+      display: block !important;
+      .title-section {
+        font-weight: bold !important;
+        font-size: 40px !important;
+        line-height: 100% !important;
+        text-align: center;
+        margin-bottom: 35px !important;
+      }
+      .swiper-slide {
+        background: none !important;
+      }
+    }
+    .chooseTel {
+      display: block !important;
+      .title-section {
+        font-weight: bold !important;
+        font-size: 40px !important;
+        line-height: 100% !important;
+        margin-bottom: 35px !important;
+      }
+      .choose-cards:nth-child(2) {
+        margin-top: 24px;
+      }
+      .button_next,
+      .button_prev {
+        display: none !important;
+      }
+    }
+    .miBand2 {
+      display: block !important;
+    }
+    .new-products-Tel {
+      display: block !important;
+      .new-product-cards {
+        position: relative;
+        .swiper-pagination {
+          display: flex !important;
+          justify-content: center;
+        }
+        .swiper-pagination-bullet {
+          background-color: gray !important;
+        }
+        .dot_orange {
+          width: 5px;
+          height: 5px;
+          background-color: #ff5314;
+        }
+        .dot1 {
+          position: absolute;
+          left: -5px;
+          top: -5px;
+        }
+        .dot2 {
+          position: absolute;
+          right: -5px;
+          top: -5px;
+        }
+        .dot3 {
+          position: absolute;
+          left: -5px;
+          bottom: -5px;
+        }
+        .dot4 {
+          position: absolute;
+          right: -5px;
+          bottom: -5px;
+        }
+      }
+    }
+    .laptopsTel {
+      display: block !important;
+      .button_next,
+      .button_prev {
+        display: none !important;
+      }
+    }
+  }
+
   //Container-mi
   .container-mi {
     background-color: #a8c9c8;
@@ -653,7 +743,8 @@ const HomeWrapper = styled.div`
   }
 
   //New-Products
-  .new-products {
+  .new-products,
+  .new-products-Tel {
     padding: 0 30px;
     margin-bottom: 30px;
     .new-product-cards {
@@ -799,7 +890,8 @@ const HomeWrapper = styled.div`
   }
 
   //Laptops
-  .laptops {
+  .laptops,
+  .laptopsTel {
     padding: 0 16px;
     margin-bottom: 30px;
     height: auto;
