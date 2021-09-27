@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
@@ -16,7 +16,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleRight,
+  faArrowLeft,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import { useSelector } from "react-redux";
@@ -24,6 +28,10 @@ import { homeDatas } from "../Data/homeData";
 import Header from "./../Containers/Header/Header";
 import { ChooseData } from "./../Data/ChooseData";
 import Messeger from "../Components/messeger";
+import { linksIndex, pages } from "../Data/HeaderData";
+import ActiveLink from "../activeLink";
+import HeaderWrapper from "../Containers/Header/HeaderWrapper";
+// import Swiper from "react-id-swiper";
 
 export default function Home() {
   const chooseData = () => {
@@ -32,7 +40,6 @@ export default function Home() {
   };
   chooseData();
   const choosedata = useSelector((state) => state.BooksReducer.chooseData);
-  // const [time, setTime] = useState("");
   const saveChooseDatas = (index) => {
     let a = choosedata?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
@@ -54,11 +61,82 @@ export default function Home() {
     dispatch(action);
   };
 
+  //////=====/////
+  const [anchorEl, setAnchorEl] = useState(false);
+
+  const handleOpenMenu = () => {
+    setAnchorEl(!anchorEl);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <HomeWrapper>
       <Container>
         <div className="contant">
           <Header />
+
+          <HeaderWrapper>
+            <div className="w-100 mt-3 d-flex  align-items-center category">
+              <div className="flex position-relative">
+                <Button
+                  className="Categories mb-3"
+                  aria-controls="menu"
+                  disableRipple
+                  onClick={handleOpenMenu}
+                  variant="contained"
+                  style={{ display: "none" }}
+                >
+                  <img className="me-1" src="iconCategories.svg" alt="photo" />
+                  Категории
+                  <img className="ms-1" src="iconCtegories2.svg" alt="photo" />
+                </Button>
+                <div
+                  className={`MenuContainer position-absolute ${
+                    anchorEl ? "Active" : ""
+                  }`}
+                >
+                  {pages.map((value, index) => {
+                    return (
+                      <div key={index} className="menuItem">
+                        <Link href={value.href}>
+                          <div style={{ cursor: "pointer" }}>
+                            <a>{value.page}</a>
+                            <FontAwesomeIcon
+                              className="icon_right position-absolute"
+                              style={{ right: "10px", color: "#606060" }}
+                              icon={faAngleRight}
+                            />
+                          </div>
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="d-flex flex-wrap">
+                  {linksIndex.map((value, index) => {
+                    return (
+                      <Link href={value.href} key={index}>
+                        <a>
+                          <ActiveLink
+                            href={value.href}
+                            onClick={handleMenuClose}
+                            style={{ zIndex: "100" }}
+                            className={`${value.className}`}
+                          >
+                            {value.link}
+                          </ActiveLink>
+                        </a>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </HeaderWrapper>
+
           {/* Container-1 */}
           <div className="container-1  mt-2">
             <div className="d-flex flex-wrap">
@@ -132,7 +210,7 @@ export default function Home() {
                 <img className="w-100" src="logo4.png" alt="photo" />
               </div>
               <div className="flex7 orange" style={{ width: "11.2%" }}></div>
-              <div className="flex8 blue py-3" style={{ width: "62.1%" }}>
+              <div className="flex8 blue" style={{ width: "62.1%" }}>
                 <div className="buttons">
                   <Button className="btn_links btn_links1">Скидки</Button>
                   <Button className="btn_links">Подборки</Button>
@@ -141,18 +219,12 @@ export default function Home() {
                 </div>
                 <div className="d-none mini-content-flex8">
                   <div className="text">
-                    <p className="subtitle m-1 top_title">
-                      заголовок редактируется через админ панель
-                    </p>
-                    <h1 className="title mb-3 big_title">
+                    <h1 className="title mb-3 pe-2 big_title">
                       Удиви своих друзей!
                     </h1>
                   </div>
                   <div className="mini-content p-0">
                     <div className="p-1">
-                      <p className="title-2 top_title">
-                        PlayStation 5 Digital version
-                      </p>
                       <div className="d-flex titles-1 justify-content-between align-items-center">
                         <p className="title mb-0 text-end">
                           с Samsung Galaxy A52
@@ -185,10 +257,6 @@ export default function Home() {
                         Магазин бытовой техники и электроники
                       </p>
                     </div>
-                    <div className="dot_orange dot1"></div>
-                    <div className="dot_orange dot2"></div>
-                    <div className="dot_orange dot3"></div>
-                    <div className="dot_orange dot4"></div>
                   </div>
                 </div>
               </div>
@@ -284,6 +352,114 @@ export default function Home() {
               </a>
             </Link>
           </div>
+          {/* container-2-Tel */}
+          <div className="container-2-Tel d-none mt-5">
+            <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
+            <div className="cards d-flex justify-content-center">
+              <Swiper
+                breakpoints={{
+                  200: {
+                    slidesPerView: 1,
+                  },
+                  568: {
+                    slidesPerView: 2,
+                  },
+                  800: {
+                    slidesPerView: 3,
+                  },
+                  1060: {
+                    slidesPerView: 4,
+                  },
+                  1590: {
+                    slidesPerView: 5,
+                  },
+                }}
+                slidesPerView={5}
+                spaceBetween={0}
+                slidesPerGroup={1}
+                loop={false}
+                loopFillGroupWithBlank={true}
+                navigation={false}
+                className="mySwiper"
+              >
+                {homeDatas.map((v, i) => {
+                  return (
+                    <SwiperSlide className="h-100" key={i}>
+                      <div className={`card mx-2 p-3`}>
+                        <img
+                          className="skidka_card"
+                          src="skidka.svg"
+                          alt="skidka"
+                        />
+                        <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                          <img
+                            className="container2_photo"
+                            style={{
+                              marginTop: "20px !important",
+                              width: "100px",
+                              height: "127px",
+                              objectFit: "contain",
+                            }}
+                            src={v.img}
+                            alt="photo"
+                          />
+                          <div className="colorBoxes flex-column mb-5">
+                            <div className="p-1">
+                              <div className="col-3 colorBox black"></div>
+                            </div>
+                            <div className="p-1">
+                              <div className="col-3 colorBox white"></div>
+                            </div>
+                            <div className="p-1">
+                              <div className="col-3 colorBox green"></div>
+                            </div>
+                            <div className="p-1">
+                              <div className="col-3 colorBox gray"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <p className="text-dark title fw-bold mt-1 mb-0">
+                          {v.title}
+                        </p>
+                        <div className="small d-flex p-0 m-0">
+                          <p className="oldPrice me-3 mt-1 m-0 p-0">
+                            {v.oldPrice}
+                          </p>
+                          <div className="badgePrice mt-1">
+                            <p className="m-0 p-0">{v.badgePrice} сум</p>
+                          </div>
+                        </div>
+                        <div className="d-flex justify-content-between">
+                          <div className="prices">
+                            <p className="m-0 fw-bold">
+                              <span className="text-dark m-0 p-0">
+                                {v.big_price}
+                              </span>
+                              <b className="text-dark">{v.price}</b>
+                              <small className="text-dark">сум</small>
+                            </p>
+                            <p className="rentPrice mb-0">
+                              от {v.rentPrice} сум/мес
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => saveRightProduct(i)}
+                            className="border-0 bag"
+                          >
+                            <img
+                              className="w-75 mb-2 "
+                              src="bag.svg"
+                              alt="photo"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+          </div>
           {/* ProductDay */}
           <div className="productDay px-lg-4 mt-5">
             <div className="row justify-content-center p-3 w-100">
@@ -357,13 +533,13 @@ export default function Home() {
                   568: {
                     slidesPerView: 2,
                   },
-                  800: {
+                  760: {
                     slidesPerView: 3,
                   },
                   1060: {
                     slidesPerView: 4,
                   },
-                  1590: {
+                  1400: {
                     slidesPerView: 5,
                   },
                 }}
@@ -459,10 +635,94 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* chooseTel */}
+          <div className="chooseTel d-none mt-5">
+            <h2 className="title-section my-2 px-2">Выбор покупателей</h2>
+            <div className="choose-cards">
+              {choosedata.map((v, i) => {
+                return (
+                  <Link href="/productCard" key={i}>
+                    <a>
+                      <div className={`choose-card p-2 ${v.className}`}>
+                        <img className="skidka" src="skidka.svg" alt="photo" />
+                        <div className="d-flex justify-content-center align-items-center ps-4 my-3">
+                          <img
+                            style={{ marginTop: "20px !important" }}
+                            className="choose_photo"
+                            src={v.img}
+                            alt="photo"
+                          />
+                          <div className="colorBoxes flex-column mb-5 ms-1">
+                            <div className="p-1">
+                              <div className="col-3 colorBox black"></div>
+                            </div>
+                            <div className="p-1">
+                              <div className="col-3 colorBox white"></div>
+                            </div>
+                            <div className="p-1">
+                              <div className="col-3 colorBox green"></div>
+                            </div>
+                            <div className="p-1">
+                              <div className="col-3 colorBox gray"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <p className=" title fw-bold mt-2">{v.title}</p>
+                        <div className="small d-flex p-0 m-0">
+                          <p className="oldPrice me-3 m-0 p-0 mt-1">
+                            {v.oldPrice}
+                            <span className="sum">сум</span>
+                          </p>
+                          <div className="badgePrice mt-1">
+                            <p className="m-0 p-0">{v.badgePrice} сум</p>
+                          </div>
+                        </div>
+                        <div className="d-flex justify-content-between">
+                          <div className="prices">
+                            <p className="m-0 fw-bold b">
+                              <span>{v.big_price}</span>
+                              {v.price}
+                              <small>сум</small>
+                            </p>
+                            <p className="rentPrice">
+                              от {v.rentPrice} сум/мес
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => saveChooseDatas(i)}
+                            className="border-0 bag"
+                          >
+                            <img
+                              className="w-75 mb-2"
+                              src="bag.svg"
+                              alt="photo"
+                            />
+                          </button>
+                        </div>
+                        <div className="dot_blue dot1"></div>
+                        <div className="dot_blue dot2"></div>
+                        <div className="dot_blue dot3"></div>
+                        <div className="dot_blue dot4"></div>
+                      </div>
+                    </a>
+                  </Link>
+                );
+              })}
+              <div className="button_next">
+                <FontAwesomeIcon icon={faArrowRight} />
+              </div>
+              <div className="button_prev">
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </div>
+            </div>
+          </div>
 
           {/* Container-mi */}
-          <div>
+          <div className="miBand">
             <img className="w-100" src="miBand.png" alt="photo" />
+          </div>
+          <div className="miBand2 d-none">
+            <img className="w-100" src="miBand2.png" alt="photo" />
           </div>
 
           {/* New-products */}
@@ -529,9 +789,112 @@ export default function Home() {
               })}
             </div>
             <div className="button d-flex justify-content-center my-4">
-              <button className="border-0">
+              <Button className="border-0">
                 Перейти в раздел <br /> новинки
-              </button>
+              </Button>
+            </div>
+          </div>
+
+          {/* New-products-Tel*/}
+          <div className="new-products-Tel d-none w-100 mt-5">
+            <h2 className="title-section my-3">Новинки</h2>
+            <div className="new-product-cards d-flex p-2">
+              <Swiper
+                pagination={{
+                  dynamicBullets: true,
+                }}
+                slidesPerView={5}
+                spaceBetween={0}
+                slidesPerGroup={1}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                navigation={false}
+                className="mySwiper"
+                breakpoints={{
+                  300: {
+                    slidesPerView: 1,
+                  },
+                  480: {
+                    slidesPerView: 2,
+                  },
+                  750: {
+                    slidesPerView: 3,
+                  },
+                  950: {
+                    slidesPerView: 4,
+                  },
+                  1200: {
+                    slidesPerView: 5,
+                  },
+                  1800: {
+                    slidesPerView: 6,
+                  },
+                }}
+              >
+                {NewProductCards.map((v, i) => {
+                  return (
+                    <SwiperSlide className=" h-100" key={i}>
+                      <Link href="/productCard" key={i}>
+                        <a>
+                          <div>
+                            <div className={`new-product-card text-center p-2`}>
+                              <img
+                                style={{ objectFit: "contain" }}
+                                className="w-100 h-50 new_photos"
+                                src={v.img}
+                                alt="photo"
+                              />
+                              <p className="title text-start fw-bold mt-2">
+                                {v.title}
+                              </p>
+                              <div className="small d-flex ">
+                                <p className="oldPrice me-3 ms-1 m-0 p-0">
+                                  {v.oldPrice}
+                                  <span className="sum">сум</span>
+                                </p>
+                                <div className="badgePrice">
+                                  <p className="m-0 p-0">{v.badgePrice} сум</p>
+                                </div>
+                              </div>
+                              <div className="d-flex justify-content-between">
+                                <div className="prices">
+                                  <p className="m-0 fw-bold">
+                                    <span>{v.big_price}</span>
+                                    <b className="small_price">{v.price}</b>
+                                    <small className="sum">сум</small>
+                                  </p>
+                                  <p className="rentPrice ">
+                                    от {v.rentPrice} сум/мес
+                                  </p>
+                                </div>
+                                <button
+                                  onClick={() => newsData(i)}
+                                  className="border-0 bag"
+                                >
+                                  <img
+                                    className="w-75 mb-2"
+                                    src="bag.svg"
+                                    alt="photo"
+                                  />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+              <div className="dot_orange dot1"></div>
+              <div className="dot_orange dot2"></div>
+              <div className="dot_orange dot3"></div>
+              <div className="dot_orange dot4"></div>
+            </div>
+            <div className="button d-flex justify-content-center my-4">
+              <Button className="border-0">
+                Перейти в раздел <br /> новинки
+              </Button>
             </div>
           </div>
 
@@ -546,7 +909,7 @@ export default function Home() {
                 loop={true}
                 loopFillGroupWithBlank={true}
                 navigation={true}
-                className="mySwiper swiper-no-swiping"
+                className="mySwiper"
                 breakpoints={{
                   300: {
                     slidesPerView: 1,
@@ -640,10 +1003,87 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* LaptopsTel */}
+          <div className="laptopsTel d-none w-100 mt-5">
+            <h2 className="title-section my-3">Топ предложения - Ноутбуки</h2>
+            <div className="laptop-cards">
+              {LaptopData.map((v, i) => {
+                return (
+                  <Link href="/productCard" key={i}>
+                    <a>
+                      <div className="h-100" key={i}>
+                        <div
+                          className={`laptop-card p-2 ${v.className}`}
+                          key={i}
+                        >
+                          <img
+                            className="discount"
+                            src="skidka.svg"
+                            alt="photo"
+                          />
+                          <div className="d-flex flex-column justify-content-center align-items-center">
+                            <img
+                              className="acer"
+                              src="acer.svg.svg"
+                              alt="acer"
+                            />
+                            <img
+                              style={{ marginTop: "70px" }}
+                              src={v.img}
+                              alt="photo"
+                            />
+                          </div>
+                          <p className="title fw-bold mt-2">{v.title}</p>
+                          <div className="small d-flex p-0 m-0">
+                            <p className="oldPrice me-3 ms-1 m-0 p-0">
+                              {v.oldPrice}
+                              <span className="sum">сум</span>
+                            </p>
+                            <div className="badgePrice">
+                              <p className="m-0 p-0">{v.badgePrice} сум</p>
+                            </div>
+                          </div>
+                          <div className="d-flex justify-content-between">
+                            <div className="prices">
+                              <p className="m-0 fw-bold">
+                                <span>{v.big_price}</span>
+                                {v.price}
+                                <small>сум</small>
+                              </p>
+                              <p className="rentPrice ms-1">
+                                от {v.rentPrice} сум/мес
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => laptopSaveData(i)}
+                              className="border-0 bag"
+                            >
+                              <img
+                                className="w-75 mb-2"
+                                src="bag.svg"
+                                alt="photo"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                );
+              })}
+              <div className="button_next">
+                <FontAwesomeIcon icon={faArrowRight} />
+              </div>
+              <div className="button_prev">
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </div>
+            </div>
+          </div>
           <div className="button d-flex justify-content-center">
-            <button className="border-0">
+            <Button className="border-0">
               Перейти в раздел <br /> ноутбуки
-            </button>
+            </Button>
           </div>
 
           {/* //brands */}

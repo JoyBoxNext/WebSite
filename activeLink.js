@@ -29,22 +29,28 @@ const ActiveLinkWrapper = styled.div`
   }
   @media screen and (max-width: 1800px) {
     button {
-      padding: 7px 28px !important;
+      padding: 7px 26px !important;
     }
   }
+
   @media screen and (max-width: 1750px) {
     button {
       padding: 7px 22px !important;
     }
   }
-  @media screen and (max-width: 1750px) {
+  @media screen and (max-width: 1710px) {
     button {
-      padding: 7px 18px !important;
+      padding: 7px 20px !important;
     }
   }
   @media screen and (max-width: 1650px) {
     button {
-      padding: 7px 26px !important;
+      padding: 7px 28px !important;
+    }
+  }
+  @media screen and (max-width: 1590px) {
+    button {
+      padding: 7px 24px !important;
     }
   }
   @media screen and (max-width: 1550px) {
@@ -54,27 +60,123 @@ const ActiveLinkWrapper = styled.div`
   }
   @media screen and (max-width: 1500px) {
     button {
-      padding: 7px 17px !important;
+      padding: 7px 15px !important;
     }
   }
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 1440px) {
     button {
-      padding: 7px 31px !important;
+      padding: 7px 28px !important;
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1400px) {
+    button {
+      padding: 7px 26px !important;
+    }
+  }
+  @media screen and (max-width: 1380px) {
+    button {
+      padding: 7px 26px !important;
+    }
+  }
+  @media screen and (max-width: 1330px) {
     button {
       padding: 7px 22px !important;
     }
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1290px) {
+    button {
+      padding: 7px 20px !important;
+    }
+  }
+  @media screen and (max-width: 1260px) {
+    button {
+      padding: 7px 16px !important;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    button {
+      padding: 7px 15px !important;
+    }
+  }
+  @media screen and (max-width: 1180px) {
+    button {
+      padding: 7px 12px !important;
+    }
+  }
+  @media screen and (max-width: 1140px) {
+    button {
+      padding: 7px 10px !important;
+    }
+  }
+  @media screen and (max-width: 1120px) {
     button {
       padding: 7px 18px !important;
     }
   }
+  @media screen and (max-width: 1120px) {
+    button {
+      padding: 7px 18px !important;
+    }
+  }
+  @media screen and (max-width: 1090px) {
+    button {
+      padding: 7px 13px !important;
+    }
+  }
+  @media screen and (max-width: 1070px) {
+    button {
+      padding: 7px 30px !important;
+    }
+  }
+  @media screen and (max-width: 1025px) {
+    button,
+    .Categories {
+      padding: 7px 55px !important;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    button,
+    .Categories {
+      padding: 7px 45px !important;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    button,
+    .Categories {
+      padding: 7px 42px !important;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    button,
+    .Categories {
+      padding: 7px 36px !important;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    button,
+    .Categories {
+      padding: 7px 30px !important;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    button {
+      padding: 7px 24px !important;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    button {
+      padding: 7px 25px !important;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    button {
+      padding: 7px 20px !important;
+    }
+  }
   @media screen and (max-width: 670px) {
     button {
-      padding: 7px 10px !important;
+      padding: 7px 15px !important;
       font-size: 15px !important;
     }
   }

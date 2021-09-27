@@ -109,6 +109,7 @@ const ProductCardWrapper = styled.div`
     .link-korzinka {
       text-decoration: underline;
       color: #2525EB;
+      display: flex;
     }
     .link-korzinka2 {
       text-decoration: underline;
@@ -406,7 +407,7 @@ const ProductCardWrapper = styled.div`
           /* max-width: 100%; */
         }
         .link-korzinka {
-          display: none;
+          display: flex;
         }
       }
     }

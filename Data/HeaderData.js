@@ -1,15 +1,47 @@
 const links = [
-  { link: "Скидки", href: "/baraxolka" },
-  { link: "Смартфоны", href: "/phones" },
-  { link: "ТВ", href: "/tv" },
+  { link: "Скидки", href: "/baraxolka", className: "sm_links" },
+  { link: "Смартфоны", href: "/phones", className: "sm_links" },
+  { link: "ТВ", href: "/tv", className: "sm_links" },
   {
     link: "Техника для кухни",
     href: "/kitchen",
+    className: "sm_links",
   },
   {
     link: "Аксессуары",
     href: "/homeTech",
-    className: "link_access",
+    className: "home_tech ",
+  },
+  {
+    link: "Техника для дома",
+    href: "/homeTech",
+    className: "home",
+  },
+  {
+    link: " Ноутбук, ПК, планшет",
+    href: "/laptops",
+    className: "laptop",
+  },
+  {
+    link: "Для геймеров",
+    href: "/gamers",
+    className: "gamer",
+  },
+];
+
+const linksIndex = [
+  { link: "Скидки", href: "/baraxolka", className: "sm_links_Index" },
+  { link: "Смартфоны", href: "/phones", className: "sm_links_Index" },
+  { link: "ТВ", href: "/tv", className: "sm_links_Index" },
+  {
+    link: "Техника для кухни",
+    href: "/kitchen",
+    className: "sm_links_Index",
+  },
+  {
+    link: "Аксессуары",
+    href: "/homeTech",
+    className: "home_tech_Index ",
   },
   {
     link: "Техника для дома",
@@ -39,4 +71,4 @@ const pages = [
   { page: "Дом, Сад", href: "/" },
 ];
 
-export { links, pages };
+export { links, linksIndex, pages };
