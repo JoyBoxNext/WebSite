@@ -16,7 +16,8 @@ const HeaderWrapper = styled.div`
     }
   }
   .sm_links_Index,
-  .home_tech_Index {
+  .home_tech_Index,
+  .index_link {
     display: none;
   }
   .header_button {
