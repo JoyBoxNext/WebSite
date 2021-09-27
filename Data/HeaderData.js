@@ -29,6 +29,37 @@ const links = [
   },
 ];
 
+const linksIndex = [
+  { link: "Скидки", href: "/baraxolka", className: "sm_links_Index" },
+  { link: "Смартфоны", href: "/phones", className: "sm_links_Index" },
+  { link: "ТВ", href: "/tv", className: "sm_links_Index" },
+  {
+    link: "Техника для кухни",
+    href: "/kitchen",
+    className: "sm_links_Index",
+  },
+  {
+    link: "Аксессуары",
+    href: "/homeTech",
+    className: "home_tech_Index ",
+  },
+  {
+    link: "Техника для дома",
+    href: "/homeTech",
+    className: "index_link",
+  },
+  {
+    link: " Ноутбук, ПК, планшет",
+    href: "/laptops",
+    className: "index_link",
+  },
+  {
+    link: "Для геймеров",
+    href: "/gamers",
+    className: "index_link",
+  },
+];
+
 const pages = [
   { page: "Акции", href: "/baraxolka" },
   { page: "Смартфоны", href: "/phones" },
@@ -40,4 +71,4 @@ const pages = [
   { page: "Дом, Сад", href: "/" },
 ];
 
-export { links, pages };
+export { links, linksIndex, pages };

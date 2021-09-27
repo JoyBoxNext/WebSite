@@ -60,17 +60,17 @@ const ActiveLinkWrapper = styled.div`
   }
   @media screen and (max-width: 1500px) {
     button {
-      padding: 7px 18px !important;
+      padding: 7px 15px !important;
     }
   }
   @media screen and (max-width: 1440px) {
     button {
-      padding: 7px 32px !important;
+      padding: 7px 28px !important;
     }
   }
   @media screen and (max-width: 1400px) {
     button {
-      padding: 7px 28px !important;
+      padding: 7px 26px !important;
     }
   }
   @media screen and (max-width: 1380px) {
@@ -80,7 +80,7 @@ const ActiveLinkWrapper = styled.div`
   }
   @media screen and (max-width: 1330px) {
     button {
-      padding: 7px 24px !important;
+      padding: 7px 22px !important;
     }
   }
   @media screen and (max-width: 1290px) {
@@ -90,22 +90,22 @@ const ActiveLinkWrapper = styled.div`
   }
   @media screen and (max-width: 1260px) {
     button {
-      padding: 7px 18px !important;
+      padding: 7px 16px !important;
     }
   }
   @media screen and (max-width: 1200px) {
     button {
-      padding: 7px 16px !important;
+      padding: 7px 15px !important;
     }
   }
   @media screen and (max-width: 1180px) {
     button {
-      padding: 7px 14px !important;
+      padding: 7px 12px !important;
     }
   }
   @media screen and (max-width: 1140px) {
     button {
-      padding: 7px 12px !important;
+      padding: 7px 10px !important;
     }
   }
   @media screen and (max-width: 1120px) {
@@ -116,14 +116,14 @@ const ActiveLinkWrapper = styled.div`
   @media screen and (max-width: 1120px) {
     button {
       padding: 7px 18px !important;
+    }
+  }
+  @media screen and (max-width: 1090px) {
+    button {
+      padding: 7px 13px !important;
     }
   }
   @media screen and (max-width: 1070px) {
-    button {
-      padding: 7px 33px !important;
-    }
-  }
-  @media screen and (max-width: 1030px) {
     button {
       padding: 7px 30px !important;
     }
@@ -137,7 +137,7 @@ const ActiveLinkWrapper = styled.div`
   @media screen and (max-width: 1000px) {
     button,
     .Categories {
-      padding: 7px 50px !important;
+      padding: 7px 45px !important;
     }
   }
   @media screen and (max-width: 950px) {
@@ -156,6 +156,11 @@ const ActiveLinkWrapper = styled.div`
     button,
     .Categories {
       padding: 7px 30px !important;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    button {
+      padding: 7px 24px !important;
     }
   }
 
