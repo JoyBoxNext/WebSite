@@ -38,7 +38,7 @@ const HeaderWrapper = styled.div`
   .flex {
     display: flex;
   }
-  .link_access {
+  .home_tech {
     display: none;
   }
   .gamer,
@@ -46,18 +46,18 @@ const HeaderWrapper = styled.div`
   .laptop {
     display: block !important;
   }
-
-  @media screen and (max-width: 1510px) {
+  @media screen and (max-width: 1120px) {
     .gamer {
       display: none !important;
     }
   }
-  @media screen and (max-width: 1250px) {
+  @media screen and (max-width: 1070px) {
     .laptop {
       display: none !important;
     }
   }
-  @media screen and (max-width: 1030px) {
+
+  @media screen and (max-width: 1025px) {
     .home {
       display: none !important;
     }
@@ -90,6 +90,15 @@ const HeaderWrapper = styled.div`
   @media screen and (max-width: 400px) {
     .MenuContainer {
       top: 20% !important;
+    }
+    .sm_links {
+      display: none;
+    }
+    .home_tech {
+      display: none !important;
+    }
+    .flex {
+      width: 90% !important;
     }
   }
   .MenuContainer {
@@ -427,6 +436,9 @@ const HeaderWrapper = styled.div`
       left: -150px;
       /* width: 400px; */
     }
+    .home_tech {
+      display: block;
+    }
   }
   @media screen and (max-width: 500px) {
     .korzina {
@@ -465,18 +477,6 @@ const HeaderWrapper = styled.div`
       }
     }
   }
-
-  /* .category {
-    .Categories {
-    }
-  } */
-
-  //category medias
-  /* @media screen and (max-width: 1980px) {
-    .category {
-      padding: 0 85px;
-    }
-  } */
 `;
 
 export default HeaderWrapper;
