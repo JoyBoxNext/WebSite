@@ -43,6 +43,7 @@ const ProductWrapper = styled.div`
         font-size: 17.1264px;
         line-height: 100%;
         border-radius: 5px;
+        cursor: pointer;
 
         &.active {
           background: #2525eb;
@@ -306,24 +307,28 @@ const ProductWrapper = styled.div`
       .sidebarBottom_title,
       .sidebarBottom_subtitle {
         font-size: 38px !important;
+        line-height: 100%;
       }
     }
     @media screen and (max-width: 1720px) {
       .sidebarBottom_title,
       .sidebarBottom_subtitle {
         font-size: 34px !important;
+        line-height: 100%;
       }
     }
     @media screen and (max-width: 1550px) {
       .sidebarBottom_title,
       .sidebarBottom_subtitle {
         font-size: 30px !important;
+        line-height: 100%;
       }
     }
     @media screen and (max-width: 1440px) {
       .sidebarBottom_title,
       .sidebarBottom_subtitle {
-        font-size: 27px !important;
+        font-size: 30px !important;
+        line-height: 100%;
       }
     }
 
@@ -366,14 +371,14 @@ const ProductWrapper = styled.div`
         }
       }
       .sidebarBottom_title {
-        font-size: 42px !important;
+        font-size: 35px !important;
         line-height: 100% !important;
         font-weight: bold !important;
       }
       .sidebarBottom_subtitle {
         font-style: normal !important;
         font-weight: 500 !important;
-        font-size: 37px !important;
+        font-size: 28px !important;
         line-height: 100% !important;
       }
       .sidebar_bottom {
@@ -394,10 +399,10 @@ const ProductWrapper = styled.div`
         }
       }
       .sidebarBottom_title {
-        font-size: 38px !important;
+        font-size: 30px !important;
       }
       .sidebarBottom_subtitle {
-        font-size: 32px !important;
+        font-size: 24px !important;
       }
       .sidebar_bottom {
         margin-left: 60px !important;
@@ -406,10 +411,10 @@ const ProductWrapper = styled.div`
 
     @media screen and (max-width: 900px) {
       .sidebarBottom_title {
-        font-size: 32px !important;
+        font-size: 26px !important;
       }
       .sidebarBottom_subtitle {
-        font-size: 28px !important;
+        font-size: 20px !important;
       }
       .sidebar_bottom {
         margin-left: 80px !important;
@@ -418,10 +423,10 @@ const ProductWrapper = styled.div`
 
     @media screen and (max-width: 800px) {
       .sidebarBottom_title {
-        font-size: 28px !important;
+        font-size: 24px !important;
       }
       .sidebarBottom_subtitle {
-        font-size: 22px !important;
+        font-size: 18px !important;
       }
       .sidebar_bottom {
         margin-left: 80px !important;
@@ -442,7 +447,7 @@ const ProductWrapper = styled.div`
         }
       }
       .sidebarBottom_title {
-        font-size: 24px !important;
+        font-size: 20px !important;
       }
       .sidebarBottom_subtitle {
         font-size: 18px !important;
@@ -465,15 +470,68 @@ const ProductWrapper = styled.div`
         }
       }
       .sidebarBottom_title {
-        font-size: 25px !important;
+        font-size: 17px !important;
       }
       .sidebarBottom_subtitle {
-        font-size: 20px !important;
+        font-size: 15px !important;
       }
       .sidebar_bottom {
-        margin-left: 30px !important;
+        margin-left: 45px !important;
       }
     }
+
+    @media screen and (max-width: 500px) {
+      .sidebarBottom_title {
+        font-size: 15px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 13px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 50px !important;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .sidebarBottom_title {
+        font-size: 13px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 12px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 40px !important;
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+      .sidebarBottom_title {
+        font-size: 12px !important;
+        margin: 0 !important;
+        margin-bottom: 25px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 11px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 40px !important;
+      }
+    }
+
+    @media screen and (max-width: 350px) {
+      .sidebarBottom_title {
+        font-size: 10px !important;
+        margin: 0 !important;
+        margin-bottom: 20px !important;
+      }
+      .sidebarBottom_subtitle {
+        font-size: 9px !important;
+      }
+      .sidebar_bottom {
+        margin-left: 40px !important;
+      }
+    }
+
     .title {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;

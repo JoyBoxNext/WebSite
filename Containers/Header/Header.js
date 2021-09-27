@@ -102,7 +102,6 @@ const Header = () => {
                   src="iconBasket.svg"
                   alt="photo"
                 />
-<<<<<<< HEAD
                 <span className="m-0 header_subtitle">
                   {/* <Badge
                     badgeContent={savedataproduct?.length}
@@ -111,11 +110,6 @@ const Header = () => {
                   </Badge> */}
                   <span
                     className={`badge_title position-absolute top-75 start-100 translate-middle badge rounded fw-bold ${
-=======
-                <p className="m-0 header_subtitle">
-                  <p
-                    className={`badge_title fw-bold ${
->>>>>>> 722dc5bab22a0e1bdc36f19e53f32edf1f4b411e
                       savedataproduct.length === 0 ? "d-none" : ""
                     }`}
                   >

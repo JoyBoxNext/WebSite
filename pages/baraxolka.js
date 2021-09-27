@@ -102,7 +102,7 @@ const Product = () => {
                                         </div>
                                       </div>
                                     </div>
-                                    <h5 className="fw-bold my-2 text model fw-bold">
+                                    <h5 className="fw-bold m-0 mb-1 text model fw-bold">
                                       {value.title}
                                     </h5>
                                     <div className="d-flex align-items-center">
