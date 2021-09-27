@@ -108,11 +108,15 @@ const Category = () => {
       </Container>
       <ProductWrapper>
         <div className="d-flex D_flex">
+          <div className="sm_btns">
+            <button className="sm_btn sm_btn1">Фильтры</button>
+            <button className="sm_btn sm_btn1">Сортировать</button>
+          </div>
           <div className="LeftSide">
             <div className="container-fluid mt-3">
-              <div className="left_flex row">
-                <div className="mt-4 col-md-4 col-lg-12 " position="static">
-                  <div className="d-lg-flex align-items-center ">
+              <div className="left_flex">
+                <div className="mt-4 left_flex_item1" position="static">
+                  <div className="left1">
                     <div
                       className={`btn_light ${
                         tabPanel ? "" : "active b_radius"
@@ -132,7 +136,7 @@ const Category = () => {
                   </div>
                   <div className="left_card">
                     <p className="mb-1 my-3 ms-1 fw-bold">Цена</p>
-                    <div className="d-flex align-items-center flex-wrap">
+                    <div className="inputs_flex">
                       <div className="d-flex align-items-center mt-3">
                         <p className="mb-0 me-2 ms-1 subtitle">От</p>
                         <input
@@ -150,9 +154,9 @@ const Category = () => {
                         />
                       </div>
                     </div>
-                    <div className={""}>
+                    <div className="">
                       <Slider
-                        className="my-4 w-100"
+                        className="my-4 slider"
                         value={valueSlider}
                         onChange={handleSliderChange}
                         valueLabelDisplay="auto"
@@ -163,18 +167,15 @@ const Category = () => {
                   </div>
                 </div>
                 <div
-                  className={`px-2 col-md-8 col-lg-12 ${
+                  className={`px-2 left_flex_item2 ${
                     tabPanel == 0 ? "d-block" : "d-none"
                   }`}
                 >
                   <div>
-                    <div className="row w-100">
+                    <div className="four_items">
                       {categories?.map((value, index) => {
                         return (
-                          <div
-                            className="col-sm-6 col-md-6 col-lg-6 col-xl-12 col-xxl-12"
-                            key={index}
-                          >
+                          <div className="four_items_block" key={index}>
                             <div className="d-flex justify-content-between mt-4">
                               <p
                                 className={`subtitle my-3 ${
@@ -229,9 +230,10 @@ const Category = () => {
               </div>
             </div>
           </div>
+
           <div className="Sidebar">
             <div className="container ">
-              <h6 className="text-center mt-4 d-flex justify-content-center align-items-center">
+              <h6 className="text-center mt-4 d-flex justify-content-center align-items-center cene">
                 Сортировать по:{" "}
                 <span className="ms-2" style={{ cursor: "pointer" }}>
                   Цене |
@@ -336,7 +338,7 @@ const Category = () => {
               </div>
             </div>
             {/* ============== */}
-            <div className="sidebar_boxes d-flex justify-content-center align-items-center">
+            <div className="sidebar_boxes d-none justify-content-center align-items-center">
               <p className="small_boxes">1</p>
               <p className="small_boxes">2</p>
               <p className="small_boxes">3</p>
@@ -369,13 +371,14 @@ const Category = () => {
               })}
             </div>
           </div>
-          <div className="rightSide mt-5 px-2">
+
+          <div className="rightSide px-2">
             <div className="row w-100 mt-5 m-0">
               <p className="top mb-0 mt-3">ТОП-5</p>
               {rightSide.map((value, index) => {
                 return (
                   <div
-                    className={`col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4 p-0 m-0 ${value.className}`}
+                    className={`col-12 col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mb-4 px-1 p-0 m-0 ${value.className}`}
                     key={index}
                   >
                     {/* <hr className="d-none d-xl-flex" /> */}
