@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
@@ -16,7 +16,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleRight,
+  faArrowLeft,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import * as t from "../redux/Types";
 import { dispatch } from "../redux/Store";
 import { useSelector } from "react-redux";
@@ -24,7 +28,9 @@ import { homeDatas } from "../Data/homeData";
 import Header from "./../Containers/Header/Header";
 import { ChooseData } from "./../Data/ChooseData";
 import Messeger from "../Components/messeger";
-import { useState } from "react";
+import { linksIndex, pages } from "../Data/HeaderData";
+import ActiveLink from "../activeLink";
+import HeaderWrapper from "../Containers/Header/HeaderWrapper";
 // import Swiper from "react-id-swiper";
 
 export default function Home() {
@@ -36,7 +42,7 @@ export default function Home() {
   chooseData();
 
   const choosedata = useSelector((state) => state.BooksReducer.chooseData);
-  const [time, setTime] = useState("");
+
   const saveChooseDatas = (index) => {
     let a = choosedata?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
@@ -60,11 +66,82 @@ export default function Home() {
     const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
+
+  //////=====/////
+  const [anchorEl, setAnchorEl] = useState(false);
+
+  const handleOpenMenu = () => {
+    setAnchorEl(!anchorEl);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <HomeWrapper>
       <Container>
         <div className="contant">
           <Header />
+
+          <HeaderWrapper>
+            <div className="w-100 mt-3 d-flex  align-items-center category">
+              <div className="flex position-relative">
+                <Button
+                  className="Categories mb-3"
+                  aria-controls="menu"
+                  disableRipple
+                  onClick={handleOpenMenu}
+                  variant="contained"
+                  style={{ display: "none" }}
+                >
+                  <img className="me-1" src="iconCategories.svg" alt="photo" />
+                  Категории
+                  <img className="ms-1" src="iconCtegories2.svg" alt="photo" />
+                </Button>
+                <div
+                  className={`MenuContainer position-absolute ${
+                    anchorEl ? "Active" : ""
+                  }`}
+                >
+                  {pages.map((value, index) => {
+                    return (
+                      <div key={index} className="menuItem">
+                        <Link href={value.href}>
+                          <div style={{ cursor: "pointer" }}>
+                            <a>{value.page}</a>
+                            <FontAwesomeIcon
+                              className="icon_right position-absolute"
+                              style={{ right: "10px", color: "#606060" }}
+                              icon={faAngleRight}
+                            />
+                          </div>
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="d-flex flex-wrap">
+                  {linksIndex.map((value, index) => {
+                    return (
+                      <Link href={value.href} key={index}>
+                        <a>
+                          <ActiveLink
+                            href={value.href}
+                            onClick={handleMenuClose}
+                            style={{ zIndex: "100" }}
+                            className={`${value.className}`}
+                          >
+                            {value.link}
+                          </ActiveLink>
+                        </a>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </HeaderWrapper>
 
           {/* Container-1 */}
           <div className="container-1  mt-2">

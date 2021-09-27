@@ -15,6 +15,10 @@ const HeaderWrapper = styled.div`
       color: white !important;
     }
   }
+  .sm_links_Index,
+  .home_tech_Index {
+    display: none;
+  }
   .header_button {
     position: relative;
     .badge_title {
@@ -93,6 +97,10 @@ const HeaderWrapper = styled.div`
     }
     .sm_links {
       display: none;
+    }
+    .sm_links_Index,
+    .home_tech_Index {
+      display: block;
     }
     .home_tech {
       display: none !important;

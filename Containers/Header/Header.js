@@ -8,7 +8,6 @@ import HeaderWrapper from "./HeaderWrapper";
 import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { dispatch } from "../../redux/Store";
-import Badge from "@material-ui/core/Badge";
 import ModalProduct from "../../Components/ModalProduct";
 import ActiveLink from "../../activeLink";
 
@@ -101,11 +100,6 @@ const Header = () => {
                   alt="photo"
                 />
                 <p className="m-0 header_subtitle">
-                  {/* <Badge
-                    badgeContent={savedataproduct?.length}
-                    color="secondary"
-                  >
-                  </Badge> */}
                   <p
                     className={`badge_title fw-bold ${
                       savedataproduct.length === 0 ? "d-none" : ""
