@@ -139,7 +139,7 @@ export default function Home() {
                 <img className="w-100" src="logo4.png" alt="photo" />
               </div>
               <div className="flex7 orange" style={{ width: "11.2%" }}></div>
-              <div className="flex8 blue py-3" style={{ width: "62.1%" }}>
+              <div className="flex8 blue" style={{ width: "62.1%" }}>
                 <div className="buttons">
                   <Button className="btn_links btn_links1">Скидки</Button>
                   <Button className="btn_links">Подборки</Button>
@@ -148,18 +148,12 @@ export default function Home() {
                 </div>
                 <div className="d-none mini-content-flex8">
                   <div className="text">
-                    <p className="subtitle m-1 top_title">
-                      заголовок редактируется через админ панель
-                    </p>
-                    <h1 className="title mb-3 big_title">
+                    <h1 className="title mb-3 pe-2 big_title">
                       Удиви своих друзей!
                     </h1>
                   </div>
                   <div className="mini-content p-0">
                     <div className="p-1">
-                      <p className="title-2 top_title">
-                        PlayStation 5 Digital version
-                      </p>
                       <div className="d-flex titles-1 justify-content-between align-items-center">
                         <p className="title mb-0 text-end">
                           с Samsung Galaxy A52
@@ -192,10 +186,6 @@ export default function Home() {
                         Магазин бытовой техники и электроники
                       </p>
                     </div>
-                    <div className="dot_orange dot1"></div>
-                    <div className="dot_orange dot2"></div>
-                    <div className="dot_orange dot3"></div>
-                    <div className="dot_orange dot4"></div>
                   </div>
                 </div>
               </div>
@@ -473,13 +463,13 @@ export default function Home() {
                   568: {
                     slidesPerView: 2,
                   },
-                  800: {
+                  760: {
                     slidesPerView: 3,
                   },
                   1060: {
                     slidesPerView: 4,
                   },
-                  1590: {
+                  1400: {
                     slidesPerView: 5,
                   },
                 }}
@@ -729,14 +719,14 @@ export default function Home() {
               })}
             </div>
             <div className="button d-flex justify-content-center my-4">
-              <button className="border-0">
+              <Button className="border-0">
                 Перейти в раздел <br /> новинки
-              </button>
+              </Button>
             </div>
           </div>
 
           {/* New-products-Tel*/}
-          <div className="new-products-Tel d-none border rounded-0 w-100 mt-5">
+          <div className="new-products-Tel d-none w-100 mt-5">
             <h2 className="title-section my-3">Новинки</h2>
             <div className="new-product-cards d-flex p-2">
               <Swiper
@@ -832,9 +822,9 @@ export default function Home() {
               <div className="dot_orange dot4"></div>
             </div>
             <div className="button d-flex justify-content-center my-4">
-              <button className="border-0">
+              <Button className="border-0">
                 Перейти в раздел <br /> новинки
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -952,7 +942,7 @@ export default function Home() {
                 return (
                   <Link href="/productCard" key={i}>
                     <a>
-                      <div className="h-100 p-2" key={i}>
+                      <div className="h-100" key={i}>
                         <div
                           className={`laptop-card p-2 ${v.className}`}
                           key={i}
