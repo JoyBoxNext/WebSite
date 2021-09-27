@@ -11,7 +11,7 @@ import { home_images } from "../Data/data";
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { Pagination, Navigation } from "swiper";
@@ -38,29 +38,23 @@ export default function Home() {
     const action = { type: t.CHOOSE_DATA, payload: ChooseData };
     dispatch(action);
   };
-
   chooseData();
-
   const choosedata = useSelector((state) => state.BooksReducer.chooseData);
-
   const saveChooseDatas = (index) => {
     let a = choosedata?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
-
   const saveRightProduct = (index) => {
     let a = homeDatas?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
-
   const newsData = (index) => {
     let a = NewProductCards?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
     dispatch(action);
   };
-
   const laptopSaveData = (index) => {
     let a = LaptopData?.[index];
     const action = { type: t.SAVE_PRODUCT, payload: a };
@@ -469,18 +463,16 @@ export default function Home() {
           {/* ProductDay */}
           <div className="productDay px-lg-4 mt-5">
             <div className="row justify-content-center p-3 w-100">
-              <div className="col-12 col-sm-4 col-md-5 col-lg-5">
-                <div className="productDayText m-0 mt-lg-3 ">
+              <div className="col-12 col-sm-4 col-md-5 col-lg-4 d-flex align-items-center">
+                <div className="productDayText m-0 ">
                   <div className="row pe-0">
                     <div className="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <p className="mb-0 left_title">Товар дня</p>
-                      <h1 className="mb-0 left_clock fw-bold">17.08</h1>
-                      <p className="fw-bold left_subtitle">
-                        Ограниченное количество. Предложение действительно
-                        только сегодня.
+                      <p className="mb-2 left_title">Товар дня</p>
+                      <h1 className="mb-2 left_clock fw-bold">17.08</h1>
+                      <p className="fw-bold left_subtitle mb-3">
+                        Ограниченное количество. <br /> Предложение
+                        действительно только сегодня.
                       </p>
-                    </div>
-                    <div className="col-6 col-sm-12 col-xl-6 ">
                       <div className="yellowCont">
                         <p>до конца акции</p>
                         <h2>08:03:45</h2>
@@ -489,24 +481,25 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-8 col-md-7 col-lg-7 col-lg-7 d-flex justify-content-center align-items-center m-0">
-                <div className={`productBoard `}>
-                  <div className="row justify-content-center align-items-center">
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                      <h2 className="right_title">
+              <div className="col-12 col-sm-8 col-md-7 d-flex justify-content-center align-items-center m-0">
+                <div className={`productBoard`}>
+                  <div className="row w-100 justify-content-between m-0 align-items-center">
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-5 ">
+                      <h2 className="right_title mb-4">
                         Samsung side by side-washer
                       </h2>
                       <div className="d-flex align-items-center">
                         <p className="oldPrice mb-0">18,577,000</p>
-                        <p className="salePrice my-auto ms-2 mb-0 right_green_price">
-                          - 2,732,000
-                        </p>
+                        <div className="sale_price_div ms-2">
+                          <p className="salePrice my-auto m-0">- 2,732,000</p>
+                        </div>
                       </div>
                       <div className="priceContainer d-grid">
-                        <div className="bgPrice w-100 rounded">
-                          <p className="small">
-                            от <span className="price__">15,845,000</span> сум
-                          </p>
+                        <div className="bgPrice">
+                          <p className="small">от</p>
+                          <div className="price__">
+                            15,845,000 <p className="summ"> сум</p>
+                          </div>
                         </div>
                         <img
                           className="product_logo"
