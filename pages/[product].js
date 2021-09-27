@@ -138,7 +138,7 @@ const Category = () => {
                         <p className="mb-0 me-2 subtitle">От</p>
                         <input
                           type="text"
-                          value="2.000.000"
+                          defaultValue="2.000.000"
                           className="input rounded"
                         />
                       </div>
@@ -146,7 +146,7 @@ const Category = () => {
                         <p className="mb-0 mx-2 subtitle">До</p>
                         <input
                           type="text"
-                          value="2.000.000"
+                          defaultValue="2.000.000"
                           className="input rounded"
                         />
                       </div>

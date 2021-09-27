@@ -92,33 +92,36 @@ const Header = () => {
             <div className="d-flex align-items-center position-relative justify-content-end">
               <Button className="d-block">
                 <img className="header_icon" src="IconPerson.svg" alt="photo" />
-                <p className="m-0 header_title">Покупателям</p>
+                <span className="m-0 header_title">Покупателям</span>
               </Button>
-              <Button className="d-block header_button" onClick={saveProduct}>
+              <Button
+                className="d-block header_button position-relative"
+                onClick={saveProduct}
+              >
                 <img
                   className="header_korzina"
                   src="iconBasket.svg"
                   alt="photo"
                 />
-                <p className="m-0 header_subtitle">
+                <span className="m-0 header_subtitle">
                   {/* <Badge
                     badgeContent={savedataproduct?.length}
                     color="secondary"
                   >
                   </Badge> */}
-                  <p
-                    className={`badge_title fw-bold ${
+                  <span
+                    className={`badge_title position-absolute top-75 start-100 translate-middle badge rounded fw-bold ${
                       savedataproduct.length === 0 ? "d-none" : ""
                     }`}
                   >
                     {savedataproduct?.length}
-                  </p>
+                  </span>
                   Корзина
-                </p>
+                </span>
               </Button>
               <div className={`korzina ${openSave ? "d-none" : "d-block"}`}>
                 {savedataproduct?.map((value, index) => (
-                  <div>
+                  <div key={index}>
                     <hr />
                     <div className="d-flex align-items-center mb-3" key={index}>
                       <img className="photo me-2" src={value.img} alt="photo" />
@@ -193,14 +196,16 @@ const Header = () => {
                 return (
                   <div key={index} className="menuItem">
                     <Link href={value.href}>
-                      <div style={{ cursor: "pointer" }}>
-                        <a>{value.page}</a>
-                        <FontAwesomeIcon
-                          className="icon_right position-absolute"
-                          style={{ right: "10px", color: "#606060" }}
-                          icon={faAngleRight}
-                        />
-                      </div>
+                      <a>
+                        {/* {value.page} */}
+                        <div style={{ cursor: "pointer" }}>
+                          <FontAwesomeIcon
+                            className="icon_right position-absolute"
+                            style={{ right: "10px", color: "#606060" }}
+                            icon={faAngleRight}
+                          />
+                        </div>
+                      </a>
                     </Link>
                   </div>
                 );

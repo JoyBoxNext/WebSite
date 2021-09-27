@@ -306,44 +306,195 @@ const HomeWrapper = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    .productDayText {
+      .left_title {
+        font-family: Roboto;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .left_clock {
+        font-family: Roboto;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 52px;
+        letter-spacing: -0.04em;
+        text-align: left;
+      }
+      .left_subtitle {
+        font-family: Roboto;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
     h2 {
       font-size: 29px;
     }
     .productBoard {
       width: 100%;
-      background-color: white;
-      padding: 30px 40px !important;
+      background: #ffffff;
+      box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
+      padding: 30px 35px !important;
       .oldPrice {
-        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
         text-decoration: line-through;
-        font-weight: bold;
+      }
+      .sale_price_div {
+        background: #fff9b0;
+        border-radius: 3.37691px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 62px;
+        height: 21.81px;
       }
       .salePrice {
-        font-size: 12px;
-        font-weight: bold;
-        background-color: #d3e38c;
-        padding: 2px 5px;
-        color: black !important;
+        font-family: "Roboto", sans-serif;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 13px;
+        letter-spacing: -0.03em;
+        text-align: left;
       }
       .bgPrice {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: nowrap !important;
-        flex-wrap: nowrap !important;
-        background-color: #ff5314;
+        margin-top: 15px;
+        height: 51.338462829589844px;
+        width: 216.1999969482422px;
+        border-radius: 0px;
+        background: #ff5314;
         color: white;
-        padding: 5px 15px;
-        margin-top: 10px;
+        display: flex;
+        align-items: flex-end;
+        padding: 0px 0px 7px 20px;
         .small {
-          font-size: 12px !important;
-          padding: 0;
-          margin: 0;
+          font-family: "Roboto", sans-serif;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0em;
+          text-align: left;
+          margin: 0 0 4px 0;
         }
         .price__ {
-          font-size: 18px;
-          margin: 0;
-          padding: 0;
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 32.406px;
+          line-height: 100%;
+          letter-spacing: 0.045em;
+          text-transform: capitalize;
+          position: relative;
+          .summ {
+            position: absolute;
+            top: -30%;
+            right: 7px;
+            font-family: "Roboto", sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 11px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+        }
+        .product_logo {
+          height: 48.14715576171875px;
+          width: 244px;
+        }
+      }
+      .right_title {
+        font-family: Roboto;
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 37px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      .productBoard {
+        padding: 30px 35px !important;
+        .oldPrice {
+          font-size: 19.8896px;
+        }
+        .sale_price_div {
+          background: #fff9b0;
+          border-radius: 3.37691px;
+          width: 62px;
+          height: 21.81px;
+        }
+        .salePrice {
+          font-size: 11px;
+        }
+        .bgPrice {
+          margin-top: 15px;
+          width: 200px;
+          padding: 5px 15px;
+          .small {
+            font-family: "Roboto", sans-serif;
+            font-size: 21px;
+            margin: 0 0 4px 0;
+          }
+          .price__ {
+            font-size: 25.7817px;
+            .summ {
+              font-size: 8.6px;
+              top: -40%;
+            }
+          }
+        }
+        .product_logo {
+          width: 205.12px;
+          height: 38.31px;
+          object-fit: cover;
+        }
+        .right_title {
+          font-size: 29.6571px;
+        }
+      }
+      .productDayText {
+        .left_title {
+          font-size: 20px;
+          line-height: 20px;
+        }
+        .left_clock {
+          font-size: 41px;
+          line-height: 41px;
+        }
+        .left_subtitle {
+          font-size: 11.93px;
+          line-height: 13.78px;
+        }
+        .yellowCont {
+          width: 142.41px;
+          height: 57.76px;
+          p {
+            font-size: 9.90675px;
+          }
+          font-size: 29.9743px;
+        }
+        h2 {
+          font-size: 29.9743px !important;
+          margin-top: 4px !important;
+          line-height: 100% !important;
         }
       }
     }
@@ -438,9 +589,25 @@ const HomeWrapper = styled.div`
       background-color: #fff9b0;
       display: inline-block;
       padding: 7px 15px;
-      p {
+      p,
+      h2 {
         margin: 0;
         padding: 0;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+      }
+      h2 {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: -0.03em;
       }
     }
   }
