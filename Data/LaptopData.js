@@ -27,6 +27,7 @@ const LaptopData = [
     big_price: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    className: " two",
     save: false,
   },
   {
@@ -37,6 +38,7 @@ const LaptopData = [
     big_price: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    className: " three",
     save: false,
   },
   {
@@ -47,6 +49,7 @@ const LaptopData = [
     big_price: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    className: " four",
     save: false,
   },
   {
@@ -57,6 +60,7 @@ const LaptopData = [
     big_price: "15",
     price: ",470,999 ",
     rentPrice: "1 362 000",
+    className: " five",
     save: false,
   },
 ];

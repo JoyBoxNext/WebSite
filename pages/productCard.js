@@ -21,7 +21,10 @@ import {
   faArrowRight,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import {characteristicData, ProductSwiperData} from "../Data/ProductSwiperData";
+import {
+  characteristicData,
+  ProductSwiperData,
+} from "../Data/ProductSwiperData";
 import ModalProduct from "../Components/ModalProduct";
 
 const ProductCard = () => {
@@ -141,18 +144,19 @@ const ProductCard = () => {
                     .
                   </div>
                   <ul>
-                    {characteristicData.map((v,i)=>{
-                      return <li key={i}>{v.p}</li>
+                    {characteristicData.map((v, i) => {
+                      return <li key={i}>{v.p}</li>;
                     })}
                   </ul>
                   <div className="buttonBottom">
-                    <FontAwesomeIcon style={{fontSize:"x-large"}} icon={faAngleDown} />
+                    <FontAwesomeIcon
+                      style={{ fontSize: "x-large" }}
+                      icon={faAngleDown}
+                    />
                   </div>
                 </div>
                 <Link href="/">
-                  <a className="link-korzinka ms-2">
-                    Все характеристики
-                  </a>
+                  <a className="link-korzinka ms-2">Все характеристики</a>
                 </Link>
               </div>
             </div>
@@ -164,7 +168,9 @@ const ProductCard = () => {
               <div className="row">
                 <div className="col-md-12 product-swiper swiper_content">
                   <Swiper
-                    pagination={true}
+                    pagination={{
+                      dynamicBullets: true,
+                    }}
                     slidesPerView={5}
                     spaceBetween={0}
                     slidesPerGroup={1}
@@ -200,7 +206,12 @@ const ProductCard = () => {
                             <a>
                               <div className="product-swiper-card p-3 text-start">
                                 <img src={v.img} alt="photo" />
-                                <p className=" title fw-bold mt-2" style={{fontWeight:"bold !important"}}>{v.name}</p>
+                                <p
+                                  className=" title fw-bold mt-2"
+                                  style={{ fontWeight: "bold !important" }}
+                                >
+                                  {v.name}
+                                </p>
                                 <div className="small d-flex p-0 m-0">
                                   <p className="oldPrice me-1 m-0 p-0">
                                     {v.oldPrice}
