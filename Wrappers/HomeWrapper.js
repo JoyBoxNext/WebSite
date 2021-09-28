@@ -1004,6 +1004,14 @@ const HomeWrapper = styled.div`
           }
         }
       }
+      .swiper-pagination-bullet-active-prev,
+      /* .swiper-pagination {
+        display: flex !important;
+        justify-content: center;
+      } */
+      .swiper-pagination-bullet {
+        background-color: red !important;
+      }
       .swiper-slide {
         background: none !important;
       }

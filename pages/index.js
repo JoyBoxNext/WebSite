@@ -361,18 +361,6 @@ export default function Home() {
                   200: {
                     slidesPerView: 1,
                   },
-                  568: {
-                    slidesPerView: 2,
-                  },
-                  800: {
-                    slidesPerView: 3,
-                  },
-                  1060: {
-                    slidesPerView: 4,
-                  },
-                  1590: {
-                    slidesPerView: 5,
-                  },
                 }}
                 slidesPerView={5}
                 spaceBetween={0}
@@ -380,6 +368,7 @@ export default function Home() {
                 loop={false}
                 loopFillGroupWithBlank={true}
                 navigation={false}
+                pagination={true}
                 className="mySwiper"
               >
                 {homeDatas.map((v, i) => {
@@ -461,22 +450,29 @@ export default function Home() {
             </div>
           </div>
           {/* ProductDay */}
-
-          <div className="productDay px-lg-4 mt-5">
-            <div className="row justify-content-center p-3 w-100">
-              <div className="col-12 col-sm-4 col-md-5 col-lg-4 d-flex align-items-center">
-                <div className="productDayText m-0 ">
-                  <div className="row pe-0">
-                    <div className="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <p className="mb-2 left_title">Товар дня</p>
-                      <h1 className="mb-2 left_clock fw-bold">17.08</h1>
-                      <p className="fw-bold left_subtitle mb-3">
-                        Ограниченное количество. <br /> Предложение
-                        действительно только сегодня.
-                      </p>
-                      <div className="yellowCont">
-                        <p>до конца акции</p>
-                        <h2>08:03:45</h2>
+          <div className="productDay w-100 px-lg-4 mt-5">
+            <div className="row justify-content-center p-3 m-0 w-100">
+              <div className="col-12 col-md-5 d-flex align-items-center mb-3 mb-md-none">
+                <div className="productDayText w-100 m-0 ">
+                  <div className="row w-100 m-0 p-0">
+                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                      <div className="row w-100 m-0 p-0">
+                        <div className="col-6 col-md-12">
+                          <p className="mb-2 left_title">Товар дня</p>
+                          <h1 className="mb-2 left_clock fw-bold">17.08</h1>
+                        </div>
+                        <div className="col-6 col-md-12 d-flex order-md-3 d-md-block justify-content-end">
+                          <div className="yellowCont">
+                            <p>до конца акции</p>
+                            <h2>08:03:45</h2>
+                          </div>
+                        </div>
+                        <div className="col-12 order-md-2">
+                          <p className="fw-bold left_subtitle mb-3">
+                            Ограниченное количество. <br /> Предложение
+                            действительно только сегодня.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -497,10 +493,9 @@ export default function Home() {
                       </div>
                       <div className="priceContainer">
                         <div className="bgPrice">
-                          <p className="small me-1">от</p>
+                          <p className="small">от</p>
                           <div className="price__">
-                            15,845,000
-                            <p className="summ "> сум</p>
+                            15,845,000 <p className="summ"> сум</p>
                           </div>
                         </div>
                         <img
@@ -512,7 +507,7 @@ export default function Home() {
                     </div>
                     <div className="col-12 col-md-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
-                        className="productDayWasher"
+                        className="productDayWasher w-100"
                         src="productDayWasher.png"
                         alt="Washer"
                       />
