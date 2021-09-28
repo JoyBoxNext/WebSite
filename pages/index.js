@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
@@ -32,6 +32,8 @@ import { linksIndex, pages } from "../Data/HeaderData";
 import ActiveLink from "../activeLink";
 import HeaderWrapper from "../Containers/Header/HeaderWrapper";
 import { getJoybox } from "../api";
+import { getCategories, getProducts } from "../api";
+
 // import Swiper from "react-id-swiper";
 SwiperCore.use([Scrollbar]);
 
@@ -73,6 +75,11 @@ export default function Home({ baraxolkaData }) {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    getProducts();
+    getCategories();
+  }, []);
 
   return (
     <HomeWrapper>
@@ -924,7 +931,7 @@ export default function Home({ baraxolkaData }) {
                   1155: {
                     slidesPerView: 5,
                   },
-                  1820: {
+                  1930: {
                     slidesPerView: 6,
                   },
                 }}
