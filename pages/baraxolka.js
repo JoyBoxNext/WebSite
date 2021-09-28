@@ -9,7 +9,9 @@ import { dispatch } from "../redux/Store";
 import Footer from "../Containers/Footer/Footer";
 import Messeger from "../Components/messeger";
 
-const Product = () => {
+const Product = ({ baraxolkaData }) => {
+  console.log(baraxolkaData);
+
   const [tabPanel, setTabPanel] = useState(false);
   const tabApp = (id) => {
     setTabPanel(id);

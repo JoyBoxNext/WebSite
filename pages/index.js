@@ -31,9 +31,11 @@ import Messeger from "../Components/messeger";
 import { linksIndex, pages } from "../Data/HeaderData";
 import ActiveLink from "../activeLink";
 import HeaderWrapper from "../Containers/Header/HeaderWrapper";
+import { getJoybox } from "../api";
 // import Swiper from "react-id-swiper";
 SwiperCore.use([Scrollbar]);
-export default function Home() {
+
+export default function Home({ baraxolkaData }) {
   const chooseData = () => {
     const action = { type: t.CHOOSE_DATA, payload: ChooseData };
     dispatch(action);
@@ -74,10 +76,9 @@ export default function Home() {
 
   return (
     <HomeWrapper>
-      <Container>
+      <Container baraxolkaData={baraxolkaData}>
         <div className="contant">
           <Header />
-
           <HeaderWrapper>
             <div className="w-100 mt-3 d-flex  align-items-center category">
               <div className="flex position-relative">
@@ -1115,3 +1116,12 @@ export default function Home() {
     </HomeWrapper>
   );
 }
+
+export const getServerSideProps = async () => {
+  const res = await getJoybox();
+  return {
+    props: {
+      baraxolkaData: res.data || [],
+    },
+  };
+};
