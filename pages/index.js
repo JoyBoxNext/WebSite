@@ -463,7 +463,7 @@ export default function Home() {
           {/* ProductDay */}
           <div className="productDay w-100 px-lg-4 mt-5">
             <div className="row justify-content-center p-3 m-0 w-100">
-              <div className="col-12 col-md-5 d-flex align-items-center mb-3 mb-md-none">
+              <div className="col-12 col-md-5 d-flex align-items-center mb-3 p-0 p-md-2 mb-md-none">
                 <div className="productDayText w-100 m-0 ">
                   <div className="row w-100 m-0 p-0">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
