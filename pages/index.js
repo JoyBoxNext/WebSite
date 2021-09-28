@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
@@ -31,6 +31,8 @@ import Messeger from "../Components/messeger";
 import { linksIndex, pages } from "../Data/HeaderData";
 import ActiveLink from "../activeLink";
 import HeaderWrapper from "../Containers/Header/HeaderWrapper";
+import { getCategories, getProducts } from "../api";
+
 // import Swiper from "react-id-swiper";
 SwiperCore.use([Scrollbar]);
 export default function Home() {
@@ -71,6 +73,11 @@ export default function Home() {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    getProducts();
+    getCategories();
+  }, []);
 
   return (
     <HomeWrapper>
@@ -923,7 +930,7 @@ export default function Home() {
                   1155: {
                     slidesPerView: 5,
                   },
-                  1820: {
+                  1930: {
                     slidesPerView: 6,
                   },
                 }}
