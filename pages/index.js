@@ -31,7 +31,6 @@ import Messeger from "../Components/messeger";
 import { linksIndex, pages } from "../Data/HeaderData";
 import ActiveLink from "../activeLink";
 import HeaderWrapper from "../Containers/Header/HeaderWrapper";
-import { getJoybox } from "../api";
 import { getCategories, getProducts } from "../api";
 
 // import Swiper from "react-id-swiper";
