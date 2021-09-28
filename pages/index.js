@@ -530,7 +530,7 @@ export default function Home() {
                   200: {
                     slidesPerView: 1,
                   },
-                  568: {
+                  550: {
                     slidesPerView: 2,
                   },
                   760: {
@@ -914,10 +914,10 @@ export default function Home() {
                   300: {
                     slidesPerView: 1,
                   },
-                  650: {
+                  550: {
                     slidesPerView: 2,
                   },
-                  800: {
+                  750: {
                     slidesPerView: 3,
                   },
                   1024: {

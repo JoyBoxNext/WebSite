@@ -98,6 +98,9 @@ const HomeWrapper = styled.div`
       }
       .miniContentLogo {
         margin-top: 7px;
+        width: 105.02px;
+        height: 26.97px;
+        align-self: end !important;
       }
     }
     .flex1 {
@@ -730,19 +733,24 @@ const HomeWrapper = styled.div`
         margin: 0 !important;
       }
       .title {
-        line-height: 16px !important;
-        font-size: 14px;
+        line-height: 115.5%;
+        font-size: 15px;
+        margin: 0;
         margin-bottom: 5px !important;
         padding: 0 !important;
-        margin: 0 !important;
         text-transform: uppercase !important;
         font-weight: bold !important;
       }
       .small {
+        display: flex;
+        align-items: center;
         .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 115.5%;
+          text-decoration-line: line-through;
+          text-transform: uppercase;
+          color: #a8a0a0;
           padding: 0;
           margin: 0;
           .sum {
@@ -753,12 +761,23 @@ const HomeWrapper = styled.div`
           }
         }
         .badgePrice {
-          font-size: 8px;
+          p {
+            font-weight: 500;
+            font-weight: 500;
+            font-size: 7.5px;
+            line-height: 115.5%;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            color: black !important;
+            margin: auto;
+          }
+          display: flex !important;
+          align-items: center !important;
           background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
-          font-weight: 500;
+          justify-content: center;
+          padding: 1px 3.7px;
           border-radius: 1.4px;
+          height: 13px;
         }
       }
       .prices {
@@ -973,6 +992,8 @@ const HomeWrapper = styled.div`
           font-weight: bold !important;
         }
         .small {
+          display: flex;
+          align-items: center;
           .oldPrice {
             font-weight: 500;
             font-size: 9px;
@@ -1150,18 +1171,24 @@ const HomeWrapper = styled.div`
       margin: auto;
       position: relative;
       .title {
-        line-height: 16px !important;
-        font-size: 12px;
-        margin-bottom: 10px !important;
-        padding: 0 !important;
+        line-height: 115.5%;
+        font-size: 15px;
         margin: 0;
+        margin-bottom: 5px !important;
+        padding: 0 !important;
         text-transform: uppercase !important;
+        font-weight: bold !important;
       }
       .small {
+        display: flex;
+        align-items: center;
         .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 115.5%;
+          text-decoration-line: line-through;
+          text-transform: uppercase;
+          color: #a8a0a0;
           padding: 0;
           margin: 0;
           .sum {
@@ -1172,12 +1199,23 @@ const HomeWrapper = styled.div`
           }
         }
         .badgePrice {
-          font-size: 8px;
+          p {
+            font-weight: 500;
+            font-weight: 500;
+            font-size: 7.5px;
+            line-height: 115.5%;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            color: black !important;
+            margin: auto;
+          }
+          display: flex !important;
+          align-items: center !important;
           background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
-          border-radius: 1.4px !important;
-          font-weight: 500 !important;
+          justify-content: center;
+          padding: 1px 3.7px;
+          border-radius: 1.4px;
+          height: 13px;
         }
       }
       .prices {
@@ -1513,9 +1551,17 @@ const HomeWrapper = styled.div`
     .new-products {
       .new-product-card {
         .oldPrice,
+        .rentPrice,
         .sum {
           font-size: 7px !important;
           line-height: 115%;
+        }
+
+        .rentPrice {
+          font-size: 7px !important;
+          display: flex;
+          justify-content: flex-start;
+          margin: 3px;
         }
         .badgePrice {
           display: -webkit-box;
