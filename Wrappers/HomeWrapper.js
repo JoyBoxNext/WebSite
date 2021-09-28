@@ -180,7 +180,6 @@ const HomeWrapper = styled.div`
       p {
         font-size: 20px;
         font-weight: normal;
-        font-size: 22px;
         line-height: 100%;
       }
     }
