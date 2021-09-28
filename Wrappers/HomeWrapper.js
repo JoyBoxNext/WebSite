@@ -1433,7 +1433,7 @@ const HomeWrapper = styled.div`
     .acer {
       position: absolute !important;
       top: 55px !important;
-      left: 47% !important;
+      left: 40% !important;
     }
 
     .new-products {
@@ -1456,6 +1456,31 @@ const HomeWrapper = styled.div`
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .discount {
+      position: absolute !important;
+      top: 0px !important;
+      left: 0px !important;
+    }
+    .acer {
+      position: absolute !important;
+      top: 55px !important;
+      left: 43% !important;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .discount {
+      position: absolute !important;
+      top: 0px !important;
+      left: 0px !important;
+    }
+    .acer {
+      position: absolute !important;
+      top: 55px !important;
+      left: 40% !important;
     }
   }
   //Laptops
