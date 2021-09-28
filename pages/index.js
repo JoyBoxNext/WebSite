@@ -1123,11 +1123,11 @@ export default function Home({ baraxolkaData }) {
   );
 }
 
-export const getServerSideProps = async () => {
-  const res = await getJoybox();
-  return {
-    props: {
-      baraxolkaData: res.data || [],
-    },
-  };
-};
+// export const getServerSideProps = async () => {
+//   const res = await getJoybox();
+//   return {
+//     props: {
+//       baraxolkaData: res.data || [],
+//     },
+//   };
+// };
