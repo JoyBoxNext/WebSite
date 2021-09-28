@@ -164,7 +164,7 @@ const Category = () => {
                         className="my-4 slider"
                         value={valueSlider}
                         onChange={handleSliderChange}
-                        valueLabelDisplay="auto"
+                        // valueLabelDisplay="auto"
                         aria-labelledby="range-slider"
                         getAriaValueText={valuetext}
                       />
@@ -189,17 +189,13 @@ const Category = () => {
                               >
                                 {value.name.title}
                               </p>
-                              {
+                              {value.name.iconUp && (
                                 <FontAwesomeIcon
                                   onClick={hide2}
                                   className={`mt-3 mx-3 icon`}
-                                  icon={
-                                    show2
-                                      ? value.name.iconUp
-                                      : value.name.iconDown
-                                  }
+                                  icon={value?.name?.iconUp}
                                 />
-                              }
+                              )}
                             </div>
                             {value.name.category.map((value, index) => {
                               return (
@@ -250,17 +246,13 @@ const Category = () => {
                               >
                                 {value.name.title}
                               </p>
-                              {
+                              {value.name.iconUp && (
                                 <FontAwesomeIcon
                                   onClick={hide2}
                                   className={`mt-3 mx-3 icon`}
-                                  icon={
-                                    show2
-                                      ? value.name.iconUp
-                                      : value.name.iconDown
-                                  }
+                                  icon={value.name.iconUp}
                                 />
-                              }
+                              )}
                             </div>
                             {value.name.category.map((value, index) => {
                               return (
