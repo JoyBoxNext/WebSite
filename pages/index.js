@@ -461,6 +461,7 @@ export default function Home() {
             </div>
           </div>
           {/* ProductDay */}
+
           <div className="productDay px-lg-4 mt-5">
             <div className="row justify-content-center p-3 w-100">
               <div className="col-12 col-sm-4 col-md-5 col-lg-4 d-flex align-items-center">
@@ -496,9 +497,10 @@ export default function Home() {
                       </div>
                       <div className="priceContainer d-grid">
                         <div className="bgPrice">
-                          <p className="small">от</p>
+                          <p className="small me-1">от</p>
                           <div className="price__">
-                            15,845,000 <p className="summ"> сум</p>
+                            15,845,000
+                            <p className="summ "> сум</p>
                           </div>
                         </div>
                         <img
@@ -510,7 +512,7 @@ export default function Home() {
                     </div>
                     <div className="col-12 col-sm-6 col-md-5 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
-                        className="productDayWasher w-100"
+                        className="productDayWasher"
                         src="productDayWasher.png"
                         alt="Washer"
                       />

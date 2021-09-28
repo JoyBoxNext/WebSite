@@ -24,8 +24,8 @@ const HeaderWrapper = styled.div`
     position: relative;
     .badge_title {
       position: absolute;
-      bottom: 8px;
-      left: 35px;
+      bottom: 16px;
+      left: 50px !important;
       width: 17px;
       height: 17px;
       background-color: #ff5314;

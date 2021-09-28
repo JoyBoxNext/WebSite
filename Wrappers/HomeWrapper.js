@@ -404,29 +404,38 @@ const HomeWrapper = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    .productDayWasher {
+      width: 344px;
+      height: 234px;
+    }
     .productDayText {
-      .left_title {
-        font-family: Roboto;
-        font-size: 26px;
+      .left_title,
+      .left_clock,
+      .left_subtitle,
+      .oldPrice,
+      .selePrice,
+      .small,
+      .price,
+      .sum {
+        font-family: "Roboto", sans-serif;
         font-style: normal;
+      }
+      .left_title {
+        font-size: 26px;
         font-weight: 400;
         line-height: 26px;
         letter-spacing: 0em;
         text-align: left;
       }
       .left_clock {
-        font-family: Roboto;
         font-size: 52px;
-        font-style: normal;
         font-weight: 900;
         line-height: 52px;
         letter-spacing: -0.04em;
         text-align: left;
       }
       .left_subtitle {
-        font-family: Roboto;
         font-size: 15px;
-        font-style: normal;
         font-weight: 400;
         line-height: 17px;
         letter-spacing: 0em;
@@ -442,9 +451,7 @@ const HomeWrapper = styled.div`
       box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
       padding: 30px 35px !important;
       .oldPrice {
-        font-family: "Roboto", sans-serif;
         font-size: 25px;
-        font-style: normal;
         font-weight: 700;
         line-height: 25px;
         letter-spacing: 0em;
@@ -453,7 +460,7 @@ const HomeWrapper = styled.div`
       }
       .sale_price_div {
         background: #fff9b0;
-        border-radius: 3.37691px;
+        border-radius: 3.6px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -461,9 +468,7 @@ const HomeWrapper = styled.div`
         height: 21.81px;
       }
       .salePrice {
-        font-family: "Roboto", sans-serif;
         font-size: 11px;
-        font-style: normal;
         font-weight: 700;
         line-height: 13px;
         letter-spacing: -0.03em;
@@ -471,18 +476,16 @@ const HomeWrapper = styled.div`
       }
       .bgPrice {
         margin-top: 15px;
-        height: 51.338462829589844px;
-        width: 216.1999969482422px;
+        height: 51px;
+        width: 216px;
         border-radius: 0px;
         background: #ff5314;
         color: white;
         display: flex;
         align-items: flex-end;
-        padding: 0px 0px 7px 20px;
+        padding: 0px 0px 7px 13px;
         .small {
-          font-family: "Roboto", sans-serif;
           font-size: 21px;
-          font-style: normal;
           font-weight: 400;
           line-height: 21px;
           letter-spacing: 0em;
@@ -490,10 +493,8 @@ const HomeWrapper = styled.div`
           margin: 0 0 4px 0;
         }
         .price__ {
-          font-family: "Roboto", sans-serif;
-          font-style: normal;
           font-weight: bold;
-          font-size: 32.406px;
+          font-size: 32px;
           line-height: 100%;
           letter-spacing: 0.045em;
           text-transform: capitalize;
@@ -502,9 +503,7 @@ const HomeWrapper = styled.div`
             position: absolute;
             top: -30%;
             right: 7px;
-            font-family: "Roboto", sans-serif;
             font-size: 11px;
-            font-style: normal;
             font-weight: 400;
             line-height: 11px;
             letter-spacing: 0em;
@@ -512,14 +511,12 @@ const HomeWrapper = styled.div`
           }
         }
         .product_logo {
-          height: 48.14715576171875px;
+          height: 48px;
           width: 244px;
         }
       }
       .right_title {
-        font-family: Roboto;
         font-size: 37px;
-        font-style: normal;
         font-weight: 700;
         line-height: 37px;
         letter-spacing: 0em;
@@ -597,22 +594,142 @@ const HomeWrapper = styled.div`
       }
     }
 
+    @media screen and (max-width: 1250px) {
+      .productBoard {
+        padding: 15px 35px !important;
+        .productDayWasher {
+          width: 303px;
+          height: 200px;
+        }
+        .oldPrice {
+          font-size: 15px;
+        }
+        .sale_price_div {
+          background: #fff9b0;
+          border-radius: 3px;
+          width: 62px;
+          height: 21.8px;
+        }
+        .salePrice {
+          font-size: 8px;
+        }
+        .bgPrice {
+          margin-top: 15px;
+          width: 128px;
+          height: 34px;
+          padding: 5px;
+          .small {
+            font-size: 12px;
+            margin: 0;
+          }
+          .price__ {
+            font-size: 19px;
+            .summ {
+              font-size: 6px;
+              top: -40%;
+            }
+          }
+        }
+        .bgPrice,
+        .small,
+        .price,
+        .selePrice,
+        .sele_price_div,
+        .oldPrice {
+          line-height: 100%;
+        }
+        .product_logo {
+          width: 144px;
+          height: 28px;
+          object-fit: cover;
+        }
+        .right_title {
+          font-size: 22px;
+          line-height: 100%;
+        }
+      }
+      .productDayText {
+        .left_title {
+          font-size: 19x;
+          line-height: 100%;
+        }
+        .left_clock {
+          font-size: 37px !important;
+          line-height: 100%;
+        }
+        .left_subtitle {
+          font-size: 10.9px;
+          line-height: 115.5%;
+        }
+        .yellowCont {
+          width: 130px;
+          height: 52px;
+          p {
+            font-size: 9px;
+            line-height: 115.5%;
+          }
+          font-size: 27px;
+          line-height: 115.5%;
+        }
+        h2 {
+          font-size: 29px !important;
+          margin-top: 4px !important;
+          line-height: 100% !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .productBoard {
+        .productDayWasher {
+          width: 250px;
+          height: 170px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1070px) {
+      .productBoard {
+        .productDayWasher {
+          width: 220px;
+          height: 150px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1070px) {
+      .productBoard {
+        .productDayWasher {
+          width: 203px;
+          height: 138px;
+          object-fit: cover;
+        }
+      }
+    }
+
     @media screen and (max-width: 920px) {
       .productBoard {
         padding: 20px !important;
+        .productDayWasher {
+          width: 180px;
+          height: 118px;
+          object-fit: cover;
+        }
       }
     }
+
     @media screen and (max-width: 850px) {
       .productBoard {
         padding: 20px !important;
-        .right_title {
-          font-size: 17px !important;
-        }
-        .price__ {
-          font-size: 13px !important;
+        .productDayWasher {
+          width: 165px;
+          height: 120px;
         }
       }
     }
+
     @media screen and (max-width: 720px) {
       .priceContainer {
         display: -webkit-box;
@@ -622,18 +739,12 @@ const HomeWrapper = styled.div`
         -ms-flex-align: center;
         align-items: center;
       }
-      .productDay {
-        padding: 0 !important;
-      }
-      .right_green_price,
-      .oldPrice {
-        font-size: 10px !important;
-      }
-      .price__ {
-        font-size: 10px !important;
-      }
-      .productDayWasher {
-        width: 180px !important;
+      .productBoard {
+        padding: 20px !important;
+        .productDayWasher {
+          width: 165px;
+          height: 120px;
+        }
       }
     }
 
@@ -646,25 +757,11 @@ const HomeWrapper = styled.div`
         -ms-flex-align: center;
         align-items: center;
       }
-      .productDay {
-        padding: 0 !important;
-      }
-      .right_green_price,
-      .oldPrice {
-        font-size: 9px !important;
-      }
-      .productDayWasher {
-        width: 165px !important;
-      }
-      .right_title {
-        font-size: 4px;
-      }
       .productBoard {
-        .price__ {
-          font-size: 10px !important;
-        }
-        .small {
-          font-size: 1px !important;
+        padding: 20px !important;
+        .productDayWasher {
+          width: 165px;
+          height: 120px;
         }
       }
     }
