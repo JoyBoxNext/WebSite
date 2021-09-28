@@ -361,18 +361,6 @@ export default function Home() {
                   200: {
                     slidesPerView: 1,
                   },
-                  568: {
-                    slidesPerView: 2,
-                  },
-                  800: {
-                    slidesPerView: 3,
-                  },
-                  1060: {
-                    slidesPerView: 4,
-                  },
-                  1590: {
-                    slidesPerView: 5,
-                  },
                 }}
                 slidesPerView={5}
                 spaceBetween={0}
@@ -380,6 +368,7 @@ export default function Home() {
                 loop={false}
                 loopFillGroupWithBlank={true}
                 navigation={false}
+                pagination={true}
                 className="mySwiper"
               >
                 {homeDatas.map((v, i) => {
@@ -538,7 +527,7 @@ export default function Home() {
                   200: {
                     slidesPerView: 1,
                   },
-                  568: {
+                  550: {
                     slidesPerView: 2,
                   },
                   760: {
@@ -922,10 +911,10 @@ export default function Home() {
                   300: {
                     slidesPerView: 1,
                   },
-                  650: {
+                  550: {
                     slidesPerView: 2,
                   },
-                  800: {
+                  750: {
                     slidesPerView: 3,
                   },
                   1024: {

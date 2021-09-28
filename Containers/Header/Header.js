@@ -103,11 +103,6 @@ const Header = () => {
                   alt="photo"
                 />
                 <span className="m-0 header_subtitle">
-                  {/* <Badge
-                    badgeContent={savedataproduct?.length}
-                    color="secondary"
-                  >
-                  </Badge> */}
                   <span
                     className={`badge_title position-absolute top-75 start-100 translate-middle badge rounded fw-bold ${
                       savedataproduct.length === 0 ? "d-none" : ""

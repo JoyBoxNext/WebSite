@@ -97,6 +97,9 @@ const HomeWrapper = styled.div`
       }
       .miniContentLogo {
         margin-top: 7px;
+        width: 105.02px;
+        height: 26.97px;
+        align-self: end !important;
       }
     }
     .flex1 {
@@ -403,29 +406,38 @@ const HomeWrapper = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    .productDayWasher {
+      width: 344px;
+      height: 234px;
+    }
     .productDayText {
-      .left_title {
-        font-family: Roboto;
-        font-size: 26px;
+      .left_title,
+      .left_clock,
+      .left_subtitle,
+      .oldPrice,
+      .selePrice,
+      .small,
+      .price,
+      .sum {
+        font-family: "Roboto", sans-serif;
         font-style: normal;
+      }
+      .left_title {
+        font-size: 26px;
         font-weight: 400;
         line-height: 26px;
         letter-spacing: 0em;
         text-align: left;
       }
       .left_clock {
-        font-family: Roboto;
         font-size: 52px;
-        font-style: normal;
         font-weight: 900;
         line-height: 52px;
         letter-spacing: -0.04em;
         text-align: left;
       }
       .left_subtitle {
-        font-family: Roboto;
         font-size: 15px;
-        font-style: normal;
         font-weight: 400;
         line-height: 17px;
         letter-spacing: 0em;
@@ -441,9 +453,7 @@ const HomeWrapper = styled.div`
       box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
       padding: 30px !important;
       .oldPrice {
-        font-family: "Roboto", sans-serif;
         font-size: 25px;
-        font-style: normal;
         font-weight: 700;
         line-height: 25px;
         letter-spacing: 0em;
@@ -452,7 +462,7 @@ const HomeWrapper = styled.div`
       }
       .sale_price_div {
         background: #fff9b0;
-        border-radius: 3.37691px;
+        border-radius: 3.6px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -460,9 +470,7 @@ const HomeWrapper = styled.div`
         height: 21.81px;
       }
       .salePrice {
-        font-family: "Roboto", sans-serif;
         font-size: 11px;
-        font-style: normal;
         font-weight: 700;
         line-height: 13px;
         letter-spacing: -0.03em;
@@ -470,18 +478,17 @@ const HomeWrapper = styled.div`
       }
       .bgPrice {
         margin-top: 15px;
-        height: 51.338462829589844px;
+        height: 51px;
+        width: 216px;
         border-radius: 0px;
         width: 90%;
         background: #ff5314;
         color: white;
         display: flex;
         align-items: flex-end;
-        padding: 0px 0px 7px 20px;
+        padding: 0px 0px 7px 13px;
         .small {
-          font-family: "Roboto", sans-serif;
           font-size: 21px;
-          font-style: normal;
           font-weight: 400;
           line-height: 21px;
           letter-spacing: 0em;
@@ -489,10 +496,8 @@ const HomeWrapper = styled.div`
           margin: 0 0 4px 0;
         }
         .price__ {
-          font-family: "Roboto", sans-serif;
-          font-style: normal;
           font-weight: bold;
-          font-size: 28px;
+          font-size: 32px;
           line-height: 100%;
           letter-spacing: 0.045em;
           text-transform: capitalize;
@@ -501,9 +506,7 @@ const HomeWrapper = styled.div`
             position: absolute;
             top: -30%;
             right: 7px;
-            font-family: "Roboto", sans-serif;
             font-size: 11px;
-            font-style: normal;
             font-weight: 400;
             line-height: 11px;
             letter-spacing: 0em;
@@ -511,14 +514,12 @@ const HomeWrapper = styled.div`
           }
         }
         .product_logo {
-          height: 48.14715576171875px;
+          height: 48px;
           width: 244px;
         }
       }
       .right_title {
-        font-family: "Roboto";
-        font-size: 28px;
-        font-style: normal;
+        font-size: 37px;
         font-weight: 700;
         line-height: 37px;
         letter-spacing: 0em;
@@ -598,84 +599,143 @@ const HomeWrapper = styled.div`
       }
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1250px) {
       .productBoard {
-        padding: 20px !important;
-      }
-      .productBoard {
-        padding: 25px !important;
+        padding: 15px 35px !important;
+        .productDayWasher {
+          width: 303px;
+          height: 200px;
+        }
         .oldPrice {
-          font-size: 19.8896px;
-          margin: 0px !important;
+          font-size: 15px;
         }
         .sale_price_div {
           background: #fff9b0;
-          border-radius: 3.37691px;
+          border-radius: 3px;
           width: 62px;
-          height: 21.81px;
+          height: 21.8px;
         }
         .salePrice {
-          font-size: 11px;
+          font-size: 8px;
         }
         .bgPrice {
-          margin-top: 10px;
-          width: 100% !important;
-          padding: 5px 15px;
-          height: 40px;
+          margin-top: 15px;
+          width: 128px;
+          height: 34px;
+          padding: 5px;
           .small {
-            font-family: "Roboto", sans-serif;
-            font-size: 15px;
+            font-size: 12px;
             margin: 0;
-            margin-right: 5px;
           }
           .price__ {
-            font-size: 20px;
+            font-size: 19px;
             .summ {
-              font-size: 8.6px;
+              font-size: 6px;
               top: -40%;
             }
           }
         }
+        .bgPrice,
+        .small,
+        .price,
+        .selePrice,
+        .sele_price_div,
+        .oldPrice {
+          line-height: 100%;
+        }
         .product_logo {
-          width: 100%;
-          height: 38.31px;
-          object-fit: contain;
+          width: 144px;
+          height: 28px;
+          object-fit: cover;
         }
         .right_title {
-          font-size: 20px !important;
-          line-height: 20px !important;
-          margin-bottom: 10px !important;
+          font-size: 22px;
+          line-height: 100%;
         }
       }
       .productDayText {
         .left_title {
-          font-size: 20px;
-          line-height: 20px;
+          font-size: 19x;
+          line-height: 100%;
         }
         .left_clock {
-          font-size: 41px;
-          line-height: 41px;
+          font-size: 37px !important;
+          line-height: 100%;
         }
         .left_subtitle {
-          font-size: 11.93px;
-          line-height: 13.78px;
+          font-size: 10.9px;
+          line-height: 115.5%;
         }
         .yellowCont {
-          width: 142.41px;
-          height: 57.76px;
+          width: 130px;
+          height: 52px;
           p {
-            font-size: 9.90675px;
+            font-size: 9px;
+            line-height: 115.5%;
           }
-          font-size: 29.9743px;
+          font-size: 27px;
+          line-height: 115.5%;
         }
         h2 {
-          font-size: 29.9743px !important;
+          font-size: 29px !important;
           margin-top: 4px !important;
           line-height: 100% !important;
         }
       }
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 1200px) {
+      .productBoard {
+        .productDayWasher {
+          width: 250px;
+          height: 170px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1070px) {
+      .productBoard {
+        .productDayWasher {
+          width: 220px;
+          height: 150px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1070px) {
+      .productBoard {
+        .productDayWasher {
+          width: 203px;
+          height: 138px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media screen and (max-width: 920px) {
+      .productBoard {
+        padding: 20px !important;
+        .productDayWasher {
+          width: 180px;
+          height: 118px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      .productBoard {
+        padding: 20px !important;
+        .productDayWasher {
+          width: 165px;
+          height: 120px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 720px) {
       .priceContainer {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -699,25 +759,11 @@ const HomeWrapper = styled.div`
         -ms-flex-align: center;
         align-items: center;
       }
-      .productDay {
-        padding: 0 !important;
-      }
-      .right_green_price,
-      .oldPrice {
-        font-size: 9px !important;
-      }
-      .productDayWasher {
-        width: 165px !important;
-      }
-      .right_title {
-        font-size: 4px;
-      }
       .productBoard {
-        .price__ {
-          font-size: 10px !important;
-        }
-        .small {
-          font-size: 1px !important;
+        padding: 20px !important;
+        .productDayWasher {
+          width: 165px;
+          height: 120px;
         }
       }
     } */
@@ -829,19 +875,24 @@ const HomeWrapper = styled.div`
         margin: 0 !important;
       }
       .title {
-        line-height: 16px !important;
-        font-size: 14px;
+        line-height: 115.5%;
+        font-size: 15px;
+        margin: 0;
         margin-bottom: 5px !important;
         padding: 0 !important;
-        margin: 0 !important;
         text-transform: uppercase !important;
         font-weight: bold !important;
       }
       .small {
+        display: flex;
+        align-items: center;
         .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 115.5%;
+          text-decoration-line: line-through;
+          text-transform: uppercase;
+          color: #a8a0a0;
           padding: 0;
           margin: 0;
           .sum {
@@ -852,12 +903,23 @@ const HomeWrapper = styled.div`
           }
         }
         .badgePrice {
-          font-size: 8px;
+          p {
+            font-weight: 500;
+            font-weight: 500;
+            font-size: 7.5px;
+            line-height: 115.5%;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            color: black !important;
+            margin: auto;
+          }
+          display: flex !important;
+          align-items: center !important;
           background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
-          font-weight: 500;
+          justify-content: center;
+          padding: 1px 3.7px;
           border-radius: 1.4px;
+          height: 13px;
         }
       }
       .prices {
@@ -941,6 +1003,14 @@ const HomeWrapper = styled.div`
             font-size: 9px;
           }
         }
+      }
+      .swiper-pagination-bullet-active-prev,
+      /* .swiper-pagination {
+        display: flex !important;
+        justify-content: center;
+      } */
+      .swiper-pagination-bullet {
+        background-color: red !important;
       }
       .swiper-slide {
         background: none !important;
@@ -1072,6 +1142,8 @@ const HomeWrapper = styled.div`
           font-weight: bold !important;
         }
         .small {
+          display: flex;
+          align-items: center;
           .oldPrice {
             font-weight: 500;
             font-size: 9px;
@@ -1234,18 +1306,24 @@ const HomeWrapper = styled.div`
       margin: auto;
       position: relative;
       .title {
-        line-height: 16px !important;
-        font-size: 12px;
-        margin-bottom: 10px !important;
-        padding: 0 !important;
+        line-height: 115.5%;
+        font-size: 15px;
         margin: 0;
+        margin-bottom: 5px !important;
+        padding: 0 !important;
         text-transform: uppercase !important;
+        font-weight: bold !important;
       }
       .small {
+        display: flex;
+        align-items: center;
         .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 115.5%;
+          text-decoration-line: line-through;
+          text-transform: uppercase;
+          color: #a8a0a0;
           padding: 0;
           margin: 0;
           .sum {
@@ -1256,12 +1334,23 @@ const HomeWrapper = styled.div`
           }
         }
         .badgePrice {
-          font-size: 8px;
+          p {
+            font-weight: 500;
+            font-weight: 500;
+            font-size: 7.5px;
+            line-height: 115.5%;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            color: black !important;
+            margin: auto;
+          }
+          display: flex !important;
+          align-items: center !important;
           background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
-          border-radius: 1.4px !important;
-          font-weight: 500 !important;
+          justify-content: center;
+          padding: 1px 3.7px;
+          border-radius: 1.4px;
+          height: 13px;
         }
       }
       .prices {
@@ -1596,9 +1685,17 @@ const HomeWrapper = styled.div`
     .new-products {
       .new-product-card {
         .oldPrice,
+        .rentPrice,
         .sum {
           font-size: 7px !important;
           line-height: 115%;
+        }
+
+        .rentPrice {
+          font-size: 7px !important;
+          display: flex;
+          justify-content: flex-start;
+          margin: 3px;
         }
         .badgePrice {
           display: -webkit-box;
