@@ -52,7 +52,6 @@ const HomeWrapper = styled.div`
         text-decoration-line: line-through;
         padding: 0;
         margin: 0;
-        margin-bottom: 3px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -443,7 +442,7 @@ const HomeWrapper = styled.div`
       width: 100%;
       background: #ffffff;
       box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
-      padding: 30px 35px !important;
+      padding: 30px !important;
       .oldPrice {
         font-family: "Roboto", sans-serif;
         font-size: 25px;
@@ -475,8 +474,8 @@ const HomeWrapper = styled.div`
       .bgPrice {
         margin-top: 15px;
         height: 51.338462829589844px;
-        width: 216.1999969482422px;
         border-radius: 0px;
+        width: 90%;
         background: #ff5314;
         color: white;
         display: flex;
@@ -496,7 +495,7 @@ const HomeWrapper = styled.div`
           font-family: "Roboto", sans-serif;
           font-style: normal;
           font-weight: bold;
-          font-size: 32.406px;
+          font-size: 28px;
           line-height: 100%;
           letter-spacing: 0.045em;
           text-transform: capitalize;
@@ -520,8 +519,8 @@ const HomeWrapper = styled.div`
         }
       }
       .right_title {
-        font-family: Roboto;
-        font-size: 37px;
+        font-family: "Roboto";
+        font-size: 28px;
         font-style: normal;
         font-weight: 700;
         line-height: 37px;
@@ -530,11 +529,12 @@ const HomeWrapper = styled.div`
       }
     }
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1455px) {
       .productBoard {
-        padding: 30px 35px !important;
+        padding: 25px !important;
         .oldPrice {
           font-size: 19.8896px;
+          margin: 0;
         }
         .sale_price_div {
           background: #fff9b0;
@@ -568,7 +568,8 @@ const HomeWrapper = styled.div`
           object-fit: cover;
         }
         .right_title {
-          font-size: 29.6571px;
+          font-size: 27px;
+          line-height: 30px;
         }
       }
       .productDayText {
@@ -600,23 +601,84 @@ const HomeWrapper = styled.div`
       }
     }
 
-    @media screen and (max-width: 920px) {
+    @media screen and (max-width: 992px) {
       .productBoard {
         padding: 20px !important;
       }
-    }
-    @media screen and (max-width: 850px) {
       .productBoard {
-        padding: 20px !important;
+        padding: 25px !important;
+        .oldPrice {
+          font-size: 19.8896px;
+          margin: 0px !important;
+        }
+        .sale_price_div {
+          background: #fff9b0;
+          border-radius: 3.37691px;
+          width: 62px;
+          height: 21.81px;
+        }
+        .salePrice {
+          font-size: 11px;
+        }
+        .bgPrice {
+          margin-top: 10px;
+          width: 100% !important;
+          padding: 5px 15px;
+          height: 40px;
+          .small {
+            font-family: "Roboto", sans-serif;
+            font-size: 15px;
+            margin: 0;
+            margin-right: 5px;
+          }
+          .price__ {
+            font-size: 20px;
+            .summ {
+              font-size: 8.6px;
+              top: -40%;
+            }
+          }
+        }
+        .product_logo {
+          width: 100%;
+          height: 38.31px;
+          object-fit: contain;
+        }
         .right_title {
-          font-size: 17px !important;
+          font-size: 20px !important;
+          line-height: 20px !important;
+          margin-bottom: 10px !important;
         }
-        .price__ {
-          font-size: 13px !important;
+      }
+      .productDayText {
+        .left_title {
+          font-size: 20px;
+          line-height: 20px;
+        }
+        .left_clock {
+          font-size: 41px;
+          line-height: 41px;
+        }
+        .left_subtitle {
+          font-size: 11.93px;
+          line-height: 13.78px;
+        }
+        .yellowCont {
+          width: 142.41px;
+          height: 57.76px;
+          p {
+            font-size: 9.90675px;
+          }
+          font-size: 29.9743px;
+        }
+        h2 {
+          font-size: 29.9743px !important;
+          margin-top: 4px !important;
+          line-height: 100% !important;
         }
       }
     }
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 768px) {
       .priceContainer {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -625,22 +687,13 @@ const HomeWrapper = styled.div`
         -ms-flex-align: center;
         align-items: center;
       }
-      .productDay {
-        padding: 0 !important;
-      }
-      .right_green_price,
-      .oldPrice {
-        font-size: 10px !important;
-      }
-      .price__ {
-        font-size: 10px !important;
-      }
-      .productDayWasher {
-        width: 180px !important;
+      .priceContainer {
+        display: flex;
+        align-items: center;
       }
     }
 
-    @media screen and (max-width: 690px) {
+    /* @media screen and (max-width: 690px) {
       .priceContainer {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -670,16 +723,62 @@ const HomeWrapper = styled.div`
           font-size: 1px !important;
         }
       }
-    }
+    } */
 
     @media screen and (max-width: 500px) {
       .priceContainer {
-        display: block;
+        display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
         .bgPrice {
-          width: 100%;
+          width: 50% !important;
+          .price__ {
+            font-size: 18.7361px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: 0.045em;
+            text-transform: lowercase;
+
+            color: #ffffff;
+          }
+        }
+        .product_logo {
+          width: 50%;
+        }
+      }
+      .productDay {
+        padding: 0 !important;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .priceContainer {
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .bgPrice {
+          width: 50% !important;
+          height: auto;
+          align-items: flex-end;
+          height: 30px;
+          .small {
+            font-size: 10px;
+            line-height: 15px;
+          }
+          .price__ {
+            font-size: 15.7361px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: 0.045em;
+            text-transform: lowercase;
+            color: #ffffff;
+            .summ {
+              top: -60% !important;
+              right: 5px;
+            }
+          }
         }
       }
       .productDay {
@@ -1126,21 +1225,6 @@ const HomeWrapper = styled.div`
       }
     }
   }
-  /* @media screen and (max-width: 700px) {
-    .discount {
-      position: absolute !important;
-      top: 13.5px !important;
-      left: 16.1% !important;
-    }
-  }
-  @media screen and (max-width: 570px) {
-    .discount {
-      position: absolute !important;
-      top: 13.5px !important;
-      left: 3.7% !important;
-    }
-  } */
-
   //Laptops
   .laptops,
   .laptopsTel {
@@ -1354,9 +1438,9 @@ const HomeWrapper = styled.div`
       font-size: 14px !important;
       padding: 0 22px !important;
     }
-    .productDayText .left_clock {
+    /* .productDayText .left_clock {
       font-size: 10px !important;
-    }
+    } */
   }
   @media screen and (max-width: 1070px) {
     .fiveNew {
@@ -1474,7 +1558,6 @@ const HomeWrapper = styled.div`
     }
     .oldPrice {
       /* text-align: right !important; */
-      margin-top: 10px !important;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
