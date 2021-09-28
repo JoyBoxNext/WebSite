@@ -60,7 +60,7 @@ const HomeWrapper = styled.div`
         justify-content: end;
       }
       .priceDec {
-        background-color: #ff5314;
+        background-color: #ff4001;
         padding: 7px 4px;
         .price {
           font-size: 10px;
@@ -221,10 +221,10 @@ const HomeWrapper = styled.div`
           right: 0;
           top: 40%;
           .oldPrice {
-            margin: 0 !important;
+            margin: 0 3px 0 0 !important;
           }
           .priceDec {
-            background-color: #ff5314;
+            background-color: #ff4001;
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
@@ -240,6 +240,7 @@ const HomeWrapper = styled.div`
             display: -ms-flexbox;
             display: flex;
             font-size: 12px !important;
+            margin: 0 3px 0 0 !important;
           }
         }
         .mini-content {
@@ -1785,7 +1786,7 @@ const HomeWrapper = styled.div`
       font-size: 11px;
     }
     .bag {
-      padding: 15px;
+      padding: 30px !important;
     }
     .left_title {
       font-size: 12px;

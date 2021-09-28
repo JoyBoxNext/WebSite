@@ -78,7 +78,7 @@ const Product = ({ baraxolkaData }) => {
                             <Link href="/productCard">
                               <a>
                                 <div className="cards_border">
-                                  <img src="skidka.svg" alt="photo" />
+                                  <img src="sale.svg" alt="photo" />
                                   <div className="px-3">
                                     <div className="d-flex justify-content-center align-items-center ps-4 mt-2 mb-3">
                                       <img
@@ -183,7 +183,7 @@ const Product = ({ baraxolkaData }) => {
                             <Link href="/productCard">
                               <a>
                                 <div className="cards_border">
-                                  <img src="skidka.jpg" alt="photo" />
+                                  <img src="sale.jpg" alt="photo" />
                                   <div className="px-3">
                                     <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                                       <img
@@ -270,7 +270,7 @@ const Product = ({ baraxolkaData }) => {
                             <Link href="/productCard">
                               <a>
                                 <div className="cards_border">
-                                  <img src="skidka.jpg" alt="photo" />
+                                  <img src="sale.jpg" alt="photo" />
                                   <div className="px-3">
                                     <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                                       <img

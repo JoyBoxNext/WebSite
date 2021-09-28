@@ -183,7 +183,7 @@ export default function Home({ baraxolkaData }) {
                   <div className="d-flex  justify-content-between  w-100">
                     <img
                       className="miniContentLogo h-100"
-                      src="logo3.png"
+                      src="logothird.png"
                       alt="photo"
                     />
                     <p className="bottom-text w-auto">
@@ -214,7 +214,7 @@ export default function Home({ baraxolkaData }) {
               <div className="flex4 blue" style={{ width: "11.2%" }}></div>
               <div className="flex5 orange" style={{ width: "62.1%" }}></div>
               <div className="flex6 blue" style={{ width: "26.7%" }}>
-                <img className="w-100" src="logo4.png" alt="photo" />
+                <img className="w-100" src="logofourth.png" alt="photo" />
               </div>
               <div className="flex7 orange" style={{ width: "11.2%" }}></div>
               <div className="flex8 blue" style={{ width: "62.1%" }}>
@@ -259,7 +259,7 @@ export default function Home({ baraxolkaData }) {
                       </div>
                     </div>
                     <div className="d-flex  justify-content-between  w-100">
-                      <img className="top_title" src="logo3.png" alt="photo" />
+                      <img className="top_title" src="logothird.png" alt="photo" />
                       <p className="bottom-text w-auto">
                         Магазин бытовой техники и электроники
                       </p>
@@ -287,8 +287,8 @@ export default function Home({ baraxolkaData }) {
                       <div className={`card mx-2 p-3 ${v.className}`} key={i}>
                         <img
                           className="skidka_card"
-                          src="skidka.svg"
-                          alt="skidka"
+                          src="sale.svg"
+                          alt="sale"
                         />
                         <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                           <img
@@ -389,8 +389,8 @@ export default function Home({ baraxolkaData }) {
                       <div className={`card mx-2 p-3`}>
                         <img
                           className="skidka_card"
-                          src="skidka.svg"
-                          alt="skidka"
+                          src="sale.svg"
+                          alt="sale"
                         />
                         <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                           <img
@@ -507,7 +507,7 @@ export default function Home({ baraxolkaData }) {
                         </div>
                         <img
                           className="product_logo"
-                          src="logo3.png"
+                          src="logothird.png"
                           alt="photo"
                         />
                       </div>
@@ -563,8 +563,8 @@ export default function Home({ baraxolkaData }) {
                           <div className="choose-card p-2">
                             <img
                               className="skidka"
-                              src="skidka.svg"
-                              alt="photo"
+                              src="sale.svg"
+                              alt="sale"
                             />
                             <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                               <img
@@ -648,7 +648,7 @@ export default function Home({ baraxolkaData }) {
                   <Link href="/productCard" key={i}>
                     <a>
                       <div className={`choose-card p-2 ${v.className}`}>
-                        <img className="skidka" src="skidka.svg" alt="photo" />
+                        <img className="skidka" src="sale.svg" alt="sale" />
                         <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                           <img
                             style={{ marginTop: "20px !important" }}
@@ -944,7 +944,7 @@ export default function Home({ baraxolkaData }) {
                             <div className="laptop-card p-2" key={i}>
                               <img
                                 className="discount"
-                                src="skidka.svg"
+                                src="sale.svg"
                                 alt="photo"
                               />
                               <div className="d-flex flex-column justify-content-center align-items-center">
@@ -1023,7 +1023,7 @@ export default function Home({ baraxolkaData }) {
                         >
                           <img
                             className="discount"
-                            src="skidka.svg"
+                            src="sale.svg"
                             alt="photo"
                           />
                           <div className="d-flex flex-column justify-content-center align-items-center">

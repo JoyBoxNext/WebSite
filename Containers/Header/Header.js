@@ -1,4 +1,4 @@
-import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as t from "../../redux/Types";
 import Link from "next/link";
@@ -77,9 +77,9 @@ const Header = () => {
           </div>
           <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 order-3 order-sm-3 order-md-3 order-lg-0 inputOrder">
             <div className="d-flex justify-content-center align-items-center">
-              <Button className="search px-5">Поиск</Button>
+              <Button className="search px-5"><FontAwesomeIcon icon={faSearch} className="me-2" /> Поиск</Button>
               <input
-                className="w-100 input-group"
+                className="w-100 input-group ps-3"
                 type="text"
                 onChange={(event) => {
                   setSearchTerm(event.target.value);
