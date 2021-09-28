@@ -323,8 +323,8 @@ const HomeWrapper = styled.div`
           left: 0;
         }
         .title {
-          line-height: 16px !important;
-          /* font-size: 12px; */
+          line-height: 115.5%;
+          font-size: 15px;
           margin: 0;
           margin-bottom: 5px !important;
           padding: 0 !important;
@@ -332,10 +332,15 @@ const HomeWrapper = styled.div`
           font-weight: bold !important;
         }
         .small {
+          display: flex;
+          align-items: center;
           .oldPrice {
-            font-size: 10px;
-            text-decoration: line-through;
-            color: gray;
+            font-weight: 500;
+            font-size: 9px;
+            line-height: 115.5%;
+            text-decoration-line: line-through;
+            text-transform: uppercase;
+            color: #a8a0a0;
             padding: 0;
             margin: 0;
             .sum {
@@ -346,12 +351,23 @@ const HomeWrapper = styled.div`
             }
           }
           .badgePrice {
-            font-size: 8px;
+            p {
+              font-weight: 500;
+              font-weight: 500;
+              font-size: 7.5px;
+              line-height: 115.5%;
+              letter-spacing: 0.025em;
+              text-transform: uppercase;
+              color: black !important;
+              margin: auto;
+            }
+            display: flex !important;
+            align-items: center !important;
             background-color: #d3e38c;
-            padding: 2px 5px;
-            color: black !important;
-            font-weight: 500;
+            justify-content: center;
+            padding: 1px 3.7px;
             border-radius: 1.4px;
+            height: 13px;
           }
         }
         .prices {
@@ -916,6 +932,16 @@ const HomeWrapper = styled.div`
         text-align: center;
         margin-bottom: 35px !important;
       }
+      .title {
+        font-size: 17.2027px;
+      }
+      .small {
+        .badgePrice {
+          p {
+            font-size: 9px;
+          }
+        }
+      }
       .swiper-slide {
         background: none !important;
       }
@@ -1037,16 +1063,24 @@ const HomeWrapper = styled.div`
         border-bottom: 0;
         position: relative;
         .title {
-          line-height: 16px;
-          font-size: 14px;
-          margin-bottom: 10px !important;
+          line-height: 115.5%;
+          font-size: 15px;
+          margin: 0;
+          margin-bottom: 5px !important;
+          padding: 0 !important;
           text-transform: uppercase !important;
+          font-weight: bold !important;
         }
         .small {
           .oldPrice {
-            font-size: 10px;
-            text-decoration: line-through;
-            color: gray;
+            font-weight: 500;
+            font-size: 9px;
+            line-height: 115.5%;
+            text-decoration-line: line-through;
+            text-transform: uppercase;
+            color: #a8a0a0;
+            padding: 0;
+            margin: 0;
             .sum {
               font-size: 8px;
               text-decoration: none !important;
@@ -1055,12 +1089,23 @@ const HomeWrapper = styled.div`
             }
           }
           .badgePrice {
-            font-size: 8px;
+            p {
+              font-weight: 500;
+              font-weight: 500;
+              font-size: 7.5px;
+              line-height: 115.5%;
+              letter-spacing: 0.025em;
+              text-transform: uppercase;
+              color: black !important;
+              margin: auto;
+            }
+            display: flex !important;
+            align-items: center !important;
             background-color: #d3e38c;
-            padding: 2px 5px;
-            color: black !important;
-            font-weight: 500;
+            justify-content: center;
+            padding: 1px 3.7px;
             border-radius: 1.4px;
+            height: 13px;
           }
         }
         .prices {

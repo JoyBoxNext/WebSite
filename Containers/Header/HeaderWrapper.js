@@ -16,7 +16,8 @@ const HeaderWrapper = styled.div`
     }
   }
   .sm_links_Index,
-  .home_tech_Index {
+  .home_tech_Index,
+  .index_link {
     display: none;
   }
   .header_button {
@@ -78,12 +79,17 @@ const HeaderWrapper = styled.div`
 
   @media screen and (max-width: 800px) {
     .MenuContainer {
-      top: 50% !important;
+      top: 100% !important;
     }
   }
   @media screen and (max-width: 700px) {
     .MenuContainer {
-      top: 40% !important;
+      top: 100% !important;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .MenuContainer {
+      top: 30% !important;
     }
   }
   @media screen and (max-width: 550px) {
@@ -93,7 +99,7 @@ const HeaderWrapper = styled.div`
   }
   @media screen and (max-width: 400px) {
     .MenuContainer {
-      top: 20% !important;
+      top: 100% !important;
     }
     .sm_links {
       display: none;
@@ -126,6 +132,7 @@ const HeaderWrapper = styled.div`
     .menuItem {
       z-index: 10000;
       padding: 8px 0;
+      font-weight: bold;
     }
   }
   .logo {
@@ -135,6 +142,7 @@ const HeaderWrapper = styled.div`
     color: #ff5314;
   }
 
+  /* @media */
   @media screen and (max-width: 600px) {
     .header_korzina,
     .header_icon {
@@ -323,7 +331,7 @@ const HeaderWrapper = styled.div`
       width: 266px !important;
       max-height: 380px !important;
       .title {
-        font-size: 8px;
+        font-size: 11px;
       }
       .aksiya_ {
         font-size: 10px;
@@ -479,6 +487,42 @@ const HeaderWrapper = styled.div`
       .photo {
         width: 52px;
         height: 64px;
+      }
+      .orange_btn {
+        font-size: 13px;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .korzina {
+      position: absolute;
+      top: 59px;
+      left: -170px;
+      padding: 10px;
+      width: 100px !important;
+      max-height: 379px !important;
+      .title {
+        font-size: 10px;
+      }
+      .aksiya_ {
+        font-size: 14px;
+      }
+      .aksiya {
+        margin-top: 0;
+        font-size: 7px;
+      }
+      .price {
+        font-size: 22px;
+      }
+      .small_price {
+        font-size: 18px !important;
+      }
+      .delete {
+        font-size: 14px;
+      }
+      .photo {
+        width: 54px;
+        height: 66px;
       }
       .orange_btn {
         font-size: 13px;

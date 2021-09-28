@@ -98,6 +98,12 @@ const Category = () => {
     dispatch(action);
   };
 
+  const [pagination, setPagination] = useState(-1);
+
+  const activePagination = (value) => {
+    setPagination(value);
+  };
+
   //masala
 
   return (
@@ -168,6 +174,67 @@ const Category = () => {
                 <div
                   className={`px-2 left_flex_item2 ${
                     tabPanel == 0 ? "d-block" : "d-none"
+                  }`}
+                >
+                  <div>
+                    <div className="four_items">
+                      {categories?.map((value, index) => {
+                        return (
+                          <div className="four_items_block" key={index}>
+                            <div className="d-flex justify-content-between mt-4">
+                              <p
+                                className={`subtitle my-3 ${
+                                  show2 ? "" : value.name.className
+                                }`}
+                              >
+                                {value.name.title}
+                              </p>
+                              {
+                                <FontAwesomeIcon
+                                  onClick={hide2}
+                                  className={`mt-3 mx-3 icon`}
+                                  icon={
+                                    show2
+                                      ? value.name.iconUp
+                                      : value.name.iconDown
+                                  }
+                                />
+                              }
+                            </div>
+                            {value.name.category.map((value, index) => {
+                              return (
+                                <div
+                                  className={`d-flex justify-content-between ${
+                                    show2 ? "" : "d-none"
+                                  }`}
+                                  key={index}
+                                >
+                                  <div className="d-flex align-items-center mt-2">
+                                    <input
+                                      type="checkbox"
+                                      className="myinput"
+                                    />
+                                    <p className="mb-0 subtitle ms-2">
+                                      {value.title}
+                                    </p>
+                                  </div>
+                                  <div className="">
+                                    <p className="my-1 subtitle numbers me-3">
+                                      {value.subtitle}
+                                    </p>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className={`px-2 left_flex_item2 ${
+                    tabPanel == 1 ? "d-block" : "d-none"
                   }`}
                 >
                   <div>
@@ -338,10 +405,30 @@ const Category = () => {
             </div>
             {/* ============== */}
             <div className="sidebar_boxes d-none justify-content-center align-items-center">
-              <p className="small_boxes">1</p>
-              <p className="small_boxes">2</p>
-              <p className="small_boxes">3</p>
-              <p className="small_boxes">4</p>
+              <p
+                onClick={() => activePagination(1)}
+                className={`small_boxes ${pagination === 1 ? "active" : ""}`}
+              >
+                1
+              </p>
+              <p
+                onClick={() => activePagination(2)}
+                className={`small_boxes ${pagination === 2 ? "active" : ""}`}
+              >
+                2
+              </p>
+              <p
+                onClick={() => activePagination(3)}
+                className={`small_boxes ${pagination === 3 ? "active" : ""}`}
+              >
+                3
+              </p>
+              <p
+                onClick={() => activePagination(4)}
+                className={`small_boxes ${pagination === 4 ? "active" : ""}`}
+              >
+                4
+              </p>
             </div>
             <p className="avto_text">автопродление страницы</p>
             <div>

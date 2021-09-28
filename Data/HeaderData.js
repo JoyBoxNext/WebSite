@@ -46,17 +46,17 @@ const linksIndex = [
   {
     link: "Техника для дома",
     href: "/homeTech",
-    className: "home",
+    className: "index_link",
   },
   {
     link: " Ноутбук, ПК, планшет",
     href: "/laptops",
-    className: "laptop",
+    className: "index_link",
   },
   {
     link: "Для геймеров",
     href: "/gamers",
-    className: "gamer",
+    className: "index_link",
   },
 ];
 
