@@ -52,7 +52,6 @@ const HomeWrapper = styled.div`
         text-decoration-line: line-through;
         padding: 0;
         margin: 0;
-        margin-bottom: 3px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -98,6 +97,9 @@ const HomeWrapper = styled.div`
       }
       .miniContentLogo {
         margin-top: 7px;
+        width: 105.02px;
+        height: 26.97px;
+        align-self: end !important;
       }
     }
     .flex1 {
@@ -449,7 +451,7 @@ const HomeWrapper = styled.div`
       width: 100%;
       background: #ffffff;
       box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
-      padding: 30px 35px !important;
+      padding: 30px !important;
       .oldPrice {
         font-size: 25px;
         font-weight: 700;
@@ -479,6 +481,7 @@ const HomeWrapper = styled.div`
         height: 51px;
         width: 216px;
         border-radius: 0px;
+        width: 90%;
         background: #ff5314;
         color: white;
         display: flex;
@@ -524,11 +527,12 @@ const HomeWrapper = styled.div`
       }
     }
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1455px) {
       .productBoard {
-        padding: 30px 35px !important;
+        padding: 25px !important;
         .oldPrice {
           font-size: 19.8896px;
+          margin: 0;
         }
         .sale_price_div {
           background: #fff9b0;
@@ -562,7 +566,8 @@ const HomeWrapper = styled.div`
           object-fit: cover;
         }
         .right_title {
-          font-size: 29.6571px;
+          font-size: 27px;
+          line-height: 30px;
         }
       }
       .productDayText {
@@ -739,16 +744,13 @@ const HomeWrapper = styled.div`
         -ms-flex-align: center;
         align-items: center;
       }
-      .productBoard {
-        padding: 20px !important;
-        .productDayWasher {
-          width: 165px;
-          height: 120px;
-        }
+      .priceContainer {
+        display: flex;
+        align-items: center;
       }
     }
 
-    @media screen and (max-width: 690px) {
+    /* @media screen and (max-width: 690px) {
       .priceContainer {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -764,16 +766,62 @@ const HomeWrapper = styled.div`
           height: 120px;
         }
       }
-    }
+    } */
 
     @media screen and (max-width: 500px) {
       .priceContainer {
-        display: block;
+        display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
         .bgPrice {
-          width: 100%;
+          width: 50% !important;
+          .price__ {
+            font-size: 18.7361px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: 0.045em;
+            text-transform: lowercase;
+
+            color: #ffffff;
+          }
+        }
+        .product_logo {
+          width: 50%;
+        }
+      }
+      .productDay {
+        padding: 0 !important;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .priceContainer {
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .bgPrice {
+          width: 50% !important;
+          height: auto;
+          align-items: flex-end;
+          height: 30px;
+          .small {
+            font-size: 10px;
+            line-height: 15px;
+          }
+          .price__ {
+            font-size: 15.7361px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: 0.045em;
+            text-transform: lowercase;
+            color: #ffffff;
+            .summ {
+              top: -60% !important;
+              right: 5px;
+            }
+          }
         }
       }
       .productDay {
@@ -827,19 +875,24 @@ const HomeWrapper = styled.div`
         margin: 0 !important;
       }
       .title {
-        line-height: 16px !important;
-        font-size: 14px;
+        line-height: 115.5%;
+        font-size: 15px;
+        margin: 0;
         margin-bottom: 5px !important;
         padding: 0 !important;
-        margin: 0 !important;
         text-transform: uppercase !important;
         font-weight: bold !important;
       }
       .small {
+        display: flex;
+        align-items: center;
         .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 115.5%;
+          text-decoration-line: line-through;
+          text-transform: uppercase;
+          color: #a8a0a0;
           padding: 0;
           margin: 0;
           .sum {
@@ -850,12 +903,23 @@ const HomeWrapper = styled.div`
           }
         }
         .badgePrice {
-          font-size: 8px;
+          p {
+            font-weight: 500;
+            font-weight: 500;
+            font-size: 7.5px;
+            line-height: 115.5%;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            color: black !important;
+            margin: auto;
+          }
+          display: flex !important;
+          align-items: center !important;
           background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
-          font-weight: 500;
+          justify-content: center;
+          padding: 1px 3.7px;
           border-radius: 1.4px;
+          height: 13px;
         }
       }
       .prices {
@@ -1070,6 +1134,8 @@ const HomeWrapper = styled.div`
           font-weight: bold !important;
         }
         .small {
+          display: flex;
+          align-items: center;
           .oldPrice {
             font-weight: 500;
             font-size: 9px;
@@ -1202,21 +1268,6 @@ const HomeWrapper = styled.div`
       }
     }
   }
-  /* @media screen and (max-width: 700px) {
-    .discount {
-      position: absolute !important;
-      top: 13.5px !important;
-      left: 16.1% !important;
-    }
-  }
-  @media screen and (max-width: 570px) {
-    .discount {
-      position: absolute !important;
-      top: 13.5px !important;
-      left: 3.7% !important;
-    }
-  } */
-
   //Laptops
   .laptops,
   .laptopsTel {
@@ -1247,18 +1298,24 @@ const HomeWrapper = styled.div`
       margin: auto;
       position: relative;
       .title {
-        line-height: 16px !important;
-        font-size: 12px;
-        margin-bottom: 10px !important;
-        padding: 0 !important;
+        line-height: 115.5%;
+        font-size: 15px;
         margin: 0;
+        margin-bottom: 5px !important;
+        padding: 0 !important;
         text-transform: uppercase !important;
+        font-weight: bold !important;
       }
       .small {
+        display: flex;
+        align-items: center;
         .oldPrice {
-          font-size: 10px;
-          text-decoration: line-through;
-          color: gray;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 115.5%;
+          text-decoration-line: line-through;
+          text-transform: uppercase;
+          color: #a8a0a0;
           padding: 0;
           margin: 0;
           .sum {
@@ -1269,12 +1326,23 @@ const HomeWrapper = styled.div`
           }
         }
         .badgePrice {
-          font-size: 8px;
+          p {
+            font-weight: 500;
+            font-weight: 500;
+            font-size: 7.5px;
+            line-height: 115.5%;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            color: black !important;
+            margin: auto;
+          }
+          display: flex !important;
+          align-items: center !important;
           background-color: #d3e38c;
-          padding: 2px 5px;
-          color: black !important;
-          border-radius: 1.4px !important;
-          font-weight: 500 !important;
+          justify-content: center;
+          padding: 1px 3.7px;
+          border-radius: 1.4px;
+          height: 13px;
         }
       }
       .prices {
@@ -1413,9 +1481,9 @@ const HomeWrapper = styled.div`
       font-size: 14px !important;
       padding: 0 22px !important;
     }
-    .productDayText .left_clock {
+    /* .productDayText .left_clock {
       font-size: 10px !important;
-    }
+    } */
   }
   @media screen and (max-width: 1070px) {
     .fiveNew {
@@ -1533,7 +1601,6 @@ const HomeWrapper = styled.div`
     }
     .oldPrice {
       /* text-align: right !important; */
-      margin-top: 10px !important;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1610,9 +1677,17 @@ const HomeWrapper = styled.div`
     .new-products {
       .new-product-card {
         .oldPrice,
+        .rentPrice,
         .sum {
           font-size: 7px !important;
           line-height: 115%;
+        }
+
+        .rentPrice {
+          font-size: 7px !important;
+          display: flex;
+          justify-content: flex-start;
+          margin: 3px;
         }
         .badgePrice {
           display: -webkit-box;

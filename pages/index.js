@@ -482,20 +482,20 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-8 col-md-7 d-flex justify-content-center align-items-center m-0">
+              <div className="col-12 col-md-7 d-flex justify-content-center align-items-center m-0">
                 <div className={`productBoard`}>
                   <div className="row w-100 justify-content-between m-0 align-items-center">
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-5 ">
-                      <h2 className="right_title mb-4">
+                    <div className="col-12 col-md-6 col-lg-6">
+                      <p className="right_title m-0 m-md-2">
                         Samsung side by side-washer
-                      </h2>
+                      </p>
                       <div className="d-flex align-items-center">
-                        <p className="oldPrice mb-0">18,577,000</p>
+                        <p className="oldPrice m-0">18,577,000</p>
                         <div className="sale_price_div ms-2">
                           <p className="salePrice my-auto m-0">- 2,732,000</p>
                         </div>
                       </div>
-                      <div className="priceContainer d-grid">
+                      <div className="priceContainer">
                         <div className="bgPrice">
                           <p className="small me-1">от</p>
                           <div className="price__">
@@ -510,7 +510,7 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-5 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
+                    <div className="col-12 col-md-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
                         className="productDayWasher"
                         src="productDayWasher.png"
@@ -532,7 +532,7 @@ export default function Home() {
                   200: {
                     slidesPerView: 1,
                   },
-                  568: {
+                  550: {
                     slidesPerView: 2,
                   },
                   760: {
@@ -916,10 +916,10 @@ export default function Home() {
                   300: {
                     slidesPerView: 1,
                   },
-                  650: {
+                  550: {
                     slidesPerView: 2,
                   },
-                  800: {
+                  750: {
                     slidesPerView: 3,
                   },
                   1024: {
