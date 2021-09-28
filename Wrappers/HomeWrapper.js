@@ -180,7 +180,6 @@ const HomeWrapper = styled.div`
       p {
         font-size: 20px;
         font-weight: normal;
-        font-size: 22px;
         line-height: 100%;
       }
     }
@@ -307,6 +306,32 @@ const HomeWrapper = styled.div`
     color: white;
     padding: 30px 30px;
     margin-bottom: 30px;
+    .swiper {
+      height: 380px;
+    }
+    .swiper-horizontal > .swiper-scrollbar {
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      opacity: 1;
+      height: 10px;
+      .swiper-scrollbar-drag {
+        background-color: white;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          height: 50%;
+          border-radius: 5px;
+          background-color: #ff8253;
+        }
+      }
+    }
     .container2_photo {
       width: 100% !important;
     }
@@ -1143,6 +1168,7 @@ const HomeWrapper = styled.div`
     .container-2-Tel {
       display: block !important;
       padding: 20px 10px !important;
+
       .title-section {
         font-weight: bold !important;
         font-size: 40px !important;
@@ -1159,6 +1185,14 @@ const HomeWrapper = styled.div`
             font-size: 9px;
           }
         }
+      }
+      .swiper-pagination-bullet-active-prev,
+      /* .swiper-pagination {
+        display: flex !important;
+        justify-content: center;
+      } */
+      .swiper-pagination-bullet {
+        background-color: red !important;
       }
       .swiper-slide {
         background: none !important;
