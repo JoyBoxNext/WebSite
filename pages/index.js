@@ -454,40 +454,35 @@ export default function Home() {
               </Swiper>
             </div>
           </div>
+
           {/* ProductDay */}
-          <div className="productDay w-100 px-lg-4 mt-5">
-            <div className="row justify-content-center p-3 m-0 w-100">
-              <div className="col-12 col-md-5 d-flex align-items-center mb-3 p-0 p-md-2 mb-md-none">
-                <div className="productDayText w-100 m-0 ">
-                  <div className="row w-100 m-0 p-0">
-                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <div className="row w-100 m-0 p-0">
-                        <div className="col-6 col-md-12">
-                          <p className="mb-2 left_title">Товар дня</p>
-                          <h1 className="mb-2 left_clock fw-bold">17.08</h1>
-                        </div>
-                        <div className="col-6 col-md-12 d-flex order-md-3 d-md-block justify-content-end">
-                          <div className="yellowCont">
-                            <p>до конца акции</p>
-                            <h2>08:03:45</h2>
-                          </div>
-                        </div>
-                        <div className="col-12 order-md-2">
-                          <p className="fw-bold left_subtitle mb-3">
-                            Ограниченное количество. <br /> Предложение
-                            действительно только сегодня.
-                          </p>
-                        </div>
+          <div className="productDay px-lg-4 mt-5">
+            <div className="row justify-content-center p-3 w-100">
+              <div className="col-12 col-sm-4 col-md-5 col-lg-4 d-flex align-items-center">
+                <div className="productDayText m-0 ">
+                  <div className="row pe-0">
+                    <div className="col-7 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                      <p className="mb-2 left_title">Товар дня</p>
+                      <h1 className="mb-2 left_clock fw-bold">17.08</h1>
+                      <p className="fw-bold left_subtitle mb-3">
+                        Ограниченное количество. <br /> Предложение
+                        действительно только сегодня.
+                      </p>
+                    </div>
+                    <div className="col-5 p-0 ">
+                      <div className="yellowCont">
+                        <p>до конца акции</p>
+                        <h2>08:03:45</h2>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-md-7 d-flex justify-content-center align-items-center m-0">
+              <div className="col-12 col-sm-8 col-md-7 col-lg-8 d-flex justify-content-center align-items-center m-0">
                 <div className={`productBoard`}>
                   <div className="row w-100 justify-content-between m-0 align-items-center">
-                    <div className="col-12 col-md-6 col-lg-6">
-                      <p className="right_title m-0 m-md-2">
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                      <p className="right_title m-0 mb-2">
                         Samsung side by side-washer
                       </p>
                       <div className="d-flex align-items-center">
@@ -510,7 +505,7 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-md-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
                         className="productDayWasher w-100"
                         src="productDayWasher.png"
