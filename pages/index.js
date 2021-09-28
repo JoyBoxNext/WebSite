@@ -14,7 +14,7 @@ import "swiper/css/bundle";
 // import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, Scrollbar } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 import {
   faAngleRight,
@@ -32,7 +32,7 @@ import { linksIndex, pages } from "../Data/HeaderData";
 import ActiveLink from "../activeLink";
 import HeaderWrapper from "../Containers/Header/HeaderWrapper";
 // import Swiper from "react-id-swiper";
-
+SwiperCore.use([Scrollbar]);
 export default function Home() {
   const chooseData = () => {
     const action = { type: t.CHOOSE_DATA, payload: ChooseData };
@@ -352,7 +352,7 @@ export default function Home() {
               </a>
             </Link>
           </div>
-          {/* container-2-Tel */}
+          {/*   -Tel */}
           <div className="container-2-Tel d-none mt-5">
             <h2 className="title-section my-2">Удивляйся и удивляй!</h2>
             <div className="cards d-flex justify-content-center">
@@ -368,8 +368,13 @@ export default function Home() {
                 loop={false}
                 loopFillGroupWithBlank={true}
                 navigation={false}
-                pagination={true}
-                className="mySwiper"
+                // pagination={{
+                //   type: "progressbar",
+                // }}
+                scrollbar={{
+                  hide: false,
+                }}
+                className="mySwiper position-relative"
               >
                 {homeDatas.map((v, i) => {
                   return (
@@ -491,8 +496,8 @@ export default function Home() {
                           <p className="salePrice my-auto m-0">- 2,732,000</p>
                         </div>
                       </div>
-                      <div className="priceContainer">
-                        <div className="bgPrice">
+                      <div className="priceContainer my-2 m-md-0">
+                        <div className="bgPrice m-0 me-2">
                           <p className="small">от</p>
                           <div className="price__">
                             15,845,000 <p className="summ"> сум</p>
