@@ -27,7 +27,6 @@ export const getProducts = async () => {
 
 export const setProducts = async () =>{
   const response = await getProducts();
-  console.log(res.data);
 }
 
 export const getCategories = async () => {
