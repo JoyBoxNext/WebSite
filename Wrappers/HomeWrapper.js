@@ -1031,10 +1031,6 @@ const HomeWrapper = styled.div`
         }
       }
       .swiper-pagination-bullet-active-prev,
-      /* .swiper-pagination {
-        display: flex !important;
-        justify-content: center;
-      } */
       .swiper-pagination-bullet {
         background-color: red !important;
       }
@@ -1066,6 +1062,10 @@ const HomeWrapper = styled.div`
       padding: 0 !important;
       .new-product-cards {
         position: relative;
+        .new_photos {
+          width: 240px !important;
+          height: 286px !important;
+        }
         .swiper-pagination {
           display: flex !important;
           justify-content: center;
