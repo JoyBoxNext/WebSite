@@ -1,4 +1,8 @@
-import { faAngleDown, faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleDown,
+  faAngleRight,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as t from "../../redux/Types";
 import Link from "next/link";
@@ -10,6 +14,7 @@ import React, { useEffect, useState } from "react";
 import { dispatch } from "../../redux/Store";
 import ModalProduct from "../../Components/ModalProduct";
 import ActiveLink from "../../activeLink";
+import { getCategories } from "../../api";
 
 const Header = () => {
   const [openInput, setOpenInput] = useState(false);
@@ -64,6 +69,12 @@ const Header = () => {
     dispatch(action);
   };
 
+  useEffect(() => {
+    getCategories().then((data) => {
+      console.log(data);
+    });
+  }, []);
+
   return (
     <HeaderWrapper>
       <div className="pt-4">
@@ -77,7 +88,9 @@ const Header = () => {
           </div>
           <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 order-3 order-sm-3 order-md-3 order-lg-0 inputOrder">
             <div className="d-flex justify-content-center align-items-center">
-              <Button className="search px-5"><FontAwesomeIcon icon={faSearch} className="me-2" /> Поиск</Button>
+              <Button className="search px-5">
+                <FontAwesomeIcon icon={faSearch} className="me-2" /> Поиск
+              </Button>
               <input
                 className="w-100 input-group ps-3"
                 type="text"

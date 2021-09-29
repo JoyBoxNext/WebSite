@@ -31,12 +31,14 @@ import Messeger from "../Components/messeger";
 import { linksIndex, pages } from "../Data/HeaderData";
 import ActiveLink from "../activeLink";
 import HeaderWrapper from "../Containers/Header/HeaderWrapper";
-import { getCategories, getProducts } from "../api";
+import { getBrands, getCategories, getProducts } from "../api";
 
 // import Swiper from "react-id-swiper";
 SwiperCore.use([Scrollbar]);
 
 export default function Home({ baraxolkaData }) {
+  const [brands, setBrands] = useState([]);
+
   const chooseData = () => {
     const action = { type: t.CHOOSE_DATA, payload: ChooseData };
     dispatch(action);
@@ -78,6 +80,11 @@ export default function Home({ baraxolkaData }) {
   useEffect(() => {
     getProducts();
     getCategories();
+    getBrands().then((data) => {
+      console.log(data);
+
+      setBrands(data.data);
+    });
   }, []);
 
   return (
@@ -173,7 +180,11 @@ export default function Home({ baraxolkaData }) {
                         <p className="oldPrice ">18,577,000</p>
                         <div className="priceDec">
                           <div className="price d-flex">
-                            от <p className="priceNum"><span className="priceNumBig">15</span>,845,000</p> сум
+                            от{" "}
+                            <p className="priceNum">
+                              <span className="priceNumBig">15</span>,845,000
+                            </p>{" "}
+                            сум
                           </div>
                         </div>
                         <p className="rentPrice d-none">от 1,185,577 сум/мес</p>
@@ -249,7 +260,10 @@ export default function Home({ baraxolkaData }) {
                           <p className="oldPrice ">18,577,000</p>
                           <div className="priceDec">
                             <div className="price d-flex">
-                              от <p className="priceNum"><span className="priceNumBig">15</span>,845,000</p>
+                              от{" "}
+                              <p className="priceNum">
+                                <span className="priceNumBig">15</span>,845,000
+                              </p>
                             </div>
                           </div>
                           <p className="rentPrice d-none">
@@ -259,7 +273,11 @@ export default function Home({ baraxolkaData }) {
                       </div>
                     </div>
                     <div className="d-flex  justify-content-between  w-100">
-                      <img className="top_title" src="logothird.png" alt="photo" />
+                      <img
+                        className="top_title"
+                        src="logothird.png"
+                        alt="photo"
+                      />
                       <p className="bottom-text w-auto">
                         Магазин бытовой техники и электроники
                       </p>
@@ -561,11 +579,7 @@ export default function Home({ baraxolkaData }) {
                       <Link href="/productCard">
                         <a>
                           <div className="choose-card p-2">
-                            <img
-                              className="skidka"
-                              src="sale.svg"
-                              alt="sale"
-                            />
+                            <img className="skidka" src="sale.svg" alt="sale" />
                             <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                               <img
                                 style={{ marginTop: "20px !important" }}
@@ -1122,4 +1136,3 @@ export default function Home({ baraxolkaData }) {
     </HomeWrapper>
   );
 }
-

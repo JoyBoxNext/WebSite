@@ -37,6 +37,10 @@ const HeaderWrapper = styled.div`
       font-size: 13px;
     }
   }
+  .header_korzina,
+    .header_icon {
+      width: 25px !important;
+    }
   .badge {
     color: red;
   }
@@ -164,7 +168,7 @@ const HeaderWrapper = styled.div`
     }
     .header_korzina,
     .header_icon {
-      width: 20px !important;
+      width: 10px !important;
     }
   }
 

@@ -41,3 +41,14 @@ export const getCategories = async () => {
     console.error(error);
   }
 };
+
+export const getBrands = async () =>{
+  try {
+    const response = await axios.get("http://joybox.bigsoft.uz/api/crazy/joybox/v1.0.1/brands?page=1&perPage=10&search=apple")
+    console.log();
+    return {success:true , data: response.data}
+
+  } catch (error) {
+    
+  }
+}
