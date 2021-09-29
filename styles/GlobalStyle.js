@@ -66,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
         left: -0.2%;
     }
 
-      .swiper-button-next::before ,  .swiper-button-prev::before {
+      .swiper-button-next::after ,  .swiper-button-prev::after {
           content: "";
     }
     
