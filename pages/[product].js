@@ -311,7 +311,7 @@ const Category = () => {
                       className={`col-10 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 px-1 mb-3 d-flex flex-wrap card_product position-relative ${value.className}`}
                     >
                       <div className="cards_border mb-4">
-                        <img className="skidka" src="skidka.jpg" alt="photo" />
+                        <img className="skidka" src="sale.jpg" alt="photo" />
                         <div className="px-2">
                           <div className="d-flex justify-content-center align-items-center mt-2">
                             <Link href="/productCard">

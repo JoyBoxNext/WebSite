@@ -114,6 +114,9 @@ const HeaderWrapper = styled.div`
     .flex {
       width: 90% !important;
     }
+    .Categories {
+      width: 125px !important;
+    }
   }
   .MenuContainer {
     background-color: #fff;

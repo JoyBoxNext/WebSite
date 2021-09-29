@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeWrapper from "../Wrappers/HomeWrapper";
 import Container from "../Containers/Container";
 import NewProductCards from "../Data/NewProductCards";
@@ -31,9 +31,12 @@ import Messeger from "../Components/messeger";
 import { linksIndex, pages } from "../Data/HeaderData";
 import ActiveLink from "../activeLink";
 import HeaderWrapper from "../Containers/Header/HeaderWrapper";
+import { getCategories, getProducts } from "../api";
+
 // import Swiper from "react-id-swiper";
 SwiperCore.use([Scrollbar]);
-export default function Home() {
+
+export default function Home({ baraxolkaData }) {
   const chooseData = () => {
     const action = { type: t.CHOOSE_DATA, payload: ChooseData };
     dispatch(action);
@@ -72,12 +75,16 @@ export default function Home() {
     setAnchorEl(null);
   };
 
+  useEffect(() => {
+    getProducts();
+    getCategories();
+  }, []);
+
   return (
     <HomeWrapper>
-      <Container>
+      <Container baraxolkaData={baraxolkaData}>
         <div className="contant">
           <Header />
-
           <HeaderWrapper>
             <div className="w-100 mt-3 d-flex  align-items-center category">
               <div className="flex position-relative">
@@ -176,7 +183,7 @@ export default function Home() {
                   <div className="d-flex  justify-content-between  w-100">
                     <img
                       className="miniContentLogo h-100"
-                      src="logo3.png"
+                      src="logothird.png"
                       alt="photo"
                     />
                     <p className="bottom-text w-auto">
@@ -207,7 +214,7 @@ export default function Home() {
               <div className="flex4 blue" style={{ width: "11.2%" }}></div>
               <div className="flex5 orange" style={{ width: "62.1%" }}></div>
               <div className="flex6 blue" style={{ width: "26.7%" }}>
-                <img className="w-100" src="logo4.png" alt="photo" />
+                <img className="w-100" src="logofourth.png" alt="photo" />
               </div>
               <div className="flex7 orange" style={{ width: "11.2%" }}></div>
               <div className="flex8 blue" style={{ width: "62.1%" }}>
@@ -252,7 +259,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="d-flex  justify-content-between  w-100">
-                      <img className="top_title" src="logo3.png" alt="photo" />
+                      <img className="top_title" src="logothird.png" alt="photo" />
                       <p className="bottom-text w-auto">
                         Магазин бытовой техники и электроники
                       </p>
@@ -280,8 +287,8 @@ export default function Home() {
                       <div className={`card mx-2 p-3 ${v.className}`} key={i}>
                         <img
                           className="skidka_card"
-                          src="skidka.svg"
-                          alt="skidka"
+                          src="sale.svg"
+                          alt="sale"
                         />
                         <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                           <img
@@ -382,8 +389,8 @@ export default function Home() {
                       <div className={`card mx-2 p-3`}>
                         <img
                           className="skidka_card"
-                          src="skidka.svg"
-                          alt="skidka"
+                          src="sale.svg"
+                          alt="sale"
                         />
                         <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                           <img
@@ -454,40 +461,35 @@ export default function Home() {
               </Swiper>
             </div>
           </div>
+
           {/* ProductDay */}
-          <div className="productDay w-100 px-lg-4 mt-5">
-            <div className="row justify-content-center p-3 m-0 w-100">
-              <div className="col-12 col-md-5 d-flex align-items-center mb-3 p-0 p-md-2 mb-md-none">
-                <div className="productDayText w-100 m-0 ">
-                  <div className="row w-100 m-0 p-0">
-                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <div className="row w-100 m-0 p-0">
-                        <div className="col-6 col-md-12">
-                          <p className="mb-2 left_title">Товар дня</p>
-                          <h1 className="mb-2 left_clock fw-bold">17.08</h1>
-                        </div>
-                        <div className="col-6 col-md-12 d-flex order-md-3 d-md-block justify-content-end">
-                          <div className="yellowCont">
-                            <p>до конца акции</p>
-                            <h2>08:03:45</h2>
-                          </div>
-                        </div>
-                        <div className="col-12 order-md-2">
-                          <p className="fw-bold left_subtitle mb-3">
-                            Ограниченное количество. <br /> Предложение
-                            действительно только сегодня.
-                          </p>
-                        </div>
+          <div className="productDay px-lg-4 mt-5">
+            <div className="row justify-content-center p-3 w-100">
+              <div className="col-12 col-sm-4 col-md-5 col-lg-4 d-flex align-items-center">
+                <div className="productDayText m-0 ">
+                  <div className="row pe-0">
+                    <div className="col-7 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                      <p className="mb-2 left_title">Товар дня</p>
+                      <h1 className="mb-2 left_clock fw-bold">17.08</h1>
+                      <p className="fw-bold left_subtitle mb-3">
+                        Ограниченное количество. <br /> Предложение
+                        действительно только сегодня.
+                      </p>
+                    </div>
+                    <div className="col-5 p-0 ">
+                      <div className="yellowCont">
+                        <p>до конца акции</p>
+                        <h2>08:03:45</h2>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-md-7 d-flex justify-content-center align-items-center m-0">
+              <div className="col-12 col-sm-8 col-md-7 col-lg-8 d-flex justify-content-center align-items-center m-0">
                 <div className={`productBoard`}>
                   <div className="row w-100 justify-content-between m-0 align-items-center">
-                    <div className="col-12 col-md-6 col-lg-6">
-                      <p className="right_title m-0 m-md-2">
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                      <p className="right_title m-0 mb-2">
                         Samsung side by side-washer
                       </p>
                       <div className="d-flex align-items-center">
@@ -505,12 +507,12 @@ export default function Home() {
                         </div>
                         <img
                           className="product_logo"
-                          src="logo3.png"
+                          src="logothird.png"
                           alt="photo"
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-md-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center p-0 ">
                       <img
                         className="productDayWasher w-100"
                         src="productDayWasher.png"
@@ -561,8 +563,8 @@ export default function Home() {
                           <div className="choose-card p-2">
                             <img
                               className="skidka"
-                              src="skidka.svg"
-                              alt="photo"
+                              src="sale.svg"
+                              alt="sale"
                             />
                             <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                               <img
@@ -646,7 +648,7 @@ export default function Home() {
                   <Link href="/productCard" key={i}>
                     <a>
                       <div className={`choose-card p-2 ${v.className}`}>
-                        <img className="skidka" src="skidka.svg" alt="photo" />
+                        <img className="skidka" src="sale.svg" alt="sale" />
                         <div className="d-flex justify-content-center align-items-center ps-4 my-3">
                           <img
                             style={{ marginTop: "20px !important" }}
@@ -928,7 +930,7 @@ export default function Home() {
                   1155: {
                     slidesPerView: 5,
                   },
-                  1820: {
+                  1930: {
                     slidesPerView: 6,
                   },
                 }}
@@ -942,7 +944,7 @@ export default function Home() {
                             <div className="laptop-card p-2" key={i}>
                               <img
                                 className="discount"
-                                src="skidka.svg"
+                                src="sale.svg"
                                 alt="photo"
                               />
                               <div className="d-flex flex-column justify-content-center align-items-center">
@@ -1021,7 +1023,7 @@ export default function Home() {
                         >
                           <img
                             className="discount"
-                            src="skidka.svg"
+                            src="sale.svg"
                             alt="photo"
                           />
                           <div className="d-flex flex-column justify-content-center align-items-center">
@@ -1120,3 +1122,4 @@ export default function Home() {
     </HomeWrapper>
   );
 }
+

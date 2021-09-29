@@ -12,9 +12,9 @@ const ActiveLinkWrapper = styled.div`
       background-color: #ffe5dc;
     }
   }
-  @media screen and (max-width: 1990px) {
+  @media screen and (max-width: 1920px) {
     button {
-      padding: 7px 37px !important;
+      padding: 7px 34px !important;
     }
   }
   @media screen and (max-width: 1900px) {
