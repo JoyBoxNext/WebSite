@@ -60,16 +60,10 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
     }
     .swiper-button-next{
-        right: -2%;
+        right: -0.2%;
     }
     .swiper-button-prev{
-        left: -2%;
-    }
-    .swiper-button-prev::after{
-         content: "";
-    }
-    .swiper-button-next::after{
-        content: "";
+        left: -0.2%;
     }
     .swiper_content {
         position: relative;
@@ -78,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
             align-items: center;
             justify-content: center;
             right: auto;
-            left: -2%;
+            left: -0.2%;
             top: 49.5%;
             transform: translateY(-50%);
             position: absolute;
@@ -95,7 +89,7 @@ const GlobalStyle = createGlobalStyle`
             align-items: center;
             justify-content: center;
             right: auto;
-            right: -2%;
+            right: -0.2%;
             top: 49.5%;
             transform: translateY(-50%);
             position: absolute;
