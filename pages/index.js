@@ -173,7 +173,7 @@ export default function Home({ baraxolkaData }) {
                         <p className="oldPrice ">18,577,000</p>
                         <div className="priceDec">
                           <div className="price d-flex">
-                            от <p className="priceNum">15,845,000</p> сум
+                            от <p className="priceNum"><span className="priceNumBig">15</span>,845,000</p> сум
                           </div>
                         </div>
                         <p className="rentPrice d-none">от 1,185,577 сум/мес</p>
@@ -249,7 +249,7 @@ export default function Home({ baraxolkaData }) {
                           <p className="oldPrice ">18,577,000</p>
                           <div className="priceDec">
                             <div className="price d-flex">
-                              от <p className="priceNum">15,845,000</p>
+                              от <p className="priceNum"><span className="priceNumBig">15</span>,845,000</p>
                             </div>
                           </div>
                           <p className="rentPrice d-none">

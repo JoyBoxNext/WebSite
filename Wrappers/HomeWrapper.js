@@ -46,12 +46,13 @@ const HomeWrapper = styled.div`
       }
       .oldPrice {
         font-weight: bold;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 100%;
         -webkit-text-decoration-line: line-through;
         text-decoration-line: line-through;
         padding: 0;
         margin: 0;
+        margin-right: 3px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -62,6 +63,7 @@ const HomeWrapper = styled.div`
       .priceDec {
         background-color: #ff4001;
         padding: 7px 4px;
+        margin-top: 2px;
         .price {
           font-size: 10px;
           line-height: 100%;
@@ -71,12 +73,15 @@ const HomeWrapper = styled.div`
           -ms-flex-align: baseline !important;
           align-items: baseline !important;
           .priceNum {
-            font-size: 16px;
+            font-size: 12px;
             line-height: 100%;
             letter-spacing: 0.045em;
             text-transform: lowercase;
             padding: 0;
             margin: 0;
+            .priceNumBig {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -231,8 +236,13 @@ const HomeWrapper = styled.div`
             padding: 5px 5px 5px 0;
             margin: 5px auto !important;
             .priceNum {
+              font-size: 13 !important;
+
               margin: 0;
               padding: 0;
+              .priceNumBig {
+                font-size: 17 !important;
+              }
             }
           }
           .rentPrice {
@@ -1829,9 +1839,6 @@ const HomeWrapper = styled.div`
       font-size: 14px !important;
       padding: 0 22px !important;
     }
-    /* .productDayText .left_clock {
-      font-size: 10px !important;
-    } */
   }
   @media screen and (max-width: 1070px) {
     .fiveNew {
@@ -1914,6 +1921,22 @@ const HomeWrapper = styled.div`
       .miniContentLogo {
         display: none;
       }
+      .priceDec {
+        margin-top: 3px;
+        .priceNumBig {
+          font-size: 23px !important;
+        }
+        .priceNum {
+          font-size: 17px !important;
+          font-weight: bold;
+          line-height: 100%;
+          letter-spacing: 0.045em;
+          text-transform: lowercase;
+          -webkit-box-align: end !important;
+          -ms-flex-align: end !important;
+          align-items: flex-end !important;
+        }
+      }
       .rentPrice {
         display: -webkit-box !important;
         display: -ms-flexbox !important;
@@ -1921,19 +1944,10 @@ const HomeWrapper = styled.div`
         font-weight: normal;
         font-size: 17px;
         line-height: 100%;
+        margin: 5px 3px 0px 0px;
       }
       .bottom-text {
         display: none !important;
-      }
-      .priceNum {
-        font-weight: bold;
-        font-size: 29px;
-        line-height: 100%;
-        letter-spacing: 0.045em;
-        text-transform: lowercase;
-        -webkit-box-align: end !important;
-        -ms-flex-align: end !important;
-        align-items: flex-end !important;
       }
     }
     .threePhone {
