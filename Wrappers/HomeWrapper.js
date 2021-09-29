@@ -169,15 +169,15 @@ const HomeWrapper = styled.div`
         border-radius: 0;
         color: white;
         text-transform: capitalize;
-        padding: 0 35px;
+        padding: 0 30px;
         font-weight: lighter;
+        font-size: 20px;
         &:hover {
           background-color: #ffffff44;
         }
       }
-      .btn_links1 {
+      .btn_links:first-child {
         border-left: 1px solid #fff;
-        border-right: 1px solid #fff;
       }
     }
     .flex9 {
