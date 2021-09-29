@@ -65,6 +65,11 @@ const GlobalStyle = createGlobalStyle`
     .swiper-button-prev{
         left: -0.2%;
     }
+
+      .swiper-button-next::after ,  .swiper-button-prev::after {
+          content: "";
+    }
+    
     .swiper_content {
         position: relative;
         .button_prev{

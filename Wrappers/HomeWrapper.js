@@ -169,15 +169,15 @@ const HomeWrapper = styled.div`
         border-radius: 0;
         color: white;
         text-transform: capitalize;
-        padding: 0 35px;
+        padding: 0 30px;
         font-weight: lighter;
+        font-size: 20px;
         &:hover {
           background-color: #ffffff44;
         }
       }
-      .btn_links1 {
+      .btn_links:first-child {
         border-left: 1px solid #fff;
-        border-right: 1px solid #fff;
       }
     }
     .flex9 {
@@ -1836,8 +1836,15 @@ const HomeWrapper = styled.div`
       font-size: 40px !important;
     }
     .btn_links {
-      font-size: 14px !important;
-      padding: 0 22px !important;
+      font-size: 19px !important;
+      line-height: 23px;
+      padding: 0 30px !important;
+    }
+    .btn_links:first-child {
+      border-left: 0px !important;
+    }
+    .btn_links:last-child {
+      border-right: 0px !important;
     }
   }
   @media screen and (max-width: 1070px) {
@@ -1981,7 +1988,7 @@ const HomeWrapper = styled.div`
       align-content: center !important;
     }
     .btn_links {
-      font-size: 11px !important;
+      font-size: 18px !important;
       padding: 0 15px !important;
     }
     .button {
@@ -2016,11 +2023,17 @@ const HomeWrapper = styled.div`
       font-size: 22px !important;
     }
     .btn_links {
-      font-size: 14px !important;
+      font-size: 15px !important;
       padding: 0 12px !important;
     }
     .title-section {
       font-size: 20px !important;
+    }
+  }
+  @media screen and (max-width: 620px) {
+    .btn_links {
+      font-size: 13px !important;
+      padding: 0 12px !important;
     }
   }
   @media screen and (max-width: 600px) {
